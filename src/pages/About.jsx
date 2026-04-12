@@ -1,320 +1,209 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { useEffect, useRef } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import CTA from '../components/CTA';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const team = [
-  {
-    name: "Vaibhav Biradar",
-    role: "Founder & Senior Graphic Designer",
-    initials: "VB",
-    color: "bg-green-600",
-  },
-  {
-    name: "Nisha Pawar",
-    role: "General Manager",
-    initials: "NP",
-    color: "bg-purple-600",
-  },
-  {
-    name: "Tanmay Patil",
-    role: "Senior Graphic Designer",
-    initials: "TP",
-    color: "bg-blue-600",
-  },
-  {
-    name: "Shraddha Dongre",
-    role: "Junior Graphic Designer",
-    initials: "SD",
-    color: "bg-pink-600",
-  },
-  {
-    name: "Prajwal Aawti",
-    role: "Intern",
-    initials: "PA",
-    color: "bg-amber-500",
-  },
+  { name: 'Vaibhav Biradar', role: 'Founder & Senior Designer', initials: 'VB', color: 'from-primary to-primary-dark' },
+  { name: 'Nisha Pawar', role: 'General Manager', initials: 'NP', color: 'from-purple-500 to-purple-700' },
+  { name: 'Tanmay Patil', role: 'Senior Graphic Designer', initials: 'TP', color: 'from-blue-500 to-blue-700' },
+  { name: 'Shraddha Dongre', role: 'Junior Graphic Designer', initials: 'SD', color: 'from-pink-500 to-pink-700' },
+  { name: 'Prajwal Aawti', role: 'Design Intern', initials: 'PA', color: 'from-secondary to-orange-400' },
+];
+
+const stats = [
+  { value: '2022', label: 'Founded' },
+  { value: '5+', label: 'Team Members' },
+  { value: '50+', label: 'Projects Done' },
+  { value: '5.0★', label: 'Google Rating' },
+];
+
+const reviews = [
+  { name: 'Rahul Patil', role: 'Business Owner, Sangli', initials: 'RP', text: 'Graphic Galaxy designed our logo and packaging — the quality was outstanding. Highly recommend!', rating: 5 },
+  { name: 'Priya Sharma', role: 'Clinic Owner, Sangli', initials: 'PS', text: 'Very professional team. Our social media designs improved our online presence significantly.', rating: 5 },
+  { name: 'Amit Desai', role: 'Event Organizer, Sangli', initials: 'AD', text: 'Amazing event branding work. The Duathlon event designs were loved by everyone.', rating: 5 },
+];
+
+const clients = [
+  { name: 'Sangli Marathon', type: 'Event Branding' },
+  { name: 'Vijeta Group', type: 'Branding & Design' },
+  { name: 'Radhey Dental Clinic', type: 'Social Media Design' },
+  { name: 'Smile Sangli Clinic', type: 'Branding & Design' },
+  { name: 'Shravani Organics', type: 'Packaging Design' },
+  { name: 'S3 Academy', type: 'Event Branding' },
+  { name: 'MTDK School', type: 'Event Branding' },
 ];
 
 const About = () => {
+  const pageRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.utils.toArray('.reveal').forEach((el) => {
+        gsap.from(el, {
+          y: 50, opacity: 0, duration: 1, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 85%' },
+        });
+      });
+      gsap.from('.team-card', {
+        y: 60, opacity: 0, duration: 0.9, stagger: 0.12, ease: 'power3.out',
+        scrollTrigger: { trigger: '.team-grid', start: 'top 80%' },
+      });
+      gsap.from('.review-card', {
+        y: 60, opacity: 0, duration: 0.9, stagger: 0.15, ease: 'power3.out',
+        scrollTrigger: { trigger: '.reviews-grid', start: 'top 80%' },
+      });
+    }, pageRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <>
-      <Header />
+    <div ref={pageRef}>
+      <Navbar />
 
-      <main className="bg-white min-h-screen">
-        {/* Hero Section */}
-        <section className="bg-gray-900 py-20 px-6 text-center">
-          <p className="text-sm font-medium text-green-400 uppercase tracking-widest mb-3">
-            About Us
+      {/* Hero */}
+      <section className="relative pt-36 pb-24 px-6 bg-[#F9FAFB] overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_50%_at_50%_0%,rgba(114,224,215,0.15),transparent)] pointer-events-none" />
+        <div className="max-w-4xl mx-auto text-center relative z-10">
+          <p className="text-sm font-bold text-primary-dark uppercase tracking-[0.3em] mb-4">About Us</p>
+          <h1 className="text-5xl md:text-7xl font-black text-text-dark mb-6 leading-tight">
+            We Are <span className="text-gradient">Graphic Galaxy</span>
+          </h1>
+          <p className="text-text-dark/55 text-lg max-w-2xl mx-auto leading-relaxed font-medium">
+            Founded in 2022 in Sangli, Maharashtra — a creative design studio helping local businesses build powerful brand identities through logos, packaging, and social media design.
           </p>
-          <h1 className="text-4xl font-bold text-white mb-4">Graphic Galaxy</h1>
-          <p className="text-gray-400 max-w-xl mx-auto text-sm leading-relaxed">
-            Founded in 2022 in Sangli, Maharashtra — we are a creative design
-            studio helping local businesses build powerful brand identities
-            through logos, packaging, and social media design.
-          </p>
-        </section>
+        </div>
+      </section>
 
-        {/* Stats */}
-        <section className="border-b border-gray-200">
-          <div className="max-w-5xl mx-auto grid grid-cols-3 divide-x divide-gray-200">
-            <div className="py-10 text-center">
-              <p className="text-3xl font-bold text-green-600">2022</p>
-              <p className="text-sm text-gray-500 mt-1">Founded</p>
+      {/* Stats */}
+      <section className="bg-white border-y border-border">
+        <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-x divide-border">
+          {stats.map((s, i) => (
+            <div key={i} className="py-12 text-center reveal">
+              <p className="text-4xl font-black text-gradient mb-2">{s.value}</p>
+              <p className="text-sm text-text-dark/50 font-semibold uppercase tracking-wider">{s.label}</p>
             </div>
-            <div className="py-10 text-center">
-              <p className="text-3xl font-bold text-green-600">5</p>
-              <p className="text-sm text-gray-500 mt-1">Team Members</p>
-            </div>
-            <div className="py-10 text-center">
-              <p className="text-3xl font-bold text-green-600">50+</p>
-              <p className="text-sm text-gray-500 mt-1">Projects Done</p>
-            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Story */}
+      <section className="py-24 px-6 bg-[#F9FAFB]">
+        <div className="max-w-3xl mx-auto text-center reveal">
+          <p className="text-sm font-bold text-primary-dark uppercase tracking-[0.3em] mb-4">Our Story</p>
+          <h2 className="text-4xl md:text-5xl font-black text-text-dark mb-8">Built for Sangli Businesses</h2>
+          <p className="text-text-dark/60 leading-relaxed text-lg">
+            Graphic Galaxy was founded in 2022 by Vaibhav Biradar with a simple vision — to provide professional and impactful design to local businesses in Sangli. Today our team works across logos, packaging, social media, brochures, and event branding. From the Duathlon event branding for S3 Academy Sangli to the Marathon branding for MTDK Run — we bring creativity and dedication to every project.
+          </p>
+        </div>
+      </section>
+
+      {/* Team */}
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16 reveal">
+            <p className="text-sm font-bold text-primary-dark uppercase tracking-[0.3em] mb-4">The Team</p>
+            <h2 className="text-4xl md:text-5xl font-black text-text-dark">Meet Our Crew</h2>
           </div>
-        </section>
-
-        {/* Story */}
-        <section className="py-16 px-6 max-w-3xl mx-auto text-center">
-          <p className="text-sm font-medium text-green-600 uppercase tracking-widest mb-3">
-            Our Story
-          </p>
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">
-            Built for Sangli businesses
-          </h2>
-          <p className="text-gray-500 text-sm leading-relaxed">
-            Graphic Galaxy was founded in 2022 by Vaibhav Biradar with a simple
-            vision — to provide professional and impactful design to local
-            businesses in Sangli. Today our team works across logos, packaging,
-            social media, brochures, and event branding. From the Duathlon event
-            branding for S3 Academy Sangli to the Marathon branding for MTDK Run
-            — we bring creativity and dedication to every project.
-          </p>
-        </section>
-
-        {/* Team */}
-        <section className="bg-gray-50 py-16 px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <p className="text-sm font-medium text-green-600 uppercase tracking-widest mb-2">
-                The Team
-              </p>
-              <h2 className="text-3xl font-bold text-gray-900">
-                Meet Our Team
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
-              {team.map((member, index) => (
-                <div
-                  key={index}
-                  className="bg-white border border-gray-200 rounded-2xl p-6 flex flex-col items-center text-center shadow-sm hover:shadow-md transition"
-                >
-                  <div
-                    className={`w-16 h-16 rounded-full ${member.color} flex items-center justify-center text-white font-bold text-lg mb-4`}
-                  >
-                    {member.initials}
-                  </div>
-                  <h3 className="font-semibold text-gray-900 text-sm">
-                    {member.name}
-                  </h3>
-                  <p className="text-xs text-gray-500 mt-1 leading-relaxed">
-                    {member.role}
-                  </p>
+          <div className="team-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+            {team.map((member, i) => (
+              <div key={i} className="team-card bg-[#F9FAFB] border border-border rounded-[1.5rem] p-6 flex flex-col items-center text-center hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all duration-300 hover:-translate-y-1">
+                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${member.color} flex items-center justify-center text-white font-black text-lg mb-4`}>
+                  {member.initials}
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* CTA */}
-        <section className="py-16 px-6 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-4">
-            Ready to build your brand?
-          </h2>
-          <p className="text-gray-500 text-sm mb-8 max-w-md mx-auto">
-            Connect with Sangli's leading graphic design studio today.
-          </p>
-
-          <a
-            href="https://wa.me/918459763568?text=Hi, I need design service"
-            target="_blank"
-            rel="noreferrer"
-            className="inline-block bg-green-500 hover:bg-green-600 text-white px-8 py-3 rounded-lg font-semibold transition"
-          >
-            💬 WhatsApp Us
-          </a>
-        </section>
-        {/* Reviews Section */}
-<section className="bg-gray-50 py-16 px-6">
-  <div className="max-w-5xl mx-auto">
-
-    <div className="text-center mb-12">
-      <p className="text-sm font-medium text-green-600 uppercase tracking-widest mb-2">
-        Testimonials
-      </p>
-      <h2 className="text-3xl font-bold text-gray-900">
-        What Our Clients Say
-      </h2>
-    </div>
-
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {[
-        {
-          name: "Rahul Patil",
-          business: "Local Business, Sangli",
-          review: "Graphic Galaxy designed our logo and packaging — the quality was outstanding. Highly recommend!",
-          rating: 5,
-        },
-        {
-          name: "Priya Sharma",
-          business: "Clinic Owner, Sangli",
-          review: "Very professional team. Our social media designs improved our online presence significantly.",
-          rating: 5,
-        },
-        {
-          name: "Amit Desai",
-          business: "Event Organizer, Sangli",
-          review: "Amazing event branding work. The Duathlon event designs were loved by everyone.",
-          rating: 5,
-        },
-      ].map((review, index) => (
-        <div
-          key={index}
-          className="bg-white border border-gray-200 rounded-2xl p-6 shadow-sm hover:shadow-md transition"
-        >
-          {/* Stars */}
-          <div className="flex gap-1 mb-4">
-            {[...Array(review.rating)].map((_, i) => (
-              <span key={i} className="text-yellow-400 text-lg">★</span>
+                <h3 className="font-bold text-text-dark text-sm">{member.name}</h3>
+                <p className="text-xs text-text-dark/50 mt-1 leading-relaxed">{member.role}</p>
+              </div>
             ))}
-          </div>
-
-          {/* Review Text */}
-          <p className="text-gray-600 text-sm leading-relaxed mb-6">
-            "{review.review}"
-          </p>
-
-          {/* Reviewer */}
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-green-50 border border-green-100 flex items-center justify-center text-green-600 font-bold text-sm">
-              {review.name.charAt(0)}
-            </div>
-            <div>
-              <p className="font-semibold text-gray-900 text-sm">{review.name}</p>
-              <p className="text-xs text-gray-400">{review.business}</p>
-            </div>
           </div>
         </div>
-      ))}
-    </div>
+      </section>
 
-    {/* Google Reviews Link */}
-    <div className="text-center mt-10">
-      
-       <a href="https://share.google/Mo2zWhichHtggjwSW"
-        target="_blank"
-        rel="noreferrer"
-        className="inline-flex items-center gap-2 border border-gray-200 text-gray-700 px-6 py-3 rounded-lg text-sm font-medium hover:border-green-400 hover:text-green-600 transition"
-      >
-        <span className="text-blue-600 font-bold">G</span>
-        View all reviews on Google
-      </a>
-    </div>
-
-  </div>
-</section>
-
-        {/* Clients Section */}
-        <section className="py-16 overflow-hidden">
-          <div className="text-center mb-12 px-6">
-            <p className="text-sm font-medium text-green-600 uppercase tracking-widest mb-2">
-              Trusted By
-            </p>
-            <h2 className="text-3xl font-bold text-gray-900">Our Clients</h2>
-            <p className="text-gray-500 mt-3 text-sm max-w-md mx-auto">
-              Businesses across Sangli who trust Graphic Galaxy for their design
-              needs.
-            </p>
+      {/* Testimonials */}
+      <section className="py-24 px-6 bg-[#F9FAFB]">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16 reveal">
+            <p className="text-sm font-bold text-primary-dark uppercase tracking-[0.3em] mb-4">Testimonials</p>
+            <h2 className="text-4xl md:text-5xl font-black text-text-dark">What Clients Say</h2>
           </div>
-
-          {/* Row 1 - Left scroll */}
-          <div className="flex gap-4 mb-4 animate-scroll-left">
-            {[
-              { name: "Sangli Marathon", type: "Event Branding" },
-              { name: "Vijeta Group", type: "Branding & Design" },
-              { name: "Radhey Dental Clinic", type: "Social Media Design" },
-              { name: "Smile Sangli Clinic", type: "Branding & Design" },
-              { name: "Shravani Organics", type: "Packaging Design" },
-              { name: "S3 Academy", type: "Event Branding" },
-              { name: "MTDK School", type: "Event Branding" },
-              // Duplicate for seamless loop
-              { name: "Sangli Marathon", type: "Event Branding" },
-              { name: "Vijeta Group", type: "Branding & Design" },
-              { name: "Radhey Dental Clinic", type: "Social Media Design" },
-              { name: "Smile Sangli Clinic", type: "Branding & Design" },
-              { name: "Shravani Organics", type: "Packaging Design" },
-              { name: "S3 Academy", type: "Event Branding" },
-              { name: "MTDK School", type: "Event Branding" },
-            ].map((client, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 bg-white border border-gray-200 rounded-xl px-6 py-4 shadow-sm flex items-center gap-3 min-w-fit"
-              >
-                <div className="w-10 h-10 rounded-full bg-green-50 border border-green-100 flex items-center justify-center text-green-600 font-bold text-sm flex-shrink-0">
-                  {client.name.charAt(0)}
+          <div className="reviews-grid grid grid-cols-1 md:grid-cols-3 gap-6">
+            {reviews.map((r, i) => (
+              <div key={i} className="review-card bg-white border border-border rounded-[1.5rem] p-7 hover:border-primary hover:shadow-lg hover:shadow-primary/10 transition-all duration-300">
+                <div className="flex gap-0.5 mb-4">
+                  {[...Array(r.rating)].map((_, j) => <span key={j} className="text-yellow-400">★</span>)}
                 </div>
-                <div>
-                  <p className="font-semibold text-gray-900 text-sm whitespace-nowrap">
-                    {client.name}
-                  </p>
-                  <p className="text-xs text-gray-400 whitespace-nowrap">
-                    {client.type}
-                  </p>
+                <p className="text-text-dark/65 text-sm leading-relaxed mb-6">"{r.text}"</p>
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold text-sm">
+                    {r.initials}
+                  </div>
+                  <div>
+                    <p className="font-bold text-text-dark text-sm">{r.name}</p>
+                    <p className="text-xs text-text-dark/40">{r.role}</p>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
+          <div className="text-center mt-10 reveal">
+            <a
+              href="https://share.google/Mo2zWhichHtggjwSW"
+              target="_blank"
+              rel="noreferrer"
+              className="interactive inline-flex items-center gap-2 border border-border text-text-dark/70 px-6 py-3 rounded-full text-sm font-semibold hover:border-primary hover:text-primary transition-all duration-300"
+            >
+              <span className="text-blue-600 font-black">G</span>
+              View all reviews on Google
+            </a>
+          </div>
+        </div>
+      </section>
 
-          {/* Row 2 - Right scroll */}
-          <div className="flex gap-4 animate-scroll-right">
-            {[
-              { name: "MTDK School", type: "Event Branding" },
-              { name: "S3 Academy", type: "Event Branding" },
-              { name: "Shravani Organics", type: "Packaging Design" },
-              { name: "Smile Sangli Clinic", type: "Branding & Design" },
-              { name: "Radhey Dental Clinic", type: "Social Media Design" },
-              { name: "Vijeta Group", type: "Branding & Design" },
-              { name: "Sangli Marathon", type: "Event Branding" },
-              // Duplicate for seamless loop
-              { name: "MTDK School", type: "Event Branding" },
-              { name: "S3 Academy", type: "Event Branding" },
-              { name: "Shravani Organics", type: "Packaging Design" },
-              { name: "Smile Sangli Clinic", type: "Branding & Design" },
-              { name: "Radhey Dental Clinic", type: "Social Media Design" },
-              { name: "Vijeta Group", type: "Branding & Design" },
-              { name: "Sangli Marathon", type: "Event Branding" },
-            ].map((client, index) => (
-              <div
-                key={index}
-                className="flex-shrink-0 bg-white border border-gray-200 rounded-xl px-6 py-4 shadow-sm flex items-center gap-3 min-w-fit"
-              >
-                <div className="w-10 h-10 rounded-full bg-green-50 border border-green-100 flex items-center justify-center text-green-600 font-bold text-sm flex-shrink-0">
-                  {client.name.charAt(0)}
+      {/* Clients Marquee */}
+      <section className="py-16 overflow-hidden bg-white border-y border-border">
+        <div className="text-center mb-10 px-6 reveal">
+          <p className="text-sm font-bold text-primary-dark uppercase tracking-[0.3em] mb-2">Trusted By</p>
+          <h2 className="text-3xl font-black text-text-dark">Our Clients</h2>
+        </div>
+        <div className="flex gap-6 mb-4 overflow-hidden">
+          <div className="flex gap-6 animate-scroll-left whitespace-nowrap">
+            {[...clients, ...clients].map((c, i) => (
+              <div key={i} className="flex-shrink-0 bg-[#F9FAFB] border border-border rounded-xl px-6 py-4 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-primary/10 flex items-center justify-center text-primary font-black text-sm flex-shrink-0">
+                  {c.name.charAt(0)}
                 </div>
                 <div>
-                  <p className="font-semibold text-gray-900 text-sm whitespace-nowrap">
-                    {client.name}
-                  </p>
-                  <p className="text-xs text-gray-400 whitespace-nowrap">
-                    {client.type}
-                  </p>
+                  <p className="font-bold text-text-dark text-sm whitespace-nowrap">{c.name}</p>
+                  <p className="text-xs text-text-dark/40 whitespace-nowrap">{c.type}</p>
                 </div>
               </div>
             ))}
           </div>
-        </section>
-      </main>
+        </div>
+        <div className="flex gap-6 overflow-hidden">
+          <div className="flex gap-6 animate-scroll-right whitespace-nowrap">
+            {[...clients.slice().reverse(), ...clients.slice().reverse()].map((c, i) => (
+              <div key={i} className="flex-shrink-0 bg-[#F9FAFB] border border-border rounded-xl px-6 py-4 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary font-black text-sm flex-shrink-0">
+                  {c.name.charAt(0)}
+                </div>
+                <div>
+                  <p className="font-bold text-text-dark text-sm whitespace-nowrap">{c.name}</p>
+                  <p className="text-xs text-text-dark/40 whitespace-nowrap">{c.type}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
+      <CTA />
       <Footer />
-    </>
+    </div>
   );
 };
 

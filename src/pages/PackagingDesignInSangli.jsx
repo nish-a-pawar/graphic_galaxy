@@ -333,7 +333,7 @@ export default function PackagingDesignInSangli() {
             <motion.div
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.55, duration: 0.5 }}
               style={{
-                marginTop: "4rem", display: "flex", alignItems: "center", justifyContent: "center",
+                marginTop: "4rem", alignItems: "center", justifyContent: "center",
                 gap: "3rem", flexWrap: "wrap",
                 backgroundColor: "rgba(255,255,255,0.6)", backdropFilter: "blur(10px)",
                 padding: "1.5rem 2rem", borderRadius: "20px", border: "1px solid rgba(232,131,106,0.1)",

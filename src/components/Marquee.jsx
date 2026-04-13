@@ -4,11 +4,11 @@ const clients = [
   'MTDK School', 'Duathlon Event', 'Local Businesses',
 ];
 
-const MarqueeTrack = ({ reverse = false }) => (
-  <div className={`flex gap-8 ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'} whitespace-nowrap`}>
+const Track = ({ reverse = false }) => (
+  <div className={`flex gap-10 ${reverse ? 'animate-marquee-reverse' : 'animate-marquee'} whitespace-nowrap`}>
     {[...clients, ...clients].map((name, i) => (
-      <span key={i} className="inline-flex items-center gap-3 text-text-dark/40 font-semibold text-sm uppercase tracking-widest">
-        <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
+      <span key={i} className="inline-flex items-center gap-3 text-white/25 font-semibold text-sm uppercase tracking-widest">
+        <span className="w-1.5 h-1.5 rounded-full bg-amber-400 inline-block" />
         {name}
       </span>
     ))}
@@ -16,13 +16,9 @@ const MarqueeTrack = ({ reverse = false }) => (
 );
 
 const Marquee = () => (
-  <div className="py-10 border-y border-border overflow-hidden bg-white">
-    <div className="flex gap-8 overflow-hidden mb-4">
-      <MarqueeTrack />
-    </div>
-    <div className="flex gap-8 overflow-hidden">
-      <MarqueeTrack reverse />
-    </div>
+  <div className="py-8 border-y border-[#2D3748] overflow-hidden bg-[#111827]">
+    <div className="flex gap-10 overflow-hidden mb-3"><Track /></div>
+    <div className="flex gap-10 overflow-hidden"><Track reverse /></div>
   </div>
 );
 

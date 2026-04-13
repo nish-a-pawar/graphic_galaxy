@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { WHATSAPP_LINK } from '../constants';
 
 const CTA = () => (
   <section className="py-28 bg-[#111827] overflow-hidden">
@@ -23,7 +24,7 @@ const CTA = () => (
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/918459763568?text=Hi, I need design service"
+              href={WHATSAPP_LINK}
               target="_blank" rel="noreferrer"
               className="interactive group px-10 py-4 bg-[#0B0F14] text-white rounded-full font-black text-lg flex items-center justify-center gap-2 hover:bg-[#111827] transition-all duration-300 shadow-xl"
             >

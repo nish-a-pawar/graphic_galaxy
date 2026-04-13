@@ -51,7 +51,7 @@ const Process = () => {
               style={{ opacity: 0 }}
             >
               {/* Watermark number */}
-              <span className={`text-7xl font-black absolute top-4 right-6 leading-none select-none opacity-[0.04] group-hover:opacity-[0.08] transition-opacity duration-500 ${
+              <span className={`text-7xl font-black absolute top-4 right-6 leading-none select-none opacity-[0.08] group-hover:opacity-[0.15] transition-opacity duration-500 ${
                 step.accent === 'amber' ? 'text-amber-400' : 'text-teal-400'
               }`}>
                 {step.number}

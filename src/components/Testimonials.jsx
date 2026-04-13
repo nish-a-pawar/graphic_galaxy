@@ -2,29 +2,8 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Quote } from 'lucide-react';
-
+import { REVIEWS } from '../constants';
 gsap.registerPlugin(ScrollTrigger);
-
-const reviews = [
-  {
-    name: 'Rahul Patil', role: 'Business Owner, Sangli', initials: 'RP',
-    color: 'from-amber-400 to-amber-600',
-    text: 'Graphic Galaxy designed our logo and packaging — the quality was outstanding. They understood our brand perfectly and delivered beyond expectations.',
-    rating: 5,
-  },
-  {
-    name: 'Priya Sharma', role: 'Clinic Owner, Sangli', initials: 'PS',
-    color: 'from-teal-400 to-teal-600',
-    text: 'Very professional team. Our social media designs improved our online presence significantly. Fast turnaround and great communication throughout.',
-    rating: 5,
-  },
-  {
-    name: 'Amit Desai', role: 'Event Organizer, Sangli', initials: 'AD',
-    color: 'from-purple-400 to-purple-600',
-    text: 'Amazing event branding work. The Duathlon event designs were loved by everyone. Graphic Galaxy truly brings creativity and dedication to every project.',
-    rating: 5,
-  },
-];
 
 const Testimonials = () => {
   const gridRef = useRef(null);
@@ -54,7 +33,7 @@ const Testimonials = () => {
         </div>
 
         <div ref={gridRef} className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {reviews.map((r, i) => (
+          {REVIEWS.map((r, i) => (
             <div
               key={i}
               className="t-card group bg-[#111827] border border-[#2D3748] rounded-3xl p-8 hover:border-amber-400/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.08)] transition-all duration-500"

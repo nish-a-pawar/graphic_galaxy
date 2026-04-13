@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ArrowRight, Star, Award, Users } from 'lucide-react';
+import { WHATSAPP_LINK } from '../constants';
 import logoSample     from '../assets/images/logo_sample.png';
 import packagingSample from '../assets/images/packaging_sample.png';
 import brandingSample  from '../assets/images/branding_sample.png';
@@ -89,7 +90,7 @@ const Hero = () => {
             {/* CTAs */}
             <div ref={ctaRef} className="flex flex-wrap gap-4 mb-14">
               <a
-                href="https://wa.me/918459763568?text=Hi, I need design service"
+                href={WHATSAPP_LINK}
                 target="_blank" rel="noreferrer"
                 className="interactive btn-amber group flex items-center gap-2 px-8 py-4 text-base"
               >

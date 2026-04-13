@@ -1,14 +1,16 @@
 import { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { motion, useInView } from "framer-motion";
-import Header from "../components/Header";
+import { ArrowRight, CheckCircle2, MessageSquare, Box, Package, Zap, Sparkles, Download, Layers } from "lucide-react";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SEO from "../seo/SEO";
-
-/* ─── Brand Colors (from Graphic Galaxy logo) ── */
-// Coral  : #E8836A  (primary CTA, accents)
-// Teal   : #4DC9BB  (labels, icons, badges)
-// Charcoal: #3C3C3C (headings, text)
+import { 
+  WHATSAPP_LINK, 
+  PHONE, 
+  SEO_DATA,
+  SERVICES
+} from "../constants";
 
 /* ─── Schema ─────────────────────────────────── */
 const combinedSchema = [
@@ -25,7 +27,7 @@ const combinedSchema = [
         addressRegion: "Maharashtra",
         addressCountry: "IN",
       },
-      telephone: "+91-8459763568",
+      telephone: PHONE,
       url: "https://graphicgalaxy.netlify.app",
     },
     areaServed: "Sangli, Miraj, Kupwad, Maharashtra",
@@ -69,81 +71,41 @@ const steps = [
     num: "01",
     title: "Structure",
     desc: "We analyze your product dimensions and requirements to create or finalize technical die-lines (templates).",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <path d="M21 8V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v3m18 8v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3" strokeLinecap="round" />
-        <rect x="3" y="8" width="18" height="8" rx="2" />
-      </svg>
-    ),
+    icon: <Layers className="w-6 h-6" />,
   },
   {
     num: "02",
     title: "Visual Design",
     desc: "We craft the visual identity—typography, colors, and graphics—that makes your product stand out on the shelf.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
-      </svg>
-    ),
+    icon: <Sparkles className="w-6 h-6" />,
   },
   {
     num: "03",
     title: "Prototyping",
     desc: "We provide realistic 3D mockups so you can see exactly how your final product will look in the real world.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-      </svg>
-    ),
+    icon: <Box className="w-6 h-6" />,
   },
   {
     num: "04",
     title: "Final Art",
     desc: "You receive high-resolution, print-ready CMYK files with all necessary bleed and margin technicalities.",
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" className="w-6 h-6">
-        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" strokeLinecap="round" />
-        <polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" strokeLinecap="round" />
-      </svg>
-    ),
+    icon: <Download className="w-6 h-6" />,
   },
 ];
 
 const portfolioItems = [
-  { client: "Shravani Organics",    industry: "Organic Spices",    initials: "SO", bg: "#E8F9F7", accent: "#4DC9BB" },
-  { client: "Radhey Dental Kit",    industry: "Medical Kits",      initials: "RD", bg: "#FFF4F1", accent: "#E8836A" },
-  { client: "Fresh Harvest",        industry: "Food & Beverage",   initials: "FH", bg: "#fef9c3", accent: "#ca8a04" },
+  { client: "Shravani Organics", industry: "Organic Spices", initials: "SO", bg: "#0f172a", accent: "#72E0D7" },
+  { client: "Radhey Dental Kit", industry: "Medical Kits", initials: "RD", bg: "#1e293b", accent: "#F59E0B" },
+  { client: "Fresh Harvest", industry: "Food & Beverage", initials: "FH", bg: "#1e1b4b", accent: "#72E0D7" },
 ];
 
 const faqs = [
   { q: "Do you design boxes, pouches, or both?",     a: "Both! At Graphic Galaxy Sangli, we design for all formats—monocartons, corrugated boxes, stand-up pouches, shrink sleeves, and label stickers." },
-  { q: "Is the design print-ready?",                  a: "Yes. All our packaging designs are delivered in high-resolution, CMYK vector formats (AI, PDF, EPS) with proper bleeds and technical marging ready for zero-error printing." },
+  { q: "Is the design print-ready?",                  a: "Yes. All our packaging designs are delivered in high-resolution, CMYK vector formats (AI, PDF, EPS) with proper bleeds and technical margins ready for zero-error printing." },
   { q: "How long is the project timeline?",           a: "Packaging projects in Sangli typically take 7-10 days depending on the complexity of the structure and the number of variants required." },
   { q: "Do you provide 3D mockups?",                  a: "Every packaging project includes premium 3D digital mockups so you can visualize the product from all angles before it goes into mass production." },
   { q: "Can you help with barcode or QR placement?",  a: "Absolutely. We ensure all legal requirements—including barcodes, FSSAI logos, nutritional facts, and batch details—are placed correctly according to your industry standards." },
 ];
-
-/* ─── Components ────────────────────────────── */
-function DotGrid({ color = "#E8836A", opacity = 0.05 }) {
-  return (
-    <div style={{
-      position: "absolute", inset: 0, pointerEvents: "none", zIndex: 0,
-      backgroundImage: `radial-gradient(${color} 1px, transparent 1px)`,
-      backgroundSize: "24px 24px", opacity
-    }} />
-  );
-}
-
-function DecorativeShape({ color = "#4DC9BB", size = "300px", top, left, right, bottom, blur = "80px", opacity = 0.1 }) {
-  return (
-    <div style={{
-      position: "absolute", top, left, right, bottom,
-      width: size, height: size, borderRadius: "50%",
-      background: color, filter: `blur(${blur})`, opacity,
-      pointerEvents: "none", zIndex: 0
-    }} />
-  );
-}
 
 /* ─── Helpers ────────────────────────────────── */
 const fadeUp = {
@@ -164,31 +126,18 @@ function Reveal({ children, delay = 0, className = "" }) {
 function FAQItem({ q, a, idx }) {
   const [open, setOpen] = useState(false);
   return (
-    <div style={{
-      borderRadius: "12px",
-      border: `1px solid ${open ? "#E8836A" : "#e5e7eb"}`,
-      overflow: "hidden",
-      transition: "border-color 0.25s",
-      backgroundColor: "#fff",
-    }}>
+    <div className={`rounded-2xl border transition-all duration-300 ${open ? "border-amber-400 bg-amber-400/5" : "border-[#2D3748] bg-[#111827]"}`}>
       <button
         id={`faq-q-${idx}`}
         aria-expanded={open}
         aria-controls={`faq-a-${idx}`}
         onClick={() => setOpen(!open)}
-        style={{
-          width: "100%", textAlign: "left", padding: "1.25rem 1.5rem",
-          display: "flex", justifyContent: "space-between", alignItems: "center",
-          background: "none", border: "none", cursor: "pointer", gap: "1rem",
-        }}
+        className="w-full text-left px-6 py-5 flex justify-between items-center gap-4 cursor-pointer"
       >
-        <span style={{ fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: "0.975rem", color: "#3C3C3C", flex: 1 }}>
-          {q}
-        </span>
+        <span className="font-bold text-white text-base md:text-lg">{q}</span>
         <motion.span
           animate={{ rotate: open ? 45 : 0 }}
-          transition={{ duration: 0.25 }}
-          style={{ color: "#E8836A", fontSize: "1.5rem", lineHeight: 1, fontWeight: 300, flexShrink: 0 }}
+          className="text-amber-400 text-2xl"
         >
           +
         </motion.span>
@@ -199,10 +148,9 @@ function FAQItem({ q, a, idx }) {
         aria-labelledby={`faq-q-${idx}`}
         initial={false}
         animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
-        transition={{ duration: 0.3, ease: "easeInOut" }}
-        style={{ overflow: "hidden" }}
+        className="overflow-hidden"
       >
-        <p style={{ padding: "0 1.5rem 1.25rem", fontFamily: "'DM Sans', sans-serif", fontSize: "0.9rem", color: "#6b7280", lineHeight: 1.75, margin: 0 }}>
+        <p className="px-6 pb-6 text-white/50 text-sm md:text-base leading-relaxed">
           {a}
         </p>
       </motion.div>
@@ -210,382 +158,192 @@ function FAQItem({ q, a, idx }) {
   );
 }
 
-/* ══════════════════════════════════════════════
-   PAGE
-══════════════════════════════════════════════ */
 export default function PackagingDesignInSangli() {
   return (
-    <>
+    <div className="bg-[#0B0F14] text-[#F9FAFB] font-inter">
       <SEO
-        title="Packaging Design in Sangli | Label & Box Packaging – Graphic Galaxy"
-        description="Premium packaging design services in Sangli. We create labels, boxes, pouches, and product packaging that sells. Trusted by Sangli businesses for professional mockups."
+        title={SEO_DATA.services.title}
+        description={SEO_DATA.services.description}
         canonical="https://graphicgalaxy.netlify.app/packaging-design-in-sangli"
-        ogTitle="Packaging Design in Sangli | Label & Box Packaging – Graphic Galaxy"
-        ogDescription="Premium packaging design services in Sangli. We create labels, boxes, pouches, and product packaging that sells."
+        ogTitle={SEO_DATA.services.title}
+        ogDescription={SEO_DATA.services.description}
         ogUrl="https://graphicgalaxy.netlify.app/packaging-design-in-sangli"
         schema={combinedSchema}
       />
 
-      <Header />
+      <Navbar />
 
-      <main style={{ backgroundColor: "#ffffff" }}>
+      <main>
+        {/* ── 1. HERO ── */}
+        <section className="relative pt-36 pb-24 px-6 overflow-hidden">
+          {/* Background Glows */}
+          <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+            <div className="absolute top-20 right-1/4 w-96 h-96 bg-teal-400/10 rounded-full blur-[120px]" />
+            <div className="absolute bottom-20 left-1/4 w-80 h-80 bg-amber-400/10 rounded-full blur-[100px]" />
+          </div>
 
-        {/* ══ 1. HERO ══════════════════════════════ */}
-        <section
-          aria-label="Packaging Design in Sangli – Hero"
-          style={{
-            position: "relative", overflow: "hidden",
-            background: "linear-gradient(135deg, #FFF9F7 0%, #ffffff 50%, #F0FBFA 100%)",
-            padding: "8rem 1.5rem 6rem",
-          }}
-        >
-          <DotGrid color="#E8836A" opacity={0.07} />
-          
-          <DecorativeShape color="#E8836A" top="-100px" right="-100px" size="450px" opacity={0.12} />
-          <DecorativeShape color="#4DC9BB" bottom="-80px" left="-80px" size="350px" opacity={0.1} />
-
-          <div style={{ maxWidth: "1000px", margin: "0 auto", textAlign: "center", position: "relative", zIndex: 1 }}>
-
-            {/* Badge */}
+          <div className="max-w-5xl mx-auto text-center relative z-10">
             <motion.div
-              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
-              style={{ display: "inline-flex", alignItems: "center", marginBottom: "1.75rem" }}
+              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }}
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-400/10 border border-teal-400/20 text-teal-400 font-bold text-xs md:text-sm mb-8 tracking-wider uppercase"
             >
-              <span style={{
-                display: "inline-flex", alignItems: "center", gap: "0.4rem",
-                backgroundColor: "#F0FBFA", color: "#2aafa0",
-                border: "1px solid #b2ece6",
-                borderRadius: "999px", padding: "0.35rem 1rem",
-                fontFamily: "'DM Sans', sans-serif", fontSize: "0.8rem", fontWeight: 600, letterSpacing: "0.05em",
-              }}>
-                <span style={{ width: "6px", height: "6px", borderRadius: "50%", backgroundColor: "#4DC9BB", display: "inline-block" }} />
-                PACKAGING DESIGN · SANGLI, MAHARASHTRA
-              </span>
+              <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse" />
+              Packaging Design · Sangli, Maharashtra
             </motion.div>
 
-            {/* H1 */}
             <motion.h1
-              initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.65, delay: 0.1 }}
-              style={{
-                fontFamily: "'Playfair Display', serif",
-                fontSize: "clamp(2.4rem, 6vw, 4rem)",
-                fontWeight: 900, color: "#3C3C3C", lineHeight: 1.15, marginBottom: "1.5rem",
-              }}
+              initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
+              className="text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-8"
             >
-              Packaging Design in{" "}
-              <span style={{ color: "#E8836A", borderBottom: "3px solid #E8836A", paddingBottom: "2px" }}>
-                Sangli
-              </span>{" "}
-              that Sells
+              Packaging Design in <span className="text-gradient">Sangli</span> that Sells
             </motion.h1>
 
-            {/* Subtext */}
             <motion.p
-              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.2 }}
-              style={{
-                fontFamily: "'DM Sans', sans-serif", fontSize: "1.1rem",
-                color: "#6b7280", lineHeight: 1.75,
-                maxWidth: "600px", margin: "0 auto 2.5rem",
-              }}
+              initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
+              className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-12 leading-relaxed font-medium"
             >
-              From milk pouches to premium retail boxes, Graphic Galaxy creates product packaging in{" "}
-              <strong style={{ color: "#3C3C3C" }}>Sangli</strong> that stands out on shelves and speeds up sales.
+              From milk pouches to premium retail boxes, Graphic Galaxy creates product packaging in <strong className="text-white">Sangli</strong> that stands out on shelves.
             </motion.p>
 
-            {/* CTAs */}
             <motion.div
-              initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.55, delay: 0.32 }}
-              style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}
+              initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 }}
+              className="flex flex-wrap justify-center gap-4"
             >
-              <motion.a
-                href="https://wa.me/918459763568?text=Hi%2C%20I%20need%20packaging%20design%20in%20Sangli"
-                target="_blank" rel="noreferrer"
-                whileHover={{ scale: 1.04, boxShadow: "0 8px 30px rgba(232,131,106,0.4)" }}
-                whileTap={{ scale: 0.97 }}
-                style={{
-                  display: "inline-flex", alignItems: "center", gap: "0.5rem",
-                  backgroundColor: "#E8836A", color: "#fff",
-                  padding: "0.875rem 1.75rem", borderRadius: "10px",
-                  fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: "0.975rem",
-                  textDecoration: "none", boxShadow: "0 4px 16px rgba(232,131,106,0.3)",
-                }}
-              >
-                📦 Get a Free Quote
-              </motion.a>
-              <motion.div whileHover={{ scale: 1.03 }}>
-                <Link
-                  to="/portfolio-graphic-designer-sangli"
-                  style={{
-                    display: "inline-flex", alignItems: "center", gap: "0.5rem",
-                    backgroundColor: "#fff", color: "#3C3C3C",
-                    border: "1.5px solid #e5e7eb",
-                    padding: "0.875rem 1.75rem", borderRadius: "10px",
-                    fontFamily: "'DM Sans', sans-serif", fontWeight: 600, fontSize: "0.975rem",
-                    textDecoration: "none", boxShadow: "0 2px 8px rgba(0,0,0,0.06)",
-                  }}
-                >
-                  View Packaging Portfolio →
-                </Link>
-              </motion.div>
+              <a href={WHATSAPP_LINK} target="_blank" rel="noreferrer" className="interactive btn-amber px-8 py-4 flex items-center gap-2 text-base md:text-lg">
+                <Package size={20} />
+                Get a Free Quote
+              </a>
+              <Link to="/portfolio-graphic-designer-sangli" className="interactive px-8 py-4 bg-[#111827] border border-[#2D3748] rounded-full text-white font-bold text-base md:text-lg hover:border-amber-400/50 hover:bg-amber-400/5 transition-all">
+                View Gallery →
+              </Link>
             </motion.div>
 
-            {/* Social proof strip */}
-            <motion.div
-              initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.55, duration: 0.5 }}
-              style={{
-                marginTop: "4rem", alignItems: "center", justifyContent: "center",
-                gap: "3rem", flexWrap: "wrap",
-                backgroundColor: "rgba(255,255,255,0.6)", backdropFilter: "blur(10px)",
-                padding: "1.5rem 2rem", borderRadius: "20px", border: "1px solid rgba(232,131,106,0.1)",
-                display: "inline-flex"
-              }}
-            >
+            <div className="mt-20 grid grid-cols-2 md:grid-cols-3 gap-8 md:divide-x md:divide-white/10 max-w-3xl mx-auto">
               {[
-                { val: "20+",  label: "Brands Served" },
+                { val: "20+", label: "Brands Served" },
                 { val: "100%", label: "Print Ready" },
-                { val: "3D",   label: "Custom Mockups" },
+                { val: "3D", label: "Custom Mockups" },
               ].map((s, i) => (
-                <div key={i} style={{ textAlign: "center", padding: "0 1rem" }}>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "1.75rem", fontWeight: 800, color: "#E8836A", margin: 0, lineHeight: 1 }}>
-                    {s.val}
-                  </p>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", fontWeight: 600, color: "#3C3C3C", opacity: 0.6, margin: "6px 0 0", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-                    {s.label}
-                  </p>
+                <div key={i} className="text-center md:px-4">
+                  <p className="text-3xl font-black text-amber-400">{s.val}</p>
+                  <p className="text-xs text-white/30 font-bold uppercase tracking-wider mt-1">{s.label}</p>
                 </div>
               ))}
-            </motion.div>
-          </div>
-        </section>
-
-        {/* ══ 2. WHY PACKAGING MATTERS ══════════════ */}
-        <section
-          aria-label="Why professional packaging design matters"
-          style={{ backgroundColor: "#fcfdfe", padding: "7rem 1.5rem", position: "relative", overflow: "hidden" }}
-        >
-          <DecorativeShape color="#4DC9BB" top="10%" left="-5%" size="300px" opacity={0.05} />
-          <div style={{ maxWidth: "1100px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "4rem", alignItems: "center" }}>
-
-              {/* Left */}
-              <Reveal>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#4DC9BB", marginBottom: "1rem" }}>
-                  THE POWER OF PACKAGING
-                </p>
-                <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.75rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "#3C3C3C", lineHeight: 1.25, marginBottom: "1.25rem" }}>
-                  Your product is great. Now make it{" "}
-                  <em style={{ color: "#E8836A", fontStyle: "italic" }}>impossible to ignore.</em>
-                </h2>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "1rem", color: "#6b7280", lineHeight: 1.8, marginBottom: "1.75rem" }}>
-                  In stores across <strong style={{ color: "#3C3C3C" }}>Sangli</strong>, customers decide in seconds. 
-                  Bad packaging hides a great product. Professional packaging design communicates value, 
-                  quality, and trust before the customer even opens the box.
-                </p>
-                <Link
-                  to="/contact"
-                  style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.9rem", fontWeight: 600, color: "#E8836A", textDecoration: "none", display: "inline-flex", alignItems: "center", gap: "0.3rem" }}
-                >
-                  Start Your Project →
-                </Link>
-              </Reveal>
-
-              {/* Right — impact cards */}
-              <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                {[
-                  { stat: "72%",     label: "Of consumers say packaging design influences their purchasing decisions." },
-                  { stat: "Premium", label: "Packaging allows you to command higher prices in the marketplace." },
-                  { stat: "Retail",  label: "Optimized for shelf-visibility and competition in Sangli markets." },
-                ].map((item, i) => (
-                  <Reveal key={i} delay={i * 1}>
-                    <motion.div
-                      whileHover={{ scale: 1.02, boxShadow: "0 8px 32px rgba(0,0,0,0.08)" }}
-                      transition={{ duration: 0.2 }}
-                      style={{
-                        backgroundColor: "#fff", border: "1px solid #e5e7eb",
-                        borderRadius: "14px", padding: "1.375rem 1.5rem",
-                        display: "flex", alignItems: "center", gap: "1.25rem",
-                        cursor: "default", boxShadow: "0 2px 8px rgba(0,0,0,0.04)",
-                      }}
-                    >
-                      <span style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.75rem", fontWeight: 900, color: "#E8836A", flexShrink: 0, minWidth: "90px" }}>
-                        {item.stat}
-                      </span>
-                      <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.875rem", color: "#6b7280", lineHeight: 1.65, margin: 0 }}>
-                        {item.label}
-                      </p>
-                    </motion.div>
-                  </Reveal>
-                ))}
-              </div>
             </div>
           </div>
         </section>
 
-        {/* ══ 3. PORTFOLIO PREVIEW ═════════════════ */}
-        <section
-          aria-label="Portfolio of packaging design in Sangli"
-          style={{ backgroundColor: "#ffffff", padding: "7rem 1.5rem", position: "relative", overflow: "hidden" }}
-        >
-          <DotGrid color="#4DC9BB" opacity={0.04} />
-          <div style={{ maxWidth: "1100px", margin: "0 auto", position: "relative", zIndex: 1 }}>
+        {/* ── 2. IMPACT ── */}
+        <section className="py-24 px-6 bg-[#111827]">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <Reveal>
-              <div style={{ display: "flex", alignItems: "flex-end", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem", marginBottom: "3rem" }}>
-                <div>
-                  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#4DC9BB", marginBottom: "0.75rem" }}>
-                    OUR WORK
-                  </p>
-                  <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.75rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "#3C3C3C", margin: 0 }}>
-                    Packaging Designer Sangli — Latest Projects
-                  </h2>
-                </div>
-                <Link
-                  to="/portfolio-graphic-designer-sangli"
-                  style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.9rem", fontWeight: 600, color: "#E8836A", textDecoration: "none", whiteSpace: "nowrap" }}
-                >
-                  View all projects →
-                </Link>
-              </div>
+              <p className="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">The Power of Packaging</p>
+              <h2 className="text-4xl md:text-5xl font-black text-white leading-tight mb-8">
+                Your product is great. Now make it <span className="text-gradient-amber">impossible to ignore.</span>
+              </h2>
+              <p className="text-white/40 text-lg leading-relaxed mb-8">
+                In stores across <strong className="text-white">Sangli</strong>, customers decide in seconds. Bad packaging hides a great product. Professional packaging design communicates value instantly.
+              </p>
+              <ul className="space-y-4">
+                {["Structural design for exact fit", "Shelf-optimized visual strategy", "Premium 3D visualization mockups"].map((item, i) => (
+                  <li key={i} className="flex items-center gap-3 text-white/70 font-medium">
+                    <CheckCircle2 className="text-teal-400" size={20} />
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </Reveal>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(290px, 1fr))", gap: "1.25rem" }}>
+            <div className="grid grid-cols-1 gap-4">
+              {[
+                { stat: "72%", label: "Of consumers say packaging design influences purchase decisions." },
+                { stat: "Premium", label: "Packaging allow you to command higher prices easily." },
+              ].map((item, i) => (
+                <Reveal key={i} delay={i * 2}>
+                  <div className="bg-[#0B0F14] border border-[#2D3748] rounded-[2rem] p-8 hover:border-teal-400/30 transition-all group">
+                    <p className="text-5xl font-black text-teal-400 mb-4 group-hover:scale-105 transition-transform origin-left">{item.stat}</p>
+                    <p className="text-white/40 font-medium leading-relaxed">{item.label}</p>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── 3. PORTFOLIO ── */}
+        <section className="py-24 px-6 bg-[#0B0F14]">
+          <div className="max-w-6xl mx-auto">
+            <Reveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
+              <div>
+                <p className="text-sm font-bold text-teal-400 uppercase tracking-widest mb-4">Portfolio</p>
+                <h2 className="text-4xl md:text-5xl font-black text-white">Latest Packaging Work</h2>
+              </div>
+              <Link to="/portfolio-graphic-designer-sangli" className="text-teal-400 font-bold hover:text-white transition-colors">
+                View All Projects →
+              </Link>
+            </Reveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {portfolioItems.map((item, i) => (
-                <Reveal key={i} delay={i * 1}>
-                  <motion.div
-                    whileHover={{ y: -6, boxShadow: "0 20px 48px rgba(0,0,0,0.1)" }}
-                    transition={{ duration: 0.25 }}
-                    style={{ backgroundColor: "#fff", borderRadius: "16px", overflow: "hidden", border: "1px solid #f3f4f6", boxShadow: "0 2px 12px rgba(0,0,0,0.05)" }}
-                  >
-                    {/* Thumbnail placeholder with initial icon */}
-                    <div
-                      role="img"
-                      aria-label={`Packaging for ${item.client} in Sangli by Graphic Galaxy`}
-                      style={{ height: "200px", backgroundColor: item.bg, display: "flex", alignItems: "center", justifyContent: "center" }}
-                    >
-                      <div style={{
-                        width: "80px", height: "80px", borderRadius: "12px",
-                        border: `2px dashed ${item.accent}`,
-                        backgroundColor: "#fff",
-                        display: "flex", alignItems: "center", justifyContent: "center",
-                        fontFamily: "'Playfair Display', serif", fontSize: "1.5rem",
-                        fontWeight: 900, color: item.accent,
-                        boxShadow: `0 4px 20px ${item.accent}30`,
-                      }}>
+                <Reveal key={i} delay={i}>
+                  <div className="group bg-[#111827] border border-[#2D3748] rounded-[2.5rem] overflow-hidden hover:border-teal-400/50 transition-all hover:-translate-y-2">
+                    <div className="h-64 flex items-center justify-center relative" style={{ backgroundColor: item.bg }}>
+                      <div 
+                        className="w-24 h-24 rounded-2xl flex items-center justify-center font-black text-2xl shadow-2xl rotate-3 group-hover:rotate-0 transition-transform duration-500"
+                        style={{ backgroundColor: '#fff', color: item.accent, border: `3px dashed ${item.accent}` }}
+                      >
                         {item.initials}
                       </div>
+                      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/20 pointer-events-none" />
                     </div>
-                    {/* Card footer */}
-                    <div style={{ padding: "1.125rem 1.25rem", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-                      <div>
-                        <h3 style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.925rem", fontWeight: 600, color: "#3C3C3C", margin: "0 0 0.2rem" }}>
-                          {item.client}
-                        </h3>
-                        <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.775rem", color: "#9ca3af", margin: 0 }}>
-                          Sangli, Maharashtra
-                        </p>
+                    <div className="p-8">
+                      <div className="flex justify-between items-start mb-2">
+                        <h3 className="text-xl font-black text-white">{item.client}</h3>
+                        <span className="text-[10px] font-bold uppercase tracking-wider text-teal-400 bg-teal-400/10 px-2 py-1 rounded-md">{item.industry}</span>
                       </div>
-                      <span style={{
-                        fontFamily: "'DM Sans', sans-serif", fontSize: "0.7rem", fontWeight: 600,
-                        color: item.accent, backgroundColor: item.bg,
-                        border: `1px solid ${item.accent}50`,
-                        padding: "0.25rem 0.7rem", borderRadius: "999px", whiteSpace: "nowrap",
-                      }}>
-                        {item.industry}
-                      </span>
+                      <p className="text-white/30 text-sm font-medium">Sangli, Maharashtra</p>
                     </div>
-                  </motion.div>
+                  </div>
                 </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ══ 4. OUR PROCESS ═══════════════════════ */}
-        <section
-          aria-label="Our packaging design process"
-          style={{ backgroundColor: "#fcfdfe", padding: "7rem 1.5rem", position: "relative", overflow: "hidden" }}
-        >
-          <DecorativeShape color="#E8836A" bottom="-5%" right="-5%" size="400px" opacity={0.05} />
-          <div style={{ maxWidth: "1100px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-            <Reveal>
-              <div style={{ textAlign: "center", marginBottom: "3.5rem" }}>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#4DC9BB", marginBottom: "0.75rem" }}>
-                  HOW WE WORK
-                </p>
-                <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.75rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "#3C3C3C", margin: 0 }}>
-                  Strategic Packaging Process in Sangli
-                </h2>
-              </div>
+        {/* ── 4. PROCESS ── */}
+        <section className="py-24 px-6 bg-[#111827]">
+          <div className="max-w-6xl mx-auto">
+            <Reveal className="text-center mb-16">
+              <p className="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">How We Work</p>
+              <h2 className="text-4xl md:text-5xl font-black text-white">Strategic Packaging Process</h2>
             </Reveal>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {steps.map((s, i) => (
-                <Reveal key={i} delay={i * 1}>
-                  <motion.div
-                    whileHover={{ y: -6, boxShadow: "0 16px 40px rgba(0,0,0,0.1)" }}
-                    transition={{ duration: 0.25 }}
-                    style={{
-                      backgroundColor: "#fff", border: "1px solid #f3f4f6",
-                      borderRadius: "16px", padding: "2rem 1.5rem",
-                      boxShadow: "0 2px 12px rgba(0,0,0,0.05)", height: "100%",
-                    }}
-                  >
-                    {/* Number + icon */}
-                    <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "1.25rem" }}>
-                      <div style={{ display: "flex", flexDirection: "column" }}>
-                        <span style={{
-                          fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", fontWeight: 800,
-                          color: "#E8836A", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: "2px"
-                        }}>
-                          Step
-                        </span>
-                        <span style={{
-                          fontFamily: "'DM Sans', sans-serif", fontSize: "2.5rem", fontWeight: 900,
-                          color: "#3C3C3C", lineHeight: 1, opacity: 0.15
-                        }}>
-                          {s.num}
-                        </span>
-                      </div>
-                      <div style={{
-                        width: "48px", height: "48px", borderRadius: "12px",
-                        backgroundColor: "rgba(77,201,187,0.1)",
-                        display: "flex", alignItems: "center", justifyContent: "center",
-                        color: "#4DC9BB", border: "1px solid rgba(77,201,187,0.2)"
-                      }}>
-                        {s.icon}
-                      </div>
+                <Reveal key={i} delay={i}>
+                  <div className="bg-[#0B0F14] border border-[#2D3748] rounded-3xl p-8 h-full hover:border-amber-400/40 transition-all flex flex-col">
+                    <div className="w-12 h-12 rounded-2xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center text-amber-400 mb-6">
+                      {s.icon}
                     </div>
-                    <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: "1.1rem", fontWeight: 700, color: "#3C3C3C", marginBottom: "0.625rem" }}>
-                      {s.title}
-                    </h3>
-                    <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.875rem", color: "#6b7280", lineHeight: 1.7, margin: 0 }}>
-                      {s.desc}
-                    </p>
-                  </motion.div>
+                    <p className="text-white/20 text-xs font-black uppercase tracking-widest mb-2">Step {s.num}</p>
+                    <h3 className="text-xl font-bold text-white mb-4">{s.title}</h3>
+                    <p className="text-white/40 text-sm leading-relaxed">{s.desc}</p>
+                  </div>
                 </Reveal>
               ))}
             </div>
           </div>
         </section>
 
-        {/* ══ 5. FAQ ═══════════════════════════════ */}
-        <section
-          aria-label="Frequently asked questions about packaging design in Sangli"
-          style={{ backgroundColor: "#ffffff", padding: "7rem 1.5rem", position: "relative", overflow: "hidden" }}
-        >
-          <DotGrid color="#E8836A" opacity={0.03} />
-          <div style={{ maxWidth: "760px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-            <Reveal>
-              <div style={{ textAlign: "center", marginBottom: "3rem" }}>
-                <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#4DC9BB", marginBottom: "0.75rem" }}>
-                  FAQ
-                </p>
-                <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.75rem, 3.5vw, 2.4rem)", fontWeight: 700, color: "#3C3C3C", margin: 0 }}>
-                  Packaging Expert in Sangli — Common Questions
-                </h2>
-              </div>
+        {/* ── 5. FAQ ── */}
+        <section className="py-24 px-6 bg-[#0B0F14]">
+          <div className="max-w-3xl mx-auto">
+            <Reveal className="text-center mb-16">
+              <p className="text-sm font-bold text-teal-400 uppercase tracking-widest mb-4">FAQ</p>
+              <h2 className="text-4xl md:text-5xl font-black text-white">Packaging Common Questions</h2>
             </Reveal>
 
-            <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
+            <div className="flex flex-col gap-4">
               {faqs.map((f, i) => (
                 <Reveal key={i} delay={i * 0.5}>
                   <FAQItem q={f.q} a={f.a} idx={i} />
@@ -595,89 +353,36 @@ export default function PackagingDesignInSangli() {
           </div>
         </section>
 
-        {/* ══ 6. CTA BANNER ════════════════════════ */}
-        <section
-          aria-label="Contact Graphic Galaxy for packaging design in Sangli"
-          style={{
-            background: "linear-gradient(135deg, #2e2e2e 0%, #3C3C3C 60%, #4a4a4a 100%)",
-            padding: "5rem 1.5rem", textAlign: "center",
-            position: "relative", overflow: "hidden",
-          }}
-        >
-          <DecorativeShape color="#E8836A" top="-80px" right="-80px" size="350px" opacity={0.15} />
-          <DecorativeShape color="#4DC9BB" bottom="-60px" left="-80px" size="300px" opacity={0.12} />
-
-          <Reveal>
-            <div style={{ maxWidth: "640px", margin: "0 auto", position: "relative" }}>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "0.75rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#4DC9BB", marginBottom: "1rem" }}>
-                READY TO SHIP?
-              </p>
-              <h2 style={{ fontFamily: "'Playfair Display', serif", fontSize: "clamp(1.75rem, 4vw, 2.6rem)", fontWeight: 700, color: "#fff", lineHeight: 1.25, marginBottom: "1.125rem" }}>
-                Need Professional Packaging Design in Sangli?
-              </h2>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: "1rem", color: "rgba(255,255,255,0.65)", lineHeight: 1.75, marginBottom: "2.5rem" }}>
-                Serving clients in Sangli, Miraj, and Kupwad. 
-                From box structural design to premium label graphics. 
-                Let's make your product look as good as it works.
-              </p>
-
-              <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap", alignItems: "center", marginBottom: "2.5rem" }}>
-                <motion.a
-                  href="https://wa.me/918459763568?text=Hi%2C%20I%20need%20packaging%20design%20in%20Sangli"
-                  target="_blank" rel="noreferrer"
-                  whileHover={{ scale: 1.05, boxShadow: "0 8px 30px rgba(232,131,106,0.4)" }}
-                  whileTap={{ scale: 0.97 }}
-                  style={{
-                    display: "inline-flex", alignItems: "center", gap: "0.5rem",
-                    backgroundColor: "#E8836A", color: "#fff",
-                    padding: "0.9rem 1.75rem", borderRadius: "10px",
-                    fontFamily: "'DM Sans', sans-serif", fontWeight: 700, fontSize: "1rem",
-                    textDecoration: "none", boxShadow: "0 4px 20px rgba(232,131,106,0.35)",
-                  }}
-                >
-                  💬 WhatsApp Us Now
-                </motion.a>
-                <a
-                  href="tel:+918459763568"
-                  style={{
-                    display: "inline-flex", alignItems: "center", gap: "0.4rem",
-                    color: "rgba(255,255,255,0.8)", textDecoration: "none",
-                    fontFamily: "'DM Sans', sans-serif", fontSize: "1rem", fontWeight: 500,
-                  }}
-                >
-                  📞 +91 84597 63568
-                </a>
-              </div>
-
-              {/* Internal links */}
-              <div style={{ display: "flex", gap: "1.5rem", justifyContent: "center", flexWrap: "wrap" }}>
-                {[
-                  { to: "/portfolio-graphic-designer-sangli", label: "View Portfolio" },
-                  { to: "/logo-design-in-sangli", label: "Logo Design Services" },
-                  { to: "/about", label: "About Our Studio" },
-                ].map((l) => (
-                  <Link
-                    key={l.to} to={l.to}
-                    style={{
-                      fontFamily: "'DM Sans', sans-serif", fontSize: "0.875rem", fontWeight: 500,
-                      color: "rgba(255,255,255,0.5)", textDecoration: "none",
-                      borderBottom: "1px solid rgba(255,255,255,0.2)", paddingBottom: "1px",
-                      transition: "color 0.2s",
-                    }}
-                    onMouseEnter={e => e.currentTarget.style.color = "#4DC9BB"}
-                    onMouseLeave={e => e.currentTarget.style.color = "rgba(255,255,255,0.5)"}
-                  >
-                    {l.label}
-                  </Link>
-                ))}
-              </div>
+        {/* ── 6. FINAL CTA ── */}
+        <section className="py-24 px-6 bg-[#111827]">
+          <div className="max-w-5xl mx-auto">
+            <div className="relative rounded-[3rem] p-12 md:p-20 text-center overflow-hidden border border-teal-400/20 bg-linear-to-br from-[#0B0F14] to-[#111827]">
+               <div className="absolute top-0 right-0 w-80 h-80 bg-teal-400/5 rounded-full blur-[100px] pointer-events-none" />
+               <div className="absolute bottom-0 left-0 w-80 h-80 bg-amber-400/5 rounded-full blur-[100px] pointer-events-none" />
+               
+               <Reveal>
+                 <p className="text-sm font-bold text-amber-400 uppercase tracking-[0.3em] mb-8">Ready to Ship?</p>
+                 <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
+                   Need Packaging Design <br className="hidden md:block" />in Sangli?
+                 </h2>
+                 <p className="text-white/50 text-lg mb-12 max-w-xl mx-auto font-medium">
+                   From box structural design to premium label graphics. Serving businesses in Sangli, Miraj, and Kupwad.
+                 </p>
+                 <div className="flex flex-wrap justify-center gap-6">
+                   <a href={WHATSAPP_LINK} className="interactive btn-amber px-10 py-5 text-lg">
+                     💬 WhatsApp Us Now
+                   </a>
+                   <a href={`tel:${PHONE.replace(/\s+/g, '')}`} className="flex items-center gap-3 text-white/70 hover:text-amber-400 font-bold transition-colors">
+                     📞 {PHONE}
+                   </a>
+                 </div>
+               </Reveal>
             </div>
-          </Reveal>
+          </div>
         </section>
-
       </main>
 
       <Footer />
-    </>
+    </div>
   );
 }

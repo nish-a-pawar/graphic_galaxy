@@ -4,25 +4,17 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA    from '../components/CTA';
+import { RECENT_PROJECTS } from '../constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const categories = ['All', 'Logo', 'Packaging', 'Social Media', 'Brochure', 'Event', 'Misc'];
-
-const projects = [
-  { id: 1, title: 'Duathlon Event',    client: 'S3 Academy Sangli',   category: 'Event',        status: 'Completed', bg: 'from-slate-700 to-slate-900'   },
-  { id: 2, title: 'Marathon Event',    client: 'MTDK Run',            category: 'Event',        status: 'Ongoing',   bg: 'from-purple-700 to-purple-900' },
-  { id: 3, title: 'Shravani Organics', client: 'Shravani Organics',   category: 'Packaging',    status: 'Completed', bg: 'from-green-700 to-green-900'   },
-  { id: 4, title: 'Radhey Dental',     client: 'Radhey Dental Clinic',category: 'Social Media', status: 'Completed', bg: 'from-blue-700 to-blue-900'     },
-  { id: 5, title: 'Vijeta Group',      client: 'Vijeta Group',        category: 'Logo',         status: 'Completed', bg: 'from-amber-600 to-orange-800'  },
-  { id: 6, title: 'Smile Clinic',      client: 'Smile Sangli Clinic', category: 'Logo',         status: 'Completed', bg: 'from-teal-600 to-teal-900'     },
-];
+const categories = ['All', 'Event Branding', 'Sports Branding', 'Packaging & Logo', 'Branding & Design', 'Social Media Design'];
 
 const Portfolio = () => {
   const [active, setActive] = useState('All');
   const gridRef = useRef(null);
 
-  const filtered = active === 'All' ? projects : projects.filter((p) => p.category === active);
+  const filtered = active === 'All' ? RECENT_PROJECTS : RECENT_PROJECTS.filter((p) => p.category === active);
 
   useEffect(() => {
     const cards = gridRef.current?.querySelectorAll('.portfolio-card');
@@ -82,7 +74,10 @@ const Portfolio = () => {
                   className="portfolio-card group bg-[#0B0F14] border border-[#2D3748] rounded-3xl overflow-hidden hover:border-amber-400/50 hover:shadow-[0_0_30px_rgba(245,158,11,0.1)] transition-all duration-500 hover:-translate-y-1"
                   style={{ opacity: 0 }}
                 >
-                  <div className={`h-52 bg-linear-to-br ${project.bg} flex items-center justify-center relative overflow-hidden`}>
+                  <div 
+                    className="h-52 flex items-center justify-center relative overflow-hidden"
+                    style={{ backgroundColor: project.bg || '#1a1a1a' }}
+                  >
                     <span className="text-white text-3xl font-black opacity-10 tracking-tight select-none">
                       {project.title.toUpperCase()}
                     </span>

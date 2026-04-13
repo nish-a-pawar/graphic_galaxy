@@ -2,15 +2,8 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react';
 import logo from '../assets/images/logo.png';
+import { SERVICES, WHATSAPP_LINK } from '../constants';
 
-const services = [
-  { name: 'Logo Design',         path: '/logo-design-in-sangli' },
-  { name: 'Packaging Design',    path: '/packaging-design-in-sangli' },
-  { name: 'Social Media Design', path: '/social-media-design-sangli' },
-  { name: 'Brochure Design',     path: '/brochure-design-sangli' },
-  { name: 'Flyer Design',        path: '/flyer-design-sangli' },
-  { name: 'Invitation Design',   path: '/invitation-design-sangli' },
-];
 
 const Navbar = () => {
   const [scrolled,     setScrolled]     = useState(false);
@@ -57,14 +50,14 @@ const Navbar = () => {
                 {dropOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
                     <div className="glass-dark rounded-2xl w-56 py-2 border border-[#2D3748]">
-                      {services.map((s) => (
+                      {SERVICES.slice(0, 6).map((s) => (
                         <Link
                           key={s.path}
                           to={s.path}
                           className="block px-5 py-2.5 text-sm text-white/60 hover:text-amber-400 hover:bg-amber-400/5 transition-colors font-medium"
                           onClick={() => setDropOpen(false)}
                         >
-                          {s.name}
+                          {s.title}
                         </Link>
                       ))}
                     </div>
@@ -91,7 +84,7 @@ const Navbar = () => {
             {/* Desktop CTA */}
             <div className="hidden md:block">
               <a
-                href="https://wa.me/918459763568?text=Hi, I need design service"
+                href={WHATSAPP_LINK}
                 target="_blank"
                 rel="noreferrer"
                 className="interactive btn-amber group px-5 py-2.5 flex items-center gap-2 text-sm"
@@ -154,14 +147,14 @@ const Navbar = () => {
             </button>
             <div className={`overflow-hidden transition-all duration-400 ${mobileServices ? 'max-h-96 pb-4' : 'max-h-0'}`}>
               <div className="flex flex-col gap-1 pl-4 border-l-2 border-amber-400/30">
-                {services.map((s) => (
+                {SERVICES.slice(0, 6).map((s) => (
                   <Link
                     key={s.path}
                     to={s.path}
                     className="text-xl font-bold text-white/60 hover:text-amber-400 transition-colors py-2"
                     onClick={() => { setMenuOpen(false); setMobileServices(false); }}
                   >
-                    {s.name}
+                    {s.title}
                   </Link>
                 ))}
               </div>
@@ -186,7 +179,7 @@ const Navbar = () => {
 
           <div className="mt-auto pt-10">
             <a
-              href="https://wa.me/918459763568?text=Hi, I need design service"
+              href={WHATSAPP_LINK}
               target="_blank"
               rel="noreferrer"
               className="block w-full py-4 btn-amber text-center text-xl font-black rounded-2xl"

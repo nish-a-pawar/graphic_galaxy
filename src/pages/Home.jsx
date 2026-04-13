@@ -1,28 +1,35 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Palette, Box, FileText, Heart, Zap, CreditCard } from 'lucide-react';
+import { Palette, Box, FileText, Heart, Zap, Layout, Image, ShoppingBag, Trophy, Shirt, Camera } from 'lucide-react';
+import { SERVICES } from '../constants';
 
-import Navbar      from '../components/Navbar';
-import Hero        from '../components/Hero';
-import Marquee     from '../components/Marquee';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import Marquee from '../components/Marquee';
 import ServiceCard from '../components/ServiceCard';
-import RecentWork  from '../components/RecentWork';
-import Process     from '../components/Process';
+import RecentWork from '../components/RecentWork';
+import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
-import CTA         from '../components/CTA';
-import Footer      from '../components/Footer';
+import CTA from '../components/CTA';
+import Footer from '../components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const services = [
-  { title: 'Logo Design',       desc: 'Unique logos that define your brand identity in Sangli and beyond. We create symbols that tell your story.',                icon: Palette    },
-  { title: 'Packaging Design',  desc: 'Eye-catching product packaging that stands out on shelves and connects with your customers.',                               icon: Box        },
-  { title: 'Brochure Design',   desc: 'Professional brochures that communicate your business clearly and leave a lasting impression.',                             icon: FileText   },
-  { title: 'Invitation Design', desc: 'Beautiful invitations for weddings, corporate events & celebrations that set the perfect tone.',                            icon: Heart      },
-  { title: 'Flyer Design',      desc: 'Attention-grabbing flyers for promotions and local events. Get your message across effectively.',                           icon: Zap        },
-  { title: 'Card Design',       desc: 'Premium business cards and visiting cards that make a strong first impression every time.',                                 icon: CreditCard },
-];
+const iconMap = {
+  "Logo Design": Palette,
+  "Packaging Design": Box,
+  "Social Media Design": Camera,
+  "Brochure Design": FileText,
+  "Flyer Design": Zap,
+  "Invitation Design": Heart,
+  "Signage Design": Layout,
+  "Nameplate Design": Image,
+  "Booklet & Magazine": FileText,
+  "Trophy & Sports": Trophy,
+  "T-Shirt Design": Shirt,
+  "Misc Design": ShoppingBag,
+};
 
 const Home = () => {
   const servicesGridRef = useRef(null);
@@ -31,8 +38,10 @@ const Home = () => {
     gsap.utils.toArray('.reveal').forEach((el) => {
       gsap.fromTo(el,
         { y: 60, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1.2, ease: 'power3.out',
-          scrollTrigger: { trigger: el, start: 'top 85%' } }
+        {
+          y: 0, opacity: 1, duration: 1.2, ease: 'power3.out',
+          scrollTrigger: { trigger: el, start: 'top 85%' }
+        }
       );
     });
 
@@ -40,8 +49,10 @@ const Home = () => {
     if (cards?.length) {
       gsap.fromTo(cards,
         { y: 100, opacity: 0 },
-        { y: 0, opacity: 1, duration: 1, stagger: 0.12, ease: 'power3.out',
-          scrollTrigger: { trigger: servicesGridRef.current, start: 'top 80%' } }
+        {
+          y: 0, opacity: 1, duration: 1, stagger: 0.12, ease: 'power3.out',
+          scrollTrigger: { trigger: servicesGridRef.current, start: 'top 80%' }
+        }
       );
     }
 
@@ -68,9 +79,9 @@ const Home = () => {
           </div>
 
           <div ref={servicesGridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {services.map((s, i) => (
+            {SERVICES.map((s, i) => (
               <div key={i} className="service-card-stagger" style={{ opacity: 0 }}>
-                <ServiceCard icon={s.icon} title={s.title} desc={s.desc} />
+                <ServiceCard icon={iconMap[s.title] || Palette} title={s.title} desc={s.desc} />
               </div>
             ))}
           </div>

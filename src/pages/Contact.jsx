@@ -2,13 +2,15 @@ import { useState } from 'react';
 import Navbar  from '../components/Navbar';
 import Footer  from '../components/Footer';
 import { Mail, Phone, MapPin, Share2 } from 'lucide-react';
+import { PHONE, EMAIL, ADDRESS, INSTAGRAM, GOOGLE_REVIEW, WHATSAPP_LINK } from '../constants';
 
 const Contact = () => {
   const [form, setForm] = useState({ name: '', message: '' });
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
   const handleWhatsApp = (e) => {
     e.preventDefault();
-    window.open(`https://wa.me/918459763568?text=Hi, I'm ${form.name}%0AMessage: ${form.message}`, '_blank');
+    const baseUrl = WHATSAPP_LINK.split('?text=')[0];
+    window.open(`${baseUrl}?text=Hi, I'm ${form.name}%0AMessage: ${form.message}`, '_blank');
   };
 
   return (
@@ -71,8 +73,8 @@ const Contact = () => {
             <h2 className="text-2xl font-black text-white mb-2">Contact Info</h2>
 
             {[
-              { icon: Phone, label: 'Phone', value: '+91 84597 63568',           href: 'tel:+918459763568' },
-              { icon: Mail,  label: 'Email', value: 'graphicgalaxy2022@gmail.com', href: 'mailto:graphicgalaxy2022@gmail.com' },
+              { icon: Phone, label: 'Phone', value: PHONE,           href: `tel:${PHONE.replace(/\s+/g, '')}` },
+              { icon: Mail,  label: 'Email', value: EMAIL, href: `mailto:${EMAIL}` },
             ].map(({ icon: Icon, label, value, href }) => (
               <a key={label} href={href} className="group bg-[#0B0F14] border border-[#2D3748] rounded-2xl p-5 hover:border-amber-400/50 hover:shadow-[0_0_20px_rgba(245,158,11,0.08)] transition-all duration-300">
                 <p className="text-xs font-bold text-white/25 uppercase tracking-widest mb-1">{label}</p>
@@ -87,13 +89,13 @@ const Contact = () => {
               <p className="text-xs font-bold text-white/25 uppercase tracking-widest mb-1">Address</p>
               <div className="flex items-start gap-3">
                 <MapPin size={16} className="text-amber-400 mt-0.5 shrink-0" />
-                <p className="font-bold text-white leading-relaxed">Near Pramod Dairy, Vishrambag,<br />Sangli – 416416, Maharashtra</p>
+                <p className="font-bold text-white leading-relaxed whitespace-pre-line">{ADDRESS}</p>
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               <a
-                href="https://instagram.com/galaxy_graphics_ind"
+                href={INSTAGRAM}
                 target="_blank" rel="noreferrer"
                 className="interactive bg-[#0B0F14] border border-[#2D3748] hover:border-pink-400/50 rounded-2xl p-5 transition-all duration-300 flex items-center gap-3"
               >
@@ -102,12 +104,12 @@ const Contact = () => {
                 </div>
                 <div>
                   <p className="text-xs text-white/30 uppercase tracking-widest mb-0.5">Instagram</p>
-                  <p className="font-bold text-white text-sm">@galaxy_graphics_ind</p>
+                  <p className="font-bold text-white text-sm">{INSTAGRAM.split('/').pop()}</p>
                 </div>
               </a>
 
               <a
-                href="https://share.google/Mo2zWhichHtggjwSW"
+                href={GOOGLE_REVIEW}
                 target="_blank" rel="noreferrer"
                 className="interactive bg-[#0B0F14] border border-[#2D3748] hover:border-blue-400/50 rounded-2xl p-5 transition-all duration-300 flex items-center gap-3"
               >
@@ -120,7 +122,7 @@ const Contact = () => {
             </div>
 
             <a
-              href="https://wa.me/918459763568?text=Hi, I need design service"
+              href={WHATSAPP_LINK}
               target="_blank" rel="noreferrer"
               className="interactive bg-[#25D366] hover:bg-[#1ebe5d] text-white rounded-2xl p-5 text-center font-black transition-all duration-300 shadow-lg hover:shadow-green-500/30"
             >

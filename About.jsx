@@ -1,12 +1,27 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Navbar  from '../components/Navbar';
-import Footer  from '../components/Footer';
-import CTA     from '../components/CTA';
-import { TEAM, CLIENTS, STATS, REVIEWS, GOOGLE_REVIEW } from '../constants';
+import Navbar  from './src/components/Navbar';
+import Footer  from './src/components/Footer';
+import CTA     from './src/components/CTA';
+import { TEAM, CLIENTS, GOOGLE_REVIEW } from './src/constants';
 
 gsap.registerPlugin(ScrollTrigger);
+
+
+const stats = [
+  { value: '2022', label: 'Founded'      },
+  { value: '5+',   label: 'Team Members' },
+  { value: '50+',  label: 'Projects Done'},
+  { value: '5.0★', label: 'Google Rating'},
+];
+
+const reviews = [
+  { name: 'Rahul Patil',  role: 'Business Owner, Sangli',  initials: 'RP', text: 'Graphic Galaxy designed our logo and packaging — the quality was outstanding. Highly recommend!',                rating: 5 },
+  { name: 'Priya Sharma', role: 'Clinic Owner, Sangli',    initials: 'PS', text: 'Very professional team. Our social media designs improved our online presence significantly.',                    rating: 5 },
+  { name: 'Amit Desai',   role: 'Event Organizer, Sangli', initials: 'AD', text: 'Amazing event branding work. The Duathlon event designs were loved by everyone.',                                 rating: 5 },
+];
+
 
 const About = () => {
   const teamRef    = useRef(null);
@@ -59,12 +74,23 @@ const About = () => {
       {/* Stats */}
       <section className="bg-[#111827] border-y border-[#2D3748]">
         <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 divide-x divide-[#2D3748]">
-          {STATS.map((s, i) => (
+          {stats.map((s, i) => (
             <div key={i} className="py-12 text-center reveal">
               <p className="text-4xl font-black text-gradient mb-2">{s.value}</p>
               <p className="text-sm text-white/40 font-semibold uppercase tracking-wider">{s.label}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Story */}
+      <section className="py-24 px-6 bg-[#0B0F14]">
+        <div className="max-w-3xl mx-auto text-center reveal">
+          <p className="text-sm font-bold text-amber-400 uppercase tracking-[0.3em] mb-4">Our Story</p>
+          <h2 className="text-4xl md:text-5xl font-black text-white mb-8">Built for Sangli Businesses</h2>
+          <p className="text-white/50 leading-relaxed text-lg">
+            Graphic Galaxy was founded in 2022 by Vaibhav Biradar with a simple vision — to provide professional and impactful design to local businesses in Sangli. Today our team works across logos, packaging, social media, brochures, and event branding. From the Duathlon event branding for S3 Academy Sangli to the Marathon branding for MTDK Run — we bring creativity and dedication to every project.
+          </p>
         </div>
       </section>
 
@@ -100,10 +126,10 @@ const About = () => {
             <h2 className="text-4xl md:text-5xl font-black text-white">What Clients Say</h2>
           </div>
           <div ref={reviewsRef} className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {REVIEWS.map((r, i) => (
+            {reviews.map((r, i) => (
               <div key={i} className="review-card bg-[#111827] border border-[#2D3748] rounded-3xl p-7 hover:border-amber-400/40 hover:shadow-[0_0_20px_rgba(245,158,11,0.08)] transition-all duration-300" style={{ opacity: 0 }}>
                 <div className="flex gap-0.5 mb-4">
-                  {[...Array(r.rating || 5)].map((_, j) => <span key={j} className="text-amber-400">★</span>)}
+                  {[...Array(r.rating)].map((_, j) => <span key={j} className="text-amber-400">★</span>)}
                 </div>
                 <p className="text-white/55 text-sm leading-relaxed mb-6">"{r.text}"</p>
                 <div className="flex items-center gap-3">
@@ -142,6 +168,21 @@ const About = () => {
             {[...CLIENTS, ...CLIENTS].map((c, i) => (
               <div key={i} className="shrink-0 bg-[#0B0F14] border border-[#2D3748] rounded-xl px-6 py-4 flex items-center gap-3">
                 <div className="w-9 h-9 rounded-xl bg-amber-400/10 flex items-center justify-center text-amber-400 font-black text-sm shrink-0">
+                  {c.name.charAt(0)}
+                </div>
+                <div>
+                  <p className="font-bold text-white text-sm whitespace-nowrap">{c.name}</p>
+                  <p className="text-xs text-white/35 whitespace-nowrap">{c.type}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="flex gap-6 overflow-hidden">
+          <div className="flex gap-6 animate-scroll-right whitespace-nowrap">
+            {[...CLIENTS.slice().reverse(), ...CLIENTS.slice().reverse()].map((c, i) => (
+              <div key={i} className="shrink-0 bg-[#0B0F14] border border-[#2D3748] rounded-xl px-6 py-4 flex items-center gap-3">
+                <div className="w-9 h-9 rounded-xl bg-teal-400/10 flex items-center justify-center text-teal-400 font-black text-sm shrink-0">
                   {c.name.charAt(0)}
                 </div>
                 <div>

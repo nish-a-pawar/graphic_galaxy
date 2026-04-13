@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, ArrowRight, ChevronDown } from 'lucide-react';
+import { Menu, X, ArrowRight, ChevronDown, Share2, Mail, Globe } from 'lucide-react';
 import logo from '../assets/images/logo.png';
 
 const services = [
@@ -95,43 +95,91 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden text-text-dark p-1"
+          className={`md:hidden p-1 z-[200] transition-colors duration-500 ${isMobileMenuOpen ? 'text-white' : 'text-text-dark'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
-          {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+          {isMobileMenuOpen ? <X size={32} /> : <Menu size={32} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      <div className={`fixed inset-0 bg-white z-[90] md:hidden transition-transform duration-500 ${
-        isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+      {/* Mobile Menu Overlay */}
+      <div className={`fixed inset-0 bg-text-dark z-[150] md:hidden transition-all duration-700 ease-[cubic-bezier(0.85,0,0.15,1)] ${
+        isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       }`}>
-        <div className="flex flex-col h-full px-8 pt-24 pb-12 gap-6">
-          {[
-            { name: 'Services', path: '#services' },
-            { name: 'Portfolio', path: '/portfolio-graphic-designer-sangli' },
-            { name: 'About', path: '/about' },
-            { name: 'Contact', path: '/contact' },
-          ].map((link) => (
-            <Link
-              key={link.name}
-              to={link.path}
-              className="text-3xl font-black text-text-dark hover:text-primary transition-colors"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {link.name}
-            </Link>
-          ))}
-          <div className="mt-auto">
+        {/* Animated background shapes */}
+        <div className="absolute top-0 right-0 w-96 h-96 bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-secondary/10 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+
+        <div className="flex flex-col h-full overflow-y-auto px-8 pt-24 pb-12 relative z-10">
+          <div className="flex flex-col gap-1">
+            <p className="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-4 opacity-60">Navigation</p>
+            
+            {/* Services Accordion in Mobile */}
+            <div className="border-b border-white/10 pb-4">
+              <button 
+                onClick={() => setServicesOpen(!servicesOpen)}
+                className="w-full flex justify-between items-center text-4xl font-black text-white hover:text-primary transition-colors text-left py-2"
+              >
+                Services
+                <ChevronDown className={`transition-transform duration-500 ${servicesOpen ? 'rotate-180' : ''}`} size={30} />
+              </button>
+              <div className={`overflow-hidden transition-all duration-500 ease-in-out ${servicesOpen ? 'max-h-96 opacity-100 mt-4' : 'max-h-0 opacity-0'}`}>
+                <div className="flex flex-col gap-4 pl-4 border-l-2 border-primary/30">
+                  {services.map((s) => (
+                    <Link
+                      key={s.path}
+                      to={s.path}
+                      className="text-xl font-bold text-white/70 hover:text-primary transition-colors"
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      {s.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+
+            {[
+              { name: 'Portfolio', path: '/portfolio-graphic-designer-sangli' },
+              { name: 'About', path: '/about' },
+              { name: 'Contact', path: '/contact' },
+            ].map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className="text-4xl font-black text-white hover:text-primary transition-colors border-b border-white/10 py-5"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {link.name}
+              </Link>
+            ))}
+          </div>
+
+          <div className="mt-12 flex flex-col gap-8">
+            <div>
+              <p className="text-primary text-xs font-bold uppercase tracking-[0.3em] mb-6 opacity-60">Get in touch</p>
+              <div className="flex gap-6">
+                <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all">
+                  <Share2 size={20} />
+                </a>
+                <a href="#" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all">
+                  <Globe size={20} />
+                </a>
+                <a href="mailto:hello@graphicgalaxy.com" className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white hover:bg-primary hover:border-primary transition-all">
+                  <Mail size={20} />
+                </a>
+              </div>
+            </div>
+
             <a
               href="https://wa.me/918459763568?text=Hi, I need design service"
               target="_blank"
               rel="noreferrer"
-              className="block w-full py-4 bg-primary text-white rounded-full font-bold text-lg text-center"
+              className="w-full py-5 bg-primary text-text-dark rounded-2xl font-black text-xl text-center shadow-xl shadow-primary/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Get Quote
+              Start Your Project
             </a>
           </div>
         </div>

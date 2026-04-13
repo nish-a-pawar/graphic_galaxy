@@ -83,7 +83,7 @@ const Hero = () => {
             </div>
 
             {/* Headline */}
-            <h1 ref={headlineRef} className="text-5xl md:text-7xl font-black text-text-dark leading-[1.05] mb-6 overflow-hidden">
+            <h1 ref={headlineRef} className="text-5xl md:text-7xl lg:text-8xl font-black text-text-dark leading-[1.1] md:leading-[1.05] mb-6 overflow-hidden">
               {words.map((word, i) => (
                 <span key={i} className="word inline-block mr-4">
                   {i === 3 ? <span className="text-gradient">{word}</span> : word}
@@ -135,40 +135,40 @@ const Hero = () => {
           </div>
 
           {/* Right — Floating Work Cards */}
-          <div ref={floatingCardsRef} className="relative h-[520px] hidden lg:block parallax-layer">
+          <div ref={floatingCardsRef} className="relative h-[400px] md:h-[520px] lg:h-[520px] parallax-layer">
             {/* Card 1 — top left */}
-            <div className="float-card absolute top-0 left-0 w-[240px] rounded-2xl overflow-hidden shadow-2xl border border-white/60">
-              <img src={logoSample} alt="Logo Design" className="w-full h-[160px] object-cover" />
-              <div className="bg-white px-4 py-3">
-                <p className="text-xs font-bold text-primary uppercase tracking-wider">Logo Design</p>
-                <p className="text-sm font-bold text-text-dark mt-0.5">Brand Identity</p>
+            <div className="float-card absolute top-0 left-0 w-[160px] md:w-[240px] rounded-2xl overflow-hidden shadow-2xl border border-white/60 z-20">
+              <img src={logoSample} alt="Logo Design" className="w-full h-[110px] md:h-[160px] object-cover" />
+              <div className="bg-white px-3 md:px-4 py-2 md:py-3">
+                <p className="text-[10px] md:text-xs font-bold text-primary uppercase tracking-wider">Logo Design</p>
+                <p className="text-xs md:text-sm font-bold text-text-dark mt-0.5">Brand Identity</p>
               </div>
             </div>
 
             {/* Card 2 — top right */}
-            <div className="float-card absolute top-8 right-0 w-[220px] rounded-2xl overflow-hidden shadow-2xl border border-white/60">
-              <img src={packagingSample} alt="Packaging" className="w-full h-[150px] object-cover" />
-              <div className="bg-white px-4 py-3">
-                <p className="text-xs font-bold text-secondary uppercase tracking-wider">Packaging</p>
-                <p className="text-sm font-bold text-text-dark mt-0.5">Product Design</p>
+            <div className="float-card absolute top-8 right-0 w-[140px] md:w-[220px] rounded-2xl overflow-hidden shadow-2xl border border-white/60 z-10">
+              <img src={packagingSample} alt="Packaging" className="w-full h-[100px] md:h-[150px] object-cover" />
+              <div className="bg-white px-3 md:px-4 py-2 md:py-3">
+                <p className="text-[10px] md:text-xs font-bold text-secondary uppercase tracking-wider">Packaging</p>
+                <p className="text-xs md:text-sm font-bold text-text-dark mt-0.5">Product Design</p>
               </div>
             </div>
 
             {/* Card 3 — bottom left */}
-            <div className="float-card absolute bottom-10 left-8 w-[220px] rounded-2xl overflow-hidden shadow-2xl border border-white/60">
-              <img src={brandingSample} alt="Branding" className="w-full h-[150px] object-cover" />
-              <div className="bg-white px-4 py-3">
-                <p className="text-xs font-bold text-primary uppercase tracking-wider">Branding</p>
-                <p className="text-sm font-bold text-text-dark mt-0.5">Visual Identity</p>
+            <div className="float-card absolute bottom-10 left-4 md:left-8 w-[140px] md:w-[220px] rounded-2xl overflow-hidden shadow-2xl border border-white/60 z-10">
+              <img src={brandingSample} alt="Branding" className="w-full h-[100px] md:h-[150px] object-cover" />
+              <div className="bg-white px-3 md:px-4 py-2 md:py-3">
+                <p className="text-[10px] md:text-xs font-bold text-primary uppercase tracking-wider">Branding</p>
+                <p className="text-xs md:text-sm font-bold text-text-dark mt-0.5">Visual Identity</p>
               </div>
             </div>
 
-            {/* Card 4 — bottom right */}
-            <div className="float-card absolute bottom-0 right-4 w-[200px] rounded-2xl overflow-hidden shadow-2xl border border-white/60">
-              <img src={posterSample} alt="Poster" className="w-full h-[140px] object-cover" />
-              <div className="bg-white px-4 py-3">
-                <p className="text-xs font-bold text-secondary uppercase tracking-wider">Poster</p>
-                <p className="text-sm font-bold text-text-dark mt-0.5">Event Design</p>
+            {/* Card 4 — bottom right (hidden on very small phones, shown on md up) */}
+            <div className="float-card absolute bottom-0 right-4 w-[130px] md:w-[200px] rounded-2xl overflow-hidden shadow-2xl border border-white/60 z-20 hidden sm:block">
+              <img src={posterSample} alt="Poster" className="w-full h-[90px] md:h-[140px] object-cover" />
+              <div className="bg-white px-3 md:px-4 py-2 md:py-3">
+                <p className="text-[10px] md:text-xs font-bold text-secondary uppercase tracking-wider">Poster</p>
+                <p className="text-xs md:text-sm font-bold text-text-dark mt-0.5">Event Design</p>
               </div>
             </div>
 
@@ -176,13 +176,14 @@ const Hero = () => {
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-gradient-to-br from-primary/30 to-secondary/20 rounded-full blur-3xl pointer-events-none" />
 
             {/* Floating badge */}
-            <div className="float-card absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-xl px-5 py-3 border border-border flex items-center gap-3 z-10">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <Star size={18} className="text-white fill-white" />
+            <div className="float-card absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white rounded-2xl shadow-xl px-4 md:px-5 py-2 md:py-3 border border-border flex items-center gap-2 md:gap-3 z-30">
+              <div className="w-8 h-8 md:w-10 md:h-10 rounded-lg md:rounded-xl bg-primary flex items-center justify-center">
+                <Star size={14} className="text-white fill-white md:hidden" />
+                <Star size={18} className="text-white fill-white hidden md:block" />
               </div>
               <div>
-                <p className="text-xs text-text-dark/50 font-medium">Google Reviews</p>
-                <p className="text-sm font-black text-text-dark">5.0 ★★★★★</p>
+                <p className="text-[10px] text-text-dark/50 font-medium leading-none">Reviews</p>
+                <p className="text-xs md:text-sm font-black text-text-dark">5.0 ★</p>
               </div>
             </div>
           </div>

@@ -8,16 +8,16 @@ const Footer = () => (
       <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16">
         {/* Brand */}
         <div className="md:col-span-4">
-          <Link to="/" className="flex items-center gap-2.5 mb-6 group">
+          <Link to="/" className="flex items-center gap-2.5 mb-6 group justify-center md:justify-start">
             <img src={logo} alt="Graphic Galaxy" className="h-9 w-auto" />
             <span className="text-xl font-black tracking-tight">
               Graphic <span className="text-primary">Galaxy</span>
             </span>
           </Link>
-          <p className="text-white/45 font-medium leading-relaxed text-sm mb-8">
+          <p className="text-white/45 font-medium leading-relaxed text-sm mb-8 text-center md:text-left">
             Elevating brands through premium graphic design and creative strategy. Based in Sangli, serving the galaxy.
           </p>
-          <div className="flex gap-3">
+          <div className="flex gap-3 justify-center md:justify-start">
             <a
               href="https://instagram.com/galaxy_graphics_ind"
               target="_blank"
@@ -49,7 +49,7 @@ const Footer = () => (
         </div>
 
         {/* Quick Links */}
-        <div className="md:col-span-2">
+        <div className="md:col-span-2 text-center md:text-left">
           <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-white/30 mb-6">Navigation</h4>
           <ul className="space-y-3">
             {[
@@ -68,7 +68,7 @@ const Footer = () => (
         </div>
 
         {/* Services */}
-        <div className="md:col-span-3">
+        <div className="md:col-span-3 text-center md:text-left">
           <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-white/30 mb-6">Services</h4>
           <ul className="space-y-3">
             {['Logo Design', 'Packaging Design', 'Brochure Design', 'Flyer Design', 'Invitation Design'].map((s) => (
@@ -81,10 +81,10 @@ const Footer = () => (
 
         {/* Contact */}
         <div className="md:col-span-3">
-          <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-white/30 mb-6">Get in Touch</h4>
-          <ul className="space-y-4">
+          <h4 className="text-sm font-bold uppercase tracking-[0.2em] text-white/30 mb-6 text-center md:text-left">Get in Touch</h4>
+          <ul className="space-y-4 flex flex-col items-center md:items-start">
             <li>
-              <a href="mailto:graphicgalaxy2022@gmail.com" className="flex items-start gap-3 text-white/50 hover:text-primary transition-colors group">
+              <a href="mailto:graphicgalaxy2022@gmail.com" className="flex items-start gap-3 text-white/50 hover:text-primary transition-colors group text-center md:text-left">
                 <Mail size={16} className="text-primary mt-0.5 flex-shrink-0" />
                 <span className="text-sm font-medium break-all">graphicgalaxy2022@gmail.com</span>
               </a>
@@ -95,7 +95,7 @@ const Footer = () => (
                 <span className="text-sm font-medium">+91 84597 63568</span>
               </a>
             </li>
-            <li className="flex items-start gap-3 text-white/50">
+            <li className="flex items-start gap-3 text-white/50 text-center md:text-left">
               <MapPin size={16} className="text-primary mt-0.5 flex-shrink-0" />
               <span className="text-sm font-medium leading-relaxed">Near Pramod Dairy, Vishrambag,<br />Sangli – 416416, Maharashtra</span>
             </li>

@@ -56,9 +56,9 @@ const RecentWork = () => {
         </div>
 
         {/* Bento-style grid */}
-        <div ref={gridRef} className="work-grid grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div ref={gridRef} className="work-grid grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-6">
           {/* Large card */}
-          <div className="work-card md:col-span-7 group relative h-[420px] rounded-4xl overflow-hidden cursor-pointer shadow-lg" style={{ opacity: 0 }}>
+          <div className="work-card md:col-span-7 group relative h-[300px] sm:h-[400px] md:h-[420px] rounded-3xl md:rounded-4xl overflow-hidden cursor-pointer shadow-lg" style={{ opacity: 0 }}>
             <img src={projects[0].image} alt={projects[0].title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-t from-text-dark/80 via-text-dark/20 to-transparent" />
             <div className="absolute top-6 left-6">
@@ -76,9 +76,9 @@ const RecentWork = () => {
           </div>
 
           {/* Small cards column */}
-          <div className="md:col-span-5 flex flex-col gap-6">
+          <div className="md:col-span-5 flex flex-col gap-4 md:gap-6">
             {projects.slice(1, 3).map((p, i) => (
-              <div key={i} className="work-card group relative h-[192px] rounded-4xl overflow-hidden cursor-pointer shadow-lg" style={{ opacity: 0 }}>
+              <div key={i} className="work-card group relative h-[200px] sm:h-[220px] md:h-[192px] rounded-3xl md:rounded-4xl overflow-hidden cursor-pointer shadow-lg" style={{ opacity: 0 }}>
                 <img src={p.image} alt={p.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-text-dark/80 via-text-dark/10 to-transparent" />
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
@@ -95,7 +95,7 @@ const RecentWork = () => {
           </div>
 
           {/* Bottom wide card */}
-          <div className="work-card md:col-span-12 group relative h-[280px] rounded-4xl overflow-hidden cursor-pointer shadow-lg" style={{ opacity: 0 }}>
+          <div className="work-card md:col-span-12 group relative h-[250px] sm:h-[300px] md:h-[280px] rounded-3xl md:rounded-4xl overflow-hidden cursor-pointer shadow-lg" style={{ opacity: 0 }}>
             <img src={projects[3].image} alt={projects[3].title} className="absolute inset-0 w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" />
             <div className="absolute inset-0 bg-gradient-to-r from-text-dark/80 via-text-dark/30 to-transparent" />
             <div className="absolute inset-0 p-10 flex flex-col justify-center max-w-lg">

@@ -5,6 +5,7 @@ import PackagingDesignInSangli from "./pages/PackagingDesignInSangli";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
 import Portfolio from "./pages/Portfolio";
+import Blog from "./pages/Blog.jsx";
 import SmoothScroll from "./components/SmoothScroll";
 import CustomCursor from "./components/CustomCursor";
 
@@ -20,6 +21,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/portfolio-graphic-designer-sangli" element={<Portfolio />} /> 
+          <Route path="/blog" element={<Blog />} />
         </Routes>
       </SmoothScroll>
     </BrowserRouter>

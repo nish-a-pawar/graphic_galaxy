@@ -170,7 +170,8 @@ export const REVIEWS = [
     role: 'Carzspa Sangli', 
     initials: 'SK',
     color: '#D97706',
-    text: 'I recently got my poster designed by Graphic Galaxy in Sangli and they did an amazing job! The design was very attractive and exactly what I wanted. Their service is super quick and the prices are very affordable too. If you are looking for a creative and budget-friendly graphic designer in Sangli, I highly recommend them!'
+    text: 'I recently got my poster designed by Graphic Galaxy in Sangli and they did an amazing job! The design was very attractive and exactly what I wanted. Their service is super quick and the prices are very affordable too. If you are looking for a creative and budget-friendly graphic designer in Sangli, I highly recommend them!',
+    rating: 5,
   },
   {
     name: 'Vaibhav Gandhi', 
@@ -187,6 +188,45 @@ export const REVIEWS = [
     color: '#7C3AED',
     text: 'Got amazing quote boards for our office just by calling Graphic Galaxy Sangli. The process was quick and the designs were creative. Highly recommended if you are searching for a good Graphic design Services in Sangli',
     rating: 5,
+  },
+];
+
+export const BLOG_POSTS = [
+  {
+    id: 1,
+    title: "Why Minimalist Logo Design is better for your Brand",
+    excerpt: "Discover why simplicity is the ultimate sophistication in modern logo design and how it can help your business stand out.",
+    date: "Oct 12, 2026",
+    category: "Branding",
+    slug: "minimalist-logo-design-benefits",
+    author: "Vaibhav Biradar",
+    readTime: "5 min read",
+    image: null,
+    keywords: ["logo design sangli", "minimalist branding", "brand identity"]
+  },
+  {
+    id: 2,
+    title: "Packaging Design Trends to Watch in 2026",
+    excerpt: "From sustainable materials to bold typography, here are the top packaging design trends that will dominate the market this year.",
+    date: "Oct 05, 2026",
+    category: "Packaging",
+    slug: "packaging-design-trends-2026",
+    author: "Tanmay Patil",
+    readTime: "7 min read",
+    image: null,
+    keywords: ["packaging design sangli", "sustainable packaging", "design trends 2026"]
+  },
+  {
+    id: 3,
+    title: "How to Boost Your Business with Social Media Design",
+    excerpt: "Learn the secrets of creating scroll-stopping social media posts that engage your audience and drive conversions.",
+    date: "Sep 28, 2026",
+    category: "Social Media",
+    slug: "boost-business-social-media-design",
+    author: "Shraddha Dongre",
+    readTime: "4 min read",
+    image: null,
+    keywords: ["social media design sangli", "business growth", "content strategy"]
   },
 ];
 
@@ -210,6 +250,11 @@ export const SEO_DATA = {
     title: "Portfolio | Graphic Designer in Sangli – Graphic Galaxy",
     description: "View our graphic design portfolio – logos, packaging, social media designs for businesses in Sangli and Maharashtra.",
     url: "/portfolio-graphic-designer-sangli",
+  },
+  blog: {
+    title: "Graphic Design Blog Sangli | Logo & Branding Tips – Graphic Galaxy",
+    description: "Read the latest insights on graphic design, logo branding, and packaging trends from our experts in Sangli, Maharashtra.",
+    url: "/blog",
   },
   services: {
     title: "Graphic Design Services in Sangli | Graphic Galaxy",

@@ -66,8 +66,9 @@ const Footer = () => (
             {[
               { name: 'Services', path: '#services' },
               { name: 'Portfolio', path: '/portfolio-graphic-designer-sangli' },
+              { name: 'Blog', path: '/blog' },
               { name: 'About Us', path: '/about' },
-              { name: 'Contact', path: '/contact' },
+              { name: 'Contact',   path: '/contact' },
             ].map((l) => (
               <li key={l.name}>
                 <Link to={l.path} className="text-white/40 hover:text-amber-400 transition-colors text-sm font-medium">

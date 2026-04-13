@@ -67,6 +67,7 @@ const Navbar = () => {
 
               {[
                 { name: 'Portfolio', path: '/portfolio-graphic-designer-sangli' },
+                { name: 'Blog',      path: '/blog' },
                 { name: 'About',     path: '/about' },
                 { name: 'Contact',   path: '/contact' },
               ].map((l) => (
@@ -164,6 +165,7 @@ const Navbar = () => {
           {/* Other links */}
           {[
             { name: 'Portfolio', path: '/portfolio-graphic-designer-sangli' },
+            { name: 'Blog',      path: '/blog' },
             { name: 'About',     path: '/about' },
             { name: 'Contact',   path: '/contact' },
           ].map((l) => (

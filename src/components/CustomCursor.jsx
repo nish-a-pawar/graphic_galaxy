@@ -8,7 +8,10 @@ const CustomCursor = () => {
   useEffect(() => {
     const dot  = dotRef.current;
     const ring = ringRef.current;
-    gsap.set([dot, ring], { opacity: 0 });
+
+    // Use xPercent/yPercent so GSAP centers both elements on the cursor point
+    gsap.set(dot,  { xPercent: -50, yPercent: -50, opacity: 0 });
+    gsap.set(ring, { xPercent: -50, yPercent: -50, opacity: 0 });
 
     const move = (e) => {
       gsap.set([dot, ring], { opacity: 1 });

@@ -50,22 +50,24 @@ const Navbar = () => {
             {/* Desktop links */}
             <div className="hidden md:flex items-center gap-8">
               <div className="relative" onMouseEnter={() => setDropOpen(true)} onMouseLeave={() => setDropOpen(false)}>
-                <button className="flex items-center gap-1 text-sm font-semibold text-white/70 hover:text-amber-400 transition-colors">
+                <button className="flex items-center gap-1 text-sm font-semibold text-white/70 hover:text-amber-400 transition-colors py-2">
                   Services
                   <ChevronDown size={14} className={`transition-transform duration-200 ${dropOpen ? 'rotate-180' : ''}`} />
                 </button>
                 {dropOpen && (
-                  <div className="absolute top-full left-1/2 -translate-x-1/2 mt-3 glass-dark rounded-2xl w-56 py-2 z-50">
-                    {services.map((s) => (
-                      <Link
-                        key={s.path}
-                        to={s.path}
-                        className="block px-5 py-2.5 text-sm text-white/60 hover:text-amber-400 hover:bg-amber-400/5 transition-colors font-medium"
-                        onClick={() => setDropOpen(false)}
-                      >
-                        {s.name}
-                      </Link>
-                    ))}
+                  <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
+                    <div className="glass-dark rounded-2xl w-56 py-2 border border-[#2D3748]">
+                      {services.map((s) => (
+                        <Link
+                          key={s.path}
+                          to={s.path}
+                          className="block px-5 py-2.5 text-sm text-white/60 hover:text-amber-400 hover:bg-amber-400/5 transition-colors font-medium"
+                          onClick={() => setDropOpen(false)}
+                        >
+                          {s.name}
+                        </Link>
+                      ))}
+                    </div>
                   </div>
                 )}
               </div>

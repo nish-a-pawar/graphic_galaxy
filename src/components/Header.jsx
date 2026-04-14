@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
+import { WHATSAPP_LINK } from "../constants";
 const services = [
   { name: "Logo Design", path: "/logo-design-in-sangli" },
   { name: "Packaging Design", path: "/packaging-design-in-sangli" },
@@ -12,23 +13,24 @@ const services = [
   { name: "Booklet & Magazine", path: "/booklet-magazine-design-sangli" },
   { name: "Trophy & Sports", path: "/trophy-sports-design-sangli" },
   { name: "T-Shirt Design", path: "/tshirt-design-sangli" },
+  { name: "Invitation Design", path: "/invitation-design-in-sangli" },
 ];
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
   return (
     <header className="w-full shadow-md bg-white sticky top-0 z-50">
-      <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <nav className="max-w-7xl mx-auto flex justify-between items-center px-6 py-2">
         {/* Logo + Brand */}
         <Link to="/" className="flex items-center gap-2">
-          <img src={logo} alt="Graphic Galaxy Logo" className="h-12 w-auto" />
-          <h1 className="text-xl font-bold text-gray-800">Graphic Galaxy</h1>
+          <img src={logo} alt="Graphic Galaxy Logo" className="h-9 w-auto" />
+          <h1 className="text-lg font-bold text-gray-800">Graphic Galaxy</h1>
         </Link>
 
         {/* Navigation */}
 
         {/* Nav Links */}
-        <div className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+        <div className="hidden md:flex items-center gap-6 text-gray-700 font-medium text-sm">
           {/* Services Dropdown */}
           <div
             className="relative"
@@ -38,9 +40,8 @@ const Header = () => {
             <button className="flex items-center gap-1 hover:text-green-500 transition font-medium">
               Services
               <svg
-                className={`w-4 h-4 transition-transform duration-200 ${
-                  dropdownOpen ? "rotate-180" : ""
-                }`}
+                className={`w-4 h-4 transition-transform duration-200 ${dropdownOpen ? "rotate-180" : ""
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -88,9 +89,9 @@ const Header = () => {
 
         {/* CTA Button */}
         <a
-          href="https://wa.me/845976?text=Hi, I need design service"
+          href={`${WHATSAPP_LINK}?text=Hi, I need design service`}
           target="_blank"
-          className="bg-green-500 hover:bg-green-600 text-white px-5 py-2 rounded-lg shadow-md transition"
+          className="bg-green-500 hover:bg-green-600 text-white px-4 py-1.5 text-sm rounded-lg shadow-md transition"
         >
           Get Quote
         </a>

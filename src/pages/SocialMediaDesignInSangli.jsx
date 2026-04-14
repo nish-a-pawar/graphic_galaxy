@@ -1,36 +1,31 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { 
-  Package, 
-  Tag, 
-  Box, 
-  Truck, 
-  Search, 
-  Lightbulb, 
-  PenTool, 
+  Zap, 
+  Target, 
+  Palette, 
+  BarChart3, 
   CheckCircle2, 
   ArrowRight,
   Sparkles,
-  Zap,
-  Printer,
-  Clock,
-  Layers,
-  Palette,
-  ShoppingCart
+  Smartphone,
+  MessageSquare,
+  Share2,
+  MousePointer2
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { SEO_DATA, WHATSAPP_LINK } from '../constants';
 
 // Assets
-import luxuryBox from '../assets/images/luxury-box.png';
-import organicBottle from '../assets/images/organic-bottle.png';
-import cosmeticPouch from '../assets/images/cosmetic-pouch.png';
+import socialCoffee from '../assets/images/social-coffee.png';
+import socialTech from '../assets/images/social-tech.png';
+import socialReel from '../assets/images/social-reel.png';
 
-const PackagingDesignInSangli = () => {
-  const seo = SEO_DATA.packagingDesign;
+const SocialMediaDesignInSangli = () => {
+  const seo = SEO_DATA.socialMediaDesign;
 
   // Animation Variants
   const fadeInUp = {
@@ -65,7 +60,6 @@ const PackagingDesignInSangli = () => {
 
       {/* --- HERO SECTION --- */}
       <section className="relative pt-32 pb-20 overflow-hidden lg:pt-48 lg:pb-32">
-        {/* Animated Background Blobs */}
         <div className="absolute top-0 -left-20 w-72 h-72 bg-amber-500/10 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-0 -right-20 w-96 h-96 bg-teal-500/5 rounded-full blur-[150px] animate-pulse delay-1000" />
 
@@ -81,22 +75,22 @@ const PackagingDesignInSangli = () => {
                 variants={fadeInUp}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-sm font-semibold mb-6"
               >
-                <Sparkles size={16} /> Premium Packaging Experts in Sangli
+                <Smartphone size={16} /> Scroll-Stopping Social Media Design
               </motion.span>
               
               <motion.h1 
                 variants={fadeInUp}
                 className="text-5xl lg:text-7xl font-black mb-8 leading-[1.1]"
               >
-                Packaging Design in <span className="text-gradient-amber">Sangli</span> <br /> 
-                <span className="text-4xl lg:text-6xl text-white/90">That Sells Your Story</span>
+                Social Media Design in <span className="text-gradient-amber">Sangli</span> <br /> 
+                <span className="text-4xl lg:text-6xl text-white/90">Dominate Every Feed</span>
               </motion.h1>
               
               <motion.p 
                 variants={fadeInUp}
                 className="text-lg lg:text-xl text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
               >
-                Don't just wrap your product; elevate it. We create high-converting, branding-focused packaging that grabs attention on shelves and builds trust with your customers.
+                In a world of infinite scrolling, capture the eye in a split second. We design premium social media assets that turn casual scrollers into loyal customers.
               </motion.p>
               
               <motion.div 
@@ -107,19 +101,19 @@ const PackagingDesignInSangli = () => {
                   href={WHATSAPP_LINK}
                   className="btn-amber px-8 py-5 flex items-center gap-3 text-lg group"
                 >
-                  <Package className="group-hover:rotate-12 transition-transform" />
-                  Get Your Packaging Designed
+                  <Share2 className="group-hover:rotate-12 transition-transform" />
+                  Get Your Feed Redesigned
                 </a>
-                <span className="text-gray-500 text-sm italic font-medium">Free Consultation & Quote</span>
+                <span className="text-gray-500 text-sm italic font-medium">Boost Your Engagement Today</span>
               </motion.div>
             </motion.div>
 
             {/* Hero Mockups Visual */}
             <div className="lg:w-1/2 relative h-[500px] w-full max-w-[600px]">
               <motion.div 
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex flex-wrap justify-center gap-4"
                 animate={{
-                  y: [0, -15, 0],
+                  y: [0, -10, 0],
                 }}
                 transition={{
                   duration: 6,
@@ -127,28 +121,29 @@ const PackagingDesignInSangli = () => {
                   ease: "easeInOut"
                 }}
               >
-                <img 
-                  src={luxuryBox} 
-                  alt="Luxury Packaging Design" 
-                  className="absolute z-30 w-72 lg:w-96 left-1/2 -translate-x-1/2 top-10 drop-shadow-[0_20px_50px_rgba(245,158,11,0.35)]"
-                />
-                <motion.img 
-                  src={organicBottle} 
-                  alt="Organic Bottle Design" 
-                  className="absolute z-20 w-48 lg:w-64 -left-10 bottom-10 drop-shadow-2xl"
-                  animate={{ rotate: [-2, 2, -2] }}
+                <motion.div 
+                  className="w-48 lg:w-64 glass-dark p-2 rounded-2xl transform rotate-[-6deg] drop-shadow-2xl"
+                  animate={{ rotate: [-6, -4, -6] }}
                   transition={{ duration: 4, repeat: Infinity }}
-                />
-                <motion.img 
-                  src={cosmeticPouch} 
-                  alt="Cosmetic Pouch Design" 
-                  className="absolute z-40 w-56 lg:w-72 -right-10 bottom-20 drop-shadow-2xl"
-                  animate={{ rotate: [2, -2, 2] }}
+                >
+                    <img src={socialCoffee} alt="Instagram Post Mockup" className="rounded-xl w-full" />
+                </motion.div>
+                <motion.div 
+                  className="w-48 lg:w-64 glass-dark p-2 rounded-2xl transform rotate-[6deg] mt-10 drop-shadow-2xl"
+                  animate={{ rotate: [6, 4, 6] }}
                   transition={{ duration: 5, repeat: Infinity }}
-                />
+                >
+                    <img src={socialTech} alt="Facebook Ad Mockup" className="rounded-xl w-full" />
+                </motion.div>
+                <motion.div 
+                  className="w-40 lg:w-56 glass-dark p-2 rounded-2xl absolute -bottom-10 left-1/2 -translate-x-1/2 z-20 drop-shadow-2xl"
+                  animate={{ y: [0, -15, 0] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                >
+                    <img src={socialReel} alt="Reel Design Mockup" className="rounded-xl w-full" />
+                </motion.div>
               </motion.div>
               
-              {/* Decorative Glow */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-amber-500/10 blur-[100px] rounded-full" />
             </div>
           </div>
@@ -159,9 +154,9 @@ const PackagingDesignInSangli = () => {
       <div className="py-12 bg-surface/50 border-y border-white/5 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
           {[
-            "Label Design", "Box Packaging", "Food Packaging", "Cosmetic Packaging",
-            "Bottle Labels", "Eco-friendly Packaging", "Luxury Gift Box", "Product Sachet",
-            "Pouch Design", "Tin Can Design", "Wine Labels", "Bakery Boxes"
+            "Instagram Posts", "Facebook Ads", "Reel Graphics", "LinkedIn Carousels",
+            "Story Designs", "Cover Photos", "YouTube Thumbnails", "Social Content Kits",
+            "Brand Presets", "Ad Creatives", "Engagement Posts", "Campaign Branding"
           ].map((service, idx) => (
             <div key={idx} className="flex items-center mx-10 text-2xl font-bold text-white/40 uppercase tracking-widest gap-4">
               <span className="w-2 h-2 bg-amber-500 rounded-full" />
@@ -170,9 +165,9 @@ const PackagingDesignInSangli = () => {
           ))}
           {/* Duplicate for infinite loop */}
           {[
-            "Label Design", "Box Packaging", "Food Packaging", "Cosmetic Packaging",
-            "Bottle Labels", "Eco-friendly Packaging", "Luxury Gift Box", "Product Sachet",
-            "Pouch Design", "Tin Can Design", "Wine Labels", "Bakery Boxes"
+            "Instagram Posts", "Facebook Ads", "Reel Graphics", "LinkedIn Carousels",
+            "Story Designs", "Cover Photos", "YouTube Thumbnails", "Social Content Kits",
+            "Brand Presets", "Ad Creatives", "Engagement Posts", "Campaign Branding"
           ].map((service, idx) => (
             <div key={`dup-${idx}`} className="flex items-center mx-10 text-2xl font-bold text-white/40 uppercase tracking-widest gap-4">
               <span className="w-2 h-2 bg-amber-500 rounded-full" />
@@ -186,31 +181,31 @@ const PackagingDesignInSangli = () => {
       <section className="py-24 lg:py-40">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mb-20 text-center mx-auto">
-            <h2 className="text-4xl lg:text-6xl font-black mb-6">Designed to <span className="text-gradient-amber">Dominate</span> the Shelf</h2>
-            <p className="text-gray-400 text-lg">Browse our elite packaging portfolio. We blend aesthetics with functionality to create designs that aren't just seen, but felt.</p>
+            <h2 className="text-4xl lg:text-6xl font-black mb-6">Designed for <span className="text-gradient-amber">Max Engagement</span></h2>
+            <p className="text-gray-400 text-lg">We don't just design; we strategize. Each pixel is placed to drive likes, shares, and conversations.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ShowcaseCard 
-              image={luxuryBox}
-              title="Aura Luxury Collection"
-              type="Premium Box Design"
+              image={socialCoffee}
+              title="Brew & Bloom"
+              type="Instagram Post"
+            />
+            <ShowcaseCard 
+              image={socialTech}
+              title="NextGen Solutions"
+              type="Facebook Ad Suite"
               colSpan="lg:col-span-2"
             />
             <ShowcaseCard 
-              image={organicBottle}
-              title="Nature's Essence"
-              type="Organic Bottle Label"
+              image={socialReel}
+              title="Pulse Creators"
+              type="Viral Reel Cover"
             />
             <ShowcaseCard 
-              image={cosmeticPouch}
-              title="Glow & Care"
-              type="Cosmetic Pouch"
-            />
-            <ShowcaseCard 
-              image={luxuryBox}
-              title="Vintage Spice"
-              type="Sustainable Tin Packaging"
+              image={socialCoffee}
+              title="Elegance Interiors"
+              type="LinkedIn Carousel"
               colSpan="lg:col-span-2"
             />
           </div>
@@ -221,34 +216,34 @@ const PackagingDesignInSangli = () => {
       <section className="py-24 relative overflow-hidden bg-surface/30">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-black mb-4">Our Creative <span className="text-amber-500">Method</span></h2>
-            <p className="text-gray-400">How we turn a concept into a shelf-ready masterpiece.</p>
+            <h2 className="text-4xl lg:text-5xl font-black mb-4">Our Content <span className="text-amber-500">Engine</span></h2>
+            <p className="text-gray-400">Streamlined workflow for consistent brand presence.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
             <ProcessStep 
-              icon={<Search className="text-amber-500" />}
+              icon={<Target className="text-amber-500" />}
               step="01"
-              title="Market Research"
-              desc="We analyze your competitors and target audience in Sangli & beyond."
+              title="Goal Setting"
+              desc="Defining the objective: Awareness, Lead Gen, or Pure Engagement."
             />
             <ProcessStep 
-              icon={<Lightbulb className="text-amber-500" />}
+              icon={<Palette className="text-amber-500" />}
               step="02"
-              title="Concept Art"
-              desc="Creating moodboards and sketches to find the perfect visual tone."
+              title="Visual Guide"
+              desc="Establishing a consistent color palette and typography for your brand."
             />
             <ProcessStep 
-              icon={<PenTool className="text-amber-500" />}
+              icon={<Zap className="text-amber-500" />}
               step="03"
-              title="Elite Design"
-              desc="High-end 3D mockups and print-ready layouts tailored for you."
+              title="Content Design"
+              desc="Creating scroll-stopping visuals tailored for each platform's algorithm."
             />
             <ProcessStep 
-              icon={<Truck className="text-amber-500" />}
+              icon={<BarChart3 className="text-amber-500" />}
               step="04"
-              title="Final Delivery"
-              desc="You get production-ready files and expert guidance on printing."
+              title="Review & Revise"
+              desc="Ensuring every post is perfect and ready to go live."
             />
           </div>
         </div>
@@ -259,31 +254,31 @@ const PackagingDesignInSangli = () => {
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             <div className="lg:w-1/2">
-              <h2 className="text-4xl lg:text-6xl font-black mb-8 leading-tight">Why Smart Brands <br /> Choose <span className="text-amber-500 underline decoration-2 underline-offset-8">Graphic Galaxy</span></h2>
+              <h2 className="text-4xl lg:text-6xl font-black mb-8 leading-tight">Elevate Your <br /> Digital <span className="text-amber-500 underline decoration-2 underline-offset-8">Authority</span></h2>
               <p className="text-gray-400 text-lg mb-12">
-                We aren't just graphic designers; we are brand storytellers. We understand the Sangli local market and global design standards.
+                In Sangli’s competitive market, professional social media design sets you apart from the 'amateur' look and builds instant trust.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                 <FeatureItem 
-                  icon={<Zap size={24} />}
-                  title="Branding-Focused"
-                  desc="We don't just design labels; we build your brand's future identity."
+                  icon={<MousePointer2 size={24} />}
+                  title="Algorithm Focused"
+                  desc="Designs optimized for high visibility and engagement on all feeds."
                 />
                 <FeatureItem 
-                  icon={<Printer size={24} />}
-                  title="Print-Ready"
-                  desc="Files optimized for offset, flexo, and digital printing perfectly."
+                  icon={<Sparkles size={24} />}
+                  title="Visual Consistency"
+                  desc="Maintain a unified brand look across all social media platforms."
                 />
                 <FeatureItem 
-                  icon={<Clock size={24} />}
-                  title="Fast Turnaround"
-                  desc="Get your premium designs ready in as little as 3-5 business days."
+                  icon={<MessageSquare size={24} />}
+                  title="Interactive Elements"
+                  desc="Custom icons and graphics that encourage users to comment and share."
                 />
                 <FeatureItem 
-                  icon={<ShoppingCart size={24} />}
-                  title="Retail Ready"
-                  desc="Designs that meet all legal and retail standards for barcodes and info."
+                  icon={<Smartphone size={24} />}
+                  title="Mobile-First"
+                  desc="Pixel-perfect designs tested on all mobile screen sizes for clarity."
                 />
               </div>
             </div>
@@ -291,12 +286,12 @@ const PackagingDesignInSangli = () => {
             <div className="lg:w-1/2 relative">
               <div className="relative z-10 glass-dark rounded-[2.5rem] p-8 lg:p-12 border border-white/10 glow-amber/5">
                 <blockquote className="text-2xl font-medium italic text-gray-200 mb-8 leading-relaxed">
-                  "Working with Graphic Galaxy changed how customers see our products. The packaging they designed made us look like a national brand overnight."
+                  "Our social media went from average to extraordinary. Graphic Galaxy knows how to make content that actually gets people talking."
                 </blockquote>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center font-bold text-gray-900">SO</div>
+                  <div className="w-12 h-12 rounded-full bg-amber-500 flex items-center justify-center font-bold text-gray-900">RC</div>
                   <div>
-                    <div className="font-bold text-white">Shravani Organics</div>
+                    <div className="font-bold text-white">Radhey Clinic</div>
                     <div className="text-gray-500 text-sm italic">Satisfied Client, Sangli</div>
                   </div>
                 </div>
@@ -304,22 +299,6 @@ const PackagingDesignInSangli = () => {
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-amber-500/20 rounded-full blur-[80px]" />
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* --- CLIENT STRIP --- */}
-      <section className="py-16 bg-surface/20">
-        <div className="container mx-auto px-6 text-center mb-10">
-          <span className="text-gray-500 text-xs uppercase tracking-[0.3em] font-black">Trusted by ambitious brands</span>
-        </div>
-        <div className="flex animate-scroll-left opacity-30 whitespace-nowrap">
-          {["Pramod Dairy", "Shravani Organics", "Radhey Dental", "Vijeta Group", "Sangli Duathlon", "MTDK School", "Smile Sangli", "Carzspa"].map((name, i) => (
-            <span key={i} className="mx-12 text-3xl lg:text-4xl font-black text-white">{name}</span>
-          ))}
-          {/* Loop */}
-          {["Pramod Dairy", "Shravani Organics", "Radhey Dental", "Vijeta Group", "Sangli Duathlon", "MTDK School", "Smile Sangli", "Carzspa"].map((name, i) => (
-            <span key={`loop-${i}`} className="mx-12 text-3xl lg:text-4xl font-black text-white">{name}</span>
-          ))}
         </div>
       </section>
 
@@ -331,11 +310,11 @@ const PackagingDesignInSangli = () => {
             
             <div className="relative z-10 max-w-4xl mx-auto">
               <h2 className="text-4xl lg:text-7xl font-black mb-10 leading-tight">
-                Let's Build Packaging <br /> 
-                <span className="text-gradient-amber">That Sells Itself</span>
+                Ready to Stop <br /> 
+                <span className="text-gradient-amber">The Scroll?</span>
               </h2>
               <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
-                Ready to take your product to the next level? Join the league of premium brands in Sangli with professional design.
+                Transform your social media into a powerful business engine. Let's create content that converts.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center gap-6 justify-center">
@@ -344,22 +323,16 @@ const PackagingDesignInSangli = () => {
                   className="btn-amber px-10 py-6 text-xl flex items-center gap-4 group shadow-xl"
                 >
                   <Zap className="fill-current" />
-                  Start My Project Now
+                  Launch My Campaign
                   <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-                </a>
-                <a 
-                  href="/portfolio-graphic-designer-sangli"
-                  className="px-10 py-6 text-xl font-bold bg-white/5 hover:bg-white/10 rounded-full transition-all border border-white/5"
-                >
-                  View Case Studies
                 </a>
               </div>
 
               <div className="mt-16 flex items-center justify-center gap-8 grayscale opacity-50">
                 <CheckCircle2 size={20} className="text-amber-500" />
-                <span className="text-sm font-medium">100% Satisfaction Guaranteed</span>
+                <span className="text-sm font-medium">Daily Engagement Boost</span>
                 <span className="hidden sm:inline w-1 h-1 bg-gray-600 rounded-full" />
-                <span className="text-sm font-medium">Premium Asset Handoff</span>
+                <span className="text-sm font-medium">Full Post Management</span>
               </div>
             </div>
           </div>
@@ -378,7 +351,7 @@ const ShowcaseCard = ({ image, title, type, colSpan = "" }) => (
     className={`group relative overflow-hidden rounded-3xl bg-surface/50 border border-white/5 ${colSpan}`}
     whileHover={{ y: -10 }}
   >
-    <div className="aspect-[16/10] overflow-hidden">
+    <div className="aspect-square overflow-hidden">
       <img 
         src={image} 
         alt={title} 
@@ -400,7 +373,6 @@ const ShowcaseCard = ({ image, title, type, colSpan = "" }) => (
       </div>
     </div>
     
-    {/* Glowing Border Hover */}
     <div className="absolute inset-0 border-2 border-transparent group-hover:border-amber-500/30 rounded-3xl transition-all pointer-events-none" />
   </motion.div>
 );
@@ -435,4 +407,4 @@ const FeatureItem = ({ icon, title, desc }) => (
   </div>
 );
 
-export default PackagingDesignInSangli;
+export default SocialMediaDesignInSangli;

@@ -63,6 +63,7 @@ const Home = () => {
     <div className="bg-[#0B0F14]">
       <Navbar />
       <Hero />
+      <RecentWork />
       <Marquee />
 
       {/* Services */}
@@ -88,7 +89,7 @@ const Home = () => {
         </div>
       </section>
 
-      <RecentWork />
+
       <Process />
       <Testimonials />
       <CTA />

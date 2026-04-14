@@ -1,15 +1,15 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Navbar  from '../components/Navbar';
-import Footer  from '../components/Footer';
-import CTA     from '../components/CTA';
-import { TEAM, CLIENTS, STATS, REVIEWS, GOOGLE_REVIEW } from '../constants';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import CTA from '../components/CTA';
+import { TEAM, clients, STATS, REVIEWS, GOOGLE_REVIEW } from '../constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
-  const teamRef    = useRef(null);
+  const teamRef = useRef(null);
   const reviewsRef = useRef(null);
 
   useEffect(() => {
@@ -21,15 +21,19 @@ const About = () => {
     const teamCards = teamRef.current?.querySelectorAll('.team-card');
     if (teamCards?.length) {
       gsap.fromTo(teamCards, { y: 60, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.9, stagger: 0.12, ease: 'power3.out',
-          scrollTrigger: { trigger: teamRef.current, start: 'top 80%' } });
+        {
+          y: 0, opacity: 1, duration: 0.9, stagger: 0.12, ease: 'power3.out',
+          scrollTrigger: { trigger: teamRef.current, start: 'top 80%' }
+        });
     }
 
     const rCards = reviewsRef.current?.querySelectorAll('.review-card');
     if (rCards?.length) {
       gsap.fromTo(rCards, { y: 60, opacity: 0 },
-        { y: 0, opacity: 1, duration: 0.9, stagger: 0.15, ease: 'power3.out',
-          scrollTrigger: { trigger: reviewsRef.current, start: 'top 80%' } });
+        {
+          y: 0, opacity: 1, duration: 0.9, stagger: 0.15, ease: 'power3.out',
+          scrollTrigger: { trigger: reviewsRef.current, start: 'top 80%' }
+        });
     }
 
     return () => ScrollTrigger.getAll().forEach((t) => t.kill());
@@ -78,7 +82,7 @@ const About = () => {
           <div ref={teamRef} className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {TEAM.map((m, i) => (
               <div key={i} className="team-card bg-[#0B0F14] border border-[#2D3748] rounded-3xl p-6 flex flex-col items-center text-center hover:border-amber-400/50 hover:shadow-[0_0_20px_rgba(245,158,11,0.1)] transition-all duration-300 hover:-translate-y-1" style={{ opacity: 0 }}>
-                <div 
+                <div
                   className="w-16 h-16 rounded-2xl flex items-center justify-center text-white font-black text-lg mb-4"
                   style={{ backgroundColor: m.color }}
                 >
@@ -139,7 +143,7 @@ const About = () => {
         </div>
         <div className="flex gap-6 mb-4 overflow-hidden">
           <div className="flex gap-6 animate-scroll-left whitespace-nowrap">
-            {[...CLIENTS, ...CLIENTS].map((c, i) => (
+            {[...clients, ...clients].map((c, i) => (
               <div key={i} className="shrink-0 bg-[#0B0F14] border border-[#2D3748] rounded-xl px-6 py-4 flex items-center gap-3">
                 <div className="w-9 h-9 rounded-xl bg-amber-400/10 flex items-center justify-center text-amber-400 font-black text-sm shrink-0">
                   {c.name.charAt(0)}

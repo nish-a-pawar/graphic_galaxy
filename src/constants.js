@@ -103,6 +103,8 @@ export const SERVICES = [
     tag: null,
     footerLabel: "Misc Design",
   },
+
+
 ];
 
 export const TEAM = [
@@ -120,15 +122,19 @@ export const STATS = [
   { value: '5.0★', label: 'Google Rating' },
 ];
 
-export const CLIENTS = [
-  { name: "Sangli Marathon", type: "Event Branding" },
-  { name: "Vijeta Group", type: "Branding & Design" },
+export const clients = [
+
+  { name: "Vijeta Group", type: "Sangli Marathon" },
   { name: "Radhey Dental Clinic", type: "Social Media Design" },
-  { name: "Smile Sangli Clinic", type: "Branding & Design" },
+  { name: "Smile Sangli Dental Clinic", type: "Branding & Design" },
   { name: "Shravani Organics", type: "Packaging Design" },
-  { name: "S3 Academy", type: "Event Branding" },
-  { name: "MTDK School", type: "Event Branding" },
+  { name: "S3 Academy", type: "S3 Duathlon Season 4 Branding" },
+  { name: "MTDK School", type: "MTDK RUN Branding & Books " },
   { name: "Carzspa Sangli", type: "Event Branding" },
+  { name: "GIFT CLINIC", type: "Social Media Design" },
+  { name: "ER. Tatyasaheb khot", type: "Flex and social media design" },
+  { name: "JK Paper Bags", type: "Packaging and social media design" }
+
 ];
 
 export const RECENT_PROJECTS = [
@@ -166,24 +172,24 @@ export const RECENT_PROJECTS = [
 
 export const REVIEWS = [
   {
-    name: 'Shreyansh Kargane', 
-    role: 'Carzspa Sangli', 
+    name: 'Shreyansh Kargane',
+    role: 'Carzspa Sangli',
     initials: 'SK',
     color: '#D97706',
     text: 'I recently got my poster designed by Graphic Galaxy in Sangli and they did an amazing job! The design was very attractive and exactly what I wanted. Their service is super quick and the prices are very affordable too. If you are looking for a creative and budget-friendly graphic designer in Sangli, I highly recommend them!',
     rating: 5,
   },
   {
-    name: 'Vaibhav Gandhi', 
-    role: 'Business Owner, Kolhapur', 
+    name: 'Vaibhav Gandhi',
+    role: 'Business Owner, Kolhapur',
     initials: 'VG',
     color: '#14B8A6',
     text: 'I had a great experience working with Graphic Galaxy. The team was very professional, creative, and responsive throughout the whole design process. A special thanks to Vaibhav, who was my main contact person. He understood my requirements clearly and ensured the final design matched exactly what I was looking for. The quality of work and attention to detail were excellent. I would definitely recommend Graphic Galaxy to anyone looking for reliable and high-quality graphic design services',
     rating: 5,
   },
   {
-    name: 'Deepak Patil', 
-    role: 'Investment Consultant, Sangli', 
+    name: 'Deepak Patil',
+    role: 'Investment Consultant, Sangli',
     initials: 'DP',
     color: '#7C3AED',
     text: 'Got amazing quote boards for our office just by calling Graphic Galaxy Sangli. The process was quick and the designs were creative. Highly recommended if you are searching for a good Graphic design Services in Sangli',
@@ -265,5 +271,35 @@ export const SEO_DATA = {
     title: "Logo Design in Sangli | Professional Logo Designer – Graphic Galaxy",
     description: "Looking for a logo designer in Sangli? Graphic Galaxy creates professional logos for businesses in Sangli, Miraj and Maharashtra.",
     url: "/logo-design-in-sangli",
+  },
+  packagingDesign: {
+    title: "Packaging Design in Sangli | Product Label & Box Design – Graphic Galaxy",
+    description: "Premium packaging design services in Sangli. Professional box packaging, label design, and product branding that stands out. Get a quote today.",
+    url: "/packaging-design-in-sangli",
+  },
+  socialMediaDesign: {
+    title: "Social Media Design in Sangli | Scroll-Stopping Content – Graphic Galaxy",
+    description: "Boost your online presence with professional social media design in Sangli. Creative posts, stories, and content kits for businesses.",
+    url: "/social-media-design-sangli",
+  },
+  brochureDesign: {
+    title: "Brochure Design in Sangli | Professional Business Brochures – Graphic Galaxy",
+    description: "Professional brochure design services in Sangli. Bi-fold, tri-fold, and multi-page brochures that effectively communicate your brand story.",
+    url: "/brochure-design-sangli",
+  },
+  flyerDesign: {
+    title: "Flyer Design in Sangli | Creative Promotional Flyers – Graphic Galaxy",
+    description: "Eye-catching flyer design in Sangli. Perfect for events, promotions, and local marketing. Get high-quality, print-ready designs today.",
+    url: "/flyer-design-sangli",
+  },
+  invitationDesign: {
+    title: "Invitation Design in Sangli | Wedding & Event Cards – Graphic Galaxy",
+    description: "Premium invitation design in Sangli. Custom wedding cards, corporate event invites, and birthday invitations with a premium touch.",
+    url: "/invitation-design-sangli",
+  },
+  bookletMagazine: {
+    title: "Booklet & Magazine Design in Sangli | Editorial Design – Graphic Galaxy",
+    description: "Professional booklet and magazine design in Sangli. High-end editorial layouts for annual reports, catalogs, and lifestyle magazines.",
+    url: "/booklet-magazine-design-sangli",
   },
 };

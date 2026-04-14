@@ -25,7 +25,7 @@ const Blog = () => {
     // GSAP Animations
     const elements = gsap.utils.toArray('.reveal-blog');
     if (elements.length > 0) {
-      gsap.fromTo(elements, 
+      gsap.fromTo(elements,
         { y: 30, opacity: 0 },
         { y: 0, opacity: 1, duration: 1, stagger: 0.1, ease: 'power3.out', scrollTrigger: { trigger: ".reveal-blog", start: "top 90%" } }
       );
@@ -49,12 +49,12 @@ const Blog = () => {
       {/* Hero */}
       <section className="relative pt-36 pb-24 px-6 overflow-hidden">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-[600px] bg-[radial-gradient(circle_at_50%_0%,rgba(245,158,11,0.06),transparent_70%)] pointer-events-none" />
-        
+
         <div className="max-w-7xl mx-auto text-center relative z-10">
           <div className="reveal-blog">
             <p className="text-sm font-bold text-amber-400 uppercase tracking-[0.4em] mb-6">Expert Perspectives</p>
             <h1 className="text-5xl md:text-8xl font-black mb-8 tracking-tighter leading-[0.9]">
-              Graphics <span className="text-gradient">Galaxy</span> Blog.
+              Graphic <span className="text-gradient">Galaxy</span> Blog.
             </h1>
             <p className="text-white/40 text-lg md:text-xl max-w-2xl mx-auto font-medium">
               Dive into the world of design, branding, and packaging with our latest news and expert guides.
@@ -68,8 +68,8 @@ const Blog = () => {
         <div className="max-w-7xl mx-auto">
           <div ref={blogGridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {BLOG_POSTS && BLOG_POSTS.map((post) => (
-              <div 
-                key={post.id} 
+              <div
+                key={post.id}
                 className="blog-card group relative bg-[#111827] border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-amber-400/30 transition-all duration-500 flex flex-col h-full"
               >
                 {/* Image Placeholder */}

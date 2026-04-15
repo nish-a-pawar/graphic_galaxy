@@ -59,7 +59,7 @@ const Navbar = () => {
                 {dropOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
                     <div className="glass-dark rounded-2xl w-56 py-2 border border-[#2D3748]">
-                      {SERVICES.slice(0, 6).map((s) => (
+                      {SERVICES.slice(0, 7).map((s) => (
                         <Link
                           key={s.path}
                           to={s.path}
@@ -160,7 +160,7 @@ const Navbar = () => {
                 }`}
             >
               <div className="flex flex-col gap-1 pl-4 border-l-2 border-amber-400/30">
-                {SERVICES.slice(0, 6).map((s) => (
+                {SERVICES.slice(0, 7).map((s) => (
                   <Link
                     key={s.path}
                     to={s.path}

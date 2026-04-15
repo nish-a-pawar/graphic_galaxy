@@ -351,6 +351,33 @@ export default function LogoDesignInSangli() {
           </div>
         </section>
 
+        {/* ── 4. RELATED SERVICES ── */}
+        <section className="py-24 px-6 bg-[#111827]">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <p className="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">Related Services</p>
+              <h2 className="text-4xl md:text-5xl font-black text-white">Connect your logo with services that complete the brand.</h2>
+            </div>
+            <div className="grid gap-6 md:grid-cols-3">
+              <Link to="/packaging-design-in-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+                <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Packaging Design</p>
+                <h3 className="text-2xl font-black text-white mb-4">Packaging design</h3>
+                <p className="text-white/50">Bring your logo to shelves with packaging that reinforces your identity.</p>
+              </Link>
+              <Link to="/brochure-design-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+                <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Brochure Design</p>
+                <h3 className="text-2xl font-black text-white mb-4">Brochure design</h3>
+                <p className="text-white/50">Use your new logo in brochures that tell your brand story with confidence.</p>
+              </Link>
+              <Link to="/social-media-design-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+                <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Social Media Design</p>
+                <h3 className="text-2xl font-black text-white mb-4">Social media design</h3>
+                <p className="text-white/50">Showcase your logo on posts and brand campaigns across social platforms.</p>
+              </Link>
+            </div>
+          </div>
+        </section>
+
         {/* ── 5. FAQ ── */}
         <section className="py-24 px-6 bg-[#0B0F14]">
           <div className="max-w-3xl mx-auto">

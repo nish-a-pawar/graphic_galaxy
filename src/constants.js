@@ -302,4 +302,9 @@ export const SEO_DATA = {
     description: "Professional booklet and magazine design in Sangli. High-end editorial layouts for annual reports, catalogs, and lifestyle magazines.",
     url: "/booklet-magazine-design-sangli",
   },
+  signageDesign: {
+    title: "Signage Board Design in Sangli | Shop Board & Glow Sign – Graphic Galaxy",
+    description: "Professional signage board design in Sangli. Shop boards, glow signs, ACP boards, 3D letter signs for businesses in Sangli, Miraj & Kolhapur.",
+    url: "/signage-design-sangli",
+  },
 };

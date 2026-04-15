@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
@@ -270,6 +271,33 @@ const BrochureDesignInSangli = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- RELATED SERVICES --- */}
+      <section className="py-24 px-6 bg-[#111827]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">Related Services</p>
+            <h2 className="text-4xl lg:text-5xl font-black text-white">Pair your brochure with services that strengthen your brand</h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            <Link to="/logo-design-in-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+              <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Logo Design</p>
+              <h3 className="text-2xl font-black text-white mb-4">Logo design services in Sangli</h3>
+              <p className="text-white/50">Start with a strong brand mark that makes your brochure look premium and consistent.</p>
+            </Link>
+            <Link to="/flyer-design-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+              <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Flyer Design</p>
+              <h3 className="text-2xl font-black text-white mb-4">Flyer design</h3>
+              <p className="text-white/50">Use flyers to amplify the same messaging and visuals from your brochure.</p>
+            </Link>
+            <Link to="/booklet-magazine-design-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+              <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Booklet & Magazine</p>
+              <h3 className="text-2xl font-black text-white mb-4">Booklet design</h3>
+              <p className="text-white/50">Scale your brochure into long-format content for product guides or catalogs.</p>
+            </Link>
           </div>
         </div>
       </section>

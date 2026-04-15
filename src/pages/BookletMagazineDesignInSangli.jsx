@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import { 
@@ -272,6 +273,28 @@ const BookletMagazineDesignInSangli = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- RELATED SERVICES --- */}
+      <section className="py-24 px-6 bg-[#111827]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">Related Services</p>
+            <h2 className="text-4xl lg:text-5xl font-black text-white">Extend your long-format design with matching branding assets</h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-2">
+            <Link to="/brochure-design-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+              <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Brochure Design</p>
+              <h3 className="text-2xl font-black text-white mb-4">Brochure design</h3>
+              <p className="text-white/50">Use booklets and magazines as an elevated extension of your brochure messaging.</p>
+            </Link>
+            <Link to="/logo-design-in-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+              <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Logo Design</p>
+              <h3 className="text-2xl font-black text-white mb-4">Logo design services in Sangli</h3>
+              <p className="text-white/50">Anchor your editorial content with a professional logo and brand identity.</p>
+            </Link>
           </div>
         </div>
       </section>

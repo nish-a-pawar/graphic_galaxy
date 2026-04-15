@@ -13,7 +13,7 @@ const services = [
   { name: "Booklet & Magazine", path: "/booklet-magazine-design-sangli" },
   { name: "Trophy & Sports", path: "/trophy-sports-design-sangli" },
   { name: "T-Shirt Design", path: "/tshirt-design-sangli" },
-  { name: "Invitation Design", path: "/invitation-design-in-sangli" },
+  { name: "Invitation Design", path: "/invitation-design-sangli" },
 ];
 const Header = () => {
   const [dropdownOpen, setDropdownOpen] = useState(false);

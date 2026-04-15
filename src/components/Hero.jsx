@@ -2,19 +2,19 @@ import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ArrowRight, Star, Award, Users } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants';
-import logoSample     from '../assets/images/logo_sample.png';
+import logoSample from '../assets/images/logo_sample.png';
 import packagingSample from '../assets/images/packaging_sample.png';
-import brandingSample  from '../assets/images/branding_sample.png';
-import posterSample    from '../assets/images/poster_sample.png';
+import brandingSample from '../assets/images/branding_sample.png';
+import posterSample from '../assets/images/poster_sample.png';
 
 const Hero = () => {
-  const heroRef         = useRef(null);
-  const headlineRef     = useRef(null);
-  const subRef          = useRef(null);
-  const ctaRef          = useRef(null);
-  const badgeRef        = useRef(null);
-  const statsRef        = useRef(null);
-  const floatingRef     = useRef(null);
+  const heroRef = useRef(null);
+  const headlineRef = useRef(null);
+  const subRef = useRef(null);
+  const ctaRef = useRef(null);
+  const badgeRef = useRef(null);
+  const statsRef = useRef(null);
+  const floatingRef = useRef(null);
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -22,7 +22,7 @@ const Hero = () => {
 
       tl.from(badgeRef.current, { y: 30, opacity: 0, duration: 0.8, delay: 0.2 })
         .from(headlineRef.current.querySelectorAll('.word'), { y: 120, opacity: 0, duration: 1, stagger: 0.08 }, '-=0.4')
-        .from(subRef.current,  { y: 40, opacity: 0, duration: 0.9 }, '-=0.6')
+        .from(subRef.current, { y: 40, opacity: 0, duration: 0.9 }, '-=0.6')
         .from(ctaRef.current.children, { y: 30, opacity: 0, duration: 0.8, stagger: 0.15 }, '-=0.6')
         .from(statsRef.current.children, { y: 40, opacity: 0, duration: 0.8, stagger: 0.1 }, '-=0.5')
         .from(floatingRef.current.children, { scale: 0.7, opacity: 0, duration: 1, stagger: 0.15, ease: 'back.out(1.4)' }, '-=0.8');
@@ -39,7 +39,7 @@ const Hero = () => {
       });
 
       const onMouseMove = (e) => {
-        const xPct = (e.clientX / window.innerWidth  - 0.5) * 18;
+        const xPct = (e.clientX / window.innerWidth - 0.5) * 18;
         const yPct = (e.clientY / window.innerHeight - 0.5) * 18;
         gsap.to('.parallax-layer', { x: xPct, y: yPct, duration: 1.2, ease: 'power2.out' });
       };
@@ -83,8 +83,8 @@ const Hero = () => {
               <span className="word inline-block text-gradient-amber">Sangli.</span>
             </h1>
 
-            <p ref={subRef} className="text-lg text-white/55 max-w-lg mb-10 leading-relaxed font-medium">
-              We transform your ideas into stunning visual identities. Logos, packaging, branding — crafted with precision for businesses that want to stand out.
+            <p ref={subRef} className="text-lg text-white/55 max-w-lg mb-10 leading-relaxed font-medium">We provide expert graphic design services in Sangli — from logo design and packaging to complete brand identity — crafted to elevate your business and attract more customers.
+
             </p>
 
             {/* CTAs */}
@@ -110,7 +110,7 @@ const Hero = () => {
               {[
                 { icon: Award, value: '50+', label: 'Projects Done' },
                 { icon: Users, value: '30+', label: 'Happy Clients' },
-                { icon: Star,  value: '5.0', label: 'Google Rating' },
+                { icon: Star, value: '5.0', label: 'Google Rating' },
               ].map(({ icon: Icon, value, label }, i) => (
                 <div key={i} className="flex items-center gap-3">
                   <div className="w-10 h-10 rounded-xl bg-amber-400/10 border border-amber-400/20 flex items-center justify-center">

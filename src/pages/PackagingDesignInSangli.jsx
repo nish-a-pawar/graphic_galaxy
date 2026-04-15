@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { 
@@ -303,6 +304,33 @@ const PackagingDesignInSangli = () => {
               </div>
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-amber-500/20 rounded-full blur-[80px]" />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* --- RELATED SERVICES --- */}
+      <section className="py-24 px-6 bg-[#111827]">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <p className="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">Related Services</p>
+            <h2 className="text-4xl lg:text-5xl font-black text-white">Complete product branding with services that work together</h2>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            <Link to="/logo-design-in-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+              <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Logo Design</p>
+              <h3 className="text-2xl font-black text-white mb-4">Logo design services in Sangli</h3>
+              <p className="text-white/50">Build the visual foundation for your packaging and brand identity.</p>
+            </Link>
+            <Link to="/brochure-design-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+              <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Brochure Design</p>
+              <h3 className="text-2xl font-black text-white mb-4">Brochure design</h3>
+              <p className="text-white/50">Create polished printed materials that support your packaged products.</p>
+            </Link>
+            <Link to="/flyer-design-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+              <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Flyer Design</p>
+              <h3 className="text-2xl font-black text-white mb-4">Flyer design</h3>
+              <p className="text-white/50">Promote your launch or product offer with a branded flyer campaign.</p>
+            </Link>
           </div>
         </div>
       </section>

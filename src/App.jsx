@@ -5,6 +5,7 @@ import PackagingDesignInSangli from "./pages/PackagingDesignInSangli";
 import SocialMediaDesignInSangli from "./pages/SocialMediaDesignInSangli";
 import BrochureDesignInSangli from "./pages/BrochureDesignInSangli";
 import FlyerDesignInSangli from "./pages/FlyerDesignInSangli";
+import InvitationDesignInSangli from "./pages/InvitationDesignInSangli";
 import SignageBoardDesignInSangli from "./pages/SignageBoardDesignInSangli";
 import Contact from "./pages/Contact";
 import About from "./pages/About";
@@ -21,7 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/logo-design-in-sangli" element={<LogoDesignInSangli />} />
-          {/* <Route path="/invitation-design-in-sangli" element={<InvitationDesignInSangli />} /> */}
+          <Route path="/invitation-design-sangli" element={<InvitationDesignInSangli />} />
           <Route path="/packaging-design-in-sangli" element={<PackagingDesignInSangli />} />
           <Route path="/social-media-design-sangli" element={<SocialMediaDesignInSangli />} />
           <Route path="/brochure-design-sangli" element={<BrochureDesignInSangli />} />

@@ -10,11 +10,15 @@ const PortfolioCard = ({ image, alt, title, category, mockups }) => {
         onClick={() => mockups && setOpen(true)}
       >
         {/* MAIN IMAGE */}
-        <img
-          src={image}
-          alt={alt}
-          className="w-full h-[250px] object-cover transition duration-500 group-hover:scale-105"
-        />
+        {image ? (
+          <img
+            src={image}
+            alt={alt || title}
+            className="w-full h-[250px] object-cover transition duration-500 group-hover:scale-105"
+          />
+        ) : (
+          <div className="w-full h-[250px] bg-linear-to-br from-[#1F2937] to-[#0B0F14]" />
+        )}
 
         {/* 🔥 HOVER MOCKUPS (only if exists) */}
         {mockups && (

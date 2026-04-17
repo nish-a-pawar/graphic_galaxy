@@ -326,8 +326,8 @@ export default function LogoDesignInSangli() {
                     {/* 🔥 IMAGE */}
                     <div className="h-64 relative overflow-hidden bg-white flex items-center justify-center">
                       <img
-                        src={item.img}
-                        alt={item.client}
+                        src={item.image}
+                        alt={item.alt}
                         loading="lazy"
                         className="h-full w-full object-contain p-6 bg-white"
                       />
@@ -341,13 +341,13 @@ export default function LogoDesignInSangli() {
                       <div className="flex justify-between items-start mb-2">
 
                         <h3 className="text-xl font-black text-white">
-                          {item.client}
+                          {item.title}
                         </h3>
 
                         {/* ✅ industry hide if empty */}
-                        {item.industry && (
+                        {item.category && (
                           <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-2 py-1 rounded-md">
-                            {item.industry}
+                            {item.category}
                           </span>
                         )}
                       </div>

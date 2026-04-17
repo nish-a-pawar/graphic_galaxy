@@ -120,6 +120,36 @@ const Portfolio = () => {
                 ))}
             </div>
           </section>
+
+          {/* POUCH */}
+          <section id="pouch-design" className="px-6 pb-16">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Pouch Design
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {allProjects
+                .filter((p) => p.category === "Pouch Design")
+                .map((project) => (
+                  <PortfolioCard key={project.id} {...project} />
+                ))}
+            </div>
+          </section>
+
+          {/* SPORTS */}
+          <section id="sports-branding" className="px-6 pb-16">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Sports Branding
+            </h2>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {allProjects
+                .filter((p) => p.category === "Sports Branding")
+                .map((project) => (
+                  <PortfolioCard key={project.id} {...project} />
+                ))}
+            </div>
+          </section>
         </>
       ) : (
         /* 🔥 FILTERED GRID */

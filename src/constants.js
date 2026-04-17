@@ -7,6 +7,9 @@ import taaya from './assets/images/Bag_Design/taaya.webp';
 import medBox from './assets/images/Box_Design/medBox.webp';
 import panelLightBx from './assets/images/Box_Design/panelLightBx.webp';
 import pizzaBox from './assets/images/Box_Design/pizzaBox.webp'
+import cosmeticPouch from './assets/images/cosmetic-pouch.png';
+import packagingSample from './assets/images/packaging_sample.png';
+import posterSample from './assets/images/poster_sample.png';
 //logo 
 import aryanagro from "./assets/images/Logo_Design/aryanagro.jpeg";
 import c3 from "./assets/images/Logo_Design/c3.jpeg";
@@ -196,7 +199,7 @@ export const PACKAGING_PROJECTS = [
   // 👉 Sticker
   {
     id: "s1",
-    image: "",
+    image: packagingSample,
     title: "Brand Sticker Design",
     category: "Sticker Design",
     alt: "Custom branding sticker design for packaging and product labels",
@@ -205,7 +208,7 @@ export const PACKAGING_PROJECTS = [
   // 👉 Pouch
   {
     id: "p1",
-    image: "",
+    image: cosmeticPouch,
     title: "Pouch Packaging Design",
     category: "Pouch Design",
     alt: "Custom pouch packaging design for food and retail products in India",
@@ -213,7 +216,7 @@ export const PACKAGING_PROJECTS = [
 
   {
     id: "p2",
-    image: "",
+    image: packagingSample,
     title: "Pouch Packaging Design",
     category: "Pouch Design",
     alt: "Custom pouch packaging design for food and retail products in India",
@@ -304,7 +307,8 @@ export const RECENT_PROJECTS = [
     status: "Completed",
     bg: "#1a0000",
     accent: "#dc2626",
-    image: null,
+    image: posterSample,
+    alt: "Duathlon sports branding project for S3 Academy in Sangli",
   },
   {
     id: 2,
@@ -314,7 +318,8 @@ export const RECENT_PROJECTS = [
     status: "Ongoing",
     bg: "#0d0d0d",
     accent: "#ef4444",
-    image: null,
+    image: posterSample,
+    alt: "Marathon sports branding design for MTDK Run",
   },
   {
     id: 3,
@@ -324,7 +329,8 @@ export const RECENT_PROJECTS = [
     status: "Completed",
     bg: "#0a0a0a",
     accent: "#dc2626",
-    image: null,
+    image: posterSample,
+    alt: "Sports branding assets for Sangli Marathon",
   },
 ];
 

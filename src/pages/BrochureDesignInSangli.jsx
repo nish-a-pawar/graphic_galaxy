@@ -52,7 +52,7 @@ const BrochureDesignInSangli = () => {
   };
 
   return (
-    <div className="bg-[#0B0F14] text-[#F9FAFB] min-h-screen font-inter selection:bg-amber-500/30">
+    <div className="bg-[#0B0F14] text-[#F9FAFB] min-h-screen font-inter selection:bg-amber-500/30 overflow-x-hidden">
       <Helmet>
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
@@ -399,3 +399,4 @@ const FeatureItem = ({ icon, title, desc }) => (
 );
 
 export default BrochureDesignInSangli;
+

@@ -174,7 +174,7 @@ function FAQItem({ q, a, idx }) {
 
 export default function LogoDesignInSangli() {
   return (
-    <div className="bg-[#0B0F14] text-[#F9FAFB] font-inter">
+    <div className="bg-[#0B0F14] text-[#F9FAFB] font-inter overflow-x-hidden">
       <SEO
         title={SEO_DATA.logoDesign.title}
         description={SEO_DATA.logoDesign.description}

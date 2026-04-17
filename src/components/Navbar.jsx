@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
 import logo from "../assets/images/logo.png";
 import { SERVICES, WHATSAPP_LINK } from "../constants";
-import { div } from "framer-motion/client";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,15 +19,13 @@ const Navbar = () => {
   return (
     <>
       {/* ── Floating pill navbar ── */}
-      <div
-        className={`fixed top-0 left-0 w-full z-[100] transition-all duration-500 pointer-events-none ${scrolled ? "pt-3 px-4" : "pt-0 px-0"
-          }`}
-      >
+      <div className={`fixed top-0 left-0 w-full z-[100] pointer-events-none transition-all duration-500 ${scrolled ? 'pt-3 px-4' : ''}`}>
         <nav
-          className={`pointer-events-auto transition-all duration-500 ${scrolled
-            ? "bg-[#0B0F14]/85 backdrop-blur-xl border border-[#2D3748] rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] py-3"
-            : "bg-transparent py-5"
-            }`}
+          className={`pointer-events-auto transition-all duration-500 ${
+            scrolled
+              ? 'bg-[#0B0F14]/85 backdrop-blur-xl border border-[#2D3748] rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.4)] py-3'
+              : 'bg-transparent py-5'
+          }`}
         >
           <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
             {/* Logo */}

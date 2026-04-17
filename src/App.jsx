@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import Home from "./pages/Home";
 import LogoDesignInSangli from "./pages/LogoDesignInSangli";
 import PackagingDesignInSangli from "./pages/PackagingDesignInSangli";
@@ -14,10 +15,21 @@ import Blog from "./pages/Blog.jsx";
 import SmoothScroll from "./components/SmoothScroll";
 import CustomCursor from "./components/CustomCursor";
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
+
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
       <SmoothScroll>
+        <ScrollToTop />
         <CustomCursor />
         <Routes>
           <Route path="/" element={<Home />} />

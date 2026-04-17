@@ -49,7 +49,7 @@ const SocialMediaDesignInSangli = () => {
   };
 
   return (
-    <div className="bg-[#0B0F14] text-[#F9FAFB] min-h-screen font-inter selection:bg-amber-500/30">
+    <div className="bg-[#0B0F14] text-[#F9FAFB] min-h-screen font-inter selection:bg-amber-500/30 overflow-x-hidden">
       <Helmet>
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
@@ -59,14 +59,14 @@ const SocialMediaDesignInSangli = () => {
       <Navbar />
 
       {/* --- HERO SECTION --- */}
-      <section className="relative pt-32 pb-20 overflow-hidden lg:pt-48 lg:pb-32">
+      <section className="relative pt-28 pb-16 overflow-hidden lg:pt-48 lg:pb-32">
         <div className="absolute top-0 -left-20 w-72 h-72 bg-amber-500/10 rounded-full blur-[120px] animate-pulse" />
         <div className="absolute bottom-0 -right-20 w-96 h-96 bg-teal-500/5 rounded-full blur-[150px] animate-pulse delay-1000" />
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
             <motion.div 
-              className="lg:w-1/2 text-center lg:text-left"
+              className="w-full lg:w-1/2 text-center lg:text-left"
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
@@ -80,26 +80,26 @@ const SocialMediaDesignInSangli = () => {
               
               <motion.h1 
                 variants={fadeInUp}
-                className="text-5xl lg:text-7xl font-black mb-8 leading-[1.1]"
+                className="text-3xl sm:text-5xl lg:text-7xl font-black mb-6 sm:mb-8 leading-[1.1]"
               >
                 Social Media Design in <span className="text-gradient-amber">Sangli</span> <br /> 
-                <span className="text-4xl lg:text-6xl text-white/90">Dominate Every Feed</span>
+                <span className="text-2xl sm:text-4xl lg:text-6xl text-white/90">Dominate Every Feed</span>
               </motion.h1>
               
               <motion.p 
                 variants={fadeInUp}
-                className="text-lg lg:text-xl text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+                className="text-base sm:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
               >
                 In a world of infinite scrolling, capture the eye in a split second. We design premium social media assets that turn casual scrollers into loyal customers.
               </motion.p>
               
               <motion.div 
                 variants={fadeInUp}
-                className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
+                className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center lg:justify-start"
               >
                 <a 
                   href={WHATSAPP_LINK}
-                  className="btn-amber px-8 py-5 flex items-center gap-3 text-lg group"
+                  className="btn-amber w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-center gap-3 text-base sm:text-lg group"
                 >
                   <Share2 className="group-hover:rotate-12 transition-transform" />
                   Get Your Feed Redesigned
@@ -109,9 +109,9 @@ const SocialMediaDesignInSangli = () => {
             </motion.div>
 
             {/* Hero Mockups Visual */}
-            <div className="lg:w-1/2 relative h-[500px] w-full max-w-[600px]">
+            <div className="w-full lg:w-1/2 relative h-[340px] sm:h-[420px] lg:h-[500px] max-w-full sm:max-w-[520px] lg:max-w-[600px]">
               <motion.div 
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex flex-wrap justify-center gap-4"
+                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full flex flex-wrap justify-center gap-3 sm:gap-4"
                 animate={{
                   y: [0, -10, 0],
                 }}
@@ -122,21 +122,21 @@ const SocialMediaDesignInSangli = () => {
                 }}
               >
                 <motion.div 
-                  className="w-48 lg:w-64 glass-dark p-2 rounded-2xl transform rotate-[-6deg] drop-shadow-2xl"
+                  className="w-36 sm:w-48 lg:w-64 glass-dark p-2 rounded-2xl transform rotate-[-6deg] drop-shadow-2xl"
                   animate={{ rotate: [-6, -4, -6] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 >
                     <img src={socialCoffee} alt="Instagram Post Mockup" className="rounded-xl w-full" />
                 </motion.div>
                 <motion.div 
-                  className="w-48 lg:w-64 glass-dark p-2 rounded-2xl transform rotate-[6deg] mt-10 drop-shadow-2xl"
+                  className="w-36 sm:w-48 lg:w-64 glass-dark p-2 rounded-2xl transform rotate-[6deg] mt-6 sm:mt-10 drop-shadow-2xl"
                   animate={{ rotate: [6, 4, 6] }}
                   transition={{ duration: 5, repeat: Infinity }}
                 >
                     <img src={socialTech} alt="Facebook Ad Mockup" className="rounded-xl w-full" />
                 </motion.div>
                 <motion.div 
-                  className="w-40 lg:w-56 glass-dark p-2 rounded-2xl absolute -bottom-10 left-1/2 -translate-x-1/2 z-20 drop-shadow-2xl"
+                  className="w-32 sm:w-40 lg:w-56 glass-dark p-2 rounded-2xl absolute bottom-2 sm:-bottom-6 lg:-bottom-10 left-1/2 -translate-x-1/2 z-20 drop-shadow-2xl"
                   animate={{ y: [0, -15, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
                 >
@@ -151,14 +151,14 @@ const SocialMediaDesignInSangli = () => {
       </section>
 
       {/* --- SCROLLING MARQUEE --- */}
-      <div className="py-12 bg-surface/50 border-y border-white/5 overflow-hidden">
+      <div className="py-8 sm:py-12 bg-surface/50 border-y border-white/5 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
           {[
             "Instagram Posts", "Facebook Ads", "Reel Graphics", "LinkedIn Carousels",
             "Story Designs", "Cover Photos", "YouTube Thumbnails", "Social Content Kits",
             "Brand Presets", "Ad Creatives", "Engagement Posts", "Campaign Branding"
           ].map((service, idx) => (
-            <div key={idx} className="flex items-center mx-10 text-2xl font-bold text-white/40 uppercase tracking-widest gap-4">
+            <div key={idx} className="flex items-center mx-5 sm:mx-10 text-base sm:text-xl lg:text-2xl font-bold text-white/40 uppercase tracking-[0.2em] sm:tracking-widest gap-3 sm:gap-4">
               <span className="w-2 h-2 bg-amber-500 rounded-full" />
               {service}
             </div>
@@ -169,7 +169,7 @@ const SocialMediaDesignInSangli = () => {
             "Story Designs", "Cover Photos", "YouTube Thumbnails", "Social Content Kits",
             "Brand Presets", "Ad Creatives", "Engagement Posts", "Campaign Branding"
           ].map((service, idx) => (
-            <div key={`dup-${idx}`} className="flex items-center mx-10 text-2xl font-bold text-white/40 uppercase tracking-widest gap-4">
+            <div key={`dup-${idx}`} className="flex items-center mx-5 sm:mx-10 text-base sm:text-xl lg:text-2xl font-bold text-white/40 uppercase tracking-[0.2em] sm:tracking-widest gap-3 sm:gap-4">
               <span className="w-2 h-2 bg-amber-500 rounded-full" />
               {service}
             </div>
@@ -178,11 +178,11 @@ const SocialMediaDesignInSangli = () => {
       </div>
 
       {/* --- SHOWCASE GRID --- */}
-      <section className="py-24 lg:py-40">
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mb-20 text-center mx-auto">
-            <h2 className="text-4xl lg:text-6xl font-black mb-6">Designed for <span className="text-gradient-amber">Max Engagement</span></h2>
-            <p className="text-gray-400 text-lg">We don't just design; we strategize. Each pixel is placed to drive likes, shares, and conversations.</p>
+      <section className="py-16 sm:py-24 lg:py-40">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="max-w-3xl mb-14 sm:mb-20 text-center mx-auto">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black mb-5 sm:mb-6">Designed for <span className="text-gradient-amber">Max Engagement</span></h2>
+            <p className="text-gray-400 text-base sm:text-lg">We don't just design; we strategize. Each pixel is placed to drive likes, shares, and conversations.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -213,14 +213,14 @@ const SocialMediaDesignInSangli = () => {
       </section>
 
       {/* --- PROCESS SECTION --- */}
-      <section className="py-24 relative overflow-hidden bg-surface/30">
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-20">
-            <h2 className="text-4xl lg:text-5xl font-black mb-4">Our Content <span className="text-amber-500">Engine</span></h2>
+      <section className="py-16 sm:py-24 relative overflow-hidden bg-surface/30">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="text-center mb-12 sm:mb-20">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4">Our Content <span className="text-amber-500">Engine</span></h2>
             <p className="text-gray-400">Streamlined workflow for consistent brand presence.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <ProcessStep 
               icon={<Target className="text-amber-500" />}
               step="01"
@@ -250,12 +250,12 @@ const SocialMediaDesignInSangli = () => {
       </section>
 
       {/* --- WHY CHOOSE US --- */}
-      <section className="py-24 lg:py-40">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-20 items-center">
+      <section className="py-16 sm:py-24 lg:py-40">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
             <div className="lg:w-1/2">
-              <h2 className="text-4xl lg:text-6xl font-black mb-8 leading-tight">Elevate Your <br /> Digital <span className="text-amber-500 underline decoration-2 underline-offset-8">Authority</span></h2>
-              <p className="text-gray-400 text-lg mb-12">
+              <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black mb-6 sm:mb-8 leading-tight">Elevate Your <br /> Digital <span className="text-amber-500 underline decoration-2 underline-offset-8">Authority</span></h2>
+              <p className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-12">
                 In Sangli’s competitive market, professional social media design sets you apart from the 'amateur' look and builds instant trust.
               </p>
 
@@ -284,8 +284,8 @@ const SocialMediaDesignInSangli = () => {
             </div>
 
             <div className="lg:w-1/2 relative">
-              <div className="relative z-10 glass-dark rounded-[2.5rem] p-8 lg:p-12 border border-white/10 glow-amber/5">
-                <blockquote className="text-2xl font-medium italic text-gray-200 mb-8 leading-relaxed">
+              <div className="relative z-10 glass-dark rounded-3xl sm:rounded-[2.5rem] p-6 sm:p-8 lg:p-12 border border-white/10 glow-amber/5">
+                <blockquote className="text-lg sm:text-2xl font-medium italic text-gray-200 mb-6 sm:mb-8 leading-relaxed">
                   "Our social media went from average to extraordinary. Graphic Galaxy knows how to make content that actually gets people talking."
                 </blockquote>
                 <div className="flex items-center gap-4">
@@ -303,24 +303,24 @@ const SocialMediaDesignInSangli = () => {
       </section>
 
       {/* --- CTA SECTION --- */}
-      <section className="py-24 lg:py-32 px-6">
+      <section className="py-16 sm:py-24 lg:py-32 px-4 sm:px-6">
         <div className="container mx-auto">
-          <div className="relative overflow-hidden rounded-[3rem] bg-gradient-to-br from-[#1F2937] to-[#0B0F14] border border-white/10 p-12 lg:p-24 text-center">
+          <div className="relative overflow-hidden rounded-3xl sm:rounded-[3rem] bg-gradient-to-br from-[#1F2937] to-[#0B0F14] border border-white/10 p-6 sm:p-10 lg:p-24 text-center">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-full bg-amber-500/5 blur-[120px]" />
             
             <div className="relative z-10 max-w-4xl mx-auto">
-              <h2 className="text-4xl lg:text-7xl font-black mb-10 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-7xl font-black mb-8 sm:mb-10 leading-tight">
                 Ready to Stop <br /> 
                 <span className="text-gradient-amber">The Scroll?</span>
               </h2>
-              <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-gray-400 text-base sm:text-xl mb-10 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
                 Transform your social media into a powerful business engine. Let's create content that converts.
               </p>
               
               <div className="flex flex-col sm:flex-row items-center gap-6 justify-center">
                 <a 
                   href={WHATSAPP_LINK} 
-                  className="btn-amber px-10 py-6 text-xl flex items-center gap-4 group shadow-xl"
+                  className="btn-amber w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-6 text-base sm:text-xl flex items-center justify-center gap-3 sm:gap-4 group shadow-xl"
                 >
                   <Zap className="fill-current" />
                   Launch My Campaign
@@ -328,7 +328,7 @@ const SocialMediaDesignInSangli = () => {
                 </a>
               </div>
 
-              <div className="mt-16 flex items-center justify-center gap-8 grayscale opacity-50">
+              <div className="mt-10 sm:mt-16 flex flex-wrap items-center justify-center gap-4 sm:gap-8 grayscale opacity-50">
                 <CheckCircle2 size={20} className="text-amber-500" />
                 <span className="text-sm font-medium">Daily Engagement Boost</span>
                 <span className="hidden sm:inline w-1 h-1 bg-gray-600 rounded-full" />
@@ -361,13 +361,13 @@ const ShowcaseCard = ({ image, title, type, colSpan = "" }) => (
     
     <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F14] via-[#0B0F14]/40 to-transparent opacity-100 group-hover:opacity-90 transition-opacity" />
     
-    <div className="absolute bottom-0 left-0 p-8 w-full">
+    <div className="absolute bottom-0 left-0 p-4 sm:p-8 w-full">
       <div className="flex justify-between items-end">
         <div>
           <span className="text-amber-500 text-xs font-bold uppercase tracking-widest mb-2 block">{type}</span>
-          <h3 className="text-2xl font-black">{title}</h3>
+          <h3 className="text-xl sm:text-2xl font-black">{title}</h3>
         </div>
-        <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-amber-500 group-hover:border-amber-500 group-hover:text-gray-900 transition-all">
+        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-amber-500 group-hover:border-amber-500 group-hover:text-gray-900 transition-all">
           <ArrowRight size={20} />
         </div>
       </div>

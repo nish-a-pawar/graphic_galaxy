@@ -2,11 +2,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion } from 'framer-motion';
 import {
   Package,
-  Tag,
-  Box,
   Truck,
   Search,
   Lightbulb,
@@ -17,8 +15,6 @@ import {
   Zap,
   Printer,
   Clock,
-  Layers,
-  Palette,
   ShoppingCart
 
 } from 'lucide-react';
@@ -62,7 +58,7 @@ const PackagingDesignInSangli = () => {
   };
 
   return (
-    <div className="bg-[#0B0F14] text-[#F9FAFB] min-h-screen font-inter selection:bg-amber-500/30">
+    <div className="bg-[#0B0F14] text-[#F9FAFB] min-h-screen font-inter selection:bg-amber-500/30 overflow-x-hidden">
       <Helmet>
         <title>{seo.title}</title>
         <meta name="description" content={seo.description} />
@@ -72,18 +68,18 @@ const PackagingDesignInSangli = () => {
       <Navbar />
 
       {/* --- HERO SECTION --- */}
-      <section className="relative pt-32 pb-20 overflow-hidden lg:pt-48 lg:pb-32 bg-gradient-to-br from-black via-[#0a0a0a] to-black">
+      <section className="relative pt-28 pb-16 overflow-hidden lg:pt-48 lg:pb-32 bg-gradient-to-br from-black via-[#0a0a0a] to-black">
 
         {/* Background Glow */}
         <div className="absolute top-0 -left-20 w-72 h-72 bg-amber-500/10 rounded-full blur-[120px]" />
         <div className="absolute bottom-0 -right-20 w-96 h-96 bg-amber-500/5 rounded-full blur-[150px]" />
 
-        <div className="container mx-auto px-6 relative z-10">
-          <div className="flex flex-col lg:flex-row items-center gap-12">
+        <div className="container mx-auto px-4 sm:px-6 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center gap-10 lg:gap-12">
 
             {/* LEFT CONTENT */}
             <motion.div
-              className="lg:w-1/2 text-center lg:text-left"
+              className="w-full lg:w-1/2 text-center lg:text-left"
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
@@ -97,18 +93,18 @@ const PackagingDesignInSangli = () => {
 
               <motion.h1
                 variants={fadeInUp}
-                className="text-5xl lg:text-7xl font-black mb-8 leading-[1.1]"
+                className="text-3xl sm:text-5xl lg:text-7xl font-black mb-6 sm:mb-8 leading-[1.1]"
               >
                 Packaging Design in{" "}
                 <span className="text-gradient-amber">Sangli</span> <br />
-                <span className="text-4xl lg:text-6xl text-white/90">
+                <span className="text-2xl sm:text-4xl lg:text-6xl text-white/90">
                   That Sells Your Story
                 </span>
               </motion.h1>
 
               <motion.p
                 variants={fadeInUp}
-                className="text-lg lg:text-xl text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
+                className="text-base sm:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
               >
                 Don't just wrap your product; elevate it. We create high-converting,
                 branding-focused packaging that grabs attention and builds trust.
@@ -116,11 +112,11 @@ const PackagingDesignInSangli = () => {
 
               <motion.div
                 variants={fadeInUp}
-                className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
+                className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center lg:justify-start"
               >
                 <a
                   href={WHATSAPP_LINK}
-                  className="btn-amber px-8 py-5 flex items-center gap-3 text-lg group"
+                  className="btn-amber w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-center gap-3 text-base sm:text-lg group"
                 >
                   <Package className="group-hover:rotate-12 transition-transform" />
                   Get Packaging Design
@@ -132,27 +128,27 @@ const PackagingDesignInSangli = () => {
             </motion.div>
 
             {/* RIGHT VISUAL */}
-            <div className="lg:w-1/2 relative h-[500px] w-full max-w-[600px]">
+            <div className="w-full lg:w-1/2 relative h-[320px] sm:h-[420px] lg:h-[500px] max-w-full overflow-hidden">
 
               {/* Background blurred image (depth) */}
               <img
                 src={organicBottle}
                 alt=""
-                className="absolute w-64 left-10 bottom-10 opacity-20 blur-md"
+                className="absolute w-32 sm:w-48 lg:w-64 left-2 sm:left-8 lg:left-10 bottom-2 sm:bottom-8 lg:bottom-10 opacity-20 blur-md"
               />
 
               {/* Main Image */}
               <img
                 src={luxuryBox}
                 alt="Luxury Packaging Design"
-                className="absolute z-30 w-72 lg:w-96 left-1/2 -translate-x-1/2 top-10 drop-shadow-[0_25px_60px_rgba(245,158,11,0.35)]"
+                className="absolute z-30 w-52 sm:w-72 lg:w-96 left-1/2 -translate-x-1/2 top-4 sm:top-8 lg:top-10 drop-shadow-[0_25px_60px_rgba(245,158,11,0.35)]"
               />
 
               {/* Secondary Image */}
               <motion.img
                 src={cosmeticPouch}
                 alt="Cosmetic Packaging"
-                className="absolute z-40 w-56 lg:w-72 right-0 bottom-16 drop-shadow-2xl"
+                className="absolute z-40 w-36 sm:w-52 lg:w-72 right-2 sm:right-0 bottom-3 sm:bottom-8 lg:bottom-16 drop-shadow-2xl"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 5, repeat: Infinity }}
               />
@@ -168,9 +164,9 @@ const PackagingDesignInSangli = () => {
       {/* --- SHOWCASE GRID --- */}
       <section className="py-16 lg:py-20">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mb-20 text-center mx-auto">
-            <h2 className="text-4xl lg:text-6xl font-black mb-6">Designed to <span className="text-gradient-amber">Dominate</span> the Shelf</h2>
-            <p className="text-gray-400 text-lg">Browse our elite packaging portfolio. We blend aesthetics with functionality to create designs that aren't just seen, but felt.</p>
+          <div className="max-w-3xl mb-14 sm:mb-20 text-center mx-auto">
+            <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black mb-5 sm:mb-6">Designed to <span className="text-gradient-amber">Dominate</span> the Shelf</h2>
+            <p className="text-gray-400 text-base sm:text-lg">Browse our elite packaging portfolio. We blend aesthetics with functionality to create designs that aren't just seen, but felt.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -203,10 +199,10 @@ const PackagingDesignInSangli = () => {
         </div>
       </section>
 
-      <section className="py-6">
-        <div className="container mx-auto px-6">
+      <section className="py-8 sm:py-10">
+        <div className="container mx-auto px-4 sm:px-6">
 
-          <h2 className="text-4xl font-black mb-4 text-center">
+          <h2 className="text-3xl md:text-4xl font-black mb-6 text-center">
             Our Packaging Design Specialties
           </h2>
 
@@ -215,7 +211,7 @@ const PackagingDesignInSangli = () => {
 
             {/* Bag */}
            <Link to="/portfolio-graphic-designer-sangli#bag-design">
-              <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60">
+              <div className="group relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 min-h-[170px]">
 
                 <img
                   src={crazy}
@@ -242,7 +238,7 @@ const PackagingDesignInSangli = () => {
 
             {/* BOX */}
             <Link to="/box-packaging-design-sangli">
-              <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 hover:scale-[1.02]">
+              <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 hover:scale-[1.02] min-h-[170px]">
 
                 <img
                   src={luxuryBox}
@@ -266,7 +262,7 @@ const PackagingDesignInSangli = () => {
 
             {/* POUCH */}
             <Link to="/pouch-design-sangli">
-              <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 hover:scale-[1.02]">
+              <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 hover:scale-[1.02] min-h-[170px]">
 
                 <img
                   src={cosmeticPouch}
@@ -292,7 +288,7 @@ const PackagingDesignInSangli = () => {
 
             {/* LABEL */}
             <Link to="/label-design-sangli">
-              <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 hover:scale-[1.02]">
+              <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 hover:scale-[1.02] min-h-[170px]">
 
                 <img
                   src={luxuryBox}
@@ -360,11 +356,11 @@ const PackagingDesignInSangli = () => {
 
       {/* --- WHY CHOOSE US --- */}
       <section className="py-16 lg:py-20">
-        <div className="container mx-auto px-6">
-          <div className="flex flex-col lg:flex-row gap-20 items-center">
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
             <div className="lg:w-1/2">
-              <h2 className="text-4xl lg:text-6xl font-black mb-8 leading-tight">Why Smart Brands <br /> Choose <span className="text-amber-500 underline decoration-2 underline-offset-8">Graphic Galaxy</span></h2>
-              <p className="text-gray-400 text-lg mb-12">
+              <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black mb-6 sm:mb-8 leading-tight">Why Smart Brands <br /> Choose <span className="text-amber-500 underline decoration-2 underline-offset-8">Graphic Galaxy</span></h2>
+              <p className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-12">
                 We aren't just graphic designers; we are brand storytellers. We understand the Sangli local market and global design standards.
               </p>
 
@@ -393,8 +389,8 @@ const PackagingDesignInSangli = () => {
             </div>
 
             <div className="lg:w-1/2 relative">
-              <div className="relative z-10 glass-dark rounded-[2.5rem] p-8 lg:p-12 border border-white/10 glow-amber/5">
-                <blockquote className="text-2xl font-medium italic text-gray-200 mb-8 leading-relaxed">
+              <div className="relative z-10 glass-dark rounded-3xl sm:rounded-[2.5rem] p-6 sm:p-8 lg:p-12 border border-white/10 glow-amber/5">
+                <blockquote className="text-lg sm:text-2xl font-medium italic text-gray-200 mb-6 sm:mb-8 leading-relaxed">
                   "Working with Graphic Galaxy changed how customers see our products. The packaging they designed made us look like a national brand overnight."
                 </blockquote>
                 <div className="flex items-center gap-4">
@@ -412,26 +408,26 @@ const PackagingDesignInSangli = () => {
       </section>
 
       {/* --- RELATED SERVICES --- */}
-      <section className="py-16 px-6 bg-[#111827]">
+      <section className="py-16 px-4 sm:px-6 bg-[#111827]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">Related Services</p>
-            <h2 className="text-4xl lg:text-5xl font-black text-white">Complete product branding with services that work together</h2>
+            <h2 className="text-3xl lg:text-5xl font-black text-white">Complete product branding with services that work together</h2>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            <Link to="/logo-design-in-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+            <Link to="/logo-design-in-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-6 sm:p-10 hover:border-amber-400/40 transition-all">
               <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Logo Design</p>
-              <h3 className="text-2xl font-black text-white mb-4">Logo design services in Sangli</h3>
+              <h3 className="text-xl sm:text-2xl font-black text-white mb-4">Logo design services in Sangli</h3>
               <p className="text-white/50">Build the visual foundation for your packaging and brand identity.</p>
             </Link>
-            <Link to="/brochure-design-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+            <Link to="/brochure-design-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-6 sm:p-10 hover:border-amber-400/40 transition-all">
               <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Brochure Design</p>
-              <h3 className="text-2xl font-black text-white mb-4">Brochure design</h3>
+              <h3 className="text-xl sm:text-2xl font-black text-white mb-4">Brochure design</h3>
               <p className="text-white/50">Create polished printed materials that support your packaged products.</p>
             </Link>
-            <Link to="/flyer-design-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-10 hover:border-amber-400/40 transition-all">
+            <Link to="/flyer-design-sangli" className="rounded-[2rem] border border-white/10 bg-[#0B0F14] p-6 sm:p-10 hover:border-amber-400/40 transition-all">
               <p className="text-sm uppercase tracking-widest text-amber-400 mb-3">Flyer Design</p>
-              <h3 className="text-2xl font-black text-white mb-4">Flyer design</h3>
+              <h3 className="text-xl sm:text-2xl font-black text-white mb-4">Flyer design</h3>
               <p className="text-white/50">Promote your launch or product offer with a branded flyer campaign.</p>
             </Link>
           </div>
@@ -455,24 +451,24 @@ const PackagingDesignInSangli = () => {
       </section>
 
       {/* --- CTA SECTION --- */}
-      <section className="py-20 lg:py-24 px-6">
+      <section className="py-16 sm:py-20 lg:py-24 px-4 sm:px-6">
         <div className="container mx-auto">
-          <div className="relative overflow-hidden rounded-[3rem] bg-gradient-to-br from-[#1F2937] to-[#0B0F14] border border-white/10 p-12 lg:p-24 text-center">
+          <div className="relative overflow-hidden rounded-3xl sm:rounded-[3rem] bg-gradient-to-br from-[#1F2937] to-[#0B0F14] border border-white/10 p-6 sm:p-10 lg:p-24 text-center">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-full bg-amber-500/5 blur-[120px]" />
 
             <div className="relative z-10 max-w-4xl mx-auto">
-              <h2 className="text-4xl lg:text-7xl font-black mb-10 leading-tight">
+              <h2 className="text-3xl sm:text-4xl lg:text-7xl font-black mb-8 sm:mb-10 leading-tight">
                 Let's Build Packaging <br />
                 <span className="text-gradient-amber">That Sells Itself</span>
               </h2>
-              <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
+              <p className="text-gray-400 text-base sm:text-xl mb-10 sm:mb-12 max-w-2xl mx-auto leading-relaxed">
                 Ready to take your product to the next level? Join the league of premium brands in Sangli with professional design.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center gap-6 justify-center">
                 <a
                   href={WHATSAPP_LINK}
-                  className="btn-amber px-10 py-6 text-xl flex items-center gap-4 group shadow-xl"
+                  className="btn-amber w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-6 text-base sm:text-xl flex items-center justify-center gap-3 sm:gap-4 group shadow-xl"
                 >
                   <Zap className="fill-current" />
                   Start My Project Now
@@ -480,13 +476,13 @@ const PackagingDesignInSangli = () => {
                 </a>
                 <a
                   href="/portfolio-graphic-designer-sangli"
-                  className="px-10 py-6 text-xl font-bold bg-white/5 hover:bg-white/10 rounded-full transition-all border border-white/5"
+                  className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-6 text-base sm:text-xl font-bold bg-white/5 hover:bg-white/10 rounded-full transition-all border border-white/5"
                 >
                   View Case Studies
                 </a>
               </div>
 
-              <div className="mt-16 flex items-center justify-center gap-8 grayscale opacity-50">
+              <div className="mt-10 sm:mt-16 flex flex-wrap items-center justify-center gap-4 sm:gap-8 grayscale opacity-50">
                 <CheckCircle2 size={20} className="text-amber-500" />
                 <span className="text-sm font-medium">100% Satisfaction Guaranteed</span>
                 <span className="hidden sm:inline w-1 h-1 bg-gray-600 rounded-full" />
@@ -506,7 +502,8 @@ const PackagingDesignInSangli = () => {
 
 const ShowcaseCard = ({ image, title, type, colSpan = "" }) => (
   <motion.div
-className={`group relative overflow-hidden rounded-2xl ${colSpan} h-[280px] md:h-[320px] lg:h-[360px]`}    whileHover={{ y: -10 }}
+    className={`group relative overflow-hidden rounded-2xl ${colSpan} h-[240px] sm:h-[280px] md:h-[320px] lg:h-[360px]`}
+    whileHover={{ y: -10 }}
   >
     <img
       src={image}
@@ -515,9 +512,9 @@ className={`group relative overflow-hidden rounded-2xl ${colSpan} h-[280px] md:h
     />
 
     {/* Overlay */}
-    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-100 md:opacity-0 md:group-hover:opacity-100 transition duration-500" />
     {/* Content */}
-    <div className="absolute bottom-0 left-0 p-6 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500">
+    <div className="absolute bottom-0 left-0 p-4 sm:p-6 translate-y-0 opacity-100 md:translate-y-10 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100 transition duration-500">
       <h3 className="text-white text-xl font-bold">{title}</h3>
       <p className="text-gray-300 text-sm mt-1">{type}</p>
 

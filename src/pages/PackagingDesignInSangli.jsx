@@ -3,15 +3,15 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { 
-  Package, 
-  Tag, 
-  Box, 
-  Truck, 
-  Search, 
-  Lightbulb, 
-  PenTool, 
-  CheckCircle2, 
+import {
+  Package,
+  Tag,
+  Box,
+  Truck,
+  Search,
+  Lightbulb,
+  PenTool,
+  CheckCircle2,
   ArrowRight,
   Sparkles,
   Zap,
@@ -20,14 +20,21 @@ import {
   Layers,
   Palette,
   ShoppingCart
+
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { SEO_DATA, WHATSAPP_LINK } from '../constants';
 
 // Assets
-import luxuryBox from '../assets/images/luxury-box.png';
+import amukti from '../assets/images/Bag_Design/amukti.webp';
+import anuj from '../assets/images/Bag_Design/anuj.webp';
+import clothesline from '../assets/images/Bag_Design/clothesline.webp';
+import crazy from '../assets/images/Bag_Design/crazy.webp';
+import jk_paper_bags from '../assets/images/Bag_Design/jk_paper_bags.webp';
+import taaya from '../assets/images/Bag_Design/taaya.webp';
 import organicBottle from '../assets/images/organic-bottle.png';
+import luxuryBox from '../assets/images/luxury-box.png';
 import cosmeticPouch from '../assets/images/cosmetic-pouch.png';
 
 const PackagingDesignInSangli = () => {
@@ -36,8 +43,8 @@ const PackagingDesignInSangli = () => {
   // Animation Variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 30 },
-    visible: { 
-      opacity: 1, 
+    visible: {
+      opacity: 1,
       y: 0,
       transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
     }
@@ -65,126 +72,101 @@ const PackagingDesignInSangli = () => {
       <Navbar />
 
       {/* --- HERO SECTION --- */}
-      <section className="relative pt-32 pb-20 overflow-hidden lg:pt-48 lg:pb-32">
-        {/* Animated Background Blobs */}
-        <div className="absolute top-0 -left-20 w-72 h-72 bg-amber-500/10 rounded-full blur-[120px] animate-pulse" />
-        <div className="absolute bottom-0 -right-20 w-96 h-96 bg-teal-500/5 rounded-full blur-[150px] animate-pulse delay-1000" />
+      <section className="relative pt-32 pb-20 overflow-hidden lg:pt-48 lg:pb-32 bg-gradient-to-br from-black via-[#0a0a0a] to-black">
+
+        {/* Background Glow */}
+        <div className="absolute top-0 -left-20 w-72 h-72 bg-amber-500/10 rounded-full blur-[120px]" />
+        <div className="absolute bottom-0 -right-20 w-96 h-96 bg-amber-500/5 rounded-full blur-[150px]" />
 
         <div className="container mx-auto px-6 relative z-10">
           <div className="flex flex-col lg:flex-row items-center gap-12">
-            <motion.div 
+
+            {/* LEFT CONTENT */}
+            <motion.div
               className="lg:w-1/2 text-center lg:text-left"
               initial="hidden"
               animate="visible"
               variants={staggerContainer}
             >
-              <motion.span 
+              <motion.span
                 variants={fadeInUp}
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-sm font-semibold mb-6"
               >
                 <Sparkles size={16} /> Premium Packaging Experts in Sangli
               </motion.span>
-              
-              <motion.h1 
+
+              <motion.h1
                 variants={fadeInUp}
                 className="text-5xl lg:text-7xl font-black mb-8 leading-[1.1]"
               >
-                Packaging Design in <span className="text-gradient-amber">Sangli</span> <br /> 
-                <span className="text-4xl lg:text-6xl text-white/90">That Sells Your Story</span>
+                Packaging Design in{" "}
+                <span className="text-gradient-amber">Sangli</span> <br />
+                <span className="text-4xl lg:text-6xl text-white/90">
+                  That Sells Your Story
+                </span>
               </motion.h1>
-              
-              <motion.p 
+
+              <motion.p
                 variants={fadeInUp}
                 className="text-lg lg:text-xl text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
               >
-                Don't just wrap your product; elevate it. We create high-converting, branding-focused packaging that grabs attention on shelves and builds trust with your customers.
+                Don't just wrap your product; elevate it. We create high-converting,
+                branding-focused packaging that grabs attention and builds trust.
               </motion.p>
-              
-              <motion.div 
+
+              <motion.div
                 variants={fadeInUp}
                 className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start"
               >
-                <a 
+                <a
                   href={WHATSAPP_LINK}
                   className="btn-amber px-8 py-5 flex items-center gap-3 text-lg group"
                 >
                   <Package className="group-hover:rotate-12 transition-transform" />
-                  Get Your Packaging Designed
+                  Get Packaging Design
                 </a>
-                <span className="text-gray-500 text-sm italic font-medium">Free Consultation & Quote</span>
+                <span className="text-gray-500 text-sm italic font-medium">
+                  Free Consultation & Quote
+                </span>
               </motion.div>
             </motion.div>
 
-            {/* Hero Mockups Visual */}
+            {/* RIGHT VISUAL */}
             <div className="lg:w-1/2 relative h-[500px] w-full max-w-[600px]">
-              <motion.div 
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full"
-                animate={{
-                  y: [0, -15, 0],
-                }}
-                transition={{
-                  duration: 6,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
-              >
-                <img 
-                  src={luxuryBox} 
-                  alt="Luxury Packaging Design" 
-                  className="absolute z-30 w-72 lg:w-96 left-1/2 -translate-x-1/2 top-10 drop-shadow-[0_20px_50px_rgba(245,158,11,0.35)]"
-                />
-                <motion.img 
-                  src={organicBottle} 
-                  alt="Organic Bottle Design" 
-                  className="absolute z-20 w-48 lg:w-64 -left-10 bottom-10 drop-shadow-2xl"
-                  animate={{ rotate: [-2, 2, -2] }}
-                  transition={{ duration: 4, repeat: Infinity }}
-                />
-                <motion.img 
-                  src={cosmeticPouch} 
-                  alt="Cosmetic Pouch Design" 
-                  className="absolute z-40 w-56 lg:w-72 -right-10 bottom-20 drop-shadow-2xl"
-                  animate={{ rotate: [2, -2, 2] }}
-                  transition={{ duration: 5, repeat: Infinity }}
-                />
-              </motion.div>
-              
-              {/* Decorative Glow */}
+
+              {/* Background blurred image (depth) */}
+              <img
+                src={organicBottle}
+                alt=""
+                className="absolute w-64 left-10 bottom-10 opacity-20 blur-md"
+              />
+
+              {/* Main Image */}
+              <img
+                src={luxuryBox}
+                alt="Luxury Packaging Design"
+                className="absolute z-30 w-72 lg:w-96 left-1/2 -translate-x-1/2 top-10 drop-shadow-[0_25px_60px_rgba(245,158,11,0.35)]"
+              />
+
+              {/* Secondary Image */}
+              <motion.img
+                src={cosmeticPouch}
+                alt="Cosmetic Packaging"
+                className="absolute z-40 w-56 lg:w-72 right-0 bottom-16 drop-shadow-2xl"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 5, repeat: Infinity }}
+              />
+
+              {/* Glow */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-amber-500/10 blur-[100px] rounded-full" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* --- SCROLLING MARQUEE --- */}
-      <div className="py-12 bg-surface/50 border-y border-white/5 overflow-hidden">
-        <div className="flex animate-marquee whitespace-nowrap">
-          {[
-            "Label Design", "Box Packaging", "Food Packaging", "Cosmetic Packaging",
-            "Bottle Labels", "Eco-friendly Packaging", "Luxury Gift Box", "Product Sachet",
-            "Pouch Design", "Tin Can Design", "Wine Labels", "Bakery Boxes"
-          ].map((service, idx) => (
-            <div key={idx} className="flex items-center mx-10 text-2xl font-bold text-white/40 uppercase tracking-widest gap-4">
-              <span className="w-2 h-2 bg-amber-500 rounded-full" />
-              {service}
-            </div>
-          ))}
-          {/* Duplicate for infinite loop */}
-          {[
-            "Label Design", "Box Packaging", "Food Packaging", "Cosmetic Packaging",
-            "Bottle Labels", "Eco-friendly Packaging", "Luxury Gift Box", "Product Sachet",
-            "Pouch Design", "Tin Can Design", "Wine Labels", "Bakery Boxes"
-          ].map((service, idx) => (
-            <div key={`dup-${idx}`} className="flex items-center mx-10 text-2xl font-bold text-white/40 uppercase tracking-widest gap-4">
-              <span className="w-2 h-2 bg-amber-500 rounded-full" />
-              {service}
-            </div>
-          ))}
-        </div>
-      </div>
 
       {/* --- SHOWCASE GRID --- */}
-      <section className="py-24 lg:py-40">
+      <section className="py-16 lg:py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mb-20 text-center mx-auto">
             <h2 className="text-4xl lg:text-6xl font-black mb-6">Designed to <span className="text-gradient-amber">Dominate</span> the Shelf</h2>
@@ -192,34 +174,155 @@ const PackagingDesignInSangli = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ShowcaseCard 
-              image={luxuryBox}
-              title="Aura Luxury Collection"
-              type="Premium Box Design"
-              colSpan="lg:col-span-2"
-            />
-            <ShowcaseCard 
-              image={organicBottle}
+
+            <ShowcaseCard
+              image={clothesline}
               title="Nature's Essence"
               type="Organic Bottle Label"
             />
-            <ShowcaseCard 
-              image={cosmeticPouch}
-              title="Glow & Care"
-              type="Cosmetic Pouch"
+            <ShowcaseCard
+              image={anuj}
+              title="Anuj Jwellers"
+              type="Premium Bag Design"
+              colSpan="lg:col-span-2"
             />
-            <ShowcaseCard 
-              image={luxuryBox}
-              title="Vintage Spice"
+
+            <ShowcaseCard
+              image={jk_paper_bags}
+              title="JK Paper Bags"
               type="Sustainable Tin Packaging"
               colSpan="lg:col-span-2"
             />
+            <ShowcaseCard
+              image={amukti}
+              title="Glow & care"
+              type="Cosmetic Pouch"
+            />
+
           </div>
         </div>
       </section>
 
+      <section className="py-6">
+        <div className="container mx-auto px-6">
+
+          <h2 className="text-4xl font-black mb-4 text-center">
+            Our Packaging Design Specialties
+          </h2>
+
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+            {/* Bag */}
+           <Link to="/portfolio-graphic-designer-sangli#bag-design">
+              <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60">
+
+                <img
+                  src={crazy}
+                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition duration-500"
+                />
+
+                <div className="absolute inset-0 bg-black/50 group-hover:bg-black/40 transition" />
+
+                {/* Content */}
+                <div className="relative z-10">
+                  <h3 className="font-bold text-xl mb-2 text-white">
+                    Bag Design
+                  </h3>
+                  <p className="text-gray-200 text-sm">
+                    Shopping bags, paper bags
+                  </p>
+
+
+                </div>
+
+              </div>
+            </Link>
+
+
+            {/* BOX */}
+            <Link to="/box-packaging-design-sangli">
+              <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 hover:scale-[1.02]">
+
+                <img
+                  src={luxuryBox}
+                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition duration-500"
+                />
+
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition" />
+
+                <div className="relative z-10">
+                  <h3 className="font-bold text-xl mb-2 text-white drop-shadow-lg">
+                    Box Packaging
+                  </h3>
+                  <p className="text-gray-200 text-sm">
+                    Luxury boxes, product boxes, gift packaging
+                  </p>
+                </div>
+
+
+              </div>
+            </Link>
+
+            {/* POUCH */}
+            <Link to="/pouch-design-sangli">
+              <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 hover:scale-[1.02]">
+
+                <img
+                  src={cosmeticPouch}
+                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition duration-500"
+                />
+
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition" />
+
+                <div className="relative z-10">
+                  <h3 className="font-bold text-xl mb-2 text-white drop-shadow-lg">
+                    Pouch Design
+                  </h3>
+                  <p className="text-gray-200 text-sm">
+                    Food pouches, cosmetic pouches
+                  </p>
+                </div>
+
+
+
+              </div>
+            </Link>
+
+
+            {/* LABEL */}
+            <Link to="/label-design-sangli">
+              <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 hover:scale-[1.02]">
+
+                <img
+                  src={luxuryBox}
+                  className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition duration-500"
+                />
+
+                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition" />
+
+                <div className="relative z-10">
+                  <h3 className="font-bold text-xl mb-2 text-white drop-shadow-lg">
+                    Sticker & Labels
+                  </h3>
+                  <p className="text-gray-200 text-sm">
+                    Product labels, barcode stickers
+                  </p>
+                </div>
+
+
+
+              </div>
+            </Link>
+
+          </div>
+        </div>
+      </section>
+
+
+
       {/* --- PROCESS SECTION --- */}
-      <section className="py-24 relative overflow-hidden bg-surface/30">
+      <section className="py-16 relative overflow-hidden bg-surface/30">
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-5xl font-black mb-4">Our Creative <span className="text-amber-500">Method</span></h2>
@@ -227,25 +330,25 @@ const PackagingDesignInSangli = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 px-4">
-            <ProcessStep 
+            <ProcessStep
               icon={<Search className="text-amber-500" />}
               step="01"
               title="Market Research"
               desc="We analyze your competitors and target audience in Sangli & beyond."
             />
-            <ProcessStep 
+            <ProcessStep
               icon={<Lightbulb className="text-amber-500" />}
               step="02"
               title="Concept Art"
               desc="Creating moodboards and sketches to find the perfect visual tone."
             />
-            <ProcessStep 
+            <ProcessStep
               icon={<PenTool className="text-amber-500" />}
               step="03"
               title="Elite Design"
               desc="High-end 3D mockups and print-ready layouts tailored for you."
             />
-            <ProcessStep 
+            <ProcessStep
               icon={<Truck className="text-amber-500" />}
               step="04"
               title="Final Delivery"
@@ -256,7 +359,7 @@ const PackagingDesignInSangli = () => {
       </section>
 
       {/* --- WHY CHOOSE US --- */}
-      <section className="py-24 lg:py-40">
+      <section className="py-16 lg:py-20">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row gap-20 items-center">
             <div className="lg:w-1/2">
@@ -266,22 +369,22 @@ const PackagingDesignInSangli = () => {
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <FeatureItem 
+                <FeatureItem
                   icon={<Zap size={24} />}
                   title="Branding-Focused"
                   desc="We don't just design labels; we build your brand's future identity."
                 />
-                <FeatureItem 
+                <FeatureItem
                   icon={<Printer size={24} />}
                   title="Print-Ready"
                   desc="Files optimized for offset, flexo, and digital printing perfectly."
                 />
-                <FeatureItem 
+                <FeatureItem
                   icon={<Clock size={24} />}
                   title="Fast Turnaround"
                   desc="Get your premium designs ready in as little as 3-5 business days."
                 />
-                <FeatureItem 
+                <FeatureItem
                   icon={<ShoppingCart size={24} />}
                   title="Retail Ready"
                   desc="Designs that meet all legal and retail standards for barcodes and info."
@@ -309,7 +412,7 @@ const PackagingDesignInSangli = () => {
       </section>
 
       {/* --- RELATED SERVICES --- */}
-      <section className="py-24 px-6 bg-[#111827]">
+      <section className="py-16 px-6 bg-[#111827]">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <p className="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">Related Services</p>
@@ -352,30 +455,30 @@ const PackagingDesignInSangli = () => {
       </section>
 
       {/* --- CTA SECTION --- */}
-      <section className="py-24 lg:py-32 px-6">
+      <section className="py-20 lg:py-24 px-6">
         <div className="container mx-auto">
           <div className="relative overflow-hidden rounded-[3rem] bg-gradient-to-br from-[#1F2937] to-[#0B0F14] border border-white/10 p-12 lg:p-24 text-center">
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-full bg-amber-500/5 blur-[120px]" />
-            
+
             <div className="relative z-10 max-w-4xl mx-auto">
               <h2 className="text-4xl lg:text-7xl font-black mb-10 leading-tight">
-                Let's Build Packaging <br /> 
+                Let's Build Packaging <br />
                 <span className="text-gradient-amber">That Sells Itself</span>
               </h2>
               <p className="text-gray-400 text-xl mb-12 max-w-2xl mx-auto leading-relaxed">
                 Ready to take your product to the next level? Join the league of premium brands in Sangli with professional design.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row items-center gap-6 justify-center">
-                <a 
-                  href={WHATSAPP_LINK} 
+                <a
+                  href={WHATSAPP_LINK}
                   className="btn-amber px-10 py-6 text-xl flex items-center gap-4 group shadow-xl"
                 >
                   <Zap className="fill-current" />
                   Start My Project Now
                   <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                 </a>
-                <a 
+                <a
                   href="/portfolio-graphic-designer-sangli"
                   className="px-10 py-6 text-xl font-bold bg-white/5 hover:bg-white/10 rounded-full transition-all border border-white/5"
                 >
@@ -402,39 +505,32 @@ const PackagingDesignInSangli = () => {
 /* --- SUB-COMPONENTS --- */
 
 const ShowcaseCard = ({ image, title, type, colSpan = "" }) => (
-  <motion.div 
-    className={`group relative overflow-hidden rounded-3xl bg-surface/50 border border-white/5 ${colSpan}`}
-    whileHover={{ y: -10 }}
+  <motion.div
+className={`group relative overflow-hidden rounded-2xl ${colSpan} h-[280px] md:h-[320px] lg:h-[360px]`}    whileHover={{ y: -10 }}
   >
-    <div className="aspect-[16/10] overflow-hidden">
-      <img 
-        src={image} 
-        alt={title} 
-        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-110" 
-      />
+    <img
+      src={image}
+      alt={title}
+      className="w-full h-full object-cover brightness-105 contrast-105 group-hover:brightness-75 transition duration-500"
+    />
+
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition duration-500" />
+    {/* Content */}
+    <div className="absolute bottom-0 left-0 p-6 translate-y-10 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition duration-500">
+      <h3 className="text-white text-xl font-bold">{title}</h3>
+      <p className="text-gray-300 text-sm mt-1">{type}</p>
+
     </div>
-    
-    <div className="absolute inset-0 bg-gradient-to-t from-[#0B0F14] via-[#0B0F14]/40 to-transparent opacity-100 group-hover:opacity-90 transition-opacity" />
-    
-    <div className="absolute bottom-0 left-0 p-8 w-full">
-      <div className="flex justify-between items-end">
-        <div>
-          <span className="text-amber-500 text-xs font-bold uppercase tracking-widest mb-2 block">{type}</span>
-          <h3 className="text-2xl font-black">{title}</h3>
-        </div>
-        <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-amber-500 group-hover:border-amber-500 group-hover:text-gray-900 transition-all">
-          <ArrowRight size={20} />
-        </div>
-      </div>
-    </div>
-    
+
+
     {/* Glowing Border Hover */}
     <div className="absolute inset-0 border-2 border-transparent group-hover:border-amber-500/30 rounded-3xl transition-all pointer-events-none" />
   </motion.div>
 );
 
 const ProcessStep = ({ icon, step, title, desc }) => (
-  <motion.div 
+  <motion.div
     className="relative p-8 rounded-3xl bg-surface/50 border border-white/5 hover:border-amber-500/20 transition-all group"
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}

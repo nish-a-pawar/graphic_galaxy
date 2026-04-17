@@ -80,12 +80,18 @@ const Home = () => {
           </div>
 
           <div ref={servicesGridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {SERVICES.map((s, i) => (
-              <div key={i} className="service-card-stagger" style={{ opacity: 0 }}>
-                <ServiceCard icon={iconMap[s.title] || Palette} title={s.title} desc={s.desc} />
-              </div>
-            ))}
-          </div>
+  {SERVICES
+    .filter((s) => s.tag === "Expertise")
+    .map((s, i) => (
+      <div key={i} className="service-card-stagger" style={{ opacity: 0 }}>
+        <ServiceCard
+          icon={iconMap[s.title] || Palette}
+          title={s.title}
+          desc={s.desc}
+        />
+      </div>
+    ))}
+</div>
         </div>
       </section>
 

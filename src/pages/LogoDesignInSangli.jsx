@@ -5,9 +5,11 @@ import { ArrowRight, CheckCircle2, MessageSquare, Star, Palette, Zap, Sparkles, 
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import SEO from "../seo/SEO";
-import { 
-  WHATSAPP_LINK, 
-  PHONE, 
+
+import { LOGO_PROJECTS } from "../constants";
+import {
+  WHATSAPP_LINK,
+  PHONE,
   SEO_DATA,
   SERVICES
 } from "../constants";
@@ -109,18 +111,14 @@ const steps = [
   },
 ];
 
-const portfolioItems = [
-  { client: "Radhey Dental Clinic", industry: "Healthcare", initials: "RD", bg: "#1e293b", accent: "#F59E0B" },
-  { client: "Shravani Organics", industry: "FMCG / Packaging", initials: "SO", bg: "#0f172a", accent: "#72E0D7" },
-  { client: "S3 Academy Sangli", industry: "Sports & Events", initials: "S3", bg: "#1e1b4b", accent: "#f59e0b" },
-];
+
 
 const faqs = [
-  { q: "How much does logo design cost in Sangli?",         a: "Logo design at Graphic Galaxy in Sangli starts from ₹1,500 for basic logos to ₹6,000 for premium brand identity packages. We offer transparent pricing with no hidden charges." },
-  { q: "How long does logo design take in Sangli?",         a: "At Graphic Galaxy Sangli, basic logo design takes 2-3 days. Premium packages with multiple revisions take 5-7 days. Rush delivery is available on request." },
-  { q: "What file formats will I receive for my logo?",     a: "You will receive your logo in PNG, JPG, SVG, PDF and AI formats — suitable for all print and digital use including business cards, signage, websites, and social media." },
+  { q: "How much does logo design cost in Sangli?", a: "Logo design at Graphic Galaxy in Sangli starts from ₹1,500 for basic logos to ₹6,000 for premium brand identity packages. We offer transparent pricing with no hidden charges." },
+  { q: "How long does logo design take in Sangli?", a: "At Graphic Galaxy Sangli, basic logo design takes 2-3 days. Premium packages with multiple revisions take 5-7 days. Rush delivery is available on request." },
+  { q: "What file formats will I receive for my logo?", a: "You will receive your logo in PNG, JPG, SVG, PDF and AI formats — suitable for all print and digital use including business cards, signage, websites, and social media." },
   { q: "Do you design logos for all types of businesses in Sangli?", a: "Yes! Graphic Galaxy designs logos for clinics, restaurants, events, retail shops, schools, and more in Sangli. We also serve clients across Miraj, Kupwad, and Kolhapur." },
-  { q: "How do I get started with logo design at Graphic Galaxy?",   a: `Simply WhatsApp us at ${PHONE} or fill our contact form. We respond within 24 hours and kick off with a quick discovery call to understand your brand.` },
+  { q: "How do I get started with logo design at Graphic Galaxy?", a: `Simply WhatsApp us at ${PHONE} or fill our contact form. We respond within 24 hours and kick off with a quick discovery call to understand your brand.` },
 ];
 
 /* ─── Helpers ────────────────────────────────── */
@@ -287,45 +285,89 @@ export default function LogoDesignInSangli() {
         </section>
 
         {/* ── 3. PORTFOLIO PREVIEW ── */}
+
         <section className="py-24 px-6 bg-[#0B0F14]">
           <div className="max-w-6xl mx-auto">
+
             <Reveal className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16">
               <div>
-                <p className="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">Our Work</p>
-                <h2 className="text-4xl md:text-5xl font-black text-white">Recent Logo Designs</h2>
+                <p className="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">
+                  Our Work
+                </p>
+                <h2 className="text-4xl md:text-5xl font-black text-white">
+                  Recent Logo Designs
+                </h2>
+
+                {/* ✅ SEO BOOST */}
+                <p className="text-white/50 mt-4 max-w-2xl">
+                  Explore professional logo design projects created for businesses in Sangli, Miraj and Maharashtra.
+                  We design logos that build trust, identity and brand recognition.
+                </p>
               </div>
-              <Link to="/portfolio-graphic-designer-sangli" className="text-amber-400 font-bold hover:text-white transition-colors">
+
+              <Link
+                to="/portfolio-graphic-designer-sangli"
+                className="text-amber-400 font-bold hover:text-white transition-colors"
+              >
                 View Full Portfolio →
               </Link>
             </Reveal>
 
+            {/* 🔥 GRID */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {portfolioItems.map((item, i) => (
+              {LOGO_PROJECTS.map((item, i) => (
                 <Reveal key={i} delay={i}>
-                  <div className="group bg-[#111827] border border-[#2D3748] rounded-[2.5rem] overflow-hidden hover:border-amber-400/50 transition-all hover:-translate-y-2">
-                    <div className="h-64 flex items-center justify-center relative" style={{ backgroundColor: item.bg }}>
-                      <div 
-                        className="w-24 h-24 rounded-full flex items-center justify-center font-black text-2xl shadow-2xl"
-                        style={{ backgroundColor: '#fff', color: item.accent, border: `3px solid ${item.accent}` }}
-                      >
-                        {item.initials}
-                      </div>
-                      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-black/20 pointer-events-none" />
+
+                  {/* 🔥 CARD */}
+                  <div className="group bg-[#111827] border border-[#2D3748] rounded-[2.5rem] overflow-hidden 
+          transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/50 
+          hover:shadow-[0_20px_60px_rgba(0,0,0,0.6)]">
+
+                    {/* 🔥 IMAGE */}
+                    <div className="h-64 relative overflow-hidden bg-white flex items-center justify-center">
+                      <img
+                        src={item.img}
+                        alt={item.client}
+                        loading="lazy"
+                        className="h-full w-full object-contain p-6 bg-white"
+                      />
+
+                      {/* premium shadow */}
+                      <div className="absolute bottom-0 w-full h-20 bg-gradient-to-t from-black/30 to-transparent" />
                     </div>
+
+                    {/* 🔥 CONTENT */}
                     <div className="p-8">
                       <div className="flex justify-between items-start mb-2">
-                        <h3 className="text-xl font-black text-white">{item.client}</h3>
-                        <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-2 py-1 rounded-md">{item.industry}</span>
+
+                        <h3 className="text-xl font-black text-white">
+                          {item.client}
+                        </h3>
+
+                        {/* ✅ industry hide if empty */}
+                        {item.industry && (
+                          <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400 bg-amber-400/10 px-2 py-1 rounded-md">
+                            {item.industry}
+                          </span>
+                        )}
                       </div>
-                      <p className="text-white/30 text-sm font-medium">Sangli, Maharashtra</p>
+
+                      <p className="text-white/30 text-sm font-medium">
+                        Sangli, Maharashtra
+                      </p>
+
+                      {/* 🔥 CTA on hover */}
+                      <button className="mt-4 text-amber-400 text-sm font-bold opacity-0 group-hover:opacity-100 transition">
+                        View Design →
+                      </button>
                     </div>
+
                   </div>
                 </Reveal>
               ))}
             </div>
           </div>
         </section>
-
         {/* ── 4. PROCESS ── */}
         <section className="py-24 px-6 bg-[#111827]">
           <div className="max-w-6xl mx-auto">
@@ -400,26 +442,26 @@ export default function LogoDesignInSangli() {
         <section className="py-24 px-6 bg-[#111827]">
           <div className="max-w-5xl mx-auto">
             <div className="relative rounded-[3rem] p-12 md:p-20 text-center overflow-hidden border border-amber-400/20 bg-linear-to-br from-[#0B0F14] to-[#111827]">
-               <div className="absolute top-0 right-0 w-80 h-80 bg-amber-400/5 rounded-full blur-[100px] pointer-events-none" />
-               <div className="absolute bottom-0 left-0 w-80 h-80 bg-teal-400/5 rounded-full blur-[100px] pointer-events-none" />
-               
-               <Reveal>
-                 <p className="text-sm font-bold text-teal-400 uppercase tracking-[0.3em] mb-8">Let's Build Your Brand</p>
-                 <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
-                   Need a Logo Designer <br className="hidden md:block" />in Sangli?
-                 </h2>
-                 <p className="text-white/50 text-lg mb-12 max-w-xl mx-auto font-medium">
-                   Get a free consultation and start building your brand identity today. Serving businesses across Maharashtra.
-                 </p>
-                 <div className="flex flex-wrap justify-center gap-6">
-                   <a href={WHATSAPP_LINK} className="interactive btn-amber px-10 py-5 text-lg">
-                     💬 WhatsApp Us Now
-                   </a>
-                   <a href={`tel:${PHONE.replace(/\s+/g, '')}`} className="flex items-center gap-3 text-white/70 hover:text-amber-400 font-bold transition-colors">
-                     📞 {PHONE}
-                   </a>
-                 </div>
-               </Reveal>
+              <div className="absolute top-0 right-0 w-80 h-80 bg-amber-400/5 rounded-full blur-[100px] pointer-events-none" />
+              <div className="absolute bottom-0 left-0 w-80 h-80 bg-teal-400/5 rounded-full blur-[100px] pointer-events-none" />
+
+              <Reveal>
+                <p className="text-sm font-bold text-teal-400 uppercase tracking-[0.3em] mb-8">Let's Build Your Brand</p>
+                <h2 className="text-4xl md:text-6xl font-black text-white mb-8 leading-tight">
+                  Need a Logo Designer <br className="hidden md:block" />in Sangli?
+                </h2>
+                <p className="text-white/50 text-lg mb-12 max-w-xl mx-auto font-medium">
+                  Get a free consultation and start building your brand identity today. Serving businesses across Maharashtra.
+                </p>
+                <div className="flex flex-wrap justify-center gap-6">
+                  <a href={WHATSAPP_LINK} className="interactive btn-amber px-10 py-5 text-lg">
+                    💬 WhatsApp Us Now
+                  </a>
+                  <a href={`tel:${PHONE.replace(/\s+/g, '')}`} className="flex items-center gap-3 text-white/70 hover:text-amber-400 font-bold transition-colors">
+                    📞 {PHONE}
+                  </a>
+                </div>
+              </Reveal>
             </div>
           </div>
         </section>

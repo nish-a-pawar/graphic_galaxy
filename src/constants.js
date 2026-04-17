@@ -1,3 +1,20 @@
+import amukti from './assets/images/Bag_Design/amukti.webp';
+import anuj from './assets/images/Bag_Design/anuj.webp';
+import clothesline from './assets/images/Bag_Design/clothesline.webp';
+import crazy from './assets/images/Bag_Design/crazy.webp';
+import jk_paper_bags from './assets/images/Bag_Design/jk_paper_bags.webp';
+import taaya from './assets/images/Bag_Design/taaya.webp';
+import medBox from './assets/images/Box_Design/medBox.webp';
+import panelLightBx from './assets/images/Box_Design/panelLightBx.webp';
+import pizzaBox from './assets/images/Box_Design/pizzaBox.webp'
+//logo 
+import aryanagro from "./assets/images/Logo_Design/aryanagro.jpeg";
+import c3 from "./assets/images/Logo_Design/c3.jpeg";
+import vanira from "./assets/images/Logo_Design/vanira.jpeg";
+import s3 from "./assets/images/Logo_Design/s3.png";
+import aditya from "./assets/images/Logo_Design/aditya.jpeg";
+import kvagro from "./assets/images/Logo_Design/kvagro.jpeg";
+
 export const WHATSAPP_LINK = "https://wa.me/918459763568?text=Hi, I need design service";
 export const PHONE = "+91 84597 63568";
 export const EMAIL = "graphicgalaxy2022@gmail.com";
@@ -6,13 +23,15 @@ export const GOOGLE_REVIEW = "https://share.google/Mo2zWhichHtggjwSW";
 export const ADDRESS = "Near Pramod Dairy, Vishrambag, Sangli – 416416, Maharashtra";
 export const SITE_URL = "https://graphicgalaxy.netlify.app";
 
+
+
 export const SERVICES = [
   {
     title: "Logo Design",
     desc: "Distinctive logos that define your brand identity.",
     path: "/logo-design-in-sangli",
     icon: "◆",
-    tag: "Most Popular",
+    tag: "Expertise",
     footerLabel: "Logo Design",
   },
   {
@@ -20,7 +39,7 @@ export const SERVICES = [
     desc: "Eye-catching product packaging that stands out on shelves.",
     path: "/packaging-design-in-sangli",
     icon: "▣",
-    tag: null,
+    tag: "Expertise",
     footerLabel: "Packaging Design",
   },
   {
@@ -28,7 +47,7 @@ export const SERVICES = [
     desc: "Scroll-stopping posts and content kits for every platform.",
     path: "/social-media-design-sangli",
     icon: "◉",
-    tag: null,
+    tag:"Expertise",
     footerLabel: "Social Media Design",
   },
   {
@@ -52,7 +71,7 @@ export const SERVICES = [
     desc: "Beautiful invitations for weddings, events and celebrations.",
     path: "/invitation-design-sangli",
     icon: "◇",
-    tag: null,
+    tag: "Expertise",
     footerLabel: "Invitation Design",
   },
   {
@@ -105,6 +124,145 @@ export const SERVICES = [
   },
 
 
+];
+//portfolio page
+export const PACKAGING_PROJECTS = [
+  {
+    id: "b1",
+    image: amukti,
+    title: "Custom Cloth Bag Design",
+    category: "Bag Design",
+    alt: "Custom cloth bag design for retail shop in Sangli Maharashtra",
+  },
+  {
+    id: "b2",
+    image: anuj,
+    title: "Luxury Shopping Bag Design",
+    category: "Bag Design",
+    alt: "Luxury shopping bag packaging design for jwellery shop in Sangli",
+  },
+  {
+    id: "b3",
+    image: clothesline,
+    title: "Clothing Brand Carry Bag",
+    category: "Bag Design",
+    alt: "Clothing brand carry bag design for apparel store in Maharashtra",
+  },
+  {
+    id: "b4",
+    image: crazy,
+    title: "Eco Friendly Bag Design",
+    category: "Bag Design",
+    alt: "Eco friendly paper bag packaging design for Crazy icecream shop in Sangli",
+  },
+  {
+    id: "b5",
+    image: jk_paper_bags,
+    title: "Retail Paper Bag Design",
+    category: "Bag Design",
+    alt: "Retail paper bag design for shop branding in Sangli city",
+  },
+  {
+    id: "b6",
+    image: taaya,
+    title: "Boutique Bag Design",
+    category: "Bag Design",
+    alt: "Custom boutique shopping bag design for fashion store in Maharashtra",
+  },
+
+  
+  {
+    id: "box1",
+    image: pizzaBox,
+    title: "Product Box Packaging",
+    category: "Box Design",
+    alt: "Creative product box packaging design for cosmetics brand in Sangli",
+  },
+  {
+    id: "box2",
+    image: panelLightBx,
+    title: "Premium Box Design",
+    category: "Box Design",
+    alt: "Premium product box design for branding and packaging in Maharashtra",
+  },
+  {
+    id: "box3",
+    image: medBox,
+    title: "Premium Box Design",
+    category: "Box Design",
+    alt: "Premium product box design for branding and packaging in Maharashtra",
+  },
+
+  // 👉 Sticker
+  {
+    id: "s1",
+    image: "",
+    title: "Brand Sticker Design",
+    category: "Sticker Design",
+    alt: "Custom branding sticker design for packaging and product labels",
+  },
+
+  // 👉 Pouch
+  {
+    id: "p1",
+    image: "",
+    title: "Pouch Packaging Design",
+    category: "Pouch Design",
+    alt: "Custom pouch packaging design for food and retail products in India",
+  },
+
+  {
+    id: "p2",
+    image: "",
+    title: "Pouch Packaging Design",
+    category: "Pouch Design",
+    alt: "Custom pouch packaging design for food and retail products in India",
+  },
+];
+
+export const LOGO_PROJECTS = [
+  {
+    id: "l1",
+    image: c3,
+    title: "C3 Unisex Salon Logo",
+    category: "Logo Design",
+    alt: "C3 Unisex Salon logo design in Sangli",
+  },
+  {
+    id: "l2",
+    image: vanira,
+    title: "Vanira Organics Logo",
+    category: "Logo Design",
+    alt: "Vanira organics logo design in Maharashtra",
+  },
+  {
+    id: "l3",
+    image: s3,
+    title: "S3 Academy Logo",
+    category: "Logo Design",
+    alt: "S3 Academy sports logo design in Sangli",
+  },
+  {
+    id: "l4",
+    image: aditya,
+    title: "Aditya Logo",
+    category: "Logo Design",
+    alt: "Aditya brand logo design",
+  },
+  {
+    id: "l5",
+    image: kvagro,
+    title: "KV Agro Logo",
+    category: "Logo Design",
+    alt: "KV Agro logo design in Maharashtra",
+  },
+  {
+    id: "l6",
+    image: aryanagro,
+    title: "Aryan Agro Logo",
+    category: "Logo Design",
+    alt: "Aryan Agro logo design",
+  },
 ];
 
 export const TEAM = [

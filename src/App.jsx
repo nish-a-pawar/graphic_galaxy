@@ -24,6 +24,7 @@ function App() {
           <Route path="/logo-design-in-sangli" element={<LogoDesignInSangli />} />
           <Route path="/invitation-design-sangli" element={<InvitationDesignInSangli />} />
           <Route path="/packaging-design-in-sangli" element={<PackagingDesignInSangli />} />
+        
           <Route path="/social-media-design-sangli" element={<SocialMediaDesignInSangli />} />
           <Route path="/brochure-design-sangli" element={<BrochureDesignInSangli />} />
           <Route path="/flyer-design-sangli" element={<FlyerDesignInSangli />} />

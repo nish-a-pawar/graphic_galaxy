@@ -5,7 +5,8 @@ import { WHATSAPP_LINK } from '../constants';
 import logoSample from '../assets/images/logo_sample.png';
 import packagingSample from '../assets/images/packaging_sample.png';
 import brandingSample from '../assets/images/branding_sample.png';
-import posterSample from '../assets/images/poster_sample.png';
+import posterSample from '../assets/images/brochure.jpeg';
+
 
 const Hero = () => {
   const heroRef = useRef(null);

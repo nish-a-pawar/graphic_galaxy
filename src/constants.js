@@ -341,6 +341,50 @@ export const INVITATION_PROJECTS = [
   },
 ];
 
+export const INVITATION_PROJECTS = [
+  {
+    id: "i1",
+    type: "video",
+    url: "https://player.cloudinary.com/embed/?cloud_name=daxfbjcpc&public_id=VideoINvite_ajuava",
+    title: "Wedding Video Invite",
+    category: "Invitation Design in sangli",
+    type:"video",
+    thumbnail: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776500921/Screenshot_2026-04-18_135404_kjk6dq.png"
+  },
+  {
+    id: "i2",
+    type: "image",
+    url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776495658/ShubhVivahIvite_fsmpy7.webp",
+    title: "Wedding Invitation Card design in sangli",
+    category: "Invitation Design",
+    type:"image"
+  },
+  {
+    id: "i3",
+    type: "image",
+    url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776495657/GrihaPraveshInvitation_dhg1kb.webp",
+    title: "Griha Pravesh Invitation in sangli",
+    category:"Invitation Design",
+    type:"image"
+  },
+  {
+    id: "i4",
+    type: "image",
+    url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776495535/2_1_1_vgthuo.webp",
+    title: "Wedding Invitation design in sangli",
+    category:"Invitation Design",
+    type:"image"
+  },
+  {
+    id: "i5",
+    type: "image",
+    url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776495533/3_1_1_mqza5j.webp",
+    title: "Wedding Invitation design in sangli",
+    category: "Invitation Design",
+    type:"image"
+  },
+];
+
 export const TEAM = [
   { name: "Vaibhav Biradar", role: "Founder & Senior Designer", initials: "VB", color: "#F59E0B" },
   { name: "Nisha Pawar", role: "General Manager", initials: "NP", color: "#7C3AED" },

@@ -14,10 +14,10 @@ const PortfolioCard = ({ image, alt, title, category, mockups }) => {
           <img
             src={image}
             alt={alt || title}
-            className="w-full h-[250px] object-cover transition duration-500 group-hover:scale-105"
+            className="block w-full h-auto"
           />
         ) : (
-          <div className="w-full h-[250px] bg-linear-to-br from-[#1F2937] to-[#0B0F14]" />
+          <div className="w-full h-[280px] bg-linear-to-br from-[#1F2937] to-[#0B0F14]" />
         )}
 
         {/* 🔥 HOVER MOCKUPS (only if exists) */}
@@ -34,7 +34,7 @@ const PortfolioCard = ({ image, alt, title, category, mockups }) => {
         )}
 
         {/* TITLE */}
-        <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
+        <div className="w-full p-4 bg-[#070B10]">
           <h3 className="text-white font-bold">{title}</h3>
           <p className="text-gray-300 text-sm">{category}</p>
         </div>

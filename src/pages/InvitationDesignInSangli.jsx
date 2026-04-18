@@ -5,10 +5,12 @@ import { motion } from "framer-motion";
 import { Heart, Zap, ArrowRight } from "lucide-react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { SEO_DATA, WHATSAPP_LINK } from "../constants";
+import InvitationSection from "../components/InvitationSection";
+import { SEO_DATA, WHATSAPP_LINK, INVITATION_PROJECTS } from "../constants";
 
 const InvitationDesignInSangli = () => {
   const seo = SEO_DATA.invitationDesign;
+
   return (
     <div className="bg-[#0B0F14] text-[#F9FAFB] min-h-screen font-inter selection:bg-amber-500/30 overflow-x-hidden">
       <Helmet>
@@ -83,6 +85,13 @@ const InvitationDesignInSangli = () => {
           </div>
         </section>
 
+       
+        <InvitationSection INVITATION_PROJECTS={INVITATION_PROJECTS}/>
+
+   
+        
+
+    
         <section className="py-24 px-6 bg-[#111827]">
           <div className="max-w-6xl mx-auto text-center mb-12">
             <p className="text-sm font-bold text-amber-400 uppercase tracking-widest mb-4">Related Services</p>
@@ -115,14 +124,14 @@ const InvitationDesignInSangli = () => {
                   Ready to create wedding cards, party invites or corporate stationery that guests will love? Let’s design something unforgettable.
                 </p>
                 <div className="flex flex-col sm:flex-row items-center gap-6 justify-center">
-                  <a
-                    href={WHATSAPP_LINK}
+                  <Link
+                    to={WHATSAPP_LINK}
                     className="btn-amber px-10 py-6 text-xl flex items-center gap-4 group shadow-xl"
                   >
                     <Zap className="fill-current" />
                     Order Custom Invitations
                     <ArrowRight className="group-hover:translate-x-2 transition-transform" />
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

@@ -1,22 +1,9 @@
-import amukti from './assets/images/Bag_Design/amukti.webp';
-import anuj from './assets/images/Bag_Design/anuj.webp';
-import clothesline from './assets/images/Bag_Design/clothesline.webp';
-import crazy from './assets/images/Bag_Design/crazy.webp';
-import jk_paper_bags from './assets/images/Bag_Design/jk_paper_bags.webp';
-import taaya from './assets/images/Bag_Design/taaya.webp';
 import medBox from './assets/images/Box_Design/medBox.webp';
 import panelLightBx from './assets/images/Box_Design/panelLightBx.webp';
 import pizzaBox from './assets/images/Box_Design/pizzaBox.webp'
 import cosmeticPouch from './assets/images/cosmetic-pouch.png';
 import packagingSample from './assets/images/packaging_sample.png';
 import posterSample from './assets/images/poster_sample.png';
-//logo 
-import aryanagro from "./assets/images/Logo_Design/aryanagro.jpeg";
-import c3 from "./assets/images/Logo_Design/c3.jpeg";
-import vanira from "./assets/images/Logo_Design/vanira.jpeg";
-import s3 from "./assets/images/Logo_Design/s3.png";
-import aditya from "./assets/images/Logo_Design/aditya.jpeg";
-import kvagro from "./assets/images/Logo_Design/kvagro.jpeg";
 
 export const WHATSAPP_LINK = "https://wa.me/918459763568?text=Hi, I need design service";
 export const PHONE = "+91 84597 63568";
@@ -132,65 +119,72 @@ export const SERVICES = [
 export const PACKAGING_PROJECTS = [
   {
     id: "b1",
-    image: amukti,
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/amukti_ramvhf.webp",
     title: "Custom Cloth Bag Design",
     category: "Bag Design",
     alt: "Custom cloth bag design for retail shop in Sangli Maharashtra",
   },
   {
     id: "b2",
-    image: anuj,
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439606/premium_bag_sf4lke.webp",
     title: "Luxury Shopping Bag Design",
     category: "Bag Design",
     alt: "Luxury shopping bag packaging design for jwellery shop in Sangli",
   },
   {
     id: "b3",
-    image: clothesline,
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/clothesline_wkvqzn.webp",
     title: "Clothing Brand Carry Bag",
     category: "Bag Design",
     alt: "Clothing brand carry bag design for apparel store in Maharashtra",
   },
   {
     id: "b4",
-    image: crazy,
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439604/crazy_oyq0j3.webp",
     title: "Eco Friendly Bag Design",
     category: "Bag Design",
     alt: "Eco friendly paper bag packaging design for Crazy icecream shop in Sangli",
   },
   {
     id: "b5",
-    image: jk_paper_bags,
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439607/jk_paper_bags_ifb3pp.webp",
     title: "Retail Paper Bag Design",
     category: "Bag Design",
     alt: "Retail paper bag design for shop branding in Sangli city",
   },
   {
     id: "b6",
-    image: taaya,
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439606/taaya_ls6ixf.webp",
     title: "Boutique Bag Design",
     category: "Bag Design",
     alt: "Custom boutique shopping bag design for fashion store in Maharashtra",
+  },
+  {
+    id: "b7",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493619/lensmart_1_awxwhb.webp",
+    title: "Lensmart Bag Design",
+    category: "Bag Design",
+    alt: "Lensmart carry bag design for retail branding",
   },
 
   
   {
     id: "box1",
-    image: pizzaBox,
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439580/pizzaBox_dyzuri.webp",
     title: "Product Box Packaging",
     category: "Box Design",
     alt: "Creative product box packaging design for cosmetics brand in Sangli",
   },
   {
     id: "box2",
-    image: panelLightBx,
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439579/panelLightBx_tbmjw8.webp",
     title: "Premium Box Design",
     category: "Box Design",
     alt: "Premium product box design for branding and packaging in Maharashtra",
   },
   {
     id: "box3",
-    image: medBox,
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439579/medBox_qec0b2.webp",
     title: "Premium Box Design",
     category: "Box Design",
     alt: "Premium product box design for branding and packaging in Maharashtra",
@@ -199,72 +193,107 @@ export const PACKAGING_PROJECTS = [
   // 👉 Sticker
   {
     id: "s1",
-    image: packagingSample,
-    title: "Brand Sticker Design",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/honeySticker_jqfosl.webp",
+    title: "Honey Product Sticker",
     category: "Sticker Design",
-    alt: "Custom branding sticker design for packaging and product labels",
+    alt: "Honey product sticker design for packaging and product labels",
+  },
+  {
+    id: "s2",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/oilSticker_xkxnor.webp",
+    title: "Oil Bottle Sticker",
+    category: "Sticker Design",
+    alt: "Oil bottle sticker label design for retail packaging",
+  },
+  {
+    id: "s3",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/agriSticker_agnikh.webp",
+    title: "Agri Product Sticker",
+    category: "Sticker Design",
+    alt: "Agriculture product sticker design for branding and labels",
   },
 
   // 👉 Pouch
   {
     id: "p1",
-    image: cosmeticPouch,
-    title: "Pouch Packaging Design",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/annpurnaPouch_bpptzi.webp",
+    title: "Annpurna Pouch Packaging",
     category: "Pouch Design",
-    alt: "Custom pouch packaging design for food and retail products in India",
+    alt: "Annpurna pouch packaging design for food product branding",
   },
 
   {
     id: "p2",
-    image: packagingSample,
-    title: "Pouch Packaging Design",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/sanjyotPouch_sv5zih.webp",
+    title: "Sanjyot Pouch Packaging",
     category: "Pouch Design",
-    alt: "Custom pouch packaging design for food and retail products in India",
+    alt: "Sanjyot pouch packaging design for retail products",
+  },
+  {
+    id: "p3",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491749/auraPouch_zyhz5k.webp",
+    title: "Aura Pouch Packaging",
+    category: "Pouch Design",
+    alt: "Aura pouch packaging design for product branding",
   },
 ];
 
 export const LOGO_PROJECTS = [
   {
     id: "l1",
-    image: c3,
-    title: "C3 Unisex Salon Logo",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Logo_evercare_hgshnm.webp",
+    title: "Evercare Logo",
     category: "Logo Design",
-    alt: "C3 Unisex Salon logo design in Sangli",
+    alt: "Evercare logo design in Sangli",
   },
   {
     id: "l2",
-    image: vanira,
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Logo_vanira-organics_drque1.webp",
     title: "Vanira Organics Logo",
     category: "Logo Design",
     alt: "Vanira organics logo design in Maharashtra",
   },
   {
     id: "l3",
-    image: s3,
-    title: "S3 Academy Logo",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Logo_Parth_Executuive_aw7jb7.webp",
+    title: "Parth Executive Logo",
     category: "Logo Design",
-    alt: "S3 Academy sports logo design in Sangli",
+    alt: "Parth Executive logo design",
   },
   {
     id: "l4",
-    image: aditya,
-    title: "Aditya Logo",
-    category: "Logo Design",
-    alt: "Aditya brand logo design",
-  },
-  {
-    id: "l5",
-    image: kvagro,
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Logo_KVP_agro_zpqnkx.webp",
     title: "KV Agro Logo",
     category: "Logo Design",
     alt: "KV Agro logo design in Maharashtra",
   },
   {
+    id: "l5",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Logo_C3_ymchbc.webp",
+    title: "C3 Unisex Salon Logo",
+    category: "Logo Design",
+    alt: "C3 Unisex Salon logo design in Sangli",
+  },
+  {
     id: "l6",
-    image: aryanagro,
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493345/Logo_aditya_transport_md5tdb.webp",
+    title: "Aditya Logo",
+    category: "Logo Design",
+    alt: "Aditya brand logo design",
+  },
+  {
+    id: "l7",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Logo_Aryan_Agro_gduxjl.webp",
     title: "Aryan Agro Logo",
     category: "Logo Design",
     alt: "Aryan Agro logo design",
+  },
+  {
+    id: "l8",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776494014/ChatGPT_Image_Apr_18_2026_12_03_12_PM_ucdhrv.png",
+    title: "Brand Logo Concept",
+    category: "Logo Design",
+    alt: "Custom brand logo concept design",
   },
 ];
 

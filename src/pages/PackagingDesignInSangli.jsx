@@ -32,6 +32,8 @@ import taaya from '../assets/images/Bag_Design/taaya.webp';
 import organicBottle from '../assets/images/organic-bottle.png';
 import luxuryBox from '../assets/images/luxury-box.png';
 import cosmeticPouch from '../assets/images/cosmetic-pouch.png';
+import agriSticker from "../assets/images/agriSticker.webp";
+import auraPouch from "../assets/images/auraPouch.webp";
 
 const PackagingDesignInSangli = () => {
   const seo = SEO_DATA.packagingDesign;
@@ -114,13 +116,13 @@ const PackagingDesignInSangli = () => {
                 variants={fadeInUp}
                 className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center lg:justify-start"
               >
-                <a
+                <Link
                   href={WHATSAPP_LINK}
                   className="btn-amber w-full sm:w-auto px-6 sm:px-8 py-4 sm:py-5 flex items-center justify-center gap-3 text-base sm:text-lg group"
                 >
                   <Package className="group-hover:rotate-12 transition-transform" />
                   Get Packaging Design
-                </a>
+                </Link>
                 <span className="text-gray-500 text-sm italic font-medium">
                   Free Consultation & Quote
                 </span>
@@ -133,20 +135,20 @@ const PackagingDesignInSangli = () => {
               {/* Background blurred image (depth) */}
               <img
                 src={organicBottle}
-                alt=""
+                alt="Product Pouch Design in Sangli"
                 className="absolute w-32 sm:w-48 lg:w-64 left-2 sm:left-8 lg:left-10 bottom-2 sm:bottom-8 lg:bottom-10 opacity-20 blur-md"
               />
 
               {/* Main Image */}
               <img
-                src={luxuryBox}
-                alt="Luxury Packaging Design"
+                src={cosmeticPouch}
+                alt=" Packaging Sticker Design in Sangli "
                 className="absolute z-30 w-52 sm:w-72 lg:w-96 left-1/2 -translate-x-1/2 top-4 sm:top-8 lg:top-10 drop-shadow-[0_25px_60px_rgba(245,158,11,0.35)]"
               />
 
               {/* Secondary Image */}
               <motion.img
-                src={cosmeticPouch}
+                src={auraPouch}
                 alt="Cosmetic Packaging"
                 className="absolute z-40 w-36 sm:w-52 lg:w-72 right-2 sm:right-0 bottom-3 sm:bottom-8 lg:bottom-16 drop-shadow-2xl"
                 animate={{ y: [0, -10, 0] }}
@@ -184,9 +186,9 @@ const PackagingDesignInSangli = () => {
             />
 
             <ShowcaseCard
-              image={jk_paper_bags}
-              title="JK Paper Bags"
-              type="Sustainable Tin Packaging"
+              image={crazy}
+              title="Crazy"
+              type="Paper Bag Design"
               colSpan="lg:col-span-2"
             />
             <ShowcaseCard

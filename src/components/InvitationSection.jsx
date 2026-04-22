@@ -118,8 +118,7 @@ const InvitationSection = ({ INVITATION_PROJECTS = [] }) => {
                   className="w-full h-[85vh] rounded-2xl"
                   allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
                   allowFullScreen
-                  frameBorder="0"
-                />
+                 />
               )}
 
             </div>

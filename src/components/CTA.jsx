@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { WHATSAPP_LINK } from '../constants';
 
 const CTA = () => (
@@ -31,12 +32,12 @@ const CTA = () => (
               💬 WhatsApp Us
               <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
             </a>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="interactive px-10 py-4 bg-transparent border-2 border-[#0B0F14]/40 text-[#0B0F14] rounded-full font-black text-lg hover:bg-[#0B0F14]/10 transition-all duration-300"
             >
               Contact Form
-            </a>
+            </Link>
           </div>
         </div>
       </div>

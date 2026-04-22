@@ -1,8 +1,4 @@
-import medBox from './assets/images/Box_Design/medBox.webp';
-import panelLightBx from './assets/images/Box_Design/panelLightBx.webp';
-import pizzaBox from './assets/images/Box_Design/pizzaBox.webp'
-import cosmeticPouch from './assets/images/cosmetic-pouch.png';
-import packagingSample from './assets/images/packaging_sample.png';
+
 import posterSample from './assets/images/poster_sample.png';
 
 export const WHATSAPP_LINK = "https://wa.me/918459763568?text=Hi, I need design service";
@@ -69,7 +65,7 @@ export const SERVICES = [
     desc: "Bold signage that makes your shop impossible to miss.",
     path: "/signage-design-sangli",
     icon: "▲",
-    tag: null,
+    tag: "Expertise",
     footerLabel: "Signage Design",
   },
   {
@@ -93,7 +89,7 @@ export const SERVICES = [
     desc: "Custom trophy designs and sports event branding.",
     path: "/trophy-sports-design-sangli",
     icon: "◎",
-    tag: null,
+    tag: "Expertise",
     footerLabel: "Trophy & Sports",
   },
   {
@@ -242,58 +238,66 @@ export const LOGO_PROJECTS = [
   {
     id: "l1",
     image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Logo_evercare_hgshnm.webp",
-    title: "Evercare Logo",
+    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Mockup_evercare.webp",
+    title: "Evercare",
     category: "Logo Design",
     alt: "Evercare logo design in Sangli",
   },
   {
     id: "l2",
     image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Logo_vanira-organics_drque1.webp",
-    title: "Vanira Organics Logo",
+    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Mockup_vanira-organics.webp",
+    title: "Vanira Organics",
     category: "Logo Design",
     alt: "Vanira organics logo design in Maharashtra",
   },
   {
     id: "l3",
     image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Logo_Parth_Executuive_aw7jb7.webp",
-    title: "Parth Executive Logo",
+    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Mockup_Parth_Executive.webp",
+    title: "Parth Executive",
     category: "Logo Design",
     alt: "Parth Executive logo design",
   },
   {
     id: "l4",
     image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Logo_KVP_agro_zpqnkx.webp",
-    title: "KV Agro Logo",
+    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Mockup_KVP_agro.webp",
+    title: "KV Agro ",
     category: "Logo Design",
     alt: "KV Agro logo design in Maharashtra",
   },
   {
     id: "l5",
     image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Logo_C3_ymchbc.webp",
-    title: "C3 Unisex Salon Logo",
+    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Mockup_C3.webp",
+    title: "C3 Unisex Salon ",
     category: "Logo Design",
     alt: "C3 Unisex Salon logo design in Sangli",
   },
   {
     id: "l6",
     image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493345/Logo_aditya_transport_md5tdb.webp",
-    title: "Aditya Logo",
+    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493345/Mockup_aditya_transport.webp",
+    title: "Aditya Transports",
     category: "Logo Design",
-    alt: "Aditya brand logo design",
+    alt: "Aditya brand logo design in sangli " ,
   },
   {
     id: "l7",
     image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Logo_Aryan_Agro_gduxjl.webp",
-    title: "Aryan Agro Logo",
+    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Mockup_Aryan_Agro.webp",
+    title: "Aryan Agro",
     category: "Logo Design",
-    alt: "Aryan Agro logo design",
+    alt: "Aryan Agro logo design in sangli " ,
   },
   {
     id: "l8",
     image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776494014/ChatGPT_Image_Apr_18_2026_12_03_12_PM_ucdhrv.png",
-    title: "Brand Logo Concept",
+    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776494014/Mockup_S3.webp",
+    title: "S3 DUATHLON",
     category: "Logo Design",
-    alt: "Custom brand logo concept design",
+    alt: "S3 DUATHLON logo design in Sangli ",
   },
 ];
 

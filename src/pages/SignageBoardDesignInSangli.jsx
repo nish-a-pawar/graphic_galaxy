@@ -340,20 +340,19 @@ export default function SignageBoardDesignInSangli() {
               </span>
             </motion.h1>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-12 leading-relaxed font-medium"
+              className="text-lg md:text-xl text-white/50 max-w-3xl mx-auto mb-12 leading-relaxed font-medium space-y-4"
             >
-              Graphic Galaxy designs bold, professional signage boards for
-              businesses in{" "}
-              <strong className="text-white">
-                Sangli, Miraj, and Kolhapur
-              </strong>{" "}
-              — shop boards that attract customers and build your street
-              presence.
-            </motion.p>
+              <p>
+                Your storefront is the physical face of your business; make sure it leaves an unforgettable impression. We design bold, highly visible, and deeply professional signage boards for businesses all across Sangli, Miraj, and Kolhapur. As a top-rated graphic designer in Maharashtra, Graphic Galaxy ensures that your shop board does more than display a name—it actively attracts customers, builds your street presence, and commands immediate attention in crowded local markets.
+              </p>
+              <p>
+                From striking 3D letter boards and vibrant glow signs to sophisticated shop front displays, our premium branding solutions are meticulously crafted to reflect your unique identity. We prioritize strategic layout, typography, and high-contrast color theory to ensure absolute readability and maximum impact from any distance. Elevate your local presence with an expert signage design that instills trust and ultimately turns casual passersby into loyal customers.
+              </p>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}

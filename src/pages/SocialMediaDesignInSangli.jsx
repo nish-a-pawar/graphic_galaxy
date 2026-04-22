@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
@@ -17,7 +16,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { SEO_DATA, WHATSAPP_LINK } from '../constants';
+import { SEO_DATA, WHATSAPP_LINK} from '../constants';
 
 // Assets
 import socialCoffee from '../assets/images/social-coffee.png';
@@ -86,12 +85,14 @@ const SocialMediaDesignInSangli = () => {
                 <span className="text-2xl sm:text-4xl lg:text-6xl text-white/90">Dominate Every Feed</span>
               </motion.h1>
               
-              <motion.p 
-                variants={fadeInUp}
-                className="text-base sm:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
-              >
-                In a world of infinite scrolling, capture the eye in a split second. We design premium social media assets that turn casual scrollers into loyal customers.
-              </motion.p>
+              <motion.div variants={fadeInUp} className="text-base sm:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed space-y-4">
+                <p>
+                  In today's fast-paced digital world, securing your audience's attention amidst infinite scrolling is more challenging than ever. As a leading graphic designer in Sangli, Miraj, and Maharashtra, we specialize in high-impact social media design that grabs eyeballs in read-less-than-a-second environments. 
+                </p>
+                <p>
+                  Our comprehensive branding approach ensures that whether you need Instagram carousels, Facebook ad creatives, or dynamic reels covers, your digital presence remains powerful and visually consistent. We don’t just create pretty graphics; we engineer compelling scroll-stoppers that convert casual viewers into dedicated clients. Elevate your online identity today and watch your engagement metrics soar across all major platforms.
+                </p>
+              </motion.div>
               
               <motion.div 
                 variants={fadeInUp}
@@ -126,21 +127,21 @@ const SocialMediaDesignInSangli = () => {
                   animate={{ rotate: [-6, -4, -6] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 >
-                    <img src={socialCoffee} alt="Instagram Post Mockup" className="rounded-xl w-full" />
+                    <img src={socialCoffee} alt="Instagram Post Mockup" className="rounded-xl w-full" loading="eager" />
                 </motion.div>
                 <motion.div 
                   className="w-36 sm:w-48 lg:w-64 glass-dark p-2 rounded-2xl transform rotate-[6deg] mt-6 sm:mt-10 drop-shadow-2xl"
                   animate={{ rotate: [6, 4, 6] }}
                   transition={{ duration: 5, repeat: Infinity }}
                 >
-                    <img src={socialTech} alt="Facebook Ad Mockup" className="rounded-xl w-full" />
+                    <img src={socialTech} alt="Facebook Ad Mockup" className="rounded-xl w-full" loading="eager" />
                 </motion.div>
                 <motion.div 
                   className="w-32 sm:w-40 lg:w-56 glass-dark p-2 rounded-2xl absolute bottom-2 sm:-bottom-6 lg:-bottom-10 left-1/2 -translate-x-1/2 z-20 drop-shadow-2xl"
                   animate={{ y: [0, -15, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
                 >
-                    <img src={socialReel} alt="Reel Design Mockup" className="rounded-xl w-full" />
+                    <img src={socialReel} alt="Reel Design Mockup" className="rounded-xl w-full" loading="eager" />
                 </motion.div>
               </motion.div>
               
@@ -153,22 +154,14 @@ const SocialMediaDesignInSangli = () => {
       {/* --- SCROLLING MARQUEE --- */}
       <div className="py-8 sm:py-12 bg-surface/50 border-y border-white/5 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
-          {[
-            "Instagram Posts", "Facebook Ads", "Reel Graphics", "LinkedIn Carousels",
-            "Story Designs", "Cover Photos", "YouTube Thumbnails", "Social Content Kits",
-            "Brand Presets", "Ad Creatives", "Engagement Posts", "Campaign Branding"
-          ].map((service, idx) => (
+          {SOCIAL_MEDIA_TYPES.map((service, idx) => (
             <div key={idx} className="flex items-center mx-5 sm:mx-10 text-base sm:text-xl lg:text-2xl font-bold text-white/40 uppercase tracking-[0.2em] sm:tracking-widest gap-3 sm:gap-4">
               <span className="w-2 h-2 bg-amber-500 rounded-full" />
               {service}
             </div>
           ))}
           {/* Duplicate for infinite loop */}
-          {[
-            "Instagram Posts", "Facebook Ads", "Reel Graphics", "LinkedIn Carousels",
-            "Story Designs", "Cover Photos", "YouTube Thumbnails", "Social Content Kits",
-            "Brand Presets", "Ad Creatives", "Engagement Posts", "Campaign Branding"
-          ].map((service, idx) => (
+          {SOCIAL_MEDIA_TYPES.map((service, idx) => (
             <div key={`dup-${idx}`} className="flex items-center mx-5 sm:mx-10 text-base sm:text-xl lg:text-2xl font-bold text-white/40 uppercase tracking-[0.2em] sm:tracking-widest gap-3 sm:gap-4">
               <span className="w-2 h-2 bg-amber-500 rounded-full" />
               {service}

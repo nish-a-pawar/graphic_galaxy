@@ -212,12 +212,17 @@ export default function LogoDesignInSangli() {
               Logo Design in <span className="text-gradient-amber">Sangli</span> that Builds Trust
             </motion.h1>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
-              className="text-lg md:text-xl text-white/50 max-w-2xl mx-auto mb-12 leading-relaxed font-medium"
+              className="text-lg md:text-xl text-white/50 max-w-3xl mx-auto mb-12 leading-relaxed font-medium space-y-4"
             >
-              Graphic Galaxy crafts distinctive, professional logos for businesses in <strong className="text-white">Sangli</strong> — identities that command attention and drive growth.
-            </motion.p>
+              <p>
+                A strong logo acts as the cornerstone of your entire brand identity, instantly communicating your values to potential customers before they even read a word. Expertly crafted, memorable, and highly professional logos are essential for standing out. As the premier graphic designer spanning the regions of Sangli, Miraj, and Maharashtra, Graphic Galaxy is dedicated to designing distinctive visual identities that truly command attention and drive exponential business growth.
+              </p>
+              <p>
+                We do not just create pretty icons; we develop comprehensive branding solutions tailored to your unique market positioning. By deeply analyzing your industry and audience, we ensure every color, typeface, and shape actively supports your strategic goals. Partner with us to build a powerful, timeless brand logo that consistently resonates with your local and regional customers, establishing unparalleled trust right from their very first glance.
+              </p>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }} transition={{ delay: 0.3 }}
@@ -358,7 +363,7 @@ export default function LogoDesignInSangli() {
 
                       {/* 🔥 CTA on hover */}
                       <button className="mt-4 text-amber-400 text-sm font-bold opacity-0 group-hover:opacity-100 transition">
-                        View Design →
+                        View Mockups →
                       </button>
                     </div>
 

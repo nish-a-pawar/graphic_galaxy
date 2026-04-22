@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { SEO_DATA, WHATSAPP_LINK } from '../constants';
+import { SEO_DATA, WHATSAPP_LINK, BROCHURE_TYPES } from '../constants';
 
 // Assets
 import brochureRealEstate from '../assets/images/brochure-realestate.png';
@@ -89,12 +89,14 @@ const BrochureDesignInSangli = () => {
                 <span className="text-4xl lg:text-6xl text-white/90">That Tells Your Journey</span>
               </motion.h1>
               
-              <motion.p 
-                variants={fadeInUp}
-                className="text-lg lg:text-xl text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
-              >
-                A brochure is more than just paper; it{"'"}s a handshake with your brand. We design professional brochures that leave a lasting impression on your clients.
-              </motion.p>
+              <motion.div variants={fadeInUp} className="text-lg lg:text-xl text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed space-y-4">
+                <p>
+                  A well-crafted brochure is far more than just paper; it is often the first physical handshake with your brand. As an experienced graphic designer in the region encompassing Sangli, Miraj, and broader Maharashtra, we understand precisely how to translate your company's core values into a tangible masterpiece. We design professional brochures that captivate and persuade.
+                </p>
+                <p>
+                  Our elite branding and design services focus on telling your unique story. Whether it is a sleek tri-fold, a comprehensive product catalog, or a large-scale corporate profile, we ensure top-tier quality from initial layout to final print. Let us help you elevate your brand identity and leave a memorable, lasting impression on your clients that consistently drives real business growth.
+                </p>
+              </motion.div>
               
               <motion.div 
                 variants={fadeInUp}
@@ -126,6 +128,7 @@ const BrochureDesignInSangli = () => {
                 <img 
                   src={brochureRealEstate} 
                   alt="Premium Brochure Design" 
+                  loading="eager"
                   className="absolute z-30 w-full max-w-[450px] left-1/2 -translate-x-1/2 top-10 drop-shadow-[0_20px_50px_rgba(245,158,11,0.25)] rounded-2xl border border-white/10"
                 />
               </motion.div>
@@ -139,22 +142,14 @@ const BrochureDesignInSangli = () => {
       {/* --- SCROLLING MARQUEE --- */}
       <div className="py-12 bg-surface/50 border-y border-white/5 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
-          {[
-            "Bi-Fold Brochures", "Tri-Fold Layouts", "Company Profiles", "Product Catalogs",
-            "Annual Reports", "Real Estate Booklets", "Education Brochures", "Hospital Profiles",
-            "Sales Folders", "Technical Catalogs", "Event Booklets", "Digital Mini-Brochures"
-          ].map((service, idx) => (
+          {BROCHURE_TYPES.map((service, idx) => (
             <div key={idx} className="flex items-center mx-10 text-2xl font-bold text-white/40 uppercase tracking-widest gap-4">
               <span className="w-2 h-2 bg-amber-500 rounded-full" />
               {service}
             </div>
           ))}
           {/* Duplicate */}
-          {[
-            "Bi-Fold Brochures", "Tri-Fold Layouts", "Company Profiles", "Product Catalogs",
-            "Annual Reports", "Real Estate Booklets", "Education Brochures", "Hospital Profiles",
-            "Sales Folders", "Technical Catalogs", "Event Booklets", "Digital Mini-Brochures"
-          ].map((service, idx) => (
+          {BROCHURE_TYPES.map((service, idx) => (
             <div key={`dup-${idx}`} className="flex items-center mx-10 text-2xl font-bold text-white/40 uppercase tracking-widest gap-4">
               <span className="w-2 h-2 bg-amber-500 rounded-full" />
               {service}

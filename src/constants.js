@@ -14,7 +14,6 @@ export const ADDRESS = "Near Pramod Dairy, Vishrambag, Sangli – 416416, Mahara
 export const SITE_URL = "https://graphicgalaxy.netlify.app";
 
 
-
 export const SERVICES = [
   {
     title: "Logo Design",

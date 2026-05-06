@@ -21,7 +21,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { SEO_DATA, WHATSAPP_LINK } from '../constants';
+import { SEO_DATA, WHATSAPP_LINK, FLYER_TYPES } from '../constants';
 
 // Assets
 import socialReel from '../assets/images/social-reel.png'; // Using as a dynamic flyer mockup
@@ -89,12 +89,14 @@ const FlyerDesignInSangli = () => {
                 <span className="text-4xl lg:text-6xl text-white/90">Catch Every Eye</span>
               </motion.h1>
               
-              <motion.p 
-                variants={fadeInUp}
-                className="text-lg lg:text-xl text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
-              >
-                From street promotions to local event launches, we design flyers that demand attention and drive action. Get noticed in every corner of Sangli.
-              </motion.p>
+              <motion.div variants={fadeInUp} className="text-lg lg:text-xl text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed space-y-4">
+                <p>
+                  In a busy market, standing out requires more than just standard printing. From dynamic street promotions to high-profile local event launches, we design premium flyers that consistently demand attention and drive immediate action. Graphic Galaxy is your go-to graphic designer in Sangli, Miraj, and Maharashtra for all promotional needs.
+                </p>
+                <p>
+                  Our specialized branding approach ensures your message is delivered clearly and attractively. We meticulously balance typography, color psychology, and striking visuals to create flyers that resonate with your local audience. Whether you are launching a new product, announcing a major seasonal sale, or promoting a community event, our beautifully tailored flyer designs guarantee that you get noticed in every corner of the city.
+                </p>
+              </motion.div>
               
               <motion.div 
                 variants={fadeInUp}
@@ -123,7 +125,7 @@ const FlyerDesignInSangli = () => {
                    }}
                    transition={{ duration: 6, repeat: Infinity }}
                 >
-                    <img src={socialReel} alt="Modern Flyer Mockup" className="rounded-2xl w-full" />
+                    <img src={socialReel} alt="Modern Flyer Mockup" loading="eager" className="rounded-2xl w-full" />
                     <div className="absolute -top-4 -right-4 w-16 h-16 bg-amber-500 rounded-full flex items-center justify-center font-black text-gray-900 shadow-xl border-4 border-[#0B0F14]">50% OFF</div>
                 </motion.div>
                 
@@ -132,7 +134,7 @@ const FlyerDesignInSangli = () => {
                   animate={{ x: [0, 10, 0] }}
                   transition={{ duration: 8, repeat: Infinity }}
                 >
-                    <img src={socialTech} alt="Promo Flyer Mockup" className="rounded-xl w-full" />
+                    <img src={socialTech} alt="Promo Flyer Mockup" loading="eager" className="rounded-xl w-full" />
                 </motion.div>
               </motion.div>
               
@@ -145,22 +147,14 @@ const FlyerDesignInSangli = () => {
       {/* --- SCROLLING MARQUEE --- */}
       <div className="py-12 bg-surface/50 border-y border-white/5 overflow-hidden">
         <div className="flex animate-marquee whitespace-nowrap">
-          {[
-            "Event Flyers", "Product Launch Promo", "Business Handouts", "Special Offers",
-            "Store Openings", "Educational Flyers", "Medical Camp Promo", "Real Estate Flyers",
-            "Discount Vouchers", "Service Menus", "Recruitment Flyers", "Charity Event Flyers"
-          ].map((service, idx) => (
+          {FLYER_TYPES.map((service, idx) => (
             <div key={idx} className="flex items-center mx-10 text-2xl font-bold text-white/40 uppercase tracking-widest gap-4">
               <span className="w-2 h-2 bg-amber-500 rounded-full" />
               {service}
             </div>
           ))}
           {/* Duplicate */}
-          {[
-            "Event Flyers", "Product Launch Promo", "Business Handouts", "Special Offers",
-            "Store Openings", "Educational Flyers", "Medical Camp Promo", "Real Estate Flyers",
-            "Discount Vouchers", "Service Menus", "Recruitment Flyers", "Charity Event Flyers"
-          ].map((service, idx) => (
+          {FLYER_TYPES.map((service, idx) => (
             <div key={`dup-${idx}`} className="flex items-center mx-10 text-2xl font-bold text-white/40 uppercase tracking-widest gap-4">
               <span className="w-2 h-2 bg-amber-500 rounded-full" />
               {service}

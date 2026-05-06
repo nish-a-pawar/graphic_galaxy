@@ -109,8 +109,8 @@ const Hero = () => {
             {/* Stats */}
             <div ref={statsRef} className="flex flex-wrap gap-8">
               {[
-                { icon: Award, value: '50+', label: 'Projects Done' },
-                { icon: Users, value: '30+', label: 'Happy Clients' },
+                { icon: Award, value: '300+', label: 'Projects Done' },
+                { icon: Users, value: '50+', label: 'Happy Clients' },
                 { icon: Star, value: '5.0', label: 'Google Rating' },
               ].map(({ icon: Icon, value, label }, i) => (
                 <div key={i} className="flex items-center gap-3">

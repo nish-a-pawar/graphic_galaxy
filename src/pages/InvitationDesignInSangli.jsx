@@ -44,9 +44,14 @@ const InvitationDesignInSangli = () => {
                   <span className="text-4xl lg:text-6xl text-white/90">Beautiful Cards for Events & Weddings</span>
                 </h1>
 
-                <p className="text-lg lg:text-xl text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed">
-                  Beautiful invitations set the tone for your event. We design premium wedding cards, birthday invites and corporate event stationery that feels memorable and polished.
-                </p>
+<motion.div variants={{hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 }}} className="text-lg lg:text-xl text-gray-400 mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed space-y-4">
+                  <p>
+                    Beautiful invitations set the exact tone for your special event before it even begins. As a premier graphic designer in Sangli, Miraj, and Maharashtra, Graphic Galaxy specializes in designing premium wedding cards, birthday invites, and high-end corporate event stationery that feels memorable, personalized, and exceptionally polished. We believe your event deserves an introduction that leaves a lasting impression.
+                  </p>
+                  <p>
+                    Whether you are planning an intimate gathering or a large-scale corporate launch, our custom branding and design services ensure that every detail speaks to your specific vision. From selecting the perfect typography to integrating elegant color palettes, we meticulously craft designs that align beautifully with your event's theme. Let us help you welcome your guests with stunning, bespoke invitations that they will cherish long after the celebration is over.
+                  </p>
+                </motion.div>
 
                 <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
                   <a

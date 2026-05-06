@@ -32,6 +32,8 @@ import taaya from '../assets/images/Bag_Design/taaya.webp';
 import organicBottle from '../assets/images/organic-bottle.png';
 import luxuryBox from '../assets/images/luxury-box.png';
 import cosmeticPouch from '../assets/images/cosmetic-pouch.png';
+import agriSticker from "../assets/images/agriSticker.webp";
+import auraPouch from "../assets/images/auraPouch.webp";
 
 const PackagingDesignInSangli = () => {
   const seo = SEO_DATA.packagingDesign;
@@ -102,16 +104,17 @@ const PackagingDesignInSangli = () => {
                 </span>
               </motion.h1>
 
-              <motion.p
-                variants={fadeInUp}
-                className="text-base sm:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed"
-              >
-                Don't just wrap your product; elevate it. We create high-converting,
-                branding-focused packaging that grabs attention and builds trust.
-              </motion.p>
+              <motion.div variants={{hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 }}} className="text-base sm:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed space-y-4">
+                <p>
+                  Do not just wrap your product; elevate it to an unforgettable unboxing experience. Superior packaging design is the silent ambassador of your brand, speaking volumes about your quality before the customer even opens the box. As the top graphic designer in Sangli, Miraj, and Maharashtra, we create packaging that dominates the shelf.
+                </p>
+                <p>
+                  From luxurious rigid boxes to sustainable pouches and vibrant labels, our comprehensive branding solutions ensure your product stands out in a crowded market. We seamlessly blend structural integrity with stunning visual aesthetics, ensuring your packaging is as functional as it is beautiful. Partner with us to transform your product presentation into a powerful marketing tool that consistently grabs consumer attention and builds lasting brand trust.
+                </p>
+              </motion.div>
 
               <motion.div
-                variants={fadeInUp}
+                variants={{hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 }}}
                 className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 justify-center lg:justify-start"
               >
                 <a
@@ -133,20 +136,20 @@ const PackagingDesignInSangli = () => {
               {/* Background blurred image (depth) */}
               <img
                 src={organicBottle}
-                alt=""
+                alt="Product Pouch Design in Sangli"
                 className="absolute w-32 sm:w-48 lg:w-64 left-2 sm:left-8 lg:left-10 bottom-2 sm:bottom-8 lg:bottom-10 opacity-20 blur-md"
               />
 
               {/* Main Image */}
               <img
-                src={luxuryBox}
-                alt="Luxury Packaging Design"
+                src={cosmeticPouch}
+                alt=" Packaging Sticker Design in Sangli "
                 className="absolute z-30 w-52 sm:w-72 lg:w-96 left-1/2 -translate-x-1/2 top-4 sm:top-8 lg:top-10 drop-shadow-[0_25px_60px_rgba(245,158,11,0.35)]"
               />
 
               {/* Secondary Image */}
               <motion.img
-                src={cosmeticPouch}
+                src={auraPouch}
                 alt="Cosmetic Packaging"
                 className="absolute z-40 w-36 sm:w-52 lg:w-72 right-2 sm:right-0 bottom-3 sm:bottom-8 lg:bottom-16 drop-shadow-2xl"
                 animate={{ y: [0, -10, 0] }}
@@ -184,9 +187,9 @@ const PackagingDesignInSangli = () => {
             />
 
             <ShowcaseCard
-              image={jk_paper_bags}
-              title="JK Paper Bags"
-              type="Sustainable Tin Packaging"
+              image={crazy}
+              title="Crazy"
+              type="Paper Bag Design"
               colSpan="lg:col-span-2"
             />
             <ShowcaseCard
@@ -474,12 +477,12 @@ const PackagingDesignInSangli = () => {
                   Start My Project Now
                   <ArrowRight className="group-hover:translate-x-2 transition-transform" />
                 </a>
-                <a
-                  href="/portfolio-graphic-designer-sangli"
+                <Link
+                  to="/portfolio-graphic-designer-sangli"
                   className="w-full sm:w-auto px-6 sm:px-10 py-4 sm:py-6 text-base sm:text-xl font-bold bg-white/5 hover:bg-white/10 rounded-full transition-all border border-white/5"
                 >
                   View Case Studies
-                </a>
+                </Link>
               </div>
 
               <div className="mt-10 sm:mt-16 flex flex-wrap items-center justify-center gap-4 sm:gap-8 grayscale opacity-50">

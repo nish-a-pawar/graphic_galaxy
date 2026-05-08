@@ -15,14 +15,14 @@ import {
 
 const categories = [
   "All",
-  "Sports Branding",
   "Logo Design",
-  "Social Media Design",
+  "Brochure Design",
   "Bag Design",
   "Box Design",
   "Sticker Design",
   "Pouch Design",
   "Invitation Design",
+  "Signage Design"
 ];
 
 // 🔥 Normalize function (IMPORTANT FIX)

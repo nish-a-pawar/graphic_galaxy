@@ -5,7 +5,7 @@ export const WHATSAPP_LINK = "https://wa.me/918459763568?text=Hi, I need design 
 export const PHONE = "+91 84597 63568";
 export const EMAIL = "graphicgalaxy2022@gmail.com";
 export const INSTAGRAM = "https://instagram.com/galaxy_graphics_ind";
-export const GOOGLE_REVIEW = "https://share.google/Mo2zWhichHtggjwSW";
+export const GOOGLE_REVIEW = "https://g.page/r/CZASs3F2JEScEBM/review";
 export const ADDRESS = "Near Pramod Dairy, Vishrambag, Sangli – 416416, Maharashtra";
 export const SITE_URL = "https://graphicgalaxy.netlify.app";
 

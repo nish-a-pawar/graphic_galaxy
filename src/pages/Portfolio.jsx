@@ -90,9 +90,12 @@ const Portfolio = () => {
       <section className="px-6 pb-16">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
 
-          {filteredProjects.map((project) => (
+          {filteredProjects.map((project, i) => (
             <PortfolioCard
               key={project.id}
+              index={i}
+              total={filteredProjects.length}
+              projects={filteredProjects}
               {...normalizeProject(project)}
             />
           ))}

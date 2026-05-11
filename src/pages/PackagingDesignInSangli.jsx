@@ -240,7 +240,7 @@ const PackagingDesignInSangli = () => {
 
 
             {/* BOX */}
-            <Link to="/box-packaging-design-sangli">
+                <Link to="/portfolio-graphic-designer-sangli#box-design">
               <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 hover:scale-[1.02] min-h-[170px]">
 
                 <img
@@ -264,7 +264,7 @@ const PackagingDesignInSangli = () => {
             </Link>
 
             {/* POUCH */}
-            <Link to="/pouch-design-sangli">
+                <Link to="/portfolio-graphic-designer-sangli#pouch-design">
               <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 hover:scale-[1.02] min-h-[170px]">
 
                 <img
@@ -290,7 +290,7 @@ const PackagingDesignInSangli = () => {
 
 
             {/* LABEL */}
-            <Link to="/label-design-sangli">
+                <Link to="/portfolio-graphic-designer-sangli#sticker-design">
               <div className="relative p-6 rounded-2xl border border-[#2D3748] overflow-hidden group cursor-pointer transition-all duration-500 hover:-translate-y-2 hover:border-amber-400/60 hover:scale-[1.02] min-h-[170px]">
 
                 <img

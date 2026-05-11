@@ -36,20 +36,20 @@ const Testimonials = () => {
           {REVIEWS.map((r, i) => (
             <div
               key={i}
-              className="t-card group bg-[#111827] border border-[#2D3748] rounded-3xl p-8 hover:border-amber-400/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.08)] transition-all duration-500"
+              className="t-card group bg-[#111827] border border-[#2D3748] rounded-3xl p-8 hover:border-amber-400/40 hover:shadow-[0_0_30px_rgba(245,158,11,0.08)] transition-all duration-500 flex flex-col"
               style={{ opacity: 0 }}
             >
               <Quote size={32} className="text-amber-400/40 mb-6" />
-              <p className="text-white/65 leading-relaxed mb-8 text-base">"{r.text}"</p>
-              <div className="flex items-center gap-4">
+              <p className="text-white/65 leading-relaxed mb-8 text-base flex-grow">"{r.text}"</p>
+              <div className="flex items-center gap-4 mt-auto">
                 <div className={`w-12 h-12 rounded-full bg-linear-to-br ${r.color} flex items-center justify-center text-[#0B0F14] font-black text-sm shrink-0`}>
                   {r.initials}
                 </div>
-                <div>
+                <div className="flex-grow">
                   <p className="font-bold text-white">{r.name}</p>
                   <p className="text-white/35 text-sm">{r.role}</p>
                 </div>
-                <div className="ml-auto flex gap-0.5">
+                <div className="flex gap-0.5 shrink-0">
                   {[...Array(r.rating)].map((_, j) => (
                     <span key={j} className="text-amber-400 text-sm">★</span>
                   ))}

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
-// import {SOCIAL_MEDIA_TYPES} from "../constants";
 import { 
   Zap, 
   Target, 
@@ -17,7 +16,7 @@ import {
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { SEO_DATA, WHATSAPP_LINK} from '../constants';
+import { SEO_DATA, WHATSAPP_LINK, SOCIAL_MEDIA_TYPES } from '../constants';
 
 // Assets
 import socialCoffee from '../assets/images/social-coffee.png';

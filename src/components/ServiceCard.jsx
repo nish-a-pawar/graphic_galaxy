@@ -14,14 +14,9 @@ const ServiceCard = ({ title, desc, icon: Icon }) => (
       {title}
     </h3>
 
-    <p className="text-white/45 leading-relaxed mb-8 grow text-sm">
+    <p className="text-white/45 leading-relaxed text-sm">
       {desc}
     </p>
-
-    <button className="interactive w-full py-3.5 bg-[#1F2937] text-white/70 rounded-2xl font-bold flex items-center justify-center gap-2 group-hover:bg-amber-400 group-hover:text-[#0B0F14] transition-all duration-500 text-sm border border-[#2D3748] group-hover:border-amber-400 group-hover:shadow-[0_0_20px_rgba(245,158,11,0.3)]">
-      Learn More
-      <ArrowUpRight size={16} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-    </button>
   </div>
 );
 

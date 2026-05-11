@@ -42,7 +42,10 @@ const Testimonials = () => {
               <Quote size={32} className="text-amber-400/40 mb-6" />
               <p className="text-white/65 leading-relaxed mb-8 text-base flex-grow">"{r.text}"</p>
               <div className="flex items-center gap-4 mt-auto">
-                <div className={`w-12 h-12 rounded-full bg-linear-to-br ${r.color} flex items-center justify-center text-[#0B0F14] font-black text-sm shrink-0`}>
+                <div 
+                  className="w-12 h-12 rounded-full flex items-center justify-center text-white font-black text-sm shrink-0"
+                  style={{ backgroundColor: r.color }}
+                >
                   {r.initials}
                 </div>
                 <div className="flex-grow">

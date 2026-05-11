@@ -3,8 +3,6 @@ import { WHATSAPP_LINK } from "../constants";
 
 const PortfolioCard = ({ image, title, category, type, videoUrl, index, total, projects }) => {
   const [open, setOpen] = useState(false);
-  const [liked, setLiked] = useState(false);
-  const [likeCount, setLikeCount] = useState(0);
   const [modalIdx, setModalIdx] = useState(index);
 
   const enquiryLink = `${WHATSAPP_LINK}&text=${encodeURIComponent(
@@ -92,28 +90,7 @@ const PortfolioCard = ({ image, title, category, type, videoUrl, index, total, p
         </div>
 
         {/* ACTIONS */}
-        <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between gap-3 opacity-0 transition-all duration-300 group-hover:opacity-100">
-          <button
-              type="button"
-              onClick={(event) => {
-                event.stopPropagation();
-                setLiked((prevLiked) => {
-                  const newLiked = !prevLiked;
-                  setLikeCount((c) => c + (newLiked ? 1 : -1));
-                  return newLiked;
-                });
-              }}
-              className={`inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold backdrop-blur-md border transition-all duration-300 ${
-                liked
-                  ? "bg-rose-500 text-white border-rose-400/50"
-                  : "bg-black/45 text-white border-white/15 hover:bg-white/15"
-              }`}
-              aria-label={liked ? `Remove like for ${title}` : `Like ${title}`}
-            >
-              <span className="text-base leading-none">{liked ? "♥" : "♡"}</span>
-              Like {likeCount > 0 ? `(${likeCount})` : ''}
-            </button>
-
+        <div className="absolute bottom-4 left-4 right-4 flex items-center justify-end gap-3 opacity-0 transition-all duration-300 group-hover:opacity-100">
             <a
               href={enquiryLink}
               target="_blank"
@@ -161,17 +138,8 @@ const PortfolioCard = ({ image, title, category, type, videoUrl, index, total, p
 </button>
 
           {/* ENQUIRE BUTTON IN MODAL */}
-          <a
-            href={enquiryLink}
-            target="_blank"
-            rel="noreferrer"
-            onClick={(event) => event.stopPropagation()}
-            className="mt-4 inline-flex items-center gap-2 rounded-full bg-amber-400 px-6 py-3 text-lg font-bold text-[#0B0F14] transition-all duration-300 hover:bg-amber-300 hover:scale-[1.02]"
-            aria-label={`Enquire on WhatsApp about ${currentTitle}`}
-          >
-            Enquire
-            <span aria-hidden="true">↗</span>
-          </a>
+          {/* CONTENT */}
+          {currentType === "video" ? (
             <iframe
               src={currentVideoUrl}
               className="relative z-10 w-[min(1100px,95vw)] h-[80vh] rounded-xl"

@@ -10,6 +10,24 @@ export const ADDRESS = "Near Pramod Dairy, Vishrambag, Sangli – 416416, Mahara
 export const SITE_URL = "https://graphicgalaxy.netlify.app";
 
 
+export const BROCHURE_TYPES = [
+  "Bi-Fold Brochures",
+  "Tri-Fold Brochures",
+  "Corporate Profiles",
+  "Product Catalogs",
+  "Real Estate Brochures",
+  "Medical Brochures"
+];
+
+export const FLYER_TYPES = [
+  "Event Flyers",
+  "Promotional Flyers",
+  "Business Flyers",
+  "Sale Flyers",
+  "Product Launch Flyers",
+  "Local Marketing Flyers"
+];
+
 export const SERVICES = [
   {
     title: "Logo Design",

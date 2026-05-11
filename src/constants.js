@@ -28,6 +28,15 @@ export const FLYER_TYPES = [
   "Local Marketing Flyers"
 ];
 
+export const SOCIAL_MEDIA_TYPES = [
+  "Instagram Posts",
+  "Facebook Ads",
+  "Reel Covers",
+  "Story Templates",
+  "LinkedIn Carousels",
+  "Twitter Graphics"
+];
+
 export const SERVICES = [
   {
     title: "Logo Design",

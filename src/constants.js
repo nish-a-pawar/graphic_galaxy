@@ -1,6 +1,5 @@
 
-import posterSample from './assets/images/poster_sample.png';
-
+import posterSample from './assets/images/brochure.jpeg';
 export const WHATSAPP_LINK = "https://wa.me/918459763568?text=Hi, I need design service";
 export const PHONE = "+91 84597 63568";
 export const EMAIL = "graphicgalaxy2022@gmail.com";
@@ -17,6 +16,26 @@ export const BROCHURE_TYPES = [
   "Product Catalogs",
   "Real Estate Brochures",
   "Medical Brochures"
+];
+export const BROCHURE_PROJECTS = [
+  {
+    id: "br1",
+    image:
+      posterSample,
+    title: "S3 Duathlon Brochure",
+    category: "Brochure Design",
+    alt: "S3 Duathlon brochure design",
+  },
+
+  {
+    id: "br2",
+    image:"https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576272/WhatsApp_Image_2026-04-29_at_2.33.42_PM_hhrvma.jpg",
+    title: "MTDK Run Brochure",
+    category: "Brochure Design",
+    alt: "MTDK Run brochure design",
+  },
+
+
 ];
 
 export const FLYER_TYPES = [
@@ -368,6 +387,23 @@ export const INVITATION_PROJECTS = [
     title: "Wedding Invitation design in sangli",
     category: "Invitation Design",
     type:"image"
+  },
+];
+
+export const SIGNAGE_PROJECTS = [
+  {
+    id: "sg1",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1777800230/ChatGPT_Image_May_3_2026_02_51_09_PM_awluua.png",
+    title: "Signage Design 1",
+    category: "Signage Design",
+    alt: "Premium signage design in Sangli",
+  },
+  {
+    id: "sg2",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1777800231/ChatGPT_Image_May_3_2026_02_52_16_PM_hpb8wl.png",
+    title: "Signage Design 2",
+    category: "Signage Design",
+    alt: "Custom shop board design in Sangli",
   },
 ];
 

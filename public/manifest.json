@@ -1,0 +1,23 @@
+{
+  "name": "Graphic Galaxy - Graphic Designer in Sangli",
+  "short_name": "Graphic Galaxy",
+  "description": "Professional logo design, packaging, and social media design services in Sangli, Maharashtra",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0B0F14",
+  "theme_color": "#F59E0B",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/vite.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "design", "graphics"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "prefer_related_applications": false
+}

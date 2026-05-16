@@ -23,17 +23,17 @@ import Footer from '../components/Footer';
 import { SEO_DATA, WHATSAPP_LINK } from '../constants';
 
 // Assets
-import amukti from 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/amukti_ramvhf.webp';
-import anuj from 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1778911942/anuj_k4md2z.web/anuj.webp';
-import clothesline from 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/clothesline_wkvqzn.webp';
-import crazy from 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439604/crazy_oyq0j3.webp';
-import jk_paper_bags from 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439607/jk_paper_bags_ifb3pp.webp';
-import taaya from 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439606/taaya_ls6ixf.webp';
+const amukti = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/amukti_ramvhf.webp';
+const anuj = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1778911942/anuj_k4md2z.web/anuj.webp';
+const clothesline = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/clothesline_wkvqzn.webp';
+const crazy = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439604/crazy_oyq0j3.webp';
+const jk_paper_bags = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439607/jk_paper_bags_ifb3pp.webp';
+const taaya = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439606/taaya_ls6ixf.webp';
 import organicBottle from '../assets/images/organic-bottle.png';
 import luxuryBox from '../assets/images/luxury-box.png';
 import cosmeticPouch from '../assets/images/cosmetic-pouch.png';
 import agriSticker from "../assets/images/agriSticker.webp";
-import auraPouch from "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491749/auraPouch_zyhz5k.webp";
+const auraPouch = "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491749/auraPouch_zyhz5k.webp";
 
 const PackagingDesignInSangli = () => {
   const seo = SEO_DATA.packagingDesign;

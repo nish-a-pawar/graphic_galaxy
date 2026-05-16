@@ -24,7 +24,7 @@ import { SEO_DATA, WHATSAPP_LINK } from '../constants';
 
 // Assets
 const amukti = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/amukti_ramvhf.webp';
-const anuj = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1778911942/anuj_k4md2z.web/anuj.webp';
+const anuj = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1778911942/anuj_k4md2z.webp';
 const clothesline = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/clothesline_wkvqzn.webp';
 const crazy = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439604/crazy_oyq0j3.webp';
 const jk_paper_bags = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439607/jk_paper_bags_ifb3pp.webp';

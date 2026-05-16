@@ -11,7 +11,7 @@ import {
 
 import { Link } from "react-router-dom";
 
-import s3 from "../assets/images/Logo_Design/s3.png";
+const s3 = "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776494014/ChatGPT_Image_Apr_18_2026_12_03_12_PM_ucdhrv.png";
 import posterSample from "../assets/images/brochure.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);

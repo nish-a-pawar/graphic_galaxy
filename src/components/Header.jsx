@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 import { useState } from "react";
-import { WHATSAPP_LINK } from "../constants";
+import { WHATSAPP_LINK } from "../src/constants";
 const services = [
   { name: "Logo Design", path: "/logo-design-in-sangli" },
   { name: "Packaging Design", path: "/packaging-design-in-sangli" },

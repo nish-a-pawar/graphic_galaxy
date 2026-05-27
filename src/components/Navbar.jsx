@@ -142,7 +142,7 @@ const Navbar = () => {
           {/* Services accordion */}
           <div className="border-b border-white/10">
             <button
-              className="w-full flex justify-between items-center text-4xl font-black text-white hover:text-amber-400 transition-colors py-5 text-left"
+              className="w-full flex justify-between items-center text-xl font-black text-white hover:text-amber-400 transition-colors py-4 text-left"
               onClick={() => setMobileServices(!mobileServices)}
             >
               Services
@@ -161,7 +161,7 @@ const Navbar = () => {
                   <Link
                     key={s.path}
                     to={s.path}
-                    className="text-xl font-bold text-white/60 hover:text-amber-400 transition-colors py-2"
+                    className="text-base font-bold text-white/60 hover:text-amber-400 transition-colors py-2"
                     onClick={() => {
                       setMenuOpen(false);
                       setMobileServices(false);
@@ -184,7 +184,7 @@ const Navbar = () => {
             <Link
               key={l.name}
               to={l.path}
-              className="text-4xl font-black text-white hover:text-amber-400 transition-colors border-b border-white/10 py-5"
+              className="text-xl font-black text-white hover:text-amber-400 transition-colors border-b border-white/10 py-4"
               onClick={() => setMenuOpen(false)}
             >
               {l.name}
@@ -195,7 +195,7 @@ const Navbar = () => {
             href={`${WHATSAPP_LINK}?text=${encodeURIComponent("Hi, I need design service")}`}
             target="_blank"
             rel="noreferrer"
-            className="block w-full py-4 btn-amber text-center text-xl font-black rounded-2xl"
+            className="block w-full py-3 mt-4 btn-amber text-center text-lg font-black rounded-2xl"
           >
             Get Quote
           </a>

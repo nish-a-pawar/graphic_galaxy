@@ -17,6 +17,7 @@ const About = lazy(() => import("./pages/About"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
 const Blog = lazy(() => import("./pages/Blog.jsx"));
 
+
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -53,6 +54,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/portfolio-graphic-designer-sangli" element={<Portfolio />} />
             <Route path="/blog" element={<Blog />} />
+         
           </Routes>
         </Suspense>
       </SmoothScroll>

@@ -33,10 +33,10 @@ const Contact = () => {
       </section>
 
       <section className="py-16 px-6 bg-[#111827]">
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
+        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-stretch">
 
           {/* Form */}
-          <form onSubmit={handleWhatsApp} className="bg-[#0B0F14] border border-[#2D3748] rounded-3xl p-8 flex flex-col gap-6">
+          <form onSubmit={handleWhatsApp} className="bg-[#0B0F14] border border-[#2D3748] rounded-3xl p-8 flex flex-col gap-6 self-stretch">
             <h2 className="text-2xl font-black text-white">Send a Message</h2>
 
             <div className="flex flex-col gap-2">
@@ -61,9 +61,9 @@ const Contact = () => {
 
             <button
               type="submit"
-              className="interactive btn-amber py-4 rounded-xl font-black text-base transition-all duration-300"
+              className="interactive btn-amber py-4 rounded-xl font-black text-base transition-all duration-300 mt-auto"
             >
-              Send via WhatsApp →
+              Send
             </button>
             <p className="text-xs text-white/25 text-center">A prefilled message will be sent to us on WhatsApp.</p>
           </form>

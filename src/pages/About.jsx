@@ -17,9 +17,9 @@ const stats = [
 ];
 
 const reviews = [
-  { name: 'Rahul Patil',  role: 'Business Owner, Sangli',  initials: 'RP', text: 'Graphic Galaxy designed our logo and packaging — the quality was outstanding. Highly recommend!',                rating: 5 },
-  { name: 'Priya Sharma', role: 'Clinic Owner, Sangli',    initials: 'PS', text: 'Very professional team. Our social media designs improved our online presence significantly.',                    rating: 5 },
-  { name: 'Amit Desai',   role: 'Event Organizer, Sangli', initials: 'AD', text: 'Amazing event branding work. The Duathlon event designs were loved by everyone.',                                 rating: 5 },
+  { name: 'Santosh Jadhav', role: 'Agricultural Products', initials: 'SJ', text: 'Working with Graphic Galaxy has been a great experience for our product packaging stickers. They deliver high-quality designs on time and help maintain strong branding for our products. Their pricing is affordable, the process is efficient, and the team is cooperative throughout. Highly recommended for reliable graphic design services in sangli.', rating: 5 },
+  { name: 'Everglow Creations', role: 'Jwellery Business', initials: 'EC', text: 'Absolutely loved the logo, bag design, and thank you card created by Graphic Galaxy for our jewellery brand at Jaysingpur. The designs were modern, classy, and gave our packaging a luxurious and emotional touch that customers genuinely appreciated. Their team perfectly understood our brand vision and created everything with great creativity and attention to detail. Professional service, unique concepts, timely delivery, and highly recommended for jewellery branding and packaging design. Great experience overall.', rating: 5 },
+  { name: 'Uma Datar', role: 'Radhey Dental Clinic', initials: 'UD', text: 'Had a great experience working with Graphic Galaxy for our clinic designs. They understood our vision perfectly and created clean, professional, and attractive creatives for us. The team was responsive, creative, and easy to work with throughout the process. Really happy with their work and would definitely recommend them.', rating: 5 },
 ];
 
 

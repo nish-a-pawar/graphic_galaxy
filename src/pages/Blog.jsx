@@ -5,7 +5,9 @@ import { Calendar, User, Clock, ArrowRight } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import CTA from '../components/CTA';
-import { BLOG_POSTS, SEO_DATA } from '../constants';
+import { SEO_DATA } from '../constants';
+import { BLOG_POSTS } from '../constants';
+import { Link } from 'react-router-dom';
 
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
@@ -42,6 +44,10 @@ const Blog = () => {
     return () => ScrollTrigger.getAll().forEach(t => t.kill());
   }, []);
 
+  const visibleBlogs = BLOG_POSTS
+    .filter(blog => new Date(blog.publishDate) <= new Date())
+    .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+
   return (
     <div className="bg-[#0B0F14] min-h-screen text-white selection:bg-amber-400/30 selection:text-amber-400">
       <Navbar />
@@ -67,28 +73,31 @@ const Blog = () => {
       <section className="pb-32 px-6">
         <div className="max-w-7xl mx-auto">
           <div ref={blogGridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {BLOG_POSTS && BLOG_POSTS.map((post) => (
-              <div
-                key={post.id}
+            {visibleBlogs.map((post) => (
+              <Link
+                to={`/blog/${post.slug}`}
+                key={post.slug}
                 className="blog-card group relative bg-[#111827] border border-white/5 rounded-[2.5rem] overflow-hidden hover:border-amber-400/30 transition-all duration-500 flex flex-col h-full"
               >
                 {/* Image Placeholder */}
                 <div className="relative h-64 w-full bg-[#1F2937] overflow-hidden">
                   <div className="absolute inset-0 bg-linear-to-br from-amber-400/10 to-teal-400/10 group-hover:scale-105 transition-transform duration-700" />
                   <div className="absolute inset-0 flex items-center justify-center text-8xl font-black text-white/5 select-none uppercase">
-                    {post.category?.charAt(0)}
+                    {post.title.charAt(0)}
                   </div>
-                  <div className="absolute top-6 left-6">
-                    <span className="px-4 py-1.5 bg-amber-400 text-[#0B0F14] text-xs font-black rounded-full uppercase tracking-widest shadow-xl">
-                      {post.category}
-                    </span>
-                  </div>
+                  {post.category && (
+                    <div className="absolute top-6 left-6">
+                      <span className="px-4 py-1.5 bg-amber-400 text-[#0B0F14] text-xs font-black rounded-full uppercase tracking-widest shadow-xl">
+                        {post.category}
+                      </span>
+                    </div>
+                  )}
                 </div>
 
                 {/* Body */}
                 <div className="p-10 flex flex-col flex-grow">
                   <div className="flex items-center gap-5 text-[10px] font-black text-white/20 mb-5 uppercase tracking-[0.2em]">
-                    <span className="flex items-center gap-1.5"><Calendar size={12} className="text-amber-400" /> {post.date}</span>
+                    <span className="flex items-center gap-1.5"><Calendar size={12} className="text-amber-400" /> {new Date(post.publishDate).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric'})}</span>
                     <span className="flex items-center gap-1.5"><Clock size={12} className="text-amber-400" /> {post.readTime}</span>
                   </div>
 
@@ -97,7 +106,7 @@ const Blog = () => {
                   </h3>
 
                   <p className="text-white/40 text-sm leading-relaxed mb-10 line-clamp-3">
-                    {post.excerpt}
+                    {post.metaDescription}
                   </p>
 
                   <div className="mt-auto flex items-center justify-between pt-8 border-t border-white/5">
@@ -105,14 +114,14 @@ const Blog = () => {
                       <div className="w-9 h-9 bg-amber-400/10 border border-amber-400/20 rounded-full flex items-center justify-center">
                         <User size={14} className="text-amber-400" />
                       </div>
-                      <span className="text-xs font-bold text-white/60">{post.author}</span>
+                      <span className="text-xs font-bold text-white/60">Graphic Galaxy</span>
                     </div>
                     <button className="flex items-center gap-2 text-xs font-black text-amber-400 uppercase tracking-widest group/btn">
                       Read <ArrowRight size={14} className="group-hover/btn:translate-x-1 transition-transform" />
                     </button>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>

@@ -13,6 +13,7 @@ import {
   INVITATION_PROJECTS,
   SIGNAGE_PROJECTS,
   BROCHURE_PROJECTS,
+  FLYER_PROJECTS
   
 } from "../constants";
 
@@ -26,6 +27,7 @@ const categories = [
   "Pouch Design",
   "Invitation Design",
   "Signage Design",
+  "Flyer Design"
 ];
 
 // Normalize function
@@ -45,7 +47,7 @@ const Portfolio = () => {
   const [active, setActive] = useState("All");
 
   // All Projects
-  const allProjects = useMemo(() => { return [ ...LOGO_PROJECTS, ...RECENT_PROJECTS, ...PACKAGING_PROJECTS, ...INVITATION_PROJECTS, ...SIGNAGE_PROJECTS, ...BROCHURE_PROJECTS, ]; }, []);
+  const allProjects = useMemo(() => { return [ ...LOGO_PROJECTS, ...RECENT_PROJECTS, ...PACKAGING_PROJECTS, ...INVITATION_PROJECTS, ...SIGNAGE_PROJECTS, ...BROCHURE_PROJECTS,...FLYER_PROJECTS ]; }, []);
 
   // Handle query params / hash
   useEffect(() => {
@@ -66,6 +68,7 @@ const Portfolio = () => {
         "pouch-design": "Pouch Design",
         "invitation-design": "Invitation Design",
         "signage-design": "Signage Design",
+        "flyer-design" :"Flyer Design"
       };
 
       const normalized = categoryMap[target] || target;

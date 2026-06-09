@@ -207,7 +207,14 @@ export const PACKAGING_PROJECTS = [
     category: "Bag Design",
     alt: "Lensmart carry bag design for retail branding",
   },
-
+  
+   {
+    id: "b8",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986895/Best_Bag_Design_in_Sangli_miraj_kupwad_o4ow1d.jpg",
+    title: "Pinkpearl Bag Design",
+    category: "Bag Design",
+    alt: "Pinkpearl carry bag design for retail branding",
+  },
   
   {
     id: "box1",
@@ -279,6 +286,16 @@ export const PACKAGING_PROJECTS = [
   },
 ];
 
+export const FLYER_PROJECTS=[
+  {
+    id:"f1",
+    image:"https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986592/carzspa_h99iby.webp",
+    title:"Flyer Design",
+    category :"Flyer Design",
+    alt:"Flyer design in sangli"
+
+  }
+]
 export const LOGO_PROJECTS = [
   {
     id: "l1",
@@ -394,16 +411,38 @@ export const SIGNAGE_PROJECTS = [
   {
     id: "sg1",
     image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1777800230/ChatGPT_Image_May_3_2026_02_51_09_PM_awluua.png",
-    title: "Signage Design 1",
+    title: "LED Board",
     category: "Signage Design",
     alt: "Premium signage design in Sangli",
   },
   {
     id: "sg2",
     image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1777800231/ChatGPT_Image_May_3_2026_02_52_16_PM_hpb8wl.png",
-    title: "Signage Design 2",
+    title: "LED Board",
     category: "Signage Design",
-    alt: "Custom shop board design in Sangli",
+    alt: "Custom bakclit board design in Sangli",
+  },
+   {
+    id: "sg3",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986611/backlit_board_for_salon_shop_hospitals_in_sangli_miraj_kupwad_dt9hnw.png",
+    title: "Backlit Board",
+    category: "Signage Design",
+    alt: "Custom bakclit board design in Sangli",
+  },
+
+ {
+    id: "sg4",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986609/Best_backlit_boards_for_salon_shops_hospitals_in_sangli_miraj_kupwad_qtlqi4.jpg",
+    title: "Backlit Board",
+    category: "Signage Design",
+    alt: "Custom bakclit board design in Sangli",
+  },
+   {
+    id: "sg5",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781001516/ChatGPT_Image_Jun_9_2026_04_07_06_PM_o5t4py.png",
+    title: "Acrylic Board",
+    category: "Signage Design",
+    alt: "Custom Acrylic board design in Sangli",
   },
 ];
 

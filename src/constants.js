@@ -1,13 +1,13 @@
-
-import posterSample from './assets/images/brochure.jpeg';
-export const WHATSAPP_LINK = "https://wa.me/918459763568?text=Hi, I need design service";
+import posterSample from "./assets/images/brochure.jpeg";
+export const WHATSAPP_LINK =
+  "https://wa.me/918459763568?text=Hi, I need design service";
 export const PHONE = "+91 84597 63568";
 export const EMAIL = "graphicgalaxy2022@gmail.com";
 export const INSTAGRAM = "https://instagram.com/galaxy_graphics_ind";
 export const GOOGLE_REVIEW = "https://g.page/r/CZASs3F2JEScEBM/review";
-export const ADDRESS = "Near Pramod Dairy, Vishrambag, Sangli – 416416, Maharashtra";
+export const ADDRESS =
+  "Near Pramod Dairy, Vishrambag, Sangli – 416416, Maharashtra";
 export const SITE_URL = "https://graphicgalaxy.netlify.app";
-
 
 export const BROCHURE_TYPES = [
   "Bi-Fold Brochures",
@@ -15,13 +15,13 @@ export const BROCHURE_TYPES = [
   "Corporate Profiles",
   "Product Catalogs",
   "Real Estate Brochures",
-  "Medical Brochures"
+  "Medical Brochures",
 ];
 export const BROCHURE_PROJECTS = [
   {
     id: "br1",
-    image:
-      posterSample,
+    image: posterSample,
+    images: [posterSample, posterSample], // User can replace with real individual pages
     title: "S3 Duathlon Brochure",
     category: "Brochure Design",
     alt: "S3 Duathlon brochure design",
@@ -29,13 +29,16 @@ export const BROCHURE_PROJECTS = [
 
   {
     id: "br2",
-    image:"https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576272/WhatsApp_Image_2026-04-29_at_2.33.42_PM_hhrvma.jpg",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576272/WhatsApp_Image_2026-04-29_at_2.33.42_PM_hhrvma.jpg",
+    images: [
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576272/WhatsApp_Image_2026-04-29_at_2.33.42_PM_hhrvma.jpg",
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576272/WhatsApp_Image_2026-04-29_at_2.33.42_PM_hhrvma.jpg",
+    ], // User can replace with real individual pages
     title: "MTDK Run Brochure",
     category: "Brochure Design",
     alt: "MTDK Run brochure design",
   },
-
-
 ];
 
 export const FLYER_TYPES = [
@@ -44,7 +47,7 @@ export const FLYER_TYPES = [
   "Business Flyers",
   "Sale Flyers",
   "Product Launch Flyers",
-  "Local Marketing Flyers"
+  "Local Marketing Flyers",
 ];
 
 export const SOCIAL_MEDIA_TYPES = [
@@ -53,7 +56,7 @@ export const SOCIAL_MEDIA_TYPES = [
   "Reel Covers",
   "Story Templates",
   "LinkedIn Carousels",
-  "Twitter Graphics"
+  "Twitter Graphics",
 ];
 
 export const SERVICES = [
@@ -78,7 +81,7 @@ export const SERVICES = [
     desc: "Scroll-stopping posts and content kits for every platform.",
     path: "/social-media-design-sangli",
     icon: "◉",
-    tag:"Expertise",
+    tag: "Expertise",
     footerLabel: "Social Media Design",
   },
   {
@@ -153,109 +156,128 @@ export const SERVICES = [
     tag: null,
     footerLabel: "Misc Design",
   },
-
-
 ];
 //portfolio page
 export const PACKAGING_PROJECTS = [
   {
     id: "b1",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/amukti_ramvhf.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/amukti_ramvhf.webp",
     title: "Custom Cloth Bag Design",
     category: "Bag Design",
     alt: "Custom cloth bag design for retail shop in Sangli Maharashtra",
   },
   {
     id: "b2",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439606/premium_bag_sf4lke.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439606/premium_bag_sf4lke.webp",
     title: "Luxury Shopping Bag Design",
     category: "Bag Design",
     alt: "Luxury shopping bag packaging design for jwellery shop in Sangli",
   },
   {
     id: "b3",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/clothesline_wkvqzn.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/clothesline_wkvqzn.webp",
     title: "Clothing Brand Carry Bag",
     category: "Bag Design",
     alt: "Clothing brand carry bag design for apparel store in Maharashtra",
   },
   {
     id: "b4",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439604/crazy_oyq0j3.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439604/crazy_oyq0j3.webp",
     title: "Eco Friendly Bag Design",
     category: "Bag Design",
     alt: "Eco friendly paper bag packaging design for Crazy icecream shop in Sangli",
   },
   {
     id: "b5",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439607/jk_paper_bags_ifb3pp.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439607/jk_paper_bags_ifb3pp.webp",
     title: "Retail Paper Bag Design",
     category: "Bag Design",
     alt: "Retail paper bag design for shop branding in Sangli city",
   },
   {
     id: "b6",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439606/taaya_ls6ixf.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439606/taaya_ls6ixf.webp",
     title: "Boutique Bag Design",
     category: "Bag Design",
     alt: "Custom boutique shopping bag design for fashion store in Maharashtra",
   },
   {
     id: "b7",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493619/lensmart_1_awxwhb.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493619/lensmart_1_awxwhb.webp",
     title: "Lensmart Bag Design",
     category: "Bag Design",
     alt: "Lensmart carry bag design for retail branding",
   },
-  
-   {
+
+  {
     id: "b8",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986895/Best_Bag_Design_in_Sangli_miraj_kupwad_o4ow1d.jpg",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986895/Best_Bag_Design_in_Sangli_miraj_kupwad_o4ow1d.jpg",
     title: "Pinkpearl Bag Design",
     category: "Bag Design",
     alt: "Pinkpearl carry bag design for retail branding",
   },
-  
+
   {
     id: "box1",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439580/pizzaBox_dyzuri.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439580/pizzaBox_dyzuri.webp",
     title: "Product Box Packaging",
     category: "Box Design",
     alt: "Creative product box packaging design for cosmetics brand in Sangli",
   },
   {
     id: "box2",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439579/panelLightBx_tbmjw8.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439579/panelLightBx_tbmjw8.webp",
     title: "Premium Box Design",
     category: "Box Design",
     alt: "Premium product box design for branding and packaging in Maharashtra",
   },
   {
     id: "box3",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439579/medBox_qec0b2.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439579/medBox_qec0b2.webp",
     title: "Premium Box Design",
     category: "Box Design",
     alt: "Premium product box design for branding and packaging in Maharashtra",
   },
-
+  {
+    id: "box4",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781088014/6db212f8-181f-439e-815c-16d283abe5bf_sjd3v3.webp",
+    title: "Premium Box Design",
+    category: "Box Design",
+    alt: "Premium product box design for branding and packaging in Maharashtra",
+  },
   // 👉 Sticker
   {
     id: "s1",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/honeySticker_jqfosl.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/honeySticker_jqfosl.webp",
     title: "Honey Product Sticker",
     category: "Sticker Design",
     alt: "Honey product sticker design for packaging and product labels",
   },
   {
     id: "s2",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/oilSticker_xkxnor.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/oilSticker_xkxnor.webp",
     title: "Oil Bottle Sticker",
     category: "Sticker Design",
     alt: "Oil bottle sticker label design for retail packaging",
   },
   {
     id: "s3",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/agriSticker_agnikh.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/agriSticker_agnikh.webp",
     title: "Agri Product Sticker",
     category: "Sticker Design",
     alt: "Agriculture product sticker design for branding and labels",
@@ -264,7 +286,8 @@ export const PACKAGING_PROJECTS = [
   // 👉 Pouch
   {
     id: "p1",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/annpurnaPouch_bpptzi.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/annpurnaPouch_bpptzi.webp",
     title: "Annpurna Pouch Packaging",
     category: "Pouch Design",
     alt: "Annpurna pouch packaging design for food product branding",
@@ -272,91 +295,214 @@ export const PACKAGING_PROJECTS = [
 
   {
     id: "p2",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/sanjyotPouch_sv5zih.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/sanjyotPouch_sv5zih.webp",
     title: "Sanjyot Pouch Packaging",
     category: "Pouch Design",
     alt: "Sanjyot pouch packaging design for retail products",
   },
   {
     id: "p3",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491749/auraPouch_zyhz5k.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491749/auraPouch_zyhz5k.webp",
     title: "Aura Pouch Packaging",
     category: "Pouch Design",
     alt: "Aura pouch packaging design for product branding",
   },
 ];
 
-export const FLYER_PROJECTS=[
+export const FLYER_PROJECTS = [
   {
-    id:"f1",
-    image:"https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986592/carzspa_h99iby.webp",
-    title:"Flyer Design",
-    category :"Flyer Design",
-    alt:"Flyer design in sangli"
+    id: "f1",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986592/carzspa_h99iby.webp",
+    title: "Flyer Design",
+    category: "Flyer Design",
+    alt: "Flyer design in sangli",
+  },
+  {
+    id: "f2",
+    image:
+      "",
+    title: "Flyer Design",
+    category: "Flyer Design",
+    alt: "Flyer design in sangli",
+  },
+  {
+    id: "f3",
+    image:
+      "",
+    title: "Flyer Design",
+    category: "Flyer Design",
+    alt: "Flyer design in sangli",
+  },
+  {
+    id: "f4",
+    image:
+      "",
+    title: "Flyer Design",
+    category: "Flyer Design",
+    alt: "Flyer design in sangli",
+  },
+];
 
+export const SOCIALMEDIA_PROJECTS = [
+  {
+    id: "sm1",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255716/yeqab3n4hsnc5beqjnpw_kcjpzp.webp",
+    title: "Hospital/Clinic Post",
+    category: "Social Media Post",
+    alt: "Hospital Clinic Social Media Post Design in Sangli",
+  },
+  {
+    id: "sm2",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255715/mj6fcdookrwmesqwfg0h_nfih6t.webp",
+    title: "Hospital/Clinic Post",
+    category: "Social Media Post",
+    alt: "Hospital Clinic Social Media Post Design in Sangli",
+  },
+  {
+    id: "sm3",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781249551/best_social__media_post_design_in_sangli_acxpa8.webp",
+    title: "Event Post",
+    category: "Social Media Post",
+    alt: "Event Social Media Post Design in Sangli",
+  },
+  {
+    id: "sm4",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576273/WhatsApp_Image_2026-05-08_at_11.47.18_AM_y4roop.jpg",
+    title: "Event Post",
+    category: "Social Media Post",
+    alt: "Event Social Media Post Design in Sangli",
+  },
+  {
+    id: "sm5",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576273/WhatsApp_Image_2026-04-29_at_2.33.41_PM_mjtvrc.jpg",
+    title: "Event Post",
+    category: "Social Media Post",
+    alt: "Event Social Media Post Design in Sangli",
+  },
+  {
+    id: "sm6",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255714/lrf8nat9ybyybpkxqw8z_fwtkhc.webp",
+    title: "Product Post",
+    category: "Social Media Post",
+    alt: "Product Social Media Post Design in Sangli",
+  },
+  {
+    id: "sm7",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255714/m2tryqtsbdjnuwbxveb3_ixxp7h.webp",
+    title: "Product Post",
+    category: "Social Media Post",
+    alt: "Product Social Media Post Design in Sangli",
+  },
+  {
+    id: "sm8",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255717/acq71ipmamt5posbuvyz_jq1w6b.webp",
+    title: "Product Post",
+    category: "Social Media Post",
+    alt: "Product Social Media Post Design in Sangli",
+  },
+  {
+    id: "sm9",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255716/qzb6rwz0mhjdqfwhtnkj_lrbkm7.webp",
+    title: "Product Post",
+    category: "Social Media Post",
+    alt: "Product Social Media Post Design in Sangli",
+  },
+  {
+    id: "sm10",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255713/dtsikc20lob8yhm5ohde_fp26p3.webp",
+    title: "Offer Post",
+    category: "Social Media Post",
+    alt: "Offer Social Media Post Design in Sangli",
+  },
+  {
+    id: "sm11",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255449/WhatsApp_Image_2026-06-12_at_2.29.27_PM_z2abw7.webp",
+    title: "Offer Post",
+    category: "Social Media Post",
+    alt: "Offer Social Media Post Design in Sangli",
   }
-]
+];
+
 export const LOGO_PROJECTS = [
   {
     id: "l1",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Logo_evercare_hgshnm.webp",
-    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Mockup_evercare.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Logo_evercare_hgshnm.webp",
+    mockupImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Mockup_evercare.webp",
     title: "Evercare",
     category: "Logo Design",
     alt: "Evercare logo design in Sangli",
   },
   {
     id: "l2",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Logo_vanira-organics_drque1.webp",
-    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Mockup_vanira-organics.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Logo_vanira-organics_drque1.webp",
+    mockupImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Mockup_vanira-organics.webp",
     title: "Vanira Organics",
     category: "Logo Design",
     alt: "Vanira organics logo design in Maharashtra",
   },
   {
     id: "l3",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Logo_Parth_Executuive_aw7jb7.webp",
-    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Mockup_Parth_Executive.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Logo_Parth_Executuive_aw7jb7.webp",
+    mockupImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493347/Mockup_Parth_Executive.webp",
     title: "Parth Executive",
     category: "Logo Design",
     alt: "Parth Executive logo design",
   },
   {
     id: "l4",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Logo_KVP_agro_zpqnkx.webp",
-    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Mockup_KVP_agro.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Logo_KVP_agro_zpqnkx.webp",
+    mockupImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Mockup_KVP_agro.webp",
     title: "KV Agro ",
     category: "Logo Design",
     alt: "KV Agro logo design in Maharashtra",
   },
   {
     id: "l5",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Logo_C3_ymchbc.webp",
-    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Mockup_C3.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Logo_C3_ymchbc.webp",
+    mockupImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Mockup_C3.webp",
     title: "C3 Unisex Salon ",
     category: "Logo Design",
     alt: "C3 Unisex Salon logo design in Sangli",
   },
   {
     id: "l6",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493345/Logo_aditya_transport_md5tdb.webp",
-    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493345/Mockup_aditya_transport.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493345/Logo_aditya_transport_md5tdb.webp",
+    mockupImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493345/Mockup_aditya_transport.webp",
     title: "Aditya Transports",
     category: "Logo Design",
-    alt: "Aditya brand logo design in sangli " ,
+    alt: "Aditya brand logo design in sangli ",
   },
   {
     id: "l7",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Logo_Aryan_Agro_gduxjl.webp",
-    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Mockup_Aryan_Agro.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Logo_Aryan_Agro_gduxjl.webp",
+    mockupImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776493346/Mockup_Aryan_Agro.webp",
     title: "Aryan Agro",
     category: "Logo Design",
-    alt: "Aryan Agro logo design in sangli " ,
+    alt: "Aryan Agro logo design in sangli ",
   },
   {
     id: "l8",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776494014/ChatGPT_Image_Apr_18_2026_12_03_12_PM_ucdhrv.png",
-    mockupImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776494014/Mockup_S3.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776494014/ChatGPT_Image_Apr_18_2026_12_03_12_PM_ucdhrv.png",
+    mockupImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776494014/Mockup_S3.webp",
     title: "S3 DUATHLON",
     category: "Logo Design",
     alt: "S3 DUATHLON logo design in Sangli ",
@@ -370,8 +516,8 @@ export const INVITATION_PROJECTS = [
     url: "https://player.cloudinary.com/embed/?cloud_name=daxfbjcpc&public_id=VideoINvite_ajuava",
     title: "Wedding Video Invite",
     category: "Invitation Design in sangli",
-    type:"video",
-    thumbnail: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776500921/Screenshot_2026-04-18_135404_kjk6dq.png"
+    thumbnail:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776500921/Screenshot_2026-04-18_135404_kjk6dq.png",
   },
   {
     id: "i2",
@@ -379,23 +525,21 @@ export const INVITATION_PROJECTS = [
     url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776495658/ShubhVivahIvite_fsmpy7.webp",
     title: "Wedding Invitation Card design in sangli",
     category: "Invitation Design",
-    type:"image"
+    
   },
   {
     id: "i3",
     type: "image",
     url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776495657/GrihaPraveshInvitation_dhg1kb.webp",
     title: "Griha Pravesh Invitation in sangli",
-    category:"Invitation Design",
-    type:"image"
+    category: "Invitation Design",
   },
   {
     id: "i4",
     type: "image",
     url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776495535/2_1_1_vgthuo.webp",
     title: "Wedding Invitation design in sangli",
-    category:"Invitation Design",
-    type:"image"
+    category: "Invitation Design",
   },
   {
     id: "i5",
@@ -403,66 +547,100 @@ export const INVITATION_PROJECTS = [
     url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776495533/3_1_1_mqza5j.webp",
     title: "Wedding Invitation design in sangli",
     category: "Invitation Design",
-    type:"image"
+
   },
 ];
 
 export const SIGNAGE_PROJECTS = [
   {
     id: "sg1",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1777800230/ChatGPT_Image_May_3_2026_02_51_09_PM_awluua.png",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1777800230/ChatGPT_Image_May_3_2026_02_51_09_PM_awluua.png",
+    litImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1777800230/ChatGPT_Image_May_3_2026_02_51_09_PM_awluua.png",
+
+    unlitImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1777800231/ChatGPT_Image_May_3_2026_02_52_16_PM_hpb8wl.png",
     title: "LED Board",
     category: "Signage Design",
     alt: "Premium signage design in Sangli",
   },
   {
-    id: "sg2",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1777800231/ChatGPT_Image_May_3_2026_02_52_16_PM_hpb8wl.png",
-    title: "LED Board",
-    category: "Signage Design",
-    alt: "Custom bakclit board design in Sangli",
-  },
-   {
     id: "sg3",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986611/backlit_board_for_salon_shop_hospitals_in_sangli_miraj_kupwad_dt9hnw.png",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986611/backlit_board_for_salon_shop_hospitals_in_sangli_miraj_kupwad_dt9hnw.png",
+    litImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986609/Best_backlit_boards_for_salon_shops_hospitals_in_sangli_miraj_kupwad_qtlqi4.jpg",
+    unlitImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986611/backlit_board_for_salon_shop_hospitals_in_sangli_miraj_kupwad_dt9hnw.png",
     title: "Backlit Board",
     category: "Signage Design",
     alt: "Custom bakclit board design in Sangli",
   },
-
- {
-    id: "sg4",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986609/Best_backlit_boards_for_salon_shops_hospitals_in_sangli_miraj_kupwad_qtlqi4.jpg",
-    title: "Backlit Board",
-    category: "Signage Design",
-    alt: "Custom bakclit board design in Sangli",
-  },
-   {
+  {
     id: "sg5",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781001516/ChatGPT_Image_Jun_9_2026_04_07_06_PM_o5t4py.png",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781001516/ChatGPT_Image_Jun_9_2026_04_07_06_PM_o5t4py.png",
     title: "Acrylic Board",
     category: "Signage Design",
     alt: "Custom Acrylic board design in Sangli",
   },
+
+  {
+    id: "sg6",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781158644/ChatGPT_Image_Jun_11_2026_11_45_52_AM_kponns.webp",
+    litImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781158644/ChatGPT_Image_Jun_11_2026_11_45_52_AM_kponns.webp",
+    unlitImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781158825/ChatGPT_Image_Jun_11_2026_11_39_34_AM_wdr306.webp",
+    title: "BackLit Board",
+    category: "Signage Design",
+    alt: "Premium signage design in Sangli",
+  },
 ];
 
 export const TEAM = [
-  { name: "Vaibhav Biradar", role: "Founder & Senior Designer", initials: "VB", color: "#F59E0B" },
-  { name: "Nisha Pawar", role: "General Manager", initials: "NP", color: "#7C3AED" },
-  { name: "Tanmay Patil", role: "Senior Graphic Designer", initials: "TP", color: "#2563EB" },
-  { name: "Shraddha Dongre", role: "Junior Graphic Designer", initials: "SD", color: "#DB2777" },
-  { name: "Prajwal Aawti", role: "Design Intern", initials: "PA", color: "#d97706" },
+  {
+    name: "Vaibhav Biradar",
+    role: "Founder & Senior Designer",
+    initials: "VB",
+    color: "#F59E0B",
+  },
+  {
+    name: "Nisha Pawar",
+    role: "General Manager",
+    initials: "NP",
+    color: "#7C3AED",
+  },
+  {
+    name: "Tanmay Patil",
+    role: "Senior Graphic Designer",
+    initials: "TP",
+    color: "#2563EB",
+  },
+  {
+    name: "Shraddha Dongre",
+    role: "Junior Graphic Designer",
+    initials: "SD",
+    color: "#DB2777",
+  },
+  {
+    name: "Prajwal Aawti",
+    role: "Design Intern",
+    initials: "PA",
+    color: "#d97706",
+  },
 ];
 
 export const STATS = [
-  { value: '2022', label: 'Founded' },
-  { value: '5+', label: 'Team Members' },
-  { value: '200+', label: 'Projects Done' },
-  { value: '5.0★', label: 'Google Rating' },
+  { value: "2022", label: "Founded" },
+  { value: "5+", label: "Team Members" },
+  { value: "200+", label: "Projects Done" },
+  { value: "5.0★", label: "Google Rating" },
 ];
 
 export const clients = [
-
   { name: "Vijeta Group", type: "Sangli Marathon" },
   { name: "Radhey Dental Clinic", type: "Social Media Design" },
   { name: "Smile Sangli Dental Clinic", type: "Branding & Design" },
@@ -472,8 +650,7 @@ export const clients = [
   { name: "Carzspa Sangli", type: "Event Branding" },
   { name: "GIFT CLINIC", type: "Social Media Design" },
   { name: "ER. Tatyasaheb khot", type: "Flex and social media design" },
-  { name: "JK Paper Bags", type: "Packaging and social media design" }
-
+  { name: "JK Paper Bags", type: "Packaging and social media design" },
 ];
 
 export const RECENT_PROJECTS = [
@@ -514,27 +691,27 @@ export const RECENT_PROJECTS = [
 
 export const REVIEWS = [
   {
-    name: 'Shreyansh Kargane',
-    role: 'Carzspa Sangli',
-    initials: 'SK',
-    color: '#D97706',
-    text: 'I recently got my poster designed by Graphic Galaxy in Sangli and they did an amazing job! The design was very attractive and exactly what I wanted. Their service is super quick and the prices are very affordable too. If you are looking for a creative and budget-friendly graphic designer in Sangli, I highly recommend them!',
+    name: "Shreyansh Kargane",
+    role: "Carzspa Sangli",
+    initials: "SK",
+    color: "#D97706",
+    text: "I recently got my poster designed by Graphic Galaxy in Sangli and they did an amazing job! The design was very attractive and exactly what I wanted. Their service is super quick and the prices are very affordable too. If you are looking for a creative and budget-friendly graphic designer in Sangli, I highly recommend them!",
     rating: 5,
   },
   {
-    name: 'Vaibhav Gandhi',
-    role: 'Business Owner, Kolhapur',
-    initials: 'VG',
-    color: '#14B8A6',
-    text: 'I had a great experience working with Graphic Galaxy. The team was very professional, creative, and responsive throughout the whole design process. A special thanks to Vaibhav, who was my main contact person. He understood my requirements clearly and ensured the final design matched exactly what I was looking for. The quality of work and attention to detail were excellent. I would definitely recommend Graphic Galaxy to anyone looking for reliable and high-quality graphic design services',
+    name: "Vaibhav Gandhi",
+    role: "Business Owner, Kolhapur",
+    initials: "VG",
+    color: "#14B8A6",
+    text: "I had a great experience working with Graphic Galaxy. The team was very professional, creative, and responsive throughout the whole design process. A special thanks to Vaibhav, who was my main contact person. He understood my requirements clearly and ensured the final design matched exactly what I was looking for. The quality of work and attention to detail were excellent. I would definitely recommend Graphic Galaxy to anyone looking for reliable and high-quality graphic design services",
     rating: 5,
   },
   {
-    name: 'Deepak Patil',
-    role: 'Investment Consultant, Sangli',
-    initials: 'DP',
-    color: '#7C3AED',
-    text: 'Got amazing quote boards for our office just by calling Graphic Galaxy Sangli. The process was quick and the designs were creative. Highly recommended if you are searching for a good Graphic design Services in Sangli',
+    name: "Deepak Patil",
+    role: "Investment Consultant, Sangli",
+    initials: "DP",
+    color: "#7C3AED",
+    text: "Got amazing quote boards for our office just by calling Graphic Galaxy Sangli. The process was quick and the designs were creative. Highly recommended if you are searching for a good Graphic design Services in Sangli",
     rating: 5,
   },
 ];
@@ -543,110 +720,144 @@ export const BLOG_POSTS = [
   {
     id: 1,
     title: "Why Minimalist Logo Design is better for your Brand",
-    excerpt: "Discover why simplicity is the ultimate sophistication in modern logo design and how it can help your business stand out.",
+    excerpt:
+      "Discover why simplicity is the ultimate sophistication in modern logo design and how it can help your business stand out.",
     date: "Oct 12, 2026",
     category: "Branding",
     slug: "minimalist-logo-design-benefits",
     author: "Vaibhav Biradar",
     readTime: "5 min read",
     image: null,
-    keywords: ["logo design sangli", "minimalist branding", "brand identity"]
+    keywords: ["logo design sangli", "minimalist branding", "brand identity"],
   },
   {
     id: 2,
     title: "Packaging Design Trends to Watch in 2026",
-    excerpt: "From sustainable materials to bold typography, here are the top packaging design trends that will dominate the market this year.",
+    excerpt:
+      "From sustainable materials to bold typography, here are the top packaging design trends that will dominate the market this year.",
     date: "Oct 05, 2026",
     category: "Packaging",
     slug: "packaging-design-trends-2026",
     author: "Tanmay Patil",
     readTime: "7 min read",
     image: null,
-    keywords: ["packaging design sangli", "sustainable packaging", "design trends 2026"]
+    keywords: [
+      "packaging design sangli",
+      "sustainable packaging",
+      "design trends 2026",
+    ],
   },
   {
     id: 3,
     title: "How to Boost Your Business with Social Media Design",
-    excerpt: "Learn the secrets of creating scroll-stopping social media posts that engage your audience and drive conversions.",
+    excerpt:
+      "Learn the secrets of creating scroll-stopping social media posts that engage your audience and drive conversions.",
     date: "Sep 28, 2026",
     category: "Social Media",
     slug: "boost-business-social-media-design",
     author: "Shraddha Dongre",
     readTime: "4 min read",
     image: null,
-    keywords: ["social media design sangli", "business growth", "content strategy"]
+    keywords: [
+      "social media design sangli",
+      "business growth",
+      "content strategy",
+    ],
   },
 ];
 
 export const SEO_DATA = {
   home: {
-    title: "Graphic Designer in Sangli | Logo & Packaging Design – Graphic Galaxy",
-    description: "Graphic Galaxy – Professional logo design, packaging, and social media design services in Sangli, Maharashtra. Get a free quote today.",
+    title:
+      "Graphic Designer in Sangli | Logo & Packaging Design – Graphic Galaxy",
+    description:
+      "Graphic Galaxy – Professional logo design, packaging, and social media design services in Sangli, Maharashtra. Get a free quote today.",
     url: "/",
   },
   about: {
     title: "About Us | Graphic Galaxy – Design Studio in Sangli",
-    description: "Graphic Galaxy is a creative design studio founded in 2022 in Sangli, Maharashtra. Meet our team of professional graphic designers.",
+    description:
+      "Graphic Galaxy is a creative design studio founded in 2022 in Sangli, Maharashtra. Meet our team of professional graphic designers.",
     url: "/about",
   },
   contact: {
     title: "Contact Graphic Galaxy | Graphic Designer in Sangli",
-    description: "Contact Graphic Galaxy for logo, packaging and social media design in Sangli. WhatsApp us for a free quote.",
+    description:
+      "Contact Graphic Galaxy for logo, packaging and social media design in Sangli. WhatsApp us for a free quote.",
     url: "/contact",
   },
   portfolio: {
     title: "Portfolio | Graphic Designer in Sangli – Graphic Galaxy",
-    description: "View our graphic design portfolio – logos, packaging, social media designs for businesses in Sangli and Maharashtra.",
+    description:
+      "View our graphic design portfolio – logos, packaging, social media designs for businesses in Sangli and Maharashtra.",
     url: "/portfolio-graphic-designer-sangli",
   },
   blog: {
     title: "Graphic Design Blog Sangli | Logo & Branding Tips – Graphic Galaxy",
-    description: "Read the latest insights on graphic design, logo branding, and packaging trends from our experts in Sangli, Maharashtra.",
+    description:
+      "Read the latest insights on graphic design, logo branding, and packaging trends from our experts in Sangli, Maharashtra.",
     url: "/blog",
   },
   services: {
     title: "Graphic Design Services in Sangli | Graphic Galaxy",
-    description: "Logo, packaging, social media, brochure and more — professional graphic design services for businesses in Sangli, Maharashtra.",
+    description:
+      "Logo, packaging, social media, brochure and more — professional graphic design services for businesses in Sangli, Maharashtra.",
     url: "/services",
   },
   logoDesign: {
-    title: "Logo Design in Sangli | Professional Logo Designer – Graphic Galaxy",
-    description: "Looking for a logo designer in Sangli? Graphic Galaxy creates professional logos for businesses in Sangli, Miraj and Maharashtra.",
+    title:
+      "Logo Design in Sangli | Professional Logo Designer – Graphic Galaxy",
+    description:
+      "Looking for a logo designer in Sangli? Graphic Galaxy creates professional logos for businesses in Sangli, Miraj and Maharashtra.",
     url: "/logo-design-in-sangli",
   },
   packagingDesign: {
-    title: "Packaging Design in Sangli | Product Label & Box Design – Graphic Galaxy",
-    description: "Premium packaging design services in Sangli. Professional box packaging, label design, and product branding that stands out. Get a quote today.",
+    title:
+      "Packaging Design in Sangli | Product Label & Box Design – Graphic Galaxy",
+    description:
+      "Premium packaging design services in Sangli. Professional box packaging, label design, and product branding that stands out. Get a quote today.",
     url: "/packaging-design-in-sangli",
   },
   socialMediaDesign: {
-    title: "Social Media Design in Sangli | Scroll-Stopping Content – Graphic Galaxy",
-    description: "Boost your online presence with professional social media design in Sangli. Creative posts, stories, and content kits for businesses.",
+    title:
+      "Social Media Design in Sangli | Scroll-Stopping Content – Graphic Galaxy",
+    description:
+      "Boost your online presence with professional social media design in Sangli. Creative posts, stories, and content kits for businesses.",
     url: "/social-media-design-sangli",
   },
   brochureDesign: {
-    title: "Brochure Design in Sangli | Professional Business Brochures – Graphic Galaxy",
-    description: "Professional brochure design services in Sangli. Bi-fold, tri-fold, and multi-page brochures that effectively communicate your brand story.",
+    title:
+      "Brochure Design in Sangli | Professional Business Brochures – Graphic Galaxy",
+    description:
+      "Professional brochure design services in Sangli. Bi-fold, tri-fold, and multi-page brochures that effectively communicate your brand story.",
     url: "/brochure-design-sangli",
   },
   flyerDesign: {
-    title: "Flyer Design in Sangli | Creative Promotional Flyers – Graphic Galaxy",
-    description: "Eye-catching flyer design in Sangli. Perfect for events, promotions, and local marketing. Get high-quality, print-ready designs today.",
+    title:
+      "Flyer Design in Sangli | Creative Promotional Flyers – Graphic Galaxy",
+    description:
+      "Eye-catching flyer design in Sangli. Perfect for events, promotions, and local marketing. Get high-quality, print-ready designs today.",
     url: "/flyer-design-sangli",
   },
   invitationDesign: {
-    title: "Invitation Design in Sangli | Wedding & Event Cards – Graphic Galaxy",
-    description: "Premium invitation design in Sangli. Custom wedding cards, corporate event invites, and birthday invitations with a premium touch.",
+    title:
+      "Invitation Design in Sangli | Wedding & Event Cards – Graphic Galaxy",
+    description:
+      "Premium invitation design in Sangli. Custom wedding cards, corporate event invites, and birthday invitations with a premium touch.",
     url: "/invitation-design-sangli",
   },
   bookletMagazine: {
-    title: "Booklet & Magazine Design in Sangli | Editorial Design – Graphic Galaxy",
-    description: "Professional booklet and magazine design in Sangli. High-end editorial layouts for annual reports, catalogs, and lifestyle magazines.",
+    title:
+      "Booklet & Magazine Design in Sangli | Editorial Design – Graphic Galaxy",
+    description:
+      "Professional booklet and magazine design in Sangli. High-end editorial layouts for annual reports, catalogs, and lifestyle magazines.",
     url: "/booklet-magazine-design-sangli",
   },
   signageDesign: {
-    title: "Signage Board Design in Sangli | Shop Board & Glow Sign – Graphic Galaxy",
-    description: "Professional signage board design in Sangli. Shop boards, glow signs, ACP boards, 3D letter signs for businesses in Sangli, Miraj & Kolhapur.",
+    title:
+      "Signage Board Design in Sangli | Shop Board & Glow Sign – Graphic Galaxy",
+    description:
+      "Professional signage board design in Sangli. Shop boards, glow signs, ACP boards, 3D letter signs for businesses in Sangli, Miraj & Kolhapur.",
     url: "/signage-design-sangli",
   },
 };

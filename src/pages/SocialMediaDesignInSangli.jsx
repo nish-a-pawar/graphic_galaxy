@@ -14,14 +14,10 @@ import {
   Share2,
   MousePointer2
 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { SEO_DATA, WHATSAPP_LINK, SOCIAL_MEDIA_TYPES } from '../constants';
-
-// Assets
-import socialCoffee from '../assets/images/social-coffee.png';
-import socialTech from '../assets/images/social-tech.png';
-import socialReel from '../assets/images/social-reel.png';
+import { SEO_DATA, WHATSAPP_LINK, SOCIAL_MEDIA_TYPES, SOCIALMEDIA_PROJECTS } from '../constants';
 
 const SocialMediaDesignInSangli = () => {
   const seo = SEO_DATA.socialMediaDesign;
@@ -127,21 +123,21 @@ const SocialMediaDesignInSangli = () => {
                   animate={{ rotate: [-6, -4, -6] }}
                   transition={{ duration: 4, repeat: Infinity }}
                 >
-                    <img src={socialCoffee} alt="Instagram Post Mockup" className="rounded-xl w-full" loading="eager" />
+                    <img src={SOCIALMEDIA_PROJECTS[0]?.image} alt="Hospital Clinic Post Mockup" className="rounded-xl w-full" loading="eager" />
                 </motion.div>
                 <motion.div 
                   className="w-36 sm:w-48 lg:w-64 glass-dark p-2 rounded-2xl transform rotate-[6deg] mt-6 sm:mt-10 drop-shadow-2xl"
                   animate={{ rotate: [6, 4, 6] }}
                   transition={{ duration: 5, repeat: Infinity }}
                 >
-                    <img src={socialTech} alt="Facebook Ad Mockup" className="rounded-xl w-full" loading="eager" />
+                    <img src={SOCIALMEDIA_PROJECTS[2]?.image} alt="Event Post Mockup" className="rounded-xl w-full" loading="eager" />
                 </motion.div>
                 <motion.div 
                   className="w-32 sm:w-40 lg:w-56 glass-dark p-2 rounded-2xl absolute bottom-2 sm:-bottom-6 lg:-bottom-10 left-1/2 -translate-x-1/2 z-20 drop-shadow-2xl"
                   animate={{ y: [0, -15, 0] }}
                   transition={{ duration: 3, repeat: Infinity }}
                 >
-                    <img src={socialReel} alt="Reel Design Mockup" className="rounded-xl w-full" loading="eager" />
+                    <img src={SOCIALMEDIA_PROJECTS[5]?.image} alt="Product Design Mockup" className="rounded-xl w-full" loading="eager" />
                 </motion.div>
               </motion.div>
               
@@ -178,29 +174,27 @@ const SocialMediaDesignInSangli = () => {
             <p className="text-gray-400 text-base sm:text-lg">We don't just design; we strategize. Each pixel is placed to drive likes, shares, and conversations.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ShowcaseCard 
-              image={socialCoffee}
-              title="Brew & Bloom"
-              type="Instagram Post"
-            />
-            <ShowcaseCard 
-              image={socialTech}
-              title="NextGen Solutions"
-              type="Facebook Ad Suite"
-              colSpan="lg:col-span-2"
-            />
-            <ShowcaseCard 
-              image={socialReel}
-              title="Pulse Creators"
-              type="Viral Reel Cover"
-            />
-            <ShowcaseCard 
-              image={socialCoffee}
-              title="Elegance Interiors"
-              type="LinkedIn Carousel"
-              colSpan="lg:col-span-2"
-            />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {[
+              SOCIALMEDIA_PROJECTS.find(p => p.title.includes("Hospital/Clinic")),
+              SOCIALMEDIA_PROJECTS.find(p => p.title.includes("Event")),
+              SOCIALMEDIA_PROJECTS.find(p => p.title.includes("Product")),
+              SOCIALMEDIA_PROJECTS.find(p => p.title.includes("Offer"))
+            ].filter(Boolean).map((project, idx) => (
+              <ShowcaseCard 
+                key={project.id}
+                image={project.image}
+                title={project.title}
+                type={project.category}
+                colSpan={idx % 4 === 1 || idx % 4 === 3 ? "lg:col-span-2" : ""}
+              />
+            ))}
+          </div>
+
+          <div className="text-center">
+            <Link to="/portfolio-graphic-designer-sangli?category=social-media-post" className="btn-amber inline-flex items-center gap-3 px-8 py-4 text-lg font-bold rounded-full group shadow-xl">
+              View All Social Media Designs <ArrowRight className="group-hover:translate-x-2 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>

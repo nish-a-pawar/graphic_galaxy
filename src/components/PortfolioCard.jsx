@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { WHATSAPP_LINK } from "../constants";
+import { Lightbulb, LightbulbOff } from "lucide-react";
 
 const PortfolioCard = ({
   image,
@@ -13,6 +14,52 @@ const PortfolioCard = ({
 }) => {
   const [open, setOpen] = useState(false);
   const [modalIdx, setModalIdx] = useState(index);
+  const [showLit, setShowLit] = useState(true);
+  const [innerImgIdx, setInnerImgIdx] = useState(0);
+
+  // Reset inner states when changing projects
+  useEffect(() => {
+    setShowLit(true);
+    setInnerImgIdx(0);
+  }, [modalIdx]);
+
+  const playClickSound = (isTurningOff) => {
+    try {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContext) return;
+      const ctx = new AudioContext();
+      
+      // Realistic mechanical switch click
+      const osc = ctx.createOscillator();
+      const osc2 = ctx.createOscillator();
+      const gain = ctx.createGain();
+      
+      // Different frequencies for turning on vs off
+      const baseFreq = isTurningOff ? 300 : 500;
+      
+      osc.type = "square";
+      osc.frequency.setValueAtTime(baseFreq, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(40, ctx.currentTime + 0.05);
+      
+      osc2.type = "triangle";
+      osc2.frequency.setValueAtTime(baseFreq * 1.5, ctx.currentTime);
+      osc2.frequency.exponentialRampToValueAtTime(40, ctx.currentTime + 0.05);
+      
+      gain.gain.setValueAtTime(0.8, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.01, ctx.currentTime + 0.05);
+      
+      osc.connect(gain);
+      osc2.connect(gain);
+      gain.connect(ctx.destination);
+      
+      osc.start();
+      osc2.start();
+      osc.stop(ctx.currentTime + 0.05);
+      osc2.stop(ctx.currentTime + 0.05);
+    } catch (e) {
+      console.log("Audio error:", e);
+    }
+  };
 
   const touchStartX = useRef(null);
 
@@ -103,12 +150,29 @@ const PortfolioCard = ({
         className="group relative overflow-hidden rounded-xl cursor-pointer cursor-zoom-in bg-[#0B0F14] border border-white/5 transition-all duration-300 hover:-translate-y-1 hover:border-amber-400/40 hover:shadow-[0_18px_60px_rgba(0,0,0,0.35)]"
       >
         {/* IMAGE */}
-        <img
-          src={image}
-          alt={title}
-          loading="lazy"
-          className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
-        />
+        {projects[index]?.litImage && projects[index]?.unlitImage ? (
+          <>
+            <img
+              src={projects[index].unlitImage}
+              alt={title}
+              loading="lazy"
+              className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+            />
+            <img
+              src={projects[index].litImage}
+              alt={title}
+              loading="lazy"
+              className="absolute inset-0 w-full h-64 object-cover transition-all duration-700 opacity-0 group-hover:opacity-100 group-hover:scale-105"
+            />
+          </>
+        ) : (
+          <img
+            src={image}
+            alt={title}
+            loading="lazy"
+            className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-105"
+          />
+        )}
 
         {/* DARK OVERLAY */}
         <div className="absolute inset-0 bg-black/10 transition duration-300 group-hover:bg-black/40" />
@@ -174,7 +238,9 @@ const PortfolioCard = ({
           onClick={() => setOpen(false)}
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
-          className="fixed inset-0 z-[200] flex items-center justify-center bg-black/95 px-4 py-6 pt-24 animate-in fade-in duration-300"
+          className={`fixed inset-0 z-[200] flex items-center justify-center px-4 py-6 pt-24 animate-in fade-in duration-500 transition-colors ${
+            current.litImage && current.unlitImage && showLit ? 'bg-black' : 'bg-black/95'
+          }`}
         >
           {/* CLOSE BUTTON */}
           <button
@@ -221,7 +287,7 @@ const PortfolioCard = ({
               href={enquiryLink}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-4 py-1.5 text-sm font-bold text-[#0B0F14] transition-all duration-300 hover:scale-[1.05] hover:bg-amber-300"
+              className="inline-flex items-center gap-1.5 md:gap-2 rounded-full bg-amber-400 px-3 py-1.5 md:px-4 md:py-1.5 text-xs md:text-sm font-bold text-[#0B0F14] transition-all duration-300 hover:scale-[1.05] hover:bg-amber-300"
             >
               Enquiry ↗
             </a>
@@ -236,6 +302,84 @@ const PortfolioCard = ({
               onClick={(e) => e.stopPropagation()}
               className="relative z-10 h-[80vh] w-[min(1100px,95vw)] rounded-xl pb-16"
             />
+          ) : current.images ? (
+            <div 
+              className="relative z-10 flex flex-col items-center pb-16 w-full max-w-[95vw]"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Pagination Dots */}
+              <div className="flex flex-wrap justify-center gap-1.5 md:gap-2 mb-4 bg-black/20 px-3 py-2 rounded-full backdrop-blur-sm border border-white/5">
+                {current.images.map((_, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setInnerImgIdx(idx)}
+                    className={`rounded-full transition-all duration-300 ${
+                      innerImgIdx === idx 
+                        ? 'bg-amber-400 w-6 h-1.5 md:w-8 md:h-2 shadow-md' 
+                        : 'bg-white/30 w-1.5 h-1.5 md:w-2 md:h-2 hover:bg-white/50'
+                    }`}
+                    aria-label={`View image ${idx + 1}`}
+                  />
+                ))}
+              </div>
+              
+              {/* Current Image */}
+              <img
+                key={innerImgIdx}
+                src={current.images[innerImgIdx]}
+                alt={`${currentTitle} page ${innerImgIdx + 1}`}
+                className="max-h-[60vh] md:max-h-[70vh] w-auto rounded-xl object-contain shadow-2xl animate-in fade-in duration-500"
+              />
+            </div>
+          ) : current.litImage && current.unlitImage ? (
+            <div className="relative z-10 flex flex-col items-center pb-16 w-full max-w-[95vw]" onClick={(e) => e.stopPropagation()}>
+              <div className="mb-6 mt-2 flex flex-col items-center gap-2">
+                <span className="text-white/80 text-xs font-semibold tracking-widest uppercase">
+                  {showLit ? 'Light is On' : 'Light is Off'}
+                </span>
+                <button 
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    playClickSound(showLit); // passing true if currently lit, meaning we turn it off
+                    setShowLit(!showLit);
+                  }} 
+                  className={`relative flex items-center w-20 h-10 rounded-full transition-all duration-300 p-1 border-2 shadow-[inset_0_2px_6px_rgba(0,0,0,0.6)] ${
+                    showLit 
+                      ? 'bg-amber-400 border-amber-500 shadow-[0_0_15px_rgba(251,191,36,0.4)]' 
+                      : 'bg-gray-800 border-gray-600'
+                  }`}
+                  aria-label={showLit ? "Turn light off" : "Turn light on"}
+                >
+                  <div className="flex w-full justify-between px-2 text-[10px] font-black absolute left-0 z-0 pointer-events-none">
+                    <span className={`transition-opacity duration-300 ${showLit ? 'opacity-100 text-[#0B0F14]' : 'opacity-0'}`}>ON</span>
+                    <span className={`transition-opacity duration-300 ${!showLit ? 'opacity-100 text-gray-400' : 'opacity-0'}`}>OFF</span>
+                  </div>
+                  
+                  <div className={`relative z-10 w-8 h-8 rounded-full bg-gradient-to-b from-white to-gray-200 shadow-[0_2px_5px_rgba(0,0,0,0.4),inset_0_-2px_2px_rgba(0,0,0,0.1)] flex items-center justify-center transition-transform duration-300 ease-[cubic-bezier(0.34,1.56,0.64,1)] ${
+                    showLit ? 'translate-x-10' : 'translate-x-0'
+                  }`}>
+                    {showLit ? <Lightbulb className="w-4 h-4 text-amber-500 fill-amber-500" /> : <LightbulbOff className="w-4 h-4 text-gray-500" />}
+                  </div>
+                </button>
+              </div>
+              <div className="relative z-10 w-full flex justify-center items-center h-[60vh] md:h-[65vh]">
+                <img
+                  src={current.unlitImage}
+                  alt={currentTitle}
+                  className="absolute max-h-full w-auto rounded-xl object-contain shadow-2xl transition-all duration-700 ease-in-out"
+                />
+                <img
+                  src={current.litImage}
+                  alt={currentTitle}
+                  className={`absolute max-h-full w-auto rounded-xl object-contain transition-all duration-700 ease-in-out ${
+                    showLit 
+                      ? 'opacity-100 shadow-[0_0_80px_rgba(251,191,36,0.25)] scale-100' 
+                      : 'opacity-0 scale-[0.98]'
+                  }`}
+                  style={showLit ? { filter: 'drop-shadow(0 0 20px rgba(251,191,36,0.15))' } : {}}
+                />
+              </div>
+            </div>
           ) : (
             <img
               src={currentImage}

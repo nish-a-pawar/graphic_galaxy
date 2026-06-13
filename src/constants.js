@@ -570,7 +570,7 @@ export const SIGNAGE_PROJECTS = [
     image:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986611/backlit_board_for_salon_shop_hospitals_in_sangli_miraj_kupwad_dt9hnw.png",
     litImage:
-      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986609/Best_backlit_boards_for_salon_shops_hospitals_in_sangli_miraj_kupwad_qtlqi4.jpg",
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781334598/ChatGPT_Image_Jun_12_2026_12_38_05_PM_zbgow8.png",
     unlitImage:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986611/backlit_board_for_salon_shop_hospitals_in_sangli_miraj_kupwad_dt9hnw.png",
     title: "Backlit Board",

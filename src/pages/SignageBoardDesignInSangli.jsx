@@ -29,6 +29,7 @@ import {
   PHONE,
   SEO_DATA,
   SERVICES,
+  SIGNAGE_PROJECTS,
 } from "../constants";
 
 /* ─── Schema ─────────────────────────────────── */
@@ -369,15 +370,39 @@ export default function SignageBoardDesignInSangli() {
                 <MessageSquare size={20} />
                 Get Your Signage Designed
               </a>
-              <Link
-                to="/portfolio-graphic-designer-sangli"
-                className="interactive px-8 py-4 bg-[#111827] border border-[#2D3748] rounded-full text-white font-bold text-base md:text-lg hover:border-amber-400/50 hover:bg-amber-400/5 transition-all"
-              >
-                View Portfolio →
-              </Link>
+                <Link
+                  to="/portfolio-graphic-designer-sangli?category=signage-design"
+                  className="interactive px-8 py-4 bg-[#111827] border border-[#2D3748] rounded-full text-white font-bold text-base md:text-lg hover:border-amber-400/50 hover:bg-amber-400/5 transition-all"
+                >
+                  View Portfolio →
+                </Link>
             </motion.div>
 
-            {/* Stats */}
+            {/* Sample Signage Images */}
+<section className="py-12 px-6 bg-[#0B0F14]">
+  <h2 className="text-3xl md:text-4xl font-black text-white text-center mb-8">
+    Sample Signage Designs
+  </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {SIGNAGE_PROJECTS.slice(0, 3).map((proj) => (
+          <Link
+            key={proj.id}
+            to="/portfolio-graphic-designer-sangli?category=signage-design"
+            className="group"
+          >
+            <div className="rounded-xl overflow-hidden border border-[#2D3748] hover:border-amber-400 transition-colors transform hover:scale-105 duration-300">
+              <img
+                src={proj.image}
+                alt={proj.alt || proj.title}
+                className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+              <p className="text-white text-center mt-2">{proj.title}</p>
+            </div>
+          </Link>
+        ))}
+      </div>
+</section>
+{/* Stats */}
             <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 md:divide-x md:divide-white/10 max-w-4xl mx-auto">
               {[
                 { val: "100+", label: "Signages Designed" },

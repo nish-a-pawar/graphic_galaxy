@@ -598,6 +598,27 @@ export const SIGNAGE_PROJECTS = [
     category: "Signage Design",
     alt: "Premium signage design in Sangli",
   },
+
+   {
+    id: "sg7",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781338304/ChatGPT_Image_Jun_13_2026_01_39_19_PM_imwh5d.png",
+    litImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781338302/ChatGPT_Image_Jun_13_2026_01_34_19_PM_qqklgj.png",
+    unlitImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781338304/ChatGPT_Image_Jun_13_2026_01_39_19_PM_imwh5d.png",
+    title: "BackLit Board",
+    category: "Signage Design",
+    alt: "Premium signage design in kolhapur",
+  },
+    {
+    id: "sg8",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781338302/ChatGPT_Image_Jun_13_2026_01_41_19_PM_ilbugf.png",
+    title: "Acrylic Board",
+    category: "Signage Design",
+    alt: "Custom Acrylic board design in Sangli",
+  },
 ];
 
 export const TEAM = [

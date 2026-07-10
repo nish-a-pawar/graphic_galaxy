@@ -623,14 +623,14 @@ export const SIGNAGE_PROJECTS = [
   },
 
    {
-    id: "sg7",
+    id: "sg9",
     image:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1783663476/ChatGPT_Image_Jul_10_2026_11_27_49_AM_dqpuq8.png",
     litImage:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1783663476/ChatGPT_Image_Jul_10_2026_11_34_15_AM_vr7zk1.png",
     unlitImage:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1783663476/ChatGPT_Image_Jul_10_2026_11_27_49_AM_dqpuq8.png",
-    title: "BackLit Board",
+    title: "House Nameplate",
     category: "Signage Design",
     alt: "best signage design in sangli",
   }

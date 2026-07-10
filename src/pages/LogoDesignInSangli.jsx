@@ -361,10 +361,7 @@ export default function LogoDesignInSangli() {
                         Sangli, Maharashtra
                       </p>
 
-                      {/* 🔥 CTA on hover */}
-                      <button className="mt-4 text-amber-400 text-sm font-bold opacity-0 group-hover:opacity-100 transition">
-                        View Mockups →
-                      </button>
+
                     </div>
 
                   </div>

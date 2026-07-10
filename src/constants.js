@@ -609,8 +609,10 @@ export const SIGNAGE_PROJECTS = [
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781338304/ChatGPT_Image_Jun_13_2026_01_39_19_PM_imwh5d.png",
     title: "BackLit Board",
     category: "Signage Design",
-    alt: "Premium signage design in kolhapur",
+    alt: "best signage design in kolhapur",
   },
+
+  
     {
     id: "sg8",
     image:
@@ -619,6 +621,19 @@ export const SIGNAGE_PROJECTS = [
     category: "Signage Design",
     alt: "Custom Acrylic board design in Sangli",
   },
+
+   {
+    id: "sg7",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1783663476/ChatGPT_Image_Jul_10_2026_11_27_49_AM_dqpuq8.png",
+    litImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1783663476/ChatGPT_Image_Jul_10_2026_11_34_15_AM_vr7zk1.png",
+    unlitImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1783663476/ChatGPT_Image_Jul_10_2026_11_27_49_AM_dqpuq8.png",
+    title: "BackLit Board",
+    category: "Signage Design",
+    alt: "best signage design in sangli",
+  }
 ];
 
 export const TEAM = [
@@ -645,13 +660,8 @@ export const TEAM = [
     role: "Junior Graphic Designer",
     initials: "SD",
     color: "#DB2777",
-  },
-  {
-    name: "Prajwal Aawti",
-    role: "Design Intern",
-    initials: "PA",
-    color: "#d97706",
-  },
+  }
+ 
 ];
 
 export const STATS = [

@@ -799,94 +799,85 @@ export const BLOG_POSTS = [
 
 export const SEO_DATA = {
   home: {
-    title:
-      "Graphic Designer in Sangli | Logo & Packaging Design – Graphic Galaxy",
+    title: "Graphic Designer in Sangli | Graphic Galaxy", // 47 chars
     description:
       "Graphic Galaxy – Professional logo design, packaging, and social media design services in Sangli, Maharashtra. Get a free quote today.",
     url: "/",
   },
   about: {
-    title: "About Us | Graphic Galaxy – Design Studio in Sangli",
+    title: "About Us | Design Studio in Sangli – Graphic Galaxy", // 55 chars
     description:
       "Graphic Galaxy is a creative design studio founded in 2022 in Sangli, Maharashtra. Meet our team of professional graphic designers.",
     url: "/about",
   },
   contact: {
-    title: "Contact Graphic Galaxy | Graphic Designer in Sangli",
+    title: "Contact Graphic Galaxy | Graphic Designer Sangli", // 53 chars
     description:
       "Contact Graphic Galaxy for logo, packaging and social media design in Sangli. WhatsApp us for a free quote.",
     url: "/contact",
   },
   portfolio: {
-    title: "Portfolio | Graphic Designer in Sangli – Graphic Galaxy",
+    title: "Design Portfolio & Projects | Graphic Galaxy", // 49 chars
     description:
       "View our graphic design portfolio – logos, packaging, social media designs for businesses in Sangli and Maharashtra.",
     url: "/portfolio-graphic-designer-sangli",
   },
   blog: {
-    title: "Graphic Design Blog Sangli | Logo & Branding Tips – Graphic Galaxy",
+    title: "Graphic Design Blog & Branding Tips | Graphic Galaxy", // 56 chars
     description:
       "Read the latest insights on graphic design, logo branding, and packaging trends from our experts in Sangli, Maharashtra.",
     url: "/blog",
   },
   services: {
-    title: "Graphic Design Services in Sangli | Graphic Galaxy",
+    title: "Graphic Design Services in Sangli | Graphic Galaxy", // 54 chars
     description:
       "Logo, packaging, social media, brochure and more — professional graphic design services for businesses in Sangli, Maharashtra.",
     url: "/services",
   },
   logoDesign: {
-    title:
-      "Logo Design in Sangli | Professional Logo Designer – Graphic Galaxy",
+    title: "Logo Design Services in Sangli | Graphic Galaxy", // 51 chars
     description:
       "Looking for a logo designer in Sangli? Graphic Galaxy creates professional logos for businesses in Sangli, Miraj and Maharashtra.",
     url: "/logo-design-in-sangli",
   },
   packagingDesign: {
-    title:
-      "Packaging Design in Sangli | Product Label & Box Design – Graphic Galaxy",
+    title: "Product Packaging & Label Design | Graphic Galaxy", // 53 chars
     description:
-      "Premium packaging design services in Sangli. Professional box packaging, label design, and product branding that stands out. Get a quote today.",
+      "Elevate your brand with premium packaging & label design in Sangli. Custom pouches, luxury boxes, and retail branding built for local growth. Get a free quote today.",
     url: "/packaging-design-in-sangli",
   },
   socialMediaDesign: {
-    title:
-      "Social Media Design in Sangli | Scroll-Stopping Content – Graphic Galaxy",
+    title: "Social Media Design & Content Kits | Graphic Galaxy", // 55 chars
     description:
       "Boost your online presence with professional social media design in Sangli. Creative posts, stories, and content kits for businesses.",
     url: "/social-media-design-sangli",
   },
   brochureDesign: {
-    title:
-      "Brochure Design in Sangli | Professional Business Brochures – Graphic Galaxy",
+    title: "Business Brochure Design in Sangli | Graphic Galaxy", // 55 chars
     description:
       "Professional brochure design services in Sangli. Bi-fold, tri-fold, and multi-page brochures that effectively communicate your brand story.",
     url: "/brochure-design-sangli",
   },
   flyerDesign: {
-    title:
-      "Flyer Design in Sangli | Creative Promotional Flyers – Graphic Galaxy",
+    title: "Creative Flyer Design in Sangli | Graphic Galaxy", // 53 chars
     description:
       "Eye-catching flyer design in Sangli. Perfect for events, promotions, and local marketing. Get high-quality, print-ready designs today.",
     url: "/flyer-design-sangli",
   },
   invitationDesign: {
-    title:
-      "Invitation Design in Sangli | Wedding & Event Cards – Graphic Galaxy",
+    title: "Premium Invitation & Card Design | Graphic Galaxy", // 53 chars
     description:
       "Premium invitation design in Sangli. Custom wedding cards, corporate event invites, and birthday invitations with a premium touch.",
     url: "/invitation-design-sangli",
   },
   bookletMagazine: {
-    title:
-      "Booklet & Magazine Design in Sangli | Editorial Design – Graphic Galaxy",
+    title: "Booklet & Magazine Design Sangli | Graphic Galaxy", // 54 chars
     description:
       "Professional booklet and magazine design in Sangli. High-end editorial layouts for annual reports, catalogs, and lifestyle magazines.",
     url: "/booklet-magazine-design-sangli",
   },
   signageDesign: {
-    title:
-      "Signage Board Design in Sangli | Shop Board & Glow Sign – Graphic Galaxy",
+    title: "Shop Signage & Glow Board Design | Graphic Galaxy", // 53 chars
     description:
       "Professional signage board design in Sangli. Shop boards, glow signs, ACP boards, 3D letter signs for businesses in Sangli, Miraj & Kolhapur.",
     url: "/signage-design-sangli",

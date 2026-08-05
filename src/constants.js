@@ -633,6 +633,19 @@ export const SIGNAGE_PROJECTS = [
     title: "House Nameplate",
     category: "Signage Design",
     alt: "best signage design in sangli",
+  },
+
+  {
+    id: "sg10",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1785915294/nameplate_design_in_sangli__xrvosu.png",
+    litImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1785915293/nameplate_design_in_sangli_lit_u8lvav.png",
+    unlitImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1785915294/nameplate_design_in_sangli__xrvosu.png",
+    title: "House Nameplate",
+    category: "Signage Design",
+    alt: "best signage design in sangli",
   }
 ];
 

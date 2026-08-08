@@ -11,10 +11,22 @@ import ServiceCard from '../components/ServiceCard';
 import RecentWork from '../components/RecentWork';
 import Process from '../components/Process';
 import Testimonials from '../components/Testimonials';
+import FAQ from '../components/FAQ';
 import CTA from '../components/CTA';
 import Footer from '../components/Footer';
 
 gsap.registerPlugin(ScrollTrigger);
+
+const activeRoutes = [
+  "/logo-design-in-sangli",
+  "/packaging-design-in-sangli",
+  "/social-media-design-sangli",
+  "/invitation-design-sangli",
+  "/signage-design-sangli",
+  "/brochure-design-sangli",
+  "/flyer-design-sangli",
+  "/booklet-magazine-design-sangli"
+];
 
 const iconMap = {
   "Logo Design": Palette,
@@ -75,29 +87,33 @@ const Home = () => {
               Design <span className="text-gradient">Services.</span>
             </h2>
             <p className="text-white/40 mt-3 max-w-2xl mx-auto text-lg font-medium">
-              Professional graphic design solutions tailored for businesses in Sangli and across Maharashtra.
+              Graphic Galaxy is a premier graphic design and branding studio in Sangli. We deliver creative logo design, product packaging, social media graphics, and brand identity solutions for startups, established businesses, and professionals in Sangli, Miraj, Kupwad, and across Maharashtra.
             </p>
           </div>
 
           <div ref={servicesGridRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-  {SERVICES
-    .filter((s) => s.tag === "Expertise")
-    .map((s, i) => (
-      <div key={i} className="service-card-stagger" style={{ opacity: 0 }}>
-        <ServiceCard
-          icon={iconMap[s.title] || Palette}
-          title={s.title}
-          desc={s.desc}
-        />
-      </div>
-    ))}
-</div>
+            {SERVICES
+              .filter((s) => s.tag === "Expertise")
+              .map((s, i) => {
+                const isMapped = activeRoutes.includes(s.path);
+                return (
+                  <div key={i} className="service-card-stagger" style={{ opacity: 0 }}>
+                    <ServiceCard
+                      icon={iconMap[s.title] || Palette}
+                      title={s.title}
+                      desc={s.desc}
+                      path={isMapped ? s.path : null}
+                    />
+                  </div>
+                );
+              })}
+          </div>
         </div>
       </section>
 
-
       <Process />
       <Testimonials />
+      <FAQ />
       <CTA />
       <Footer />
     </div>

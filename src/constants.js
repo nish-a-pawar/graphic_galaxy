@@ -62,7 +62,7 @@ export const SOCIAL_MEDIA_TYPES = [
 export const SERVICES = [
   {
     title: "Logo Design",
-    desc: "Distinctive logos that define your brand identity.",
+    desc: "Custom logo designs crafted to define your brand identity and set your business apart.",
     path: "/logo-design-in-sangli",
     icon: "◆",
     tag: "Expertise",
@@ -70,7 +70,7 @@ export const SERVICES = [
   },
   {
     title: "Packaging Design",
-    desc: "Eye-catching product packaging that stands out on shelves.",
+    desc: "Eye-catching product packaging and label designs engineered to stand out on retail shelves.",
     path: "/packaging-design-in-sangli",
     icon: "▣",
     tag: "Expertise",
@@ -78,7 +78,7 @@ export const SERVICES = [
   },
   {
     title: "Social Media Design",
-    desc: "Scroll-stopping posts and content kits for every platform.",
+    desc: "Scroll-stopping social graphics and promotional kits tailored to grow your online audience.",
     path: "/social-media-design-sangli",
     icon: "◉",
     tag: "Expertise",
@@ -86,7 +86,7 @@ export const SERVICES = [
   },
   {
     title: "Brochure Design",
-    desc: "Professional brochures that communicate your business clearly.",
+    desc: "Structured corporate brochures and catalogs that communicate your services effectively.",
     path: "/brochure-design-sangli",
     icon: "◈",
     tag: null,
@@ -94,7 +94,7 @@ export const SERVICES = [
   },
   {
     title: "Flyer Design",
-    desc: "Attention-grabbing flyers for promotions and local events.",
+    desc: "High-impact promotional flyers designed to boost awareness for events and local offers.",
     path: "/flyer-design-sangli",
     icon: "✦",
     tag: null,
@@ -102,7 +102,7 @@ export const SERVICES = [
   },
   {
     title: "Invitation Design",
-    desc: "Beautiful invitations for weddings, events and celebrations.",
+    desc: "Bespoke print and digital invitation designs for corporate events, weddings, and celebrations.",
     path: "/invitation-design-sangli",
     icon: "◇",
     tag: "Expertise",
@@ -110,7 +110,7 @@ export const SERVICES = [
   },
   {
     title: "Signage Design",
-    desc: "Bold signage that makes your shop impossible to miss.",
+    desc: "High-visibility LED and backlit shopfront signage designs that command attention.",
     path: "/signage-design-sangli",
     icon: "▲",
     tag: "Expertise",
@@ -118,7 +118,7 @@ export const SERVICES = [
   },
   {
     title: "Nameplate Design",
-    desc: "Premium nameplates for offices, clinics and homes.",
+    desc: "Premium custom nameplates for corporate offices, healthcare clinics, and residences.",
     path: "/nameplate-design-sangli",
     icon: "▬",
     tag: null,
@@ -126,7 +126,7 @@ export const SERVICES = [
   },
   {
     title: "Booklet & Magazine",
-    desc: "Editorial layouts for booklets, magazines and reports.",
+    desc: "Professional editorial layouts for company booklets, annual reports, and magazines.",
     path: "/booklet-magazine-design-sangli",
     icon: "❒",
     tag: null,
@@ -134,7 +134,7 @@ export const SERVICES = [
   },
   {
     title: "Trophy & Sports",
-    desc: "Custom trophy designs and sports event branding.",
+    desc: "Comprehensive sports branding, marathon asset kits, and custom trophy designs.",
     path: "/trophy-sports-design-sangli",
     icon: "◎",
     tag: "Expertise",
@@ -142,7 +142,7 @@ export const SERVICES = [
   },
   {
     title: "T-Shirt Design",
-    desc: "Creative t-shirt graphics for teams, events and brands.",
+    desc: "Creative custom apparel graphics for corporate teams, sports events, and brands.",
     path: "/tshirt-design-sangli",
     icon: "◑",
     tag: null,
@@ -150,7 +150,7 @@ export const SERVICES = [
   },
   {
     title: "Misc Design",
-    desc: "Business cards, catalogs, certificates and more.",
+    desc: "Professional business card designs, certificates, banners, and miscellaneous branding assets.",
     path: "/misc-design-sangli",
     icon: "◐",
     tag: null,

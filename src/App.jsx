@@ -15,7 +15,9 @@ const SignageBoardDesignInSangli = lazy(() => import("./pages/SignageBoardDesign
 const Contact = lazy(() => import("./pages/Contact"));
 const About = lazy(() => import("./pages/About"));
 const Portfolio = lazy(() => import("./pages/Portfolio"));
-// const Blog = lazy(() => import("./pages/Blog.jsx"));
+const BookletMagazineDesignInSangli = lazy(() => import("./pages/BookletMagazineDesignInSangli"));
+const BlogListing = lazy(() => import("./pages/BlogListing"));
+const BlogPost = lazy(() => import("./pages/BlogPost"));
 
 
 function ScrollToTop() {
@@ -50,6 +52,9 @@ function App() {
             <Route path="/brochure-design-sangli" element={<BrochureDesignInSangli />} />
             <Route path="/flyer-design-sangli" element={<FlyerDesignInSangli />} />
             <Route path="/signage-design-sangli" element={<SignageBoardDesignInSangli />} />
+            <Route path="/booklet-magazine-design-sangli" element={<BookletMagazineDesignInSangli />} />
+            <Route path="/blog" element={<BlogListing />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/portfolio-graphic-designer-sangli" element={<Portfolio />} />

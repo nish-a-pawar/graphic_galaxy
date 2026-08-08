@@ -184,7 +184,11 @@ const RecentWork = () => {
           </div>
 
           <p className="max-w-md text-white/40 font-medium text-lg">
-            A showcase of our latest design projects across various industries.
+            A showcase of our latest design projects across various industries.{' '}
+            <Link to="/portfolio-graphic-designer-sangli" className="text-amber-400 hover:underline transition-all">
+              View our graphic design portfolio
+            </Link>{' '}
+            to explore more of our work.
           </p>
         </div>
 

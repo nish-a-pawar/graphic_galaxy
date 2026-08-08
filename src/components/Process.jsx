@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { MessageSquare, Lightbulb, PenTool, Rocket } from 'lucide-react';
@@ -6,7 +7,20 @@ import { MessageSquare, Lightbulb, PenTool, Rocket } from 'lucide-react';
 gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
-  { number: '01', icon: MessageSquare, title: 'Discovery Call',     desc: 'We start by understanding your brand, goals, and target audience through a quick consultation.', accent: 'amber' },
+  { 
+    number: '01', 
+    icon: MessageSquare, 
+    title: 'Discovery Call', 
+    desc: (
+      <>
+        We start by understanding your brand, goals, and target audience through a{' '}
+        <Link to="/contact" className="text-amber-400 hover:underline font-semibold">
+          quick consultation
+        </Link>.
+      </>
+    ), 
+    accent: 'amber' 
+  },
   { number: '02', icon: Lightbulb,     title: 'Concept & Strategy', desc: 'Our team brainstorms creative directions and presents initial concepts tailored to your vision.',  accent: 'teal'  },
   { number: '03', icon: PenTool,       title: 'Design & Refine',    desc: "We craft the final design with precision, incorporating your feedback until it's perfect.",         accent: 'amber' },
   { number: '04', icon: Rocket,        title: 'Deliver & Launch',   desc: 'Final files delivered in all formats you need — print-ready, web-optimized, and more.',             accent: 'teal'  },

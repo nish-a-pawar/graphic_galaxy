@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import gsap from 'gsap';
 import { ArrowRight, Star, Award, Users } from 'lucide-react';
 import { WHATSAPP_LINK } from '../constants';
@@ -84,8 +85,20 @@ const Hero = () => {
               <span className="word inline-block text-gradient-amber">Sangli.</span>
             </h1>
 
-            <p ref={subRef} className="text-lg text-white/55 max-w-lg mb-10 leading-relaxed font-medium">We provide expert graphic design services in Sangli — from logo design and packaging to complete brand identity — crafted to elevate your business and attract more customers.
-
+            <p ref={subRef} className="text-lg text-white/55 max-w-lg mb-10 leading-relaxed font-medium">
+              We provide expert graphic design services in Sangli — from{' '}
+              <Link to="/logo-design-in-sangli" className="text-white/80 underline decoration-amber-400/40 hover:decoration-amber-400 hover:text-amber-400 transition-colors">
+                logo design
+              </Link>{' '}
+              and{' '}
+              <Link to="/packaging-design-in-sangli" className="text-white/80 underline decoration-amber-400/40 hover:decoration-amber-400 hover:text-amber-400 transition-colors">
+                packaging
+              </Link>{' '}
+              to{' '}
+              <Link to="/about" className="text-white/80 underline decoration-amber-400/40 hover:decoration-amber-400 hover:text-amber-400 transition-colors">
+                complete brand identity
+              </Link>{' '}
+              — crafted to elevate your business and attract more customers.
             </p>
 
             {/* CTAs */}
@@ -130,7 +143,7 @@ const Hero = () => {
           <div ref={floatingRef} className="relative h-[400px] md:h-[520px] hidden lg:block parallax-layer">
             {/* Card 1 */}
             <div className="float-card absolute top-0 left-0 w-[240px] rounded-2xl overflow-hidden shadow-2xl border border-[#2D3748] glass-dark z-20">
-              <img src={logoSample} alt="Logo Design" className="w-full h-[160px] object-cover" />
+              <img src={logoSample} alt="Graphic Galaxy Brand Logo Design Sample" className="w-full h-[160px] object-cover" />
               <div className="px-4 py-3">
                 <p className="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Logo Design</p>
                 <p className="text-sm font-bold text-white mt-0.5">Brand Identity</p>
@@ -138,7 +151,7 @@ const Hero = () => {
             </div>
             {/* Card 2 */}
             <div className="float-card absolute top-8 right-0 w-[220px] rounded-2xl overflow-hidden shadow-2xl border border-[#2D3748] glass-dark z-10">
-              <img src={packagingSample} alt="Packaging" className="w-full h-[150px] object-cover" />
+              <img src={packagingSample} alt="Product Packaging Design Sample" className="w-full h-[150px] object-cover" />
               <div className="px-4 py-3">
                 <p className="text-[10px] font-bold text-teal-400 uppercase tracking-wider">Packaging</p>
                 <p className="text-sm font-bold text-white mt-0.5">Product Design</p>
@@ -146,7 +159,7 @@ const Hero = () => {
             </div>
             {/* Card 3 */}
             <div className="float-card absolute bottom-10 left-8 w-[220px] rounded-2xl overflow-hidden shadow-2xl border border-[#2D3748] glass-dark z-10">
-              <img src={brandingSample} alt="Branding" className="w-full h-[150px] object-cover" />
+              <img src={brandingSample} alt="Corporate Branding & Visual Identity Sample" className="w-full h-[150px] object-cover" />
               <div className="px-4 py-3">
                 <p className="text-[10px] font-bold text-amber-400 uppercase tracking-wider">Branding</p>
                 <p className="text-sm font-bold text-white mt-0.5">Visual Identity</p>
@@ -154,7 +167,7 @@ const Hero = () => {
             </div>
             {/* Card 4 */}
             <div className="float-card absolute bottom-0 right-4 w-[200px] rounded-2xl overflow-hidden shadow-2xl border border-[#2D3748] glass-dark z-20">
-              <img src={posterSample} alt="Poster" className="w-full h-[140px] object-cover" />
+              <img src={posterSample} alt="Event Poster & Brochure Design Sample" className="w-full h-[140px] object-cover" />
               <div className="px-4 py-3">
                 <p className="text-[10px] font-bold text-teal-400 uppercase tracking-wider">Poster</p>
                 <p className="text-sm font-bold text-white mt-0.5">Event Design</p>

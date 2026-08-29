@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { Link } from "react-router-dom";
 import { WHATSAPP_LINK } from "../constants";
 import { Lightbulb, LightbulbOff } from "lucide-react";
 
@@ -11,6 +12,7 @@ const PortfolioCard = ({
   index,
   total,
   projects,
+  caseStudyUrl,
 }) => {
   const [open, setOpen] = useState(false);
   const [modalIdx, setModalIdx] = useState(index);
@@ -136,6 +138,7 @@ const PortfolioCard = ({
     image;
 
   const currentVideoUrl = current.url;
+  const currentCaseStudyUrl = current.caseStudyUrl || (modalIdx === index ? caseStudyUrl : null);
 
   // ENQUIRY LINK
   const enquiryLink = `${WHATSAPP_LINK}&text=${encodeURIComponent(
@@ -213,19 +216,39 @@ const PortfolioCard = ({
             {title}
           </h3>
 
-          <p className="text-gray-400 text-sm">
-            {category}
-          </p>
+          <div className="flex items-center justify-between mt-1">
+            <p className="text-gray-400 text-sm">
+              {category}
+            </p>
+            {caseStudyUrl && (
+              <Link
+                to={caseStudyUrl}
+                onClick={(e) => e.stopPropagation()}
+                className="text-xs font-bold text-amber-400 hover:text-amber-300 transition-colors inline-flex items-center gap-1 hover:underline md:hidden"
+              >
+                See Story →
+              </Link>
+            )}
+          </div>
         </div>
 
-        {/* HOVER BUTTON */}
-        <div className="absolute bottom-4 left-4 right-4 hidden items-center justify-end opacity-0 transition-all duration-300 md:flex md:group-hover:opacity-100">
+        {/* HOVER BUTTONS */}
+        <div className="absolute bottom-4 left-4 right-4 hidden items-center justify-end gap-2 z-30 opacity-0 transition-all duration-300 md:flex md:group-hover:opacity-100">
+          {caseStudyUrl && (
+            <Link
+              to={caseStudyUrl}
+              onClick={(e) => e.stopPropagation()}
+              className="inline-flex items-center gap-1 rounded-full border border-amber-400 bg-[#0B0F14]/90 backdrop-blur-md px-3.5 py-1.5 text-xs font-bold text-amber-400 transition-all duration-300 hover:scale-105 hover:bg-amber-400 hover:text-[#0B0F14] shadow-lg"
+            >
+              See Story →
+            </Link>
+          )}
           <a
             href={enquiryLink}
             target="_blank"
             rel="noreferrer"
             onClick={(e) => e.stopPropagation()}
-            className="inline-flex items-center gap-2 rounded-full bg-amber-400 px-4 py-2 text-sm font-bold text-[#0B0F14] transition-all duration-300 hover:scale-[1.02] hover:bg-amber-300"
+            className="inline-flex items-center gap-1.5 rounded-full bg-amber-400 px-3.5 py-1.5 text-xs font-bold text-[#0B0F14] transition-all duration-300 hover:scale-105 hover:bg-amber-300 shadow-lg"
           >
             Enquiry ↗
           </a>
@@ -275,11 +298,27 @@ const PortfolioCard = ({
           {/* BOTTOM INFO BAR */}
           <div
             onClick={(e) => e.stopPropagation()}
-            className="fixed bottom-4 md:bottom-8 left-1/2 z-[220] flex -translate-x-1/2 items-center gap-4 rounded-full border border-white/15 bg-black/70 px-4 md:px-6 py-3 backdrop-blur-md shadow-2xl"
+            className="fixed bottom-4 md:bottom-8 left-1/2 z-[220] flex -translate-x-1/2 items-center gap-3 md:gap-4 rounded-full border border-white/15 bg-black/80 px-4 md:px-6 py-3 backdrop-blur-md shadow-2xl"
           >
             <span className="whitespace-nowrap text-sm font-bold tracking-wide text-white md:text-base">
               {currentCategory}
             </span>
+
+            {currentCaseStudyUrl && (
+              <>
+                <div className="h-5 w-px bg-white/20" />
+                <Link
+                  to={currentCaseStudyUrl}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setOpen(false);
+                  }}
+                  className="inline-flex items-center gap-1 rounded-full border border-amber-400 bg-amber-400/10 px-3 py-1.5 md:px-4 md:py-1.5 text-xs md:text-sm font-bold text-amber-400 transition-all duration-300 hover:scale-[1.05] hover:bg-amber-400 hover:text-[#0B0F14]"
+                >
+                  See Story →
+                </Link>
+              </>
+            )}
 
             <div className="h-5 w-px bg-white/20" />
 

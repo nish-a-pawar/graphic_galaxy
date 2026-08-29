@@ -1,7 +1,6 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
 import { motion } from 'framer-motion';
 import {
   Package,
@@ -20,6 +19,8 @@ import {
 } from 'lucide-react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import FAQ from '../components/FAQ';
+import SEO from '../seo/SEO';
 import { SEO_DATA, WHATSAPP_LINK } from '../constants';
 
 // Assets
@@ -27,16 +28,109 @@ const amukti = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/am
 const anuj = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1778911942/anuj_k4md2z.webp';
 const clothesline = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439605/clothesline_wkvqzn.webp';
 const crazy = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439604/crazy_oyq0j3.webp';
-// const jk_paper_bags = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439607/jk_paper_bags_ifb3pp.webp';
-// const taaya = 'https://res.cloudinary.com/daxfbjcpc/image/upload/v1776439606/taaya_ls6ixf.webp';
 import organicBottle from '../assets/images/organic-bottle.png';
 import luxuryBox from '../assets/images/luxury-box.png';
 import cosmeticPouch from '../assets/images/cosmetic-pouch.png';
-// import agriSticker from "../assets/images/agriSticker.webp";
 const auraPouch = "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491749/auraPouch_zyhz5k.webp";
+
+const packagingFaqs = [
+  {
+    question: "What packaging design services does Graphic Galaxy offer in Sangli?",
+    answer: (
+      <>
+        Graphic Galaxy provides comprehensive packaging design services in Sangli, including custom product packaging design, food packaging design, product box packaging, pouch packaging, bottle sticker design, and retail labels for businesses in Sangli, Vishrambag, Miraj, and Kupwad.
+      </>
+    ),
+    rawAnswer: "Graphic Galaxy provides comprehensive packaging design services in Sangli, including custom product packaging design, food packaging design, product box packaging, pouch packaging, bottle sticker design, and retail labels for businesses in Sangli, Vishrambag, Miraj, and Kupwad."
+  },
+  {
+    question: "Do you design food packaging and labels for food products?",
+    answer: (
+      <>
+        Yes, we specialize in food packaging design and product label design for food brands, snacks, spices, bakery items, homemade food products, farsan/faral, and food startups in Sangli and nearby areas.
+      </>
+    ),
+    rawAnswer: "Yes, we specialize in food packaging design and product label design for food brands, snacks, spices, bakery items, homemade food products, farsan/faral, and food startups in Sangli and nearby areas."
+  },
+  {
+    question: "Do you design product packaging boxes and custom labels?",
+    answer: (
+      <>
+        Absolutely. We design custom product box packaging, luxury rigid boxes, retail packaging boxes, product labels, barcode stickers, and sealing stickers tailored to your brand identity.
+      </>
+    ),
+    rawAnswer: "Absolutely. We design custom product box packaging, luxury rigid boxes, retail packaging boxes, product labels, barcode stickers, and sealing stickers tailored to your brand identity."
+  },
+  {
+    question: "Do you provide packaging design services in Vishrambag, Miraj, and Kupwad?",
+    answer: (
+      <>
+        Yes! While Graphic Galaxy is located in Sangli (Vishrambag), we regularly serve clients across Vishrambag, Miraj, Kupwad, and surrounding regions in Maharashtra.
+      </>
+    ),
+    rawAnswer: "Yes! While Graphic Galaxy is located in Sangli (Vishrambag), we regularly serve clients across Vishrambag, Miraj, Kupwad, and surrounding regions in Maharashtra."
+  },
+  {
+    question: "Can you create custom packaging designs for small businesses and startups?",
+    answer: (
+      <>
+        Yes, we work with small businesses, new startups, and established brands to create print-ready, high-impact custom packaging designs that help products stand out on retail shelves and e-commerce platforms.
+      </>
+    ),
+    rawAnswer: "Yes, we work with small businesses, new startups, and established brands to create print-ready, high-impact custom packaging designs that help products stand out on retail shelves and e-commerce platforms."
+  }
+];
 
 const PackagingDesignInSangli = () => {
   const seo = SEO_DATA.packagingDesign;
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Packaging Design Services in Sangli",
+    "serviceType": "Packaging Design, Product Packaging Design, Food Packaging Design, Label & Box Design",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Graphic Galaxy",
+      "image": "https://graphicgalaxystudio.netlify.app/logo.png",
+      "telephone": "+918459763568",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Near Pramod Dairy, Vishrambag",
+        "addressLocality": "Sangli",
+        "addressRegion": "Maharashtra",
+        "postalCode": "416416",
+        "addressCountry": "IN"
+      },
+      "url": "https://graphicgalaxystudio.netlify.app"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Sangli" },
+      { "@type": "AdministrativeArea", "name": "Vishrambag" },
+      { "@type": "City", "name": "Miraj" },
+      { "@type": "City", "name": "Kupwad" }
+    ],
+    "description": "Custom product, food packaging, box and label design services in Sangli, Vishrambag, Miraj and Kupwad. Create professional packaging that makes your brand stand out."
+  };
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://graphicgalaxystudio.netlify.app/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Packaging Design Services in Sangli",
+        "item": "https://graphicgalaxystudio.netlify.app/packaging-design-in-sangli"
+      }
+    ]
+  };
 
   // Animation Variants
   const fadeInUp = {
@@ -61,11 +155,15 @@ const PackagingDesignInSangli = () => {
 
   return (
     <div className="bg-[#0B0F14] text-[#F9FAFB] min-h-screen font-inter selection:bg-amber-500/30 overflow-x-hidden">
-      <Helmet>
-        <title>{seo.title}</title>
-        <meta name="description" content={seo.description} />
-        <link rel="canonical" href={seo.url} />
-      </Helmet>
+      <SEO
+        title={seo.title}
+        description={seo.description}
+        canonical={seo.url}
+        ogTitle={seo.title}
+        ogDescription={seo.description}
+        ogUrl={seo.url}
+        schema={[serviceSchema, breadcrumbSchema]}
+      />
 
       <Navbar />
 
@@ -97,19 +195,19 @@ const PackagingDesignInSangli = () => {
                 variants={fadeInUp}
                 className="text-3xl sm:text-5xl lg:text-7xl font-black mb-6 sm:mb-8 leading-[1.1]"
               >
-                Packaging Design in{" "}
+                Packaging Design Services in{" "}
                 <span className="text-gradient-amber">Sangli</span> <br />
                 <span className="text-2xl sm:text-4xl lg:text-6xl text-white/90">
-                  That Sells Your Story
+                  Custom Product & Food Packaging That Sells Your Story
                 </span>
               </motion.h1>
 
               <motion.div variants={{hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 }}} className="text-base sm:text-lg lg:text-xl text-gray-400 mb-8 sm:mb-10 max-w-xl mx-auto lg:mx-0 leading-relaxed space-y-4">
                 <p>
-                  Do not just wrap your product; elevate it to an unforgettable unboxing experience. Superior packaging design is the silent ambassador of your brand, speaking volumes about your quality before the customer even opens the box. As the top graphic designer in Sangli, Miraj, and Maharashtra, we create packaging that dominates the shelf.
+                  Graphic Galaxy offers custom packaging design services in Sangli for product brands, food businesses, startups and local businesses. As a professional graphic design and packaging studio serving Sangli, Miraj and nearby areas, we create packaging that dominates the shelf and speaks volumes about your quality.
                 </p>
                 <p>
-                  From luxurious rigid boxes to sustainable pouches and vibrant labels, our comprehensive branding solutions ensure your product stands out in a crowded market. We seamlessly blend structural integrity with stunning visual aesthetics, ensuring your packaging is as functional as it is beautiful. Partner with us to transform your product presentation into a powerful marketing tool that consistently grabs consumer attention and builds lasting brand trust.
+                  From luxurious rigid boxes and sustainable pouches to vibrant product labels and stickers, we create packaging that combines strong visual branding with practical, print-ready design. We create custom product packaging, food packaging, product boxes, pouches, labels and stickers for businesses in Sangli, Vishrambag, Miraj and nearby areas.
                 </p>
               </motion.div>
 
@@ -136,21 +234,21 @@ const PackagingDesignInSangli = () => {
               {/* Background blurred image (depth) */}
               <img
                 src={organicBottle}
-                alt="Product Pouch Design in Sangli"
+                alt="Custom food and organic product bottle packaging design in Sangli"
                 className="absolute w-32 sm:w-48 lg:w-64 left-2 sm:left-8 lg:left-10 bottom-2 sm:bottom-8 lg:bottom-10 opacity-20 blur-md"
               />
 
               {/* Main Image */}
               <img
                 src={cosmeticPouch}
-                alt=" Packaging Sticker Design in Sangli "
+                alt="Custom product packaging pouch design in Sangli"
                 className="absolute z-30 w-52 sm:w-72 lg:w-96 left-1/2 -translate-x-1/2 top-4 sm:top-8 lg:top-10 drop-shadow-[0_25px_60px_rgba(245,158,11,0.35)]"
               />
 
               {/* Secondary Image */}
               <motion.img
                 src={auraPouch}
-                alt="Cosmetic Packaging"
+                alt="Cosmetic packaging pouch design by Graphic Galaxy Sangli"
                 className="absolute z-40 w-36 sm:w-52 lg:w-72 right-2 sm:right-0 bottom-3 sm:bottom-8 lg:bottom-16 drop-shadow-2xl"
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 5, repeat: Infinity }}
@@ -178,11 +276,13 @@ const PackagingDesignInSangli = () => {
               image={clothesline}
               title="Nature's Essence"
               type="Organic Bottle Label"
+              alt="Organic product bottle label design in Sangli"
             />
             <ShowcaseCard
               image={anuj}
               title="Anuj Jwellers"
               type="Premium Bag Design"
+              alt="Luxury shopping bag packaging design for jewellery store in Sangli"
               colSpan="lg:col-span-2"
             />
 
@@ -190,12 +290,14 @@ const PackagingDesignInSangli = () => {
               image={crazy}
               title="Crazy"
               type="Paper Bag Design"
+              alt="Eco friendly paper bag packaging design in Sangli"
               colSpan="lg:col-span-2"
             />
             <ShowcaseCard
               image={amukti}
               title="Glow & care"
               type="Cosmetic Pouch"
+              alt="Cosmetic pouch packaging and label design in Sangli"
             />
 
           </div>
@@ -218,6 +320,7 @@ const PackagingDesignInSangli = () => {
 
                 <img
                   src={crazy}
+                  alt="Custom paper bag packaging design in Sangli"
                   className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition duration-500"
                 />
 
@@ -245,6 +348,7 @@ const PackagingDesignInSangli = () => {
 
                 <img
                   src={luxuryBox}
+                  alt="Product box design and luxury box packaging in Sangli"
                   className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition duration-500"
                 />
 
@@ -269,6 +373,7 @@ const PackagingDesignInSangli = () => {
 
                 <img
                   src={cosmeticPouch}
+                  alt="Food packaging pouch and cosmetic pouch design in Sangli"
                   className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition duration-500"
                 />
 
@@ -295,6 +400,7 @@ const PackagingDesignInSangli = () => {
 
                 <img
                   src={luxuryBox}
+                  alt="Custom product label design and stickers in Sangli"
                   className="absolute inset-0 w-full h-full object-cover opacity-70 group-hover:scale-110 transition duration-500"
                 />
 
@@ -333,7 +439,7 @@ const PackagingDesignInSangli = () => {
               icon={<Search className="text-amber-500" />}
               step="01"
               title="Market Research"
-              desc="We analyze your competitors and target audience in Sangli & beyond."
+              desc="We analyze your competitors and target audience in Sangli, Vishrambag & nearby areas."
             />
             <ProcessStep
               icon={<Lightbulb className="text-amber-500" />}
@@ -364,7 +470,7 @@ const PackagingDesignInSangli = () => {
             <div className="lg:w-1/2">
               <h2 className="text-3xl sm:text-4xl lg:text-6xl font-black mb-6 sm:mb-8 leading-tight">Why Smart Brands <br /> Choose <span className="text-amber-500 underline decoration-2 underline-offset-8">Graphic Galaxy</span></h2>
               <p className="text-gray-400 text-base sm:text-lg mb-10 sm:mb-12">
-                We aren't just graphic designers; we are brand storytellers. We understand the Sangli local market and global design standards.
+                We aren't just graphic designers; we are brand storytellers. We understand the local market across Sangli, Vishrambag, Miraj, and Kupwad as well as global packaging design standards.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -437,6 +543,14 @@ const PackagingDesignInSangli = () => {
         </div>
       </section>
 
+      {/* --- FAQ SECTION --- */}
+      <FAQ
+        items={packagingFaqs}
+        tagText="Packaging FAQs"
+        heading={<>Packaging Design <span className="text-gradient">Questions.</span></>}
+        subheading="Frequently asked questions about custom product and food packaging design services in Sangli."
+      />
+
       {/* --- CLIENT STRIP --- */}
       <section className="py-16 bg-surface/20">
         <div className="container mx-auto px-6 text-center mb-10">
@@ -503,14 +617,14 @@ const PackagingDesignInSangli = () => {
 
 /* --- SUB-COMPONENTS --- */
 
-const ShowcaseCard = ({ image, title, type, colSpan = "" }) => (
+const ShowcaseCard = ({ image, title, type, alt, colSpan = "" }) => (
   <motion.div
     className={`group relative overflow-hidden rounded-2xl ${colSpan} h-[240px] sm:h-[280px] md:h-[320px] lg:h-[360px]`}
     whileHover={{ y: -10 }}
   >
     <img
       src={image}
-      alt={title}
+      alt={alt || title}
       className="w-full h-full object-cover brightness-105 contrast-105 group-hover:brightness-75 transition duration-500"
     />
 

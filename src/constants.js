@@ -282,6 +282,31 @@ export const PACKAGING_PROJECTS = [
     category: "Sticker Design",
     alt: "Agriculture product sticker design for branding and labels",
   },
+  {
+    id: "s4",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787209249/food-packaging-sticker-design-near-me_yvvk6t.webp",
+    title: "Food Packaging Sticker",
+    category: "Sticker Design",
+    alt: "Food packaging sticker design for product labeling",
+  },
+  {
+    id: "s5",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787209247/food-lable-design-near-me_lf06zw.webp",
+    title: "Food Packaging Sticker",
+    category: "Sticker Design",
+    alt: "Food packaging sticker design for product labeling",
+  },
+  {
+    id: "s6",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787215756/food-product-sticker-design-khakhra-in-sangli_u4dtaj.webp",
+    title: "Krisha Khakhra Packaging",
+    category: "Sticker Design",
+    alt: "Krisha Khakhra packaging sticker design for food product labeling in Sangli",
+  },
+
 
   // 👉 Pouch
   {
@@ -323,27 +348,13 @@ export const FLYER_PROJECTS = [
   {
     id: "f2",
     image:
-      "",
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787994074/WhatsApp_Image_2026-08-27_at_12.19.24_PM_2_lavkq9.jpg",
     title: "Flyer Design",
     category: "Flyer Design",
     alt: "Flyer design in sangli",
-  },
-  {
-    id: "f3",
-    image:
-      "",
-    title: "Flyer Design",
-    category: "Flyer Design",
-    alt: "Flyer design in sangli",
-  },
-  {
-    id: "f4",
-    image:
-      "",
-    title: "Flyer Design",
-    category: "Flyer Design",
-    alt: "Flyer design in sangli",
-  },
+  }
+ 
+
 ];
 
 export const SOCIALMEDIA_PROJECTS = [
@@ -725,11 +736,23 @@ export const RECENT_PROJECTS = [
     title: "Sangli Marathon",
     client: "Sangli Marathon",
     category: "Marathon Assets",
-    status: "Completed",
+    status: "Upcoming",
     bg: "#0a0a0a",
     accent: "#dc2626",
     image: posterSample,
     alt: "Sports branding assets for Sangli Marathon",
+  },
+  {
+    id: 4,
+    title: "Dandoba Hill Run / Walk 2026",
+    client: "Radhey Seva Foundation",
+    category: "Nature-Focused Event Branding",
+    status: "Completed",
+    bg: "#061a12",
+    accent: "#10b981",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787564375/WhatsApp_Image_2026-08-24_at_3.07.05_PM_dwcoll.jpg",
+    alt: "Dandoba Hill Run Walk 2026 branding design by Graphic Galaxy",
+    caseStudyUrl: "/case-study/dandoba-hill-run-2026",
   },
 ];
 
@@ -854,10 +877,10 @@ export const SEO_DATA = {
     url: "/logo-design-in-sangli",
   },
   packagingDesign: {
-    title: "Product Packaging & Label Design | Graphic Galaxy", // 53 chars
+    title: "Packaging Design Services in Sangli | Graphic Galaxy",
     description:
-      "Elevate your brand with premium packaging & label design in Sangli. Custom pouches, luxury boxes, and retail branding built for local growth. Get a free quote today.",
-    url: "/packaging-design-in-sangli",
+      "Custom product, food packaging, box and label design services in Sangli, Vishrambag, Miraj and Kupwad. Create professional packaging that makes your brand stand out.",
+    url: "https://graphicgalaxystudio.netlify.app/packaging-design-in-sangli",
   },
   socialMediaDesign: {
     title: "Social Media Design & Content Kits | Graphic Galaxy", // 55 chars
@@ -895,4 +918,373 @@ export const SEO_DATA = {
       "Professional signage board design in Sangli. Shop boards, glow signs, ACP boards, 3D letter signs for businesses in Sangli, Miraj & Kolhapur.",
     url: "/signage-design-sangli",
   },
+  khakhraCaseStudy: {
+    title:
+      "Krisha Khakhra Packaging Design | Food Packaging Case Study | Graphic Galaxy",
+    description:
+      "Krisha Khakhra packaging design case study by Graphic Galaxy, featuring custom food packaging, khakhra label design and food branding in Sangli.",
+    url: "https://graphicgalaxystudio.netlify.app/portfolio/khakhra-sticker-design",
+  },
+};
+
+export const KRISHA_KHAKHRA_CASE_STUDY = {
+  title: "Krisha Khakhra Packaging Design",
+  subtitle: "Food Packaging & Label Design Case Study",
+  category: "Packaging Design | Food Branding | Label Design | Sangli",
+  slug: "khakhra-sticker-design",
+  route: "/portfolio/khakhra-sticker-design",
+
+  // Images & ALTs
+  heroImage:
+    "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787215756/food-product-sticker-design-khakhra-in-sangli_u4dtaj.webp",
+  heroImageAlt: "Krisha Khakhra packaging design",
+  thumbnailImage:
+    "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787215756/food-product-sticker-design-khakhra-in-sangli_u4dtaj.webp",
+  thumbnailAlt: "Krisha Khakhra food packaging design in Sangli",
+  ogImage:
+    "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787215756/food-product-sticker-design-khakhra-in-sangli_u4dtaj.webp",
+
+  beforeImage:
+    "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787209249/food-packaging-sticker-design-near-me_yvvk6t.webp",
+  beforeImageAlt: "Krisha Khakhra plain packaging before design",
+
+  afterImage:
+    "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787215756/food-product-sticker-design-khakhra-in-sangli_u4dtaj.webp",
+  afterImageAlt: "Krisha Khakhra food packaging design in Sangli",
+
+  flatLabelImage:
+    "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787215756/food-sticker-design-in-sangli_gbhjle.webp",
+  flatLabelImageAlt: "Custom khakhra label design",
+
+  finalMockupImage:
+    "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787215756/food-product-sticker-design-khakhra-in-sangli_u4dtaj.webp",
+  finalMockupAlt: "Krisha Khakhra packaging mockup",
+  finalMockupRevealAlt: "Food packaging label design by Graphic Galaxy",
+
+  // Audio Narration Chapters
+  audioChapters: [
+    {
+      id: "ch-1",
+      sectionId: "section-challenge",
+      chapterNum: "01",
+      title: "The Challenge",
+      duration: "0:25",
+      script:
+        "This project started with a simple challenge. Krisha Khakhra had a product, but its packaging didn't yet communicate the brand behind it. The goal was to create a stronger visual identity while making the product feel more professional and ready for the shelf.",
+    },
+    {
+      id: "ch-2",
+      sectionId: "section-transformation",
+      chapterNum: "02",
+      title: "The Transformation",
+      duration: "0:28",
+      script:
+        "The transformation began by moving away from a plain, unbranded appearance. The packaging needed stronger brand visibility, clearer product hierarchy and a visual language that immediately felt appropriate for a food product.",
+    },
+    {
+      id: "ch-3",
+      sectionId: "section-label",
+      chapterNum: "03",
+      title: "The Label",
+      duration: "0:26",
+      script:
+        "The label became the key visual element. The design brings the Krisha brand forward, organizes the product information clearly and creates a more distinctive identity for the packaging.",
+    },
+    {
+      id: "ch-4",
+      sectionId: "section-final",
+      chapterNum: "04",
+      title: "The Final Result",
+      duration: "0:25",
+      script:
+        "The final result transforms Krisha Khakhra into a more recognizable, trustworthy and shelf-ready food brand. What started as simple packaging now has a clearer identity and a stronger presence.",
+    },
+  ],
+
+  // Content Sections
+  challenge: {
+    sectionLabel: "01 — THE CHALLENGE",
+    question: "Can a simple food pack become a brand people remember?",
+    revealBtn: "Reveal the Challenge →",
+    heading: "The Challenge",
+    content:
+      "The product had simple, unbranded packaging with limited shelf presence. The goal was to create a professional food packaging design that builds brand recognition and clearly communicates the product.",
+  },
+
+  beforeAfter: {
+    sectionLabel: "02 — THE TRANSFORMATION",
+    heading: "From Plain Packaging to a Shelf-Ready Brand",
+    teaser: "Something is missing. Can you spot it?",
+    revealBtn: "Reveal the Transformation →",
+    dragPrompt: "Now drag to compare →",
+    microcopy: "Drag to compare",
+    beforeTitle: "Plain, unbranded product packaging",
+    beforeDesc:
+      "Standard unprinted material lacking food branding, clear flavor identification, or retail appeal in local food markets.",
+    afterTitle:
+      "Distinctive Khakhra packaging with custom label design and brand identity",
+    afterDesc:
+      "Vibrant, retail-ready product packaging design with appetizing color themes, clear label design hierarchy, and strong brand recall.",
+  },
+
+  spotTheDifference: {
+    heading: "What Changed?",
+    subtext: "Explore the three key design improvements.",
+    completionText: "Design transformation explored ✓",
+    items: [
+      {
+        id: "spot-1",
+        number: "01",
+        title: "01 — Brand Visibility",
+        desc: "Stronger and more recognizable Krisha brand presence.",
+      },
+      {
+        id: "spot-2",
+        number: "02",
+        title: "02 — Product Hierarchy",
+        desc: "Clearer organization of important product information.",
+      },
+      {
+        id: "spot-3",
+        number: "03",
+        title: "03 — Shelf Presence",
+        desc: "A more distinctive and professional food-packaging appearance.",
+      },
+    ],
+  },
+
+  flatSticker: {
+    sectionLabel: "03 — THE LABEL",
+    heading: "The detail that changed the pack.",
+    subheading: "Custom Khakhra Label Design",
+    revealBtn: "Explore the Label →",
+    listenBtn: "🎧 Listen to why this label works",
+  },
+
+  labelHotspots: [
+    {
+      id: "hotspot-1",
+      number: "01",
+      tag: "01 Brand",
+      title: "Brand Visibility",
+      desc: "Krisha gets stronger visual presence, helping the product become more recognizable.",
+    },
+    {
+      id: "hotspot-2",
+      number: "02",
+      tag: "02 Product",
+      title: "Product Information",
+      desc: "Important product information is organized so it can be understood quickly.",
+    },
+    {
+      id: "hotspot-3",
+      number: "03",
+      tag: "03 Information",
+      title: "Visual Hierarchy",
+      desc: "The design creates a clearer relationship between the brand, product and supporting information.",
+    },
+  ],
+
+  designDecisionsCarousel: {
+    heading: "Why does this packaging feel more professional?",
+    subheading: "Design Decisions",
+    slides: [
+      {
+        number: "01",
+        title: "01 — Brand Identity",
+        subtitle: "Brand Identity",
+        desc: "A stronger visual identity for Krisha Khakhra.",
+      },
+      {
+        number: "02",
+        title: "02 — Visual Hierarchy",
+        subtitle: "Visual Hierarchy",
+        desc: "Important product information becomes easier to identify.",
+      },
+      {
+        number: "03",
+        title: "03 — Food Identity",
+        subtitle: "Food Identity",
+        desc: "The visual language communicates the food category clearly.",
+      },
+      {
+        number: "04",
+        title: "04 — Shelf Presence",
+        subtitle: "Shelf Presence",
+        desc: "The final treatment feels more professional and retail-ready.",
+      },
+    ],
+  },
+
+  whyItWorks: {
+    heading: "Why This Design Works",
+    points: [
+      "Stronger brand recognition",
+      "Clear product hierarchy",
+      "Easy-to-read product information",
+      "More professional shelf presence",
+    ],
+  },
+
+  finalMockup: {
+    sectionLabel: "04 — THE FINAL RESULT",
+    teasers: [
+      "You've seen the problem.",
+      "You've explored the details.",
+      "Now see the final result.",
+    ],
+    promptText: "Ready to see the final result?",
+    revealButtonText: "Reveal Final Packaging →",
+    heading: "Designed to Look Professional. Built to Stand Out.",
+    content:
+      "The final packaging transforms Krisha Khakhra into a more recognizable, trustworthy and shelf-ready food brand.",
+    listenBtn: "▶ Listen to the Final Story",
+  },
+
+  internalLink: {
+    anchorText: "Packaging Design Services in Sangli",
+    path: "/packaging-design-in-sangli",
+  },
+
+  cta: {
+    sectionLabel: "05 — YOUR PRODUCT NEXT",
+    heading: "Looking for Packaging Design for Your Product?",
+    buttonText: "Get Your Packaging Designed →",
+  },
+
+  moreProjectsHeading: "Explore More Packaging Projects",
+
+  completionFeedback: {
+    text: "Design Story Complete ✓",
+    subtext: "You didn't just see the packaging. You explored the thinking behind it.",
+    storyPrompt: "Ready to create your own product story?",
+    ctaText: "Get Your Packaging Designed →",
+  },
+
+  heroExploreCta: "Start the Story ↓",
+  heroListenBtn: "▶ Listen to the Design Story",
+
+  progressSections: [
+    { id: "section-challenge", label: "01 Challenge" },
+    { id: "section-transformation", label: "02 Transformation" },
+    { id: "section-label", label: "03 Label" },
+    { id: "section-final", label: "04 Final" },
+    { id: "section-cta", label: "05 Start Project" },
+  ],
+
+  labelCallouts: [
+    {
+      title: "Brand Visibility",
+      desc: "Krisha's brand identity remains clear and prominent.",
+    },
+    {
+      title: "Product Hierarchy",
+      desc: "The product information is organized for quick recognition.",
+    },
+    {
+      title: "Readable Information",
+      desc: "The label maintains clear and easy-to-read product information.",
+    },
+  ],
+
+  designDecision: {
+    before: "Plain, unbranded packaging with no shelf presence",
+    decision:
+      "Create stronger brand visibility, clearer product hierarchy, and a food-focused visual identity.",
+    after: "Shelf-ready Krisha Khakhra packaging with recognizable brand identity",
+  },
+
+  projectScope: [
+    { label: "Packaging Design", link: "/packaging-design-in-sangli" },
+    { label: "Khakhra Label Design", link: null },
+    { label: "Food Branding", link: null },
+    { label: "Packaging Mockup", link: null },
+  ],
+
+  seo: {
+    title:
+      "Krisha Khakhra Packaging Design | Food Packaging Case Study | Graphic Galaxy",
+    description:
+      "Krisha Khakhra packaging design case study by Graphic Galaxy, featuring custom food packaging, khakhra label design and food branding in Sangli.",
+    canonical:
+      "https://graphicgalaxystudio.netlify.app/portfolio/khakhra-sticker-design",
+    h1: "Krisha Khakhra Packaging Design",
+    robots: "index, follow",
+  },
+};
+
+export const DANDOBA_HILL_RUN_CASE_STUDY = {
+  title: "Dandoba Hill Run / Walk 2026",
+  subtitle: "Nature-Focused Event Branding Case Study",
+  client: "Radhey Seva Foundation",
+  eventDate: "16 August 2026",
+  eventType: "Nature-focused Run & Walk",
+  location: "Dandoba Hill, Sangli",
+  category: "Nature-Focused Event Branding",
+  slug: "dandoba-hill-run-2026-branding",
+  route: "/portfolio/dandoba-hill-run-2026-branding",
+  legacyRoute: "/portfolio/dandoba-hill-run",
+
+  seo: {
+    title: "Dandoba Hill Run Branding Case Study | Graphic Galaxy",
+    description: "Explore the Dandoba Hill Run 2026 branding designed by Graphic Galaxy for Radhey Seva Foundation, from event identity and T-shirt design to social media creatives.",
+    keywords: "Dandoba Hill Run branding, Dandoba Hill Run 2026, Dandoba Hill Run design, event branding in Sangli, sports event branding, run event branding, event design in Sangli, graphic design in Sangli",
+    canonical: "https://graphicgalaxy.netlify.app/portfolio/dandoba-hill-run-2026-branding",
+    h1: "Dandoba Hill Run / Walk 2026",
+    robots: "index, follow",
+  },
+
+  heroImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562729/ChatGPT_Image_Aug_20_2026_03_45_57_PM_v7jtit.png",
+  heroImageAlt: "Dandoba Hill Run Walk 2026 branding design by Graphic Galaxy",
+
+  images: [
+    {
+      id: "img-1",
+      url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562729/ChatGPT_Image_Aug_20_2026_03_45_57_PM_v7jtit.png",
+      title: "Finisher Wings Selfie Backdrop",
+      alt: "Dandoba Hill Run Walk 2026 branding design by Graphic Galaxy",
+      tag: "Main Branding Visual",
+      caption: "Interactive finisher photo backdrop featuring custom feather wings graphic and sponsor hierarchy.",
+    },
+    {
+      id: "img-2",
+      url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562727/ChatGPT_Image_Aug_20_2026_03_49_27_PM_hjeipa.png",
+      title: "Event Logo & Main Stage Visual Identity",
+      alt: "Dandoba Hill Run Walk 2026 event identity",
+      tag: "Event Identity & Logo",
+      caption: "Main stage backdrop combining hill silhouettes, sunrise imagery, and nature movement typography.",
+    },
+    {
+      id: "img-3",
+      url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562726/ChatGPT_Image_Aug_20_2026_03_49_35_PM_gny7zw.png",
+      title: "Venue Billboard & Promotional Creative",
+      alt: "Dandoba Hill Run event information design",
+      tag: "Promotional Billboard",
+      caption: "High-impact venue billboard graphic connecting the hill challenge with community refreshment.",
+    },
+    {
+      id: "img-4",
+      url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562725/ChatGPT_Image_Aug_20_2026_02_55_25_PM_vmaotz.png",
+      title: "Event T-Shirt Merchandise Design",
+      alt: "Dandoba Hill Run T-shirt design",
+      tag: "Wearable Brand Asset",
+      caption: "Custom event T-shirt turning every participant into an active brand ambassador on the trail.",
+    },
+    {
+      id: "img-5",
+      url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562725/ChatGPT_Image_Aug_20_2026_03_52_28_PM_ynt7pv.png",
+      title: "Finisher Acrylic Trophy & Memento",
+      alt: "Dandoba Hill Run participant event branding",
+      tag: "Participant Experience",
+      caption: "Custom shaped finisher acrylic trophy highlighting hill trail illustration and event date.",
+    },
+    {
+      id: "img-6",
+      url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562725/ChatGPT_Image_Aug_20_2026_04_27_11_PM_yntw9f.png",
+      title: "Registration & Start Gate Arch Design",
+      alt: "Dandoba Hill Run registration poster",
+      tag: "Venue Entry Arch",
+      caption: "Grand venue entrance arch marking the start line with sponsor branding and nature theme pillars.",
+    },
+  ],
 };

@@ -58,8 +58,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
             <Route path="/portfolio-graphic-designer-sangli" element={<Portfolio />} />
-            
-         
+          
           </Routes>
         </Suspense>
       </SmoothScroll>

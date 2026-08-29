@@ -87,7 +87,7 @@ const Home = () => {
               Design <span className="text-gradient">Services.</span>
             </h2>
             <p className="text-white/40 mt-3 max-w-2xl mx-auto text-lg font-medium">
-              Graphic Galaxy is a premier graphic design and branding studio in Sangli. We deliver creative logo design, product packaging, social media graphics, and brand identity solutions for startups, established businesses, and professionals in Sangli, Miraj, Kupwad, and across Maharashtra.
+              Graphic Galaxy is a premier graphic design and branding studio in Sangli. We deliver creative logo design, custom product & food packaging design, social media graphics, and brand identity solutions for startups, established businesses, and professionals in Sangli, Vishrambag, Miraj, and Kupwad.
             </p>
           </div>
 

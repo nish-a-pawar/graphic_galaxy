@@ -43,6 +43,7 @@ const normalizeProject = (p) => ({
   videoUrl: p.url,
   litImage: p.litImage,
   unlitImage: p.unlitImage,
+  caseStudyUrl: p.caseStudyUrl,
 });
 
 const socialMediaCategories = ["All", "Hospital/Clinic", "Event", "Product", "Offer"];

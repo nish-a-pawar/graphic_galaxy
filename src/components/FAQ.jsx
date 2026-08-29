@@ -98,7 +98,8 @@ const faqs = [
   }
 ];
 
-const FAQ = () => {
+const FAQ = ({ items, tagText, heading, subheading }) => {
+  const activeFaqs = items || faqs;
   const [openIndex, setOpenIndex] = useState(null);
   const containerRef = useRef(null);
 
@@ -107,11 +108,11 @@ const FAQ = () => {
   };
 
   useEffect(() => {
-    const items = containerRef.current?.querySelectorAll(".faq-item");
-    if (!items?.length) return;
+    const faqElements = containerRef.current?.querySelectorAll(".faq-item");
+    if (!faqElements?.length) return;
 
     gsap.fromTo(
-      items,
+      faqElements,
       { y: 50, opacity: 0 },
       {
         y: 0,
@@ -129,13 +130,13 @@ const FAQ = () => {
     return () => {
       ScrollTrigger.getAll().forEach((t) => t.kill());
     };
-  }, []);
+  }, [activeFaqs]);
 
   // Matching FAQPage JSON-LD Schema
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map((faq) => ({
+    "mainEntity": activeFaqs.map((faq) => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {
@@ -156,18 +157,22 @@ const FAQ = () => {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <p className="text-sm font-bold text-amber-400 uppercase tracking-[0.3em] mb-4">
-            Got Questions?
+            {tagText || "Got Questions?"}
           </p>
           <h2 className="text-4xl md:text-6xl font-black text-white mb-6">
-            Frequently Asked <span className="text-gradient">Questions.</span>
+            {heading || (
+              <>
+                Frequently Asked <span className="text-gradient">Questions.</span>
+              </>
+            )}
           </h2>
           <p className="text-white/40 max-w-xl mx-auto text-lg font-medium">
-            Everything you need to know about working with Graphic Galaxy in Sangli.
+            {subheading || "Everything you need to know about working with Graphic Galaxy in Sangli."}
           </p>
         </div>
 
         <div ref={containerRef} className="space-y-4">
-          {faqs.map((faq, i) => {
+          {activeFaqs.map((faq, i) => {
             const isOpen = openIndex === i;
             return (
               <div

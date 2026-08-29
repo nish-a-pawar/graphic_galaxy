@@ -114,4 +114,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+
+  <!-- Portfolio Case Studies -->
+  <url>
+    <loc>https://graphicgalaxystudio.netlify.app/portfolio/khakhra-sticker-design</loc>
+    <lastmod>2026-08-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
 </urlset>

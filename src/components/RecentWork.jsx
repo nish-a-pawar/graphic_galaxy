@@ -5,7 +5,6 @@ import { ArrowUpRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 import { Link } from "react-router-dom";
 
-
 import posterSample from "../assets/images/brochure.jpeg";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -17,7 +16,10 @@ const projects = [
     image: posterSample,
     tag: "Completed",
     assets: [
-      { url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776494014/ChatGPT_Image_Apr_18_2026_12_03_12_PM_ucdhrv.png", name: "Logo" },
+      {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776494014/ChatGPT_Image_Apr_18_2026_12_03_12_PM_ucdhrv.png",
+        name: "Logo",
+      },
       { url: posterSample, name: "Brochure" },
       {
         url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781251711/trophy_duathlon_zfnzxd.webp",
@@ -89,6 +91,59 @@ const projects = [
       },
     ],
   },
+  {
+    title: "Dandoba Hill Run / Walk 2026",
+    category: "Nature-Focused Event Branding",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787564375/WhatsApp_Image_2026-08-24_at_3.07.05_PM_dwcoll.jpg",
+    tag: "Completed",
+    assets: [
+      {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787564375/WhatsApp_Image_2026-08-24_at_3.07.05_PM_dwcoll.jpg",
+        name: "Social Media Post",
+        alt: "Dandoba Hill Run Walk 2026 branding design by Graphic Galaxy",
+      },
+      {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562725/ChatGPT_Image_Aug_20_2026_02_55_25_PM_vmaotz.png",
+        name: "T-Shirt Design",
+        alt: "Dandoba Hill Run T-shirt design",
+      },
+      {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562725/ChatGPT_Image_Aug_20_2026_03_52_28_PM_ynt7pv.png",
+        name: "Finisher Trophy",
+        alt: "Dandoba Hill Run participant event branding",
+      },
+       {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562725/ChatGPT_Image_Aug_20_2026_04_27_11_PM_yntw9f.png",
+        name: "Start / Finish Arch ",
+        alt: "Dandoba Hill Run registration poster",
+      },
+      {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562727/ChatGPT_Image_Aug_20_2026_03_49_27_PM_hjeipa.png",
+        name: "Stage Backdrop",
+        alt: "Dandoba Hill Run Walk 2026 event identity",
+      },
+      {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562726/ChatGPT_Image_Aug_20_2026_03_49_35_PM_gny7zw.png",
+        name: "Selfie Point 1",
+        alt: "Dandoba Hill Run event information design",
+      },
+        {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562729/ChatGPT_Image_Aug_20_2026_03_45_57_PM_v7jtit.png",
+        name: "Selfie Point 1",
+        alt: "Dandoba Hill Run event information design",
+      },
+
+       {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562726/ChatGPT_Image_Aug_20_2026_03_49_35_PM_gny7zw.png",
+        name: "Selfie Point 2",
+        alt: "Dandoba Hill Run event information design",
+      },
+
+     
+     
+    ],
+  },
 ];
 
 const RecentWork = () => {
@@ -98,8 +153,36 @@ const RecentWork = () => {
 
   const [currentAssetIndex, setCurrentAssetIndex] = useState(0);
 
+  // SOUND EFFECT
+  const playTransitionSound = () => {
+    try {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (!AudioContext) return;
+      const ctx = new AudioContext();
+
+      const osc = ctx.createOscillator();
+      const gain = ctx.createGain();
+
+      osc.type = "sine";
+      osc.frequency.setValueAtTime(500, ctx.currentTime);
+      osc.frequency.exponentialRampToValueAtTime(220, ctx.currentTime + 0.07);
+
+      gain.gain.setValueAtTime(0.05, ctx.currentTime);
+      gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.07);
+
+      osc.connect(gain);
+      gain.connect(ctx.destination);
+
+      osc.start();
+      osc.stop(ctx.currentTime + 0.07);
+    } catch (e) {
+      // Silent catch
+    }
+  };
+
   // OPEN MODAL
   const openModal = (index) => {
+    playTransitionSound();
     setSelectedProject(index);
     setCurrentAssetIndex(0);
 
@@ -116,6 +199,7 @@ const RecentWork = () => {
   // NEXT
   const nextAsset = (e) => {
     e.stopPropagation();
+    playTransitionSound();
 
     if (selectedProject !== null) {
       setCurrentAssetIndex(
@@ -127,6 +211,7 @@ const RecentWork = () => {
   // PREV
   const prevAsset = (e) => {
     e.stopPropagation();
+    playTransitionSound();
 
     if (selectedProject !== null) {
       setCurrentAssetIndex(
@@ -184,10 +269,13 @@ const RecentWork = () => {
           </div>
 
           <p className="max-w-md text-white/40 font-medium text-lg">
-            A showcase of our latest design projects across various industries.{' '}
-            <Link to="/portfolio-graphic-designer-sangli" className="text-amber-400 hover:underline transition-all">
+            A showcase of our latest design projects across various industries.{" "}
+            <Link
+              to="/portfolio-graphic-designer-sangli"
+              className="text-amber-400 hover:underline transition-all"
+            >
               View our graphic design portfolio
-            </Link>{' '}
+            </Link>{" "}
             to explore more of our work.
           </p>
         </div>

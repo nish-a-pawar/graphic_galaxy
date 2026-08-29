@@ -93,18 +93,18 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <a
                 href={INSTAGRAM}
                 target="_blank" rel="noreferrer"
                 className="interactive bg-[#0B0F14] border border-[#2D3748] hover:border-pink-400/50 rounded-2xl p-5 transition-all duration-300 flex items-center gap-3"
               >
-                <div className="w-10 h-10 rounded-xl bg-linear-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white">
+                <div className="w-10 h-10 shrink-0 rounded-xl bg-gradient-to-br from-pink-500 to-purple-600 flex items-center justify-center text-white">
                   <Share2 size={16} />
                 </div>
-                <div>
+                <div className="min-w-0">
                   <p className="text-xs text-white/30 uppercase tracking-widest mb-0.5">Instagram</p>
-                  <p className="font-bold text-white text-sm">{INSTAGRAM.split('/').pop()}</p>
+                  <p className="font-bold text-white text-sm truncate">{INSTAGRAM.split('/').pop()}</p>
                 </div>
               </a>
 
@@ -113,8 +113,8 @@ const Contact = () => {
                 target="_blank" rel="noreferrer"
                 className="interactive bg-[#0B0F14] border border-[#2D3748] hover:border-blue-400/50 rounded-2xl p-5 transition-all duration-300 flex items-center gap-3"
               >
-                <div className="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black">G</div>
-                <div>
+                <div className="w-10 h-10 shrink-0 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black">G</div>
+                <div className="min-w-0">
                   <p className="text-xs text-white/30 uppercase tracking-widest mb-0.5">Google</p>
                   <p className="font-bold text-white text-sm">Find us</p>
                 </div>

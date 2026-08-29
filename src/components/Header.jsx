@@ -89,7 +89,7 @@ const Header = () => {
 
         {/* CTA Button */}
         <a
-          href={`${WHATSAPP_LINK}?text=Hi, I need design service`}
+          href={WHATSAPP_LINK}
           target="_blank"
           className="bg-green-500 hover:bg-green-600 text-white px-4 py-1.5 text-sm rounded-lg shadow-md transition"
         >

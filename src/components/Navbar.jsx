@@ -93,7 +93,7 @@ const Navbar = () => {
 
             {/* Desktop CTA */}
             <a
-              href={`${WHATSAPP_LINK}?text=${encodeURIComponent("Hi, I need design service")}`}
+              href={WHATSAPP_LINK}
               target="_blank"
               rel="noreferrer"
               className="interactive btn-amber group px-5 py-2.5 flex items-center gap-2 text-sm"
@@ -192,7 +192,7 @@ const Navbar = () => {
           ))}
 
           <a
-            href={`${WHATSAPP_LINK}?text=${encodeURIComponent("Hi, I need design service")}`}
+            href={WHATSAPP_LINK}
             target="_blank"
             rel="noreferrer"
             className="block w-full py-3 mt-4 btn-amber text-center text-lg font-black rounded-2xl"

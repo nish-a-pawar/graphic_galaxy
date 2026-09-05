@@ -85,9 +85,15 @@ const Footer = () => (
           <ul className="grid grid-cols-2 gap-x-4 gap-y-3">
             {SERVICES.map((s) => (
               <li key={s.title}>
-                <Link to={s.path} className="text-white/40 text-sm font-medium hover:text-amber-400 transition-colors whitespace-nowrap">
-                  {s.footerLabel || s.title}
-                </Link>
+                {s.path ? (
+                  <Link to={s.path} className="text-white/40 text-sm font-medium hover:text-amber-400 transition-colors whitespace-nowrap">
+                    {s.footerLabel || s.title}
+                  </Link>
+                ) : (
+                  <span className="text-white/40 text-sm font-medium whitespace-nowrap cursor-default">
+                    {s.footerLabel || s.title}
+                  </span>
+                )}
               </li>
             ))}
           </ul>

@@ -128,7 +128,7 @@ export const SERVICES = [
   {
     title: "Nameplate Design",
     desc: "Premium custom nameplates for corporate offices, healthcare clinics, and residences.",
-    path: "/nameplate-design-sangli",
+    path: null,
     icon: "▬",
     tag: null,
     footerLabel: "Nameplate Design",
@@ -144,7 +144,7 @@ export const SERVICES = [
   {
     title: "Trophy & Sports",
     desc: "Comprehensive sports branding, marathon asset kits, and custom trophy designs.",
-    path: "/trophy-sports-design-sangli",
+    path: null,
     icon: "◎",
     tag: "Expertise",
     footerLabel: "Trophy & Sports",
@@ -152,7 +152,7 @@ export const SERVICES = [
   {
     title: "T-Shirt Design",
     desc: "Creative custom apparel graphics for corporate teams, sports events, and brands.",
-    path: "/tshirt-design-sangli",
+    path: null,
     icon: "◑",
     tag: null,
     footerLabel: "T-Shirt Design",
@@ -160,7 +160,7 @@ export const SERVICES = [
   {
     title: "Misc Design",
     desc: "Professional business card designs, certificates, banners, and miscellaneous branding assets.",
-    path: "/misc-design-sangli",
+    path: null,
     icon: "◐",
     tag: null,
     footerLabel: "Misc Design",

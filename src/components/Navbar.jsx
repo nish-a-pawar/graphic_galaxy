@@ -56,7 +56,7 @@ const Navbar = () => {
                 {dropOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
                     <div className="glass-dark rounded-2xl w-64 py-2 border border-[#2D3748] shadow-2xl max-h-[75vh] overflow-y-auto">
-                      {SERVICES.slice(0, 9).map((s) => (
+                      {SERVICES.filter((s) => s.path).map((s) => (
                         <Link
                           key={s.path}
                           to={s.path}
@@ -157,7 +157,7 @@ const Navbar = () => {
                 }`}
             >
               <div className="flex flex-col gap-1 pl-4 border-l-2 border-amber-400/30">
-                {SERVICES.slice(0, 9).map((s) => (
+                {SERVICES.filter((s) => s.path).map((s) => (
                   <Link
                     key={s.path}
                     to={s.path}

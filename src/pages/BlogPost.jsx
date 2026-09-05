@@ -54,7 +54,7 @@ const BlogPost = () => {
     "@type": "BlogPosting",
     headline: metadata.title,
     description: metadata.description,
-    image: `https://graphicgalaxystudio.netlify.app${metadata.featuredImage}`,
+    image: `https://graphicgalaxystudio.netlify.app${imageSrc}`,
     datePublished: metadata.date,
     dateModified: metadata.date,
     author: {
@@ -81,6 +81,8 @@ const BlogPost = () => {
         title={metadata.title}
         description={metadata.description}
         canonical={`https://graphicgalaxystudio.netlify.app/blog/${slug}`}
+        ogUrl={`https://graphicgalaxystudio.netlify.app/blog/${slug}`}
+        ogImage={`https://graphicgalaxystudio.netlify.app${imageSrc}`}
         schema={articleSchema}
       />
       <Navbar />

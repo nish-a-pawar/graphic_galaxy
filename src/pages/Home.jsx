@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Palette, Box, FileText, Heart, Zap, Layout, Image, ShoppingBag, Trophy, Shirt, Camera } from 'lucide-react';
+import { Palette, Box, FileText, Heart, Zap, Layout, Image, ShoppingBag, Trophy, Shirt, Camera, Calendar } from 'lucide-react';
 import { SERVICES } from '../constants';
 
 import Navbar from '../components/Navbar';
@@ -21,6 +21,7 @@ const activeRoutes = [
   "/logo-design-in-sangli",
   "/packaging-design-in-sangli",
   "/social-media-design-sangli",
+  "/event-graphic-design-in-sangli",
   "/invitation-design-sangli",
   "/signage-design-sangli",
   "/brochure-design-sangli",
@@ -32,6 +33,7 @@ const iconMap = {
   "Logo Design": Palette,
   "Packaging Design": Box,
   "Social Media Design": Camera,
+  "Event Graphic Design": Calendar,
   "Brochure Design": FileText,
   "Flyer Design": Zap,
   "Invitation Design": Heart,

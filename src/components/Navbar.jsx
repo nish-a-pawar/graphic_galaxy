@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, ArrowRight, ChevronDown } from "lucide-react";
-import logo from "../assets/images/logo.png";
+import { Menu, X,  ChevronDown } from "lucide-react";
+import {LOGO} from "../constants.js";
 import { SERVICES, WHATSAPP_LINK } from "../constants";
 
 const Navbar = () => {
@@ -31,10 +31,10 @@ const Navbar = () => {
             {/* Logo */}
             <Link to="/" className="flex items-center gap-2.5 group">
               <img
-                src={logo}
+                src={LOGO}
                 alt="Graphic Galaxy"
                 className="px-2 h-16 w-auto group-hover:scale-105 transition-transform duration-300"
-                style={{ filter: "brightness(0) invert(1)" }}
+                // style={{ filter: "brightness(0) invert(1)" }}
               />
             </Link>
 
@@ -55,12 +55,12 @@ const Navbar = () => {
                 </button>
                 {dropOpen && (
                   <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 z-50">
-                    <div className="glass-dark rounded-2xl w-56 py-2 border border-[#2D3748]">
-                      {SERVICES.slice(0, 7).map((s) => (
+                    <div className="glass-dark rounded-2xl w-64 py-2 border border-[#2D3748] shadow-2xl max-h-[75vh] overflow-y-auto">
+                      {SERVICES.slice(0, 9).map((s) => (
                         <Link
                           key={s.path}
                           to={s.path}
-                          className="block px-5 py-2.5 text-sm text-white/60 hover:text-amber-400 hover:bg-amber-400/5 transition-colors font-medium"
+                          className="block px-5 py-2.5 text-sm text-white/70 hover:text-amber-400 hover:bg-amber-400/10 transition-colors font-medium"
                           onClick={() => setDropOpen(false)}
                         >
                           {s.title}
@@ -153,11 +153,11 @@ const Navbar = () => {
               />
             </button>
             <div
-              className={`overflow-hidden transition-all duration-400 ${mobileServices ? "max-h-96 pb-4" : "max-h-0"
+              className={`overflow-hidden transition-all duration-400 ${mobileServices ? "max-h-[32rem] pb-4" : "max-h-0"
                 }`}
             >
               <div className="flex flex-col gap-1 pl-4 border-l-2 border-amber-400/30">
-                {SERVICES.slice(0, 7).map((s) => (
+                {SERVICES.slice(0, 9).map((s) => (
                   <Link
                     key={s.path}
                     to={s.path}

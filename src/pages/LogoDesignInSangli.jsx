@@ -30,7 +30,7 @@ const combinedSchema = [
         addressCountry: "IN",
       },
       telephone: PHONE,
-      url: "https://graphicgalaxy.netlify.app",
+      url: "https://graphicgalaxystudio.netlify.app",
     },
     areaServed: "Sangli, Miraj, Kupwad, Maharashtra",
     description: "Professional logo design services in Sangli Maharashtra",
@@ -178,10 +178,10 @@ export default function LogoDesignInSangli() {
       <SEO
         title={SEO_DATA.logoDesign.title}
         description={SEO_DATA.logoDesign.description}
-        canonical="https://graphicgalaxy.netlify.app/logo-design-in-sangli"
+        canonical="https://graphicgalaxystudio.netlify.app/logo-design-in-sangli"
         ogTitle={SEO_DATA.logoDesign.title}
         ogDescription={SEO_DATA.logoDesign.description}
-        ogUrl="https://graphicgalaxy.netlify.app/logo-design-in-sangli"
+        ogUrl="https://graphicgalaxystudio.netlify.app/logo-design-in-sangli"
         schema={combinedSchema}
       />
 

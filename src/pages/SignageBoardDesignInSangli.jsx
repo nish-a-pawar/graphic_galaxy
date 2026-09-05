@@ -48,7 +48,7 @@ const combinedSchema = [
         addressCountry: "IN",
       },
       telephone: PHONE,
-      url: "https://graphicgalaxy.netlify.app",
+      url: "https://graphicgalaxystudio.netlify.app",
     },
     areaServed: "Sangli, Miraj, Kolhapur, Maharashtra",
     description:
@@ -299,10 +299,10 @@ export default function SignageBoardDesignInSangli() {
       <SEO
         title={SEO_DATA.signageDesign.title}
         description={SEO_DATA.signageDesign.description}
-        canonical="https://graphicgalaxy.netlify.app/signage-design-sangli"
+        canonical="https://graphicgalaxystudio.netlify.app/signage-design-sangli"
         ogTitle={SEO_DATA.signageDesign.title}
         ogDescription={SEO_DATA.signageDesign.description}
-        ogUrl="https://graphicgalaxy.netlify.app/signage-design-sangli"
+        ogUrl="https://graphicgalaxystudio.netlify.app/signage-design-sangli"
         schema={combinedSchema}
       />
 

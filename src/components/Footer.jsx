@@ -1,6 +1,6 @@
 import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import logo from '../assets/images/logo.png';
+import {LOGO }from '../constants.js';
 import {
   WHATSAPP_LINK,
   PHONE,
@@ -19,7 +19,7 @@ const Footer = () => (
         {/* Brand */}
         <div className="md:col-span-4">
           <Link to="/" className="flex items-center gap-2.5 mb-6 group">
-            <img src={logo} alt="Graphic Galaxy" className="h-9 w-auto" />
+            <img src={LOGO} alt="Graphic Galaxy" className="h-12 w-auto" />
             <span className="text-xl font-black tracking-tight">
               Graphic <span className="text-amber-400">Galaxy</span>
             </span>

@@ -7,7 +7,8 @@ export const INSTAGRAM = "https://instagram.com/galaxy_graphics_ind";
 export const GOOGLE_REVIEW = "https://g.page/r/CZASs3F2JEScEBM/review";
 export const ADDRESS =
   "Near Pramod Dairy, Vishrambag, Sangli – 416416, Maharashtra";
-export const SITE_URL = "https://graphicgalaxy.netlify.app";
+export const SITE_URL = "https://graphicgalaxystudio.netlify.app";
+export const LOGO = "https://res.cloudinary.com/daxfbjcpc/image/upload/v1788078157/white_logo_quteom.png";
 
 export const BROCHURE_TYPES = [
   "Bi-Fold Brochures",
@@ -83,6 +84,14 @@ export const SERVICES = [
     icon: "◉",
     tag: "Expertise",
     footerLabel: "Social Media Design",
+  },
+  {
+    title: "Event Graphic Design",
+    desc: "Comprehensive event visual identity, sports event graphics, banners, standees, and promotional asset kits in Sangli.",
+    path: "/event-graphic-design-in-sangli",
+    icon: "★",
+    tag: "Expertise",
+    footerLabel: "Event Graphic Design",
   },
   {
     title: "Brochure Design",
@@ -918,6 +927,12 @@ export const SEO_DATA = {
       "Professional signage board design in Sangli. Shop boards, glow signs, ACP boards, 3D letter signs for businesses in Sangli, Miraj & Kolhapur.",
     url: "/signage-design-sangli",
   },
+  eventGraphicDesign: {
+    title: "Event Graphic Design in Sangli | Event Creatives & Branding",
+    description:
+      "Event graphic design in Sangli for corporate events, exhibitions and sports events. Graphic Galaxy creates event creatives, banners, backdrops, standees and promotional designs.",
+    url: "/event-graphic-design-in-sangli",
+  },
   khakhraCaseStudy: {
     title:
       "Krisha Khakhra Packaging Design | Food Packaging Case Study | Graphic Galaxy",
@@ -1229,7 +1244,7 @@ export const DANDOBA_HILL_RUN_CASE_STUDY = {
     title: "Dandoba Hill Run Branding Case Study | Graphic Galaxy",
     description: "Explore the Dandoba Hill Run 2026 branding designed by Graphic Galaxy for Radhey Seva Foundation, from event identity and T-shirt design to social media creatives.",
     keywords: "Dandoba Hill Run branding, Dandoba Hill Run 2026, Dandoba Hill Run design, event branding in Sangli, sports event branding, run event branding, event design in Sangli, graphic design in Sangli",
-    canonical: "https://graphicgalaxy.netlify.app/portfolio/dandoba-hill-run-2026-branding",
+    canonical: "https://graphicgalaxystudio.netlify.app/portfolio/dandoba-hill-run-2026-branding",
     h1: "Dandoba Hill Run / Walk 2026",
     robots: "index, follow",
   },

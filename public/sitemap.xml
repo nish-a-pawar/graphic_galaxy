@@ -81,6 +81,13 @@
   </url>
   
   <url>
+    <loc>https://graphicgalaxystudio.netlify.app/event-graphic-design-in-sangli</loc>
+    <lastmod>2026-09-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  
+  <url>
     <loc>https://graphicgalaxystudio.netlify.app/brochure-design-sangli</loc>
     <lastmod>2026-04-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -121,5 +128,11 @@
     <lastmod>2026-08-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://graphicgalaxystudio.netlify.app/portfolio/dandoba-hill-run-2026-branding</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 </urlset>

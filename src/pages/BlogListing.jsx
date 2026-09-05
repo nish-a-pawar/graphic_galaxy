@@ -55,6 +55,7 @@ const BlogListing = () => {
         title="Blog & Graphic Design Insights | Graphic Galaxy"
         description="Read practical guides on logo design costs, packaging design best practices, and how to choose a graphic designer in Sangli."
         canonical="https://graphicgalaxystudio.netlify.app/blog"
+        ogUrl="https://graphicgalaxystudio.netlify.app/blog"
       />
       <Navbar />
 

@@ -4,6 +4,7 @@ import { useEffect, Suspense, lazy } from "react";
 import SmoothScroll from "./components/SmoothScroll";
 import CustomCursor from "./components/CustomCursor";
 import PageTransition from "./components/PageTransition";
+import FamousLogoJigsawModal from "./components/FamousLogoJigsawModal";
 
 const Home = lazy(() => import("./pages/Home"));
 const LogoDesignInSangli = lazy(() => import("./pages/LogoDesignInSangli"));
@@ -20,6 +21,7 @@ const BookletMagazineDesignInSangli = lazy(() => import("./pages/BookletMagazine
 const BlogListing = lazy(() => import("./pages/BlogListing"));
 const BlogPost = lazy(() => import("./pages/BlogPost"));
 const EventGraphicDesignInSangli = lazy(() => import("./pages/EventGraphicDesignInSangli"));
+const BusinessCardDesignInSangli = lazy(() => import("./pages/BusinessCardDesignInSangli"));
 const DandobaHillRunDesignStory = lazy(() => import("./pages/DandobaHillRunDesignStory"));
 
 
@@ -46,6 +48,7 @@ function App() {
         <ScrollToTop />
         <PageTransition />
         <CustomCursor />
+        <FamousLogoJigsawModal />
         <Suspense fallback={<LoadingFallback />}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -63,6 +66,7 @@ function App() {
             <Route path="/about" element={<About />} />
             <Route path="/portfolio-graphic-designer-sangli" element={<Portfolio />} />
             <Route path="/event-graphic-design-in-sangli" element={<EventGraphicDesignInSangli />} />
+            <Route path="/business-card-design-sangli" element={<BusinessCardDesignInSangli />} />
             <Route path="/portfolio/dandoba-hill-run-2026-branding" element={<DandobaHillRunDesignStory />} />
             <Route path="/case-study/dandoba-hill-run-2026" element={<DandobaHillRunDesignStory />} />
           

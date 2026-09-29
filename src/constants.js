@@ -51,6 +51,15 @@ export const FLYER_TYPES = [
   "Local Marketing Flyers",
 ];
 
+export const BUSINESS_CARD_TYPES = [
+  "Standard Business Cards",
+  "Premium Card Sets",
+  "Digital QR Cards",
+  "Custom Shape Cards",
+  "Eco‑Friendly Cards",
+  "Luxury Foil‑Stamped Cards",
+];
+
 export const SOCIAL_MEDIA_TYPES = [
   "Instagram Posts",
   "Facebook Ads",
@@ -108,6 +117,14 @@ export const SERVICES = [
     icon: "✦",
     tag: null,
     footerLabel: "Flyer Design",
+  },
+  {
+    title: "Business Card Design",
+    desc: "Professional business card design and printing services in Sangli, Miraj, Vishrambag, Kupwad.",
+    path: "/business-card-design-sangli",
+    icon: "▣",
+    tag: "Expertise",
+    footerLabel: "Business Card Design",
   },
   {
     title: "Invitation Design",
@@ -909,6 +926,11 @@ export const SEO_DATA = {
       "Eye-catching flyer design in Sangli. Perfect for events, promotions, and local marketing. Get high-quality, print-ready designs today.",
     url: "/flyer-design-sangli",
   },
+  businessCardDesign: {
+    title: "Business Card Design & Printing in Sangli | Graphic Galaxy",
+    description: "Professional business card and visiting card design in Sangli by Graphic Galaxy. Explore creative, custom and premium designs with printing options. Enquire today.",
+    url: "/business-card-design-sangli",
+  },
   invitationDesign: {
     title: "Premium Invitation & Card Design | Graphic Galaxy", // 53 chars
     description:
@@ -921,7 +943,15 @@ export const SEO_DATA = {
       "Professional booklet and magazine design in Sangli. High-end editorial layouts for annual reports, catalogs, and lifestyle magazines.",
     url: "/booklet-magazine-design-sangli",
   },
-  signageDesign: {
+  businessCardDesign: {
+  title: "Business Card Design",
+  desc: "Professional business card design and printing services in Sangli, Miraj, Vishrambag, Kupwad.",
+  path: "/business-card-design-sangli",
+  icon: "▣",
+  tag: "Expertise",
+  footerLabel: "Business Card Design",
+},
+signageDesign: {
     title: "Shop Signage & Glow Board Design | Graphic Galaxy", // 53 chars
     description:
       "Professional signage board design in Sangli. Shop boards, glow signs, ACP boards, 3D letter signs for businesses in Sangli, Miraj & Kolhapur.",

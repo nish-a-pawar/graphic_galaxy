@@ -370,6 +370,7 @@ export default function LogoDesignInSangli() {
             </div>
           </div>
         </section>
+
         {/* ── 4. PROCESS ── */}
         <section className="py-24 px-6 bg-[#111827]">
           <div className="max-w-6xl mx-auto">

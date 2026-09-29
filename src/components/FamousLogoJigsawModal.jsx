@@ -471,7 +471,7 @@ export default function FamousLogoJigsawModal() {
             {/* Title / Instruction */}
             <div className="text-center mb-4">
               <h3 className="text-xl sm:text-2xl font-black text-white">
-               Are you a Brand Genious ? 
+               Are you a Brand Genius ? 
             
               </h3>
               <p className="text-xs text-white/50 mt-1 flex items-center justify-center gap-1.5">

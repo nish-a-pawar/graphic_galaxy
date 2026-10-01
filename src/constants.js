@@ -544,6 +544,50 @@ export const LOGO_PROJECTS = [
     category: "Logo Design",
     alt: "S3 DUATHLON logo design in Sangli ",
   },
+
+   {
+    id: "l9",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790852590/Sajavat_Studio_Final_Logo_Full_vwwfdj.jpg",
+    mockupImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790852590/Sajavat_Studio_Final_Logo_Full_vwwfdj.jpg",
+    title: "Sajavat Studio - A gift Brand in Pune",
+    category: "Logo Design",
+    alt: "Sajavat Studio a gift hamper brand in pune got logo design in Sangli ",
+  },
+
+   {
+    id: "l10",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790852591/RAAN_Smart_Farming_Logo_sxouw6.png",
+    mockupImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790852591/RAAN_Smart_Farming_Logo_sxouw6.png",
+    title: "Raan App  - An Agricultural App",
+    category: "Logo Design",
+    alt: "Raan an agricultural app from solapur got logo design in Sangli ",
+  },
+
+   {
+    id: "l11",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790852591/Lucky_eggs_logo_kkwmpn.jpg",
+    mockupImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790852591/Lucky_eggs_logo_kkwmpn.jpg",
+    title: "Lucky Eggs  - Sangli's Egg Brand ",
+    category: "Logo Design",
+    alt: "Lucky eggs is a well known egg wholesaler brand in sangli  got logo design in Sangli ",
+  },
+
+    {
+    id: "l12",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790852592/Raabta_Sunrise_Logo_g6zhys.png",
+    mockupImage:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790852592/Raabta_Sunrise_Logo_g6zhys.png",
+    title: "Lucky Eggs  - Sangli's Icecream Brand ",
+    category: "Logo Design",
+    alt: "Raabta is newly launched icecream brand in sangli  got logo design in Sangli ",
+  },
 ];
 
 export const INVITATION_PROJECTS = [

@@ -15,7 +15,8 @@ import {
   SIGNAGE_PROJECTS,
   BROCHURE_PROJECTS,
   FLYER_PROJECTS,
-  SOCIALMEDIA_PROJECTS
+  SOCIALMEDIA_PROJECTS,
+  BUSINESSCARD_PROJECTS
   
 } from "../constants";
 
@@ -30,7 +31,8 @@ const categories = [
   "Invitation Design",
   "Signage Design",
   "Flyer Design",
-  "Social Media Post"
+  "Social Media Post",
+  "Business Card Design"
 ];
 
 // Normalize function
@@ -56,7 +58,7 @@ const Portfolio = () => {
   const [socialMediaActive, setSocialMediaActive] = useState("All");
 
   // All Projects
-  const allProjects = useMemo(() => { return [ ...LOGO_PROJECTS, ...RECENT_PROJECTS, ...PACKAGING_PROJECTS, ...INVITATION_PROJECTS, ...SIGNAGE_PROJECTS, ...BROCHURE_PROJECTS,...FLYER_PROJECTS ,...SOCIALMEDIA_PROJECTS ]; }, []);
+  const allProjects = useMemo(() => { return [ ...LOGO_PROJECTS, ...RECENT_PROJECTS, ...PACKAGING_PROJECTS, ...INVITATION_PROJECTS, ...SIGNAGE_PROJECTS, ...BROCHURE_PROJECTS,...FLYER_PROJECTS ,...SOCIALMEDIA_PROJECTS , ...BUSINESSCARD_PROJECTS ]; }, []);
 
   // Handle query params / hash
   useEffect(() => {
@@ -78,7 +80,8 @@ const Portfolio = () => {
         "invitation-design": "Invitation Design",
         "signage-design": "Signage Design",
         "flyer-design" :"Flyer Design",
-        "social-media-post":"Social Media Post"
+        "social-media-post":"Social Media Post",
+        "business-card":"Business Card Design"
       };
 
       const normalized = categoryMap[target] || target;

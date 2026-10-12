@@ -4,7 +4,7 @@ import { useEffect, Suspense, lazy } from "react";
 import SmoothScroll from "./components/SmoothScroll";
 import CustomCursor from "./components/CustomCursor";
 import PageTransition from "./components/PageTransition";
-import FamousLogoJigsawModal from "./components/FamousLogoJigsawModal";
+
 
 const Home = lazy(() => import("./pages/Home"));
 const LogoDesignInSangli = lazy(() => import("./pages/LogoDesignInSangli"));
@@ -23,6 +23,11 @@ const BlogPost = lazy(() => import("./pages/BlogPost"));
 const EventGraphicDesignInSangli = lazy(() => import("./pages/EventGraphicDesignInSangli"));
 const BusinessCardDesignInSangli = lazy(() => import("./pages/BusinessCardDesignInSangli"));
 const DandobaHillRunDesignStory = lazy(() => import("./pages/DandobaHillRunDesignStory"));
+const DesignStories = lazy(() => import("./pages/DesignStories"));
+const SajavatStudioStory = lazy(() => import("./pages/design-stories/SajavatStudioStory"));
+const LuckyEggsStory = lazy(() => import("./pages/design-stories/LuckyEggsStory"));
+const AgriculturalPackagingStory = lazy(() => import("./pages/design-stories/AgriculturalPackagingStory"));
+const SportsEventBrandingStory = lazy(() => import("./pages/design-stories/SportsEventBrandingStory"));
 
 
 function ScrollToTop() {
@@ -48,7 +53,7 @@ function App() {
         <ScrollToTop />
         <PageTransition />
         <CustomCursor />
-        <FamousLogoJigsawModal />
+        
         <Suspense fallback={<LoadingFallback />}>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -69,7 +74,11 @@ function App() {
             <Route path="/business-card-design-sangli" element={<BusinessCardDesignInSangli />} />
             <Route path="/portfolio/dandoba-hill-run-2026-branding" element={<DandobaHillRunDesignStory />} />
             <Route path="/case-study/dandoba-hill-run-2026" element={<DandobaHillRunDesignStory />} />
-          
+            <Route path="/design-stories" element={<DesignStories />} />
+            <Route path="/design-stories/sajavat-studio-brand-identity" element={<SajavatStudioStory />} />
+            <Route path="/design-stories/lucky-eggs-logo-design" element={<LuckyEggsStory />} />
+            <Route path="/design-stories/agricultural-packaging-design" element={<AgriculturalPackagingStory />} />
+            <Route path="/design-stories/sports-event-branding-sangli" element={<SportsEventBrandingStory />} />
           </Routes>
         </Suspense>
       </SmoothScroll>

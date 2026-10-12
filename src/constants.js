@@ -8,7 +8,8 @@ export const GOOGLE_REVIEW = "https://g.page/r/CZASs3F2JEScEBM/review";
 export const ADDRESS =
   "Near Pramod Dairy, Vishrambag, Sangli – 416416, Maharashtra";
 export const SITE_URL = "https://graphicgalaxystudio.netlify.app";
-export const LOGO = "https://res.cloudinary.com/daxfbjcpc/image/upload/v1788078157/white_logo_quteom.png";
+export const LOGO =
+  "https://res.cloudinary.com/daxfbjcpc/image/upload/v1788078157/white_logo_quteom.png";
 
 export const BROCHURE_TYPES = [
   "Bi-Fold Brochures",
@@ -307,6 +308,7 @@ export const PACKAGING_PROJECTS = [
     title: "Agri Product Sticker",
     category: "Sticker Design",
     alt: "Agriculture product sticker design for branding and labels",
+    caseStudyUrl: "/design-stories/agricultural-packaging-design",
   },
   {
     id: "s4",
@@ -333,6 +335,17 @@ export const PACKAGING_PROJECTS = [
     alt: "Krisha Khakhra packaging sticker design for food product labeling in Sangli",
   },
 
+  {
+    id: "s7",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790938602/ChatGPT_Image_Oct_2_2026_04_24_46_PM_ywikqn.webp",
+    title: " Jaggary Sticker ",
+    category: "Sticker Design",
+    alt: " Sanjyot Jaggary packaging sticker design for food product labeling in Sangli",
+  },
+   
+
+  
 
   // 👉 Pouch
   {
@@ -347,18 +360,28 @@ export const PACKAGING_PROJECTS = [
   {
     id: "p2",
     image:
-      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491750/sanjyotPouch_sv5zih.webp",
-    title: "Sanjyot Pouch Packaging",
-    category: "Pouch Design",
-    alt: "Sanjyot pouch packaging design for retail products",
-  },
-  {
-    id: "p3",
-    image:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776491749/auraPouch_zyhz5k.webp",
     title: "Aura Pouch Packaging",
     category: "Pouch Design",
-    alt: "Aura pouch packaging design for product branding",
+    alt: "Aura pouch packaging design for product branding .Minimalistic Pouch design for coffee brand in sangli",
+  },
+
+   {
+    id: "p3",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790938602/ChatGPT_Image_Oct_2_2026_04_24_53_PM_pvi5bz.webp",
+    title: "Jaggery Pouch Packaging",
+    category: "Pouch Design",
+    alt: "Jaggry pouch packaging design for product branding .Minimalistic Pouch design for organic food brand in sangli",
+  },
+
+   {
+    id: "p4",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790938602/Premium_Jaggery_Powder_Packaging_Display_lnehxz.webp",
+    title: "Jaggery Pouch Packaging",
+    category: "Pouch Design",
+    alt: "Jaggry Pouch packaging design for product branding .Process oriented pouch design for organic food brand in sangli",
   },
 ];
 
@@ -378,89 +401,152 @@ export const FLYER_PROJECTS = [
     title: "Flyer Design",
     category: "Flyer Design",
     alt: "Flyer design in sangli",
+  },
+];
+export const BUSINESSCARD_PROJECTS =[
+  {
+    id:"b1",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1791711242/business-card-design-in-sangli_xvexiq.webp",
+    title:"Business Card",
+    category :"Business Card Design"
+  },
+  {
+    id:"b2",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1791711242/best-business-card-design-and-print-in-sangli_1_ghaj4j.webp",
+    title:"Business Card",
+    category :"Business Card Design"
+  },
+  {
+    id:"b3",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1791789896/modern-business-card-design-by-graphic-galaxy-sangli_aamybn.png",
+    title:"Business Card",
+    category :"Business Card Design"
+  } ,
+
+    {
+    id:"b4",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1791789896/business-card-design-by-graphic-galaxy-sangli_ijcbkx.png",
+    title:"Business Card",
+    category :"Business Card Design"
+  },
+
+      {
+    id:"b5",
+    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1791789897/visiting-card-design-by-graphic-galaxy-sangli_f0vw5t.png",
+    title:"Business Card",
+    category :"Business Card Design"
+  },
+      {
+    id:"b6",
+    image: " https://res.cloudinary.com/daxfbjcpc/image/upload/v1791789897/simple-business-card-design-by-graphic-galaxy-sangli_omaewy.png",
+    title:"Business Card",
+    category :"Business Card Design"
+  } ,
+
+     {
+    id:"b7",
+    image: " https://res.cloudinary.com/daxfbjcpc/image/upload/v1791789897/business-card-designed-by-graphic-galaxy-sangli_xmkvpc.png",
+    title:"Business Card",
+    category :"Business Card Design"
+  },
+     {
+    id:"b8",
+    image: " https://res.cloudinary.com/daxfbjcpc/image/upload/v1791789894/business-card-design-in-sangli_idohzm.png",
+    title:"Business Card",
+    category :"Business Card Design"
   }
  
-
-];
+]
 
 export const SOCIALMEDIA_PROJECTS = [
   {
     id: "sm1",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255716/yeqab3n4hsnc5beqjnpw_kcjpzp.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255716/yeqab3n4hsnc5beqjnpw_kcjpzp.webp",
     title: "Hospital/Clinic Post",
     category: "Social Media Post",
     alt: "Hospital Clinic Social Media Post Design in Sangli",
   },
   {
     id: "sm2",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255715/mj6fcdookrwmesqwfg0h_nfih6t.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255715/mj6fcdookrwmesqwfg0h_nfih6t.webp",
     title: "Hospital/Clinic Post",
     category: "Social Media Post",
     alt: "Hospital Clinic Social Media Post Design in Sangli",
   },
   {
     id: "sm3",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781249551/best_social__media_post_design_in_sangli_acxpa8.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781249551/best_social__media_post_design_in_sangli_acxpa8.webp",
     title: "Event Post",
     category: "Social Media Post",
     alt: "Event Social Media Post Design in Sangli",
   },
   {
     id: "sm4",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576273/WhatsApp_Image_2026-05-08_at_11.47.18_AM_y4roop.jpg",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576273/WhatsApp_Image_2026-05-08_at_11.47.18_AM_y4roop.jpg",
     title: "Event Post",
     category: "Social Media Post",
     alt: "Event Social Media Post Design in Sangli",
   },
   {
     id: "sm5",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576273/WhatsApp_Image_2026-04-29_at_2.33.41_PM_mjtvrc.jpg",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576273/WhatsApp_Image_2026-04-29_at_2.33.41_PM_mjtvrc.jpg",
     title: "Event Post",
     category: "Social Media Post",
     alt: "Event Social Media Post Design in Sangli",
   },
   {
     id: "sm6",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255714/lrf8nat9ybyybpkxqw8z_fwtkhc.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255714/lrf8nat9ybyybpkxqw8z_fwtkhc.webp",
     title: "Product Post",
     category: "Social Media Post",
     alt: "Product Social Media Post Design in Sangli",
   },
   {
     id: "sm7",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255714/m2tryqtsbdjnuwbxveb3_ixxp7h.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255714/m2tryqtsbdjnuwbxveb3_ixxp7h.webp",
     title: "Product Post",
     category: "Social Media Post",
     alt: "Product Social Media Post Design in Sangli",
   },
   {
     id: "sm8",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255717/acq71ipmamt5posbuvyz_jq1w6b.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255717/acq71ipmamt5posbuvyz_jq1w6b.webp",
     title: "Product Post",
     category: "Social Media Post",
     alt: "Product Social Media Post Design in Sangli",
   },
   {
     id: "sm9",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255716/qzb6rwz0mhjdqfwhtnkj_lrbkm7.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255716/qzb6rwz0mhjdqfwhtnkj_lrbkm7.webp",
     title: "Product Post",
     category: "Social Media Post",
     alt: "Product Social Media Post Design in Sangli",
   },
   {
     id: "sm10",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255713/dtsikc20lob8yhm5ohde_fp26p3.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255713/dtsikc20lob8yhm5ohde_fp26p3.webp",
     title: "Offer Post",
     category: "Social Media Post",
     alt: "Offer Social Media Post Design in Sangli",
   },
   {
     id: "sm11",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255449/WhatsApp_Image_2026-06-12_at_2.29.27_PM_z2abw7.webp",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781255449/WhatsApp_Image_2026-06-12_at_2.29.27_PM_z2abw7.webp",
     title: "Offer Post",
     category: "Social Media Post",
     alt: "Offer Social Media Post Design in Sangli",
-  }
+  },
 ];
 
 export const LOGO_PROJECTS = [
@@ -545,7 +631,7 @@ export const LOGO_PROJECTS = [
     alt: "S3 DUATHLON logo design in Sangli ",
   },
 
-   {
+  {
     id: "l9",
     image:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790852590/Sajavat_Studio_Final_Logo_Full_vwwfdj.jpg",
@@ -554,9 +640,10 @@ export const LOGO_PROJECTS = [
     title: "Sajavat Studio - A gift Brand in Pune",
     category: "Logo Design",
     alt: "Sajavat Studio a gift hamper brand in pune got logo design in Sangli ",
+    caseStudyUrl: "/design-stories/sajavat-studio-brand-identity",
   },
 
-   {
+  {
     id: "l10",
     image:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790852591/RAAN_Smart_Farming_Logo_sxouw6.png",
@@ -567,7 +654,7 @@ export const LOGO_PROJECTS = [
     alt: "Raan an agricultural app from solapur got logo design in Sangli ",
   },
 
-   {
+  {
     id: "l11",
     image:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790852591/Lucky_eggs_logo_kkwmpn.jpg",
@@ -576,9 +663,10 @@ export const LOGO_PROJECTS = [
     title: "Lucky Eggs  - Sangli's Egg Brand ",
     category: "Logo Design",
     alt: "Lucky eggs is a well known egg wholesaler brand in sangli  got logo design in Sangli ",
+    caseStudyUrl: "/design-stories/lucky-eggs-logo-design",
   },
 
-    {
+  {
     id: "l12",
     image:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1790852592/Raabta_Sunrise_Logo_g6zhys.png",
@@ -596,7 +684,7 @@ export const INVITATION_PROJECTS = [
     type: "video",
     url: "https://player.cloudinary.com/embed/?cloud_name=daxfbjcpc&public_id=VideoINvite_ajuava",
     title: "Wedding Video Invite",
-    category: "Invitation Design in sangli",
+    category: "Invitation Design",
     thumbnail:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776500921/Screenshot_2026-04-18_135404_kjk6dq.png",
   },
@@ -606,7 +694,6 @@ export const INVITATION_PROJECTS = [
     url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776495658/ShubhVivahIvite_fsmpy7.webp",
     title: "Wedding Invitation Card design in sangli",
     category: "Invitation Design",
-    
   },
   {
     id: "i3",
@@ -628,7 +715,6 @@ export const INVITATION_PROJECTS = [
     url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1776495533/3_1_1_mqza5j.webp",
     title: "Wedding Invitation design in sangli",
     category: "Invitation Design",
-
   },
 ];
 
@@ -680,7 +766,7 @@ export const SIGNAGE_PROJECTS = [
     alt: "Premium signage design in Sangli",
   },
 
-   {
+  {
     id: "sg7",
     image:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781338304/ChatGPT_Image_Jun_13_2026_01_39_19_PM_imwh5d.png",
@@ -693,8 +779,7 @@ export const SIGNAGE_PROJECTS = [
     alt: "best signage design in kolhapur",
   },
 
-  
-    {
+  {
     id: "sg8",
     image:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781338302/ChatGPT_Image_Jun_13_2026_01_41_19_PM_ilbugf.png",
@@ -703,7 +788,7 @@ export const SIGNAGE_PROJECTS = [
     alt: "Custom Acrylic board design in Sangli",
   },
 
-   {
+  {
     id: "sg9",
     image:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1783663476/ChatGPT_Image_Jul_10_2026_11_27_49_AM_dqpuq8.png",
@@ -727,7 +812,7 @@ export const SIGNAGE_PROJECTS = [
     title: "House Nameplate",
     category: "Signage Design",
     alt: "best signage design in sangli",
-  }
+  },
 ];
 
 export const TEAM = [
@@ -754,8 +839,7 @@ export const TEAM = [
     role: "Junior Graphic Designer",
     initials: "SD",
     color: "#DB2777",
-  }
- 
+  },
 ];
 
 export const STATS = [
@@ -811,6 +895,7 @@ export const RECENT_PROJECTS = [
     accent: "#dc2626",
     image: posterSample,
     alt: "Sports branding assets for Sangli Marathon",
+    caseStudyUrl: "/design-stories/sports-event-branding-sangli",
   },
   {
     id: 4,
@@ -820,7 +905,8 @@ export const RECENT_PROJECTS = [
     status: "Completed",
     bg: "#061a12",
     accent: "#10b981",
-    image: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787564375/WhatsApp_Image_2026-08-24_at_3.07.05_PM_dwcoll.jpg",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787564375/WhatsApp_Image_2026-08-24_at_3.07.05_PM_dwcoll.jpg",
     alt: "Dandoba Hill Run Walk 2026 branding design by Graphic Galaxy",
     caseStudyUrl: "/case-study/dandoba-hill-run-2026",
   },
@@ -970,11 +1056,7 @@ export const SEO_DATA = {
       "Eye-catching flyer design in Sangli. Perfect for events, promotions, and local marketing. Get high-quality, print-ready designs today.",
     url: "/flyer-design-sangli",
   },
-  businessCardDesign: {
-    title: "Business Card Design & Printing in Sangli | Graphic Galaxy",
-    description: "Professional business card and visiting card design in Sangli by Graphic Galaxy. Explore creative, custom and premium designs with printing options. Enquire today.",
-    url: "/business-card-design-sangli",
-  },
+
   invitationDesign: {
     title: "Premium Invitation & Card Design | Graphic Galaxy", // 53 chars
     description:
@@ -988,14 +1070,14 @@ export const SEO_DATA = {
     url: "/booklet-magazine-design-sangli",
   },
   businessCardDesign: {
-  title: "Business Card Design",
-  desc: "Professional business card design and printing services in Sangli, Miraj, Vishrambag, Kupwad.",
-  path: "/business-card-design-sangli",
-  icon: "▣",
-  tag: "Expertise",
-  footerLabel: "Business Card Design",
-},
-signageDesign: {
+    title: "Business Card Design",
+    desc: "Professional business card design and printing services in Sangli, Miraj, Vishrambag, Kupwad.",
+    path: "/business-card-design-sangli",
+    icon: "▣",
+    tag: "Expertise",
+    footerLabel: "Business Card Design",
+  },
+  signageDesign: {
     title: "Shop Signage & Glow Board Design | Graphic Galaxy", // 53 chars
     description:
       "Professional signage board design in Sangli. Shop boards, glow signs, ACP boards, 3D letter signs for businesses in Sangli, Miraj & Kolhapur.",
@@ -1245,7 +1327,8 @@ export const KRISHA_KHAKHRA_CASE_STUDY = {
 
   completionFeedback: {
     text: "Design Story Complete ✓",
-    subtext: "You didn't just see the packaging. You explored the thinking behind it.",
+    subtext:
+      "You didn't just see the packaging. You explored the thinking behind it.",
     storyPrompt: "Ready to create your own product story?",
     ctaText: "Get Your Packaging Designed →",
   },
@@ -1280,7 +1363,8 @@ export const KRISHA_KHAKHRA_CASE_STUDY = {
     before: "Plain, unbranded packaging with no shelf presence",
     decision:
       "Create stronger brand visibility, clearer product hierarchy, and a food-focused visual identity.",
-    after: "Shelf-ready Krisha Khakhra packaging with recognizable brand identity",
+    after:
+      "Shelf-ready Krisha Khakhra packaging with recognizable brand identity",
   },
 
   projectScope: [
@@ -1316,14 +1400,18 @@ export const DANDOBA_HILL_RUN_CASE_STUDY = {
 
   seo: {
     title: "Dandoba Hill Run Branding Case Study | Graphic Galaxy",
-    description: "Explore the Dandoba Hill Run 2026 branding designed by Graphic Galaxy for Radhey Seva Foundation, from event identity and T-shirt design to social media creatives.",
-    keywords: "Dandoba Hill Run branding, Dandoba Hill Run 2026, Dandoba Hill Run design, event branding in Sangli, sports event branding, run event branding, event design in Sangli, graphic design in Sangli",
-    canonical: "https://graphicgalaxystudio.netlify.app/portfolio/dandoba-hill-run-2026-branding",
+    description:
+      "Explore the Dandoba Hill Run 2026 branding designed by Graphic Galaxy for Radhey Seva Foundation, from event identity and T-shirt design to social media creatives.",
+    keywords:
+      "Dandoba Hill Run branding, Dandoba Hill Run 2026, Dandoba Hill Run design, event branding in Sangli, sports event branding, run event branding, event design in Sangli, graphic design in Sangli",
+    canonical:
+      "https://graphicgalaxystudio.netlify.app/portfolio/dandoba-hill-run-2026-branding",
     h1: "Dandoba Hill Run / Walk 2026",
     robots: "index, follow",
   },
 
-  heroImage: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562729/ChatGPT_Image_Aug_20_2026_03_45_57_PM_v7jtit.png",
+  heroImage:
+    "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562729/ChatGPT_Image_Aug_20_2026_03_45_57_PM_v7jtit.png",
   heroImageAlt: "Dandoba Hill Run Walk 2026 branding design by Graphic Galaxy",
 
   images: [
@@ -1333,7 +1421,8 @@ export const DANDOBA_HILL_RUN_CASE_STUDY = {
       title: "Finisher Wings Selfie Backdrop",
       alt: "Dandoba Hill Run Walk 2026 branding design by Graphic Galaxy",
       tag: "Main Branding Visual",
-      caption: "Interactive finisher photo backdrop featuring custom feather wings graphic and sponsor hierarchy.",
+      caption:
+        "Interactive finisher photo backdrop featuring custom feather wings graphic and sponsor hierarchy.",
     },
     {
       id: "img-2",
@@ -1341,7 +1430,8 @@ export const DANDOBA_HILL_RUN_CASE_STUDY = {
       title: "Event Logo & Main Stage Visual Identity",
       alt: "Dandoba Hill Run Walk 2026 event identity",
       tag: "Event Identity & Logo",
-      caption: "Main stage backdrop combining hill silhouettes, sunrise imagery, and nature movement typography.",
+      caption:
+        "Main stage backdrop combining hill silhouettes, sunrise imagery, and nature movement typography.",
     },
     {
       id: "img-3",
@@ -1349,7 +1439,8 @@ export const DANDOBA_HILL_RUN_CASE_STUDY = {
       title: "Venue Billboard & Promotional Creative",
       alt: "Dandoba Hill Run event information design",
       tag: "Promotional Billboard",
-      caption: "High-impact venue billboard graphic connecting the hill challenge with community refreshment.",
+      caption:
+        "High-impact venue billboard graphic connecting the hill challenge with community refreshment.",
     },
     {
       id: "img-4",
@@ -1357,7 +1448,8 @@ export const DANDOBA_HILL_RUN_CASE_STUDY = {
       title: "Event T-Shirt Merchandise Design",
       alt: "Dandoba Hill Run T-shirt design",
       tag: "Wearable Brand Asset",
-      caption: "Custom event T-shirt turning every participant into an active brand ambassador on the trail.",
+      caption:
+        "Custom event T-shirt turning every participant into an active brand ambassador on the trail.",
     },
     {
       id: "img-5",
@@ -1365,7 +1457,8 @@ export const DANDOBA_HILL_RUN_CASE_STUDY = {
       title: "Finisher Acrylic Trophy & Memento",
       alt: "Dandoba Hill Run participant event branding",
       tag: "Participant Experience",
-      caption: "Custom shaped finisher acrylic trophy highlighting hill trail illustration and event date.",
+      caption:
+        "Custom shaped finisher acrylic trophy highlighting hill trail illustration and event date.",
     },
     {
       id: "img-6",
@@ -1373,7 +1466,8 @@ export const DANDOBA_HILL_RUN_CASE_STUDY = {
       title: "Registration & Start Gate Arch Design",
       alt: "Dandoba Hill Run registration poster",
       tag: "Venue Entry Arch",
-      caption: "Grand venue entrance arch marking the start line with sponsor branding and nature theme pillars.",
+      caption:
+        "Grand venue entrance arch marking the start line with sponsor branding and nature theme pillars.",
     },
   ],
 };

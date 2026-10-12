@@ -142,3 +142,53 @@ html.lenis { height: auto; }
   box-shadow: 0 0 24px rgba(245,158,11,0.5), 0 0 48px rgba(245,158,11,0.2);
   transform: scale(1.03);
 }
+
+@keyframes storySparkle {
+  0% {
+    transform: scale(0.9) rotate(-8deg);
+    opacity: 0.7;
+  }
+
+  25% {
+    transform: scale(1.25) rotate(8deg);
+    opacity: 1;
+  }
+
+  50% {
+    transform: scale(1) rotate(-4deg);
+    opacity: 0.85;
+  }
+
+  75% {
+    transform: scale(1.18) rotate(5deg);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(0.9) rotate(-8deg);
+    opacity: 0.7;
+  }
+}
+
+@keyframes storyShimmer {
+  0% {
+    background-position: -200% center;
+  }
+
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes storyDot {
+  0%,
+  100% {
+    transform: scale(0.7);
+    opacity: 0.5;
+  }
+
+  50% {
+    transform: scale(1.25);
+    opacity: 1;
+  }
+}

@@ -910,6 +910,20 @@ export const RECENT_PROJECTS = [
     alt: "Dandoba Hill Run Walk 2026 branding design by Graphic Galaxy",
     caseStudyUrl: "/case-study/dandoba-hill-run-2026",
   },
+
+    {
+    id: 5,
+    title: " Cyclothon 2026",
+    client: "S3 Academy ,Sangli ",
+    category: "Cyclothon Event Branding",
+    status: "Completed",
+    bg: "#061a12",
+    accent: "#10b981",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787564375/WhatsApp_Image_2026-08-24_at_3.07.05_PM_dwcoll.jpg",
+    alt: "Cylothon 2026 branding design by Graphic Galaxy at sangli ",
+   
+  }
 ];
 
 export const REVIEWS = [

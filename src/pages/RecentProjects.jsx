@@ -3,7 +3,7 @@ import React from 'react'
 const RecentProjects = () => {
   return (
   
-      <div className="grid md:grid-cols-2 gap-6 mt-6 ">
+      <div className="grid md:grid-cols-2 gap-6 mt-6 grid-auto-rows: auto">
 
   <div className="shadow-lg p-4 rounded-xl hover:shadow-xl">
     <h3 className="font-semibold">Duathlon Event</h3>

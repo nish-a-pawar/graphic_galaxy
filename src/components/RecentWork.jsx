@@ -21,10 +21,7 @@ const projects = [
         name: "Logo",
       },
       { url: posterSample, name: "Brochure" },
-      {
-        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781251711/trophy_duathlon_zfnzxd.webp",
-        name: "Trophy ",
-      },
+     
       {
         url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576273/WhatsApp_Image_2026-05-08_at_11.47.18_AM_y4roop.jpg",
         name: "Social Media Post",
@@ -143,6 +140,19 @@ const projects = [
      
      
     ],
+  },
+
+   {
+    title: "Sangli Marathon Season 5",
+    category: " Marathon Event Branding",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787564375/WhatsApp_Image_2026-08-24_at_3.07.05_PM_dwcoll.jpg",
+    tag: "Ongoing ",
+    assets: [
+     
+  
+
+     ],
   },
 ];
 

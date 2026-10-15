@@ -251,6 +251,14 @@ export const PACKAGING_PROJECTS = [
     category: "Bag Design",
     alt: "Pinkpearl carry bag design for retail branding",
   },
+    {
+    id: "b9",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1792045751/Teal_Marathi_Collection_Shopping_Bag_a18qgg.png",
+    title: "Shoping Bag Design",
+    category: "Bag Design",
+    alt: "Shopping carry bag design for retail branding of a clothing store in sangli ",
+  },
 
   {
     id: "box1",
@@ -385,24 +393,41 @@ export const PACKAGING_PROJECTS = [
   },
 ];
 
+
+
+
 export const FLYER_PROJECTS = [
   {
     id: "f1",
     image:
       "https://res.cloudinary.com/daxfbjcpc/image/upload/v1780986592/carzspa_h99iby.webp",
     title: "Flyer Design",
-    category: "Flyer Design",
+    category: "Flyer / Pamphlet Design",
     alt: "Flyer design in sangli",
   },
-  {
+   {
     id: "f2",
     image:
-      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787994074/WhatsApp_Image_2026-08-27_at_12.19.24_PM_2_lavkq9.jpg",
-    title: "Flyer Design",
-    category: "Flyer Design",
-    alt: "Flyer design in sangli",
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1792051341/Marathi_Jewelry_Offer_Leaflet_on_Newspaper_xat3ng.png",
+    title: "Flyer Design / Pamphlet ",
+    category: "Flyer / Pamphlet Design",
+    alt: "pamphlet design in sangli",
   },
 ];
+
+export const ARCH_PROJECTS = [
+  
+    {
+    id: "a1",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1792058527/Royal_Purple_Jewelry_Storefront_Arch_f1ygzn.png",
+       title: "Arch / kaman Design ",
+    category: "Arch Design",
+    alt: "arch design in sangli",
+  },
+
+  
+]
 export const BUSINESSCARD_PROJECTS =[
   {
     id:"b1",
@@ -456,6 +481,37 @@ export const BUSINESSCARD_PROJECTS =[
     category :"Business Card Design"
   }
  
+]
+
+export const BANNER_PROJECTS = 
+[
+  {
+    id : "ban01",
+    image :"https://res.cloudinary.com/daxfbjcpc/image/upload/v1787994074/WhatsApp_Image_2026-08-27_at_12.19.24_PM_2_lavkq9.jpg" ,
+    title :"Banner Design",
+    category:"Banner Design",
+    alt:"Banner ,flex , hording Design in Sangli"
+  } ,
+
+  {
+    id : "ban02",
+    image :"https://res.cloudinary.com/daxfbjcpc/image/upload/v1792052153/RV_Jewellers_Festive_Banner_Display_mzmtsk.png" ,
+    title : "Jwellery Shop Banner",
+    category:"Banner Design",
+    alt:"offer Banner ,flex , hording Design in Sangli"
+  } ,
+
+    {
+    id : "ban03",
+    image :"https://res.cloudinary.com/daxfbjcpc/image/upload/v1792051341/jwellery-shop-banner-design-in-sangli_fg9uo5.png" ,
+    title : "Jwellery Shop Banner",
+    category:"Banner Design",
+    alt:"offer Banner ,flex , hording Design in Sangli"
+  } ,
+
+  
+
+
 ]
 
 export const SOCIALMEDIA_PROJECTS = [
@@ -514,6 +570,7 @@ export const SOCIALMEDIA_PROJECTS = [
     title: "Product Post",
     category: "Social Media Post",
     alt: "Product Social Media Post Design in Sangli",
+
   },
   {
     id: "sm8",
@@ -546,6 +603,14 @@ export const SOCIALMEDIA_PROJECTS = [
     title: "Offer Post",
     category: "Social Media Post",
     alt: "Offer Social Media Post Design in Sangli",
+  },
+ {
+    id: "sm12",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1792051985/Festive_Jewellery_Ad_on_Instagram_yztsvz.png",
+    title: "Offer Post",
+    category: "Social Media Post",
+    alt: "Offer Social Media Post Design in Sangli ,Tasgaon",
   },
 ];
 

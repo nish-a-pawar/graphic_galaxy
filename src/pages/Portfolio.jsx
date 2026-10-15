@@ -16,7 +16,8 @@ import {
   BROCHURE_PROJECTS,
   FLYER_PROJECTS,
   SOCIALMEDIA_PROJECTS,
-  BUSINESSCARD_PROJECTS
+  BUSINESSCARD_PROJECTS,
+  BANNER_PROJECTS
   
 } from "../constants";
 
@@ -30,9 +31,10 @@ const categories = [
   "Pouch Design",
   "Invitation Design",
   "Signage Design",
-  "Flyer Design",
+  "Flyer / Pamphlet Design",
   "Social Media Post",
-  "Business Card Design"
+  "Business Card Design",
+  "Banner Design"
 ];
 
 // Normalize function
@@ -58,7 +60,7 @@ const Portfolio = () => {
   const [socialMediaActive, setSocialMediaActive] = useState("All");
 
   // All Projects
-  const allProjects = useMemo(() => { return [ ...LOGO_PROJECTS, ...RECENT_PROJECTS, ...PACKAGING_PROJECTS, ...INVITATION_PROJECTS, ...SIGNAGE_PROJECTS, ...BROCHURE_PROJECTS,...FLYER_PROJECTS ,...SOCIALMEDIA_PROJECTS , ...BUSINESSCARD_PROJECTS ]; }, []);
+  const allProjects = useMemo(() => { return [ ...LOGO_PROJECTS, ...RECENT_PROJECTS, ...PACKAGING_PROJECTS, ...INVITATION_PROJECTS, ...SIGNAGE_PROJECTS, ...BROCHURE_PROJECTS,...FLYER_PROJECTS ,...SOCIALMEDIA_PROJECTS , ...BUSINESSCARD_PROJECTS , ...BANNER_PROJECTS ]; }, []);
 
   // Handle query params / hash
   useEffect(() => {
@@ -79,9 +81,10 @@ const Portfolio = () => {
         "pouch-design": "Pouch Design",
         "invitation-design": "Invitation Design",
         "signage-design": "Signage Design",
-        "flyer-design" :"Flyer Design",
+        "flyer-design" :"Flyer / Pamphlet Design",
         "social-media-post":"Social Media Post",
-        "business-card":"Business Card Design"
+        "business-card":"Business Card Design",
+        "banner-design":"Banner Design"
       };
 
       const normalized = categoryMap[target] || target;

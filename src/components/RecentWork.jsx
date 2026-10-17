@@ -62,14 +62,21 @@ const projects = [
     tag: "Completed",
 
     assets: [
-      {
-        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576273/WhatsApp_Image_2026-04-29_at_2.33.41_PM_mjtvrc.jpg",
-        name: "Social Media Post",
-      },
-      {
-        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1778576272/WhatsApp_Image_2026-04-29_at_2.33.42_PM_hhrvma.jpg",
+
+        {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1792233179/MTDK_Run_2026_Brochure_Mockup_ob5ztj.png",
         name: "Brochure",
       },
+      {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1792232323/MTDK_Run_Instagram_Promo_Mockup_ng3pbj.png",
+        name: "Social Media Post",
+      },
+
+        {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1792232318/ChatGPT_Image_Oct_17_2026_03_36_16_PM-3_wvxgye.png",
+        name: "Social Media Post",
+      },
+    
       {
         url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781249551/6d860301-abb4-4b46-a642-b4c6ff538113_jcyvss.webp",
         name: "Medal",
@@ -78,14 +85,27 @@ const projects = [
         url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781249551/ChatGPT_Image_Jun_12_2026_12_42_22_PM_cyjiia.webp",
         name: "Trophy",
       },
-      {
-        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781249551/best_social__media_post_design_in_sangli_acxpa8.webp",
-        name: "Social Media Post",
-      },
+    
       {
         url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1781249551/75d72dd7-c1dd-431c-9c95-7e9cd3b58733_qgtrmo.webp",
         name: "Medal",
       },
+
+         {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1792233872/MTDK_Run_Outdoor_Stage_and_Plaza_zkyhuc.png",
+        name: "Stage Backdrop",
+      },
+
+      {
+        url: " https://res.cloudinary.com/daxfbjcpc/image/upload/v1792232317/ChatGPT_Image_Oct_17_2026_03_36_13_PM-1_qsytuo.png",
+        name: "Start Finish Arch",
+      },
+
+       {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1792232316/ChatGPT_Image_Oct_17_2026_03_36_14_PM-2_tqcfk9.png",
+        name: "Kilometer Signboard",
+      },
+
     ],
   },
   {
@@ -134,7 +154,7 @@ const projects = [
        {
         url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1787562726/ChatGPT_Image_Aug_20_2026_03_49_35_PM_gny7zw.png",
         name: "Selfie Point 2",
-        alt: "Dandoba Hill Run event information design",
+        alt: "Dandoba Hill Run event graphic design",
       },
 
      
@@ -150,6 +170,23 @@ const projects = [
     tag: "Ongoing ",
     assets: [
      
+  
+
+     ],
+  },
+
+  {
+    title: "Shakti Run",
+    category: "Inter City Ultra Run Event Branding",
+    image:
+      "https://res.cloudinary.com/daxfbjcpc/image/upload/v1792234367/Golden_Shakti_Run_Trophy_on_Marble_m69eia.png",
+    tag: "Ongoing ",
+    assets: [
+       {
+        url: "https://res.cloudinary.com/daxfbjcpc/image/upload/v1792234367/Golden_Shakti_Run_Trophy_on_Marble_m69eia.png",
+        name: "Trophy",
+        alt: "Shakti Run event trophy design in sangli",
+      },
   
 
      ],
